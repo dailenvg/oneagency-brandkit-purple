@@ -1,0 +1,44 @@
+{
+  "name": "oneagency-brandkit",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "kit:tokens": "node scripts/extract-tokens.mjs",
+    "kit:fonts": "python3 scripts/fetch-fonts.py",
+    "kit:logos": "node scripts/build-logos.mjs",
+    "kit:motion": "node scripts/build-motion.mjs",
+    "kit": "npm run kit:tokens && npm run kit:fonts && npm run kit:logos && npm run kit:motion && npm run kit:elements && npm run kit:mobius && npm run kit:copy && npm run kit:motion-ads && npm run kit:references && npm run kit:ads && npm run kit:optimise && npm run kit:og && npm run kit:zips",
+    "kit:elements": "node scripts/build-elements.mjs",
+    "kit:mobius": "node scripts/build-mobius.mjs",
+    "kit:copy": "node scripts/build-copy.mjs",
+    "kit:motion-ads": "node scripts/build-motion-ads.mjs && node scripts/export-motion-ads.mjs",
+    "kit:references": "node scripts/copy-references.mjs",
+    "kit:ads": "node scripts/export-creative-ads.mjs",
+    "kit:optimise": "python3 scripts/optimise-pngs.py public/kit",
+    "kit:zips": "node scripts/build-zips.mjs",
+    "kit:og": "node scripts/build-og-image.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "@tailwindcss/vite": "^4.3.4",
+    "motion": "^14.9.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.89.0",
+    "playwright": "^1.64.1",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.5"
+  }
+}

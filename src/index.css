@@ -1,0 +1,317 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+@import "./styles/theme.css";
+@import "./styles/glass.css";
+
+/*
+ * Kit site theme. Colours are the live site's custom properties (src/styles/tokens.css, generated from the
+ * production CSS). The hub's own surfaces and text map to the --ui-* theme layer (src/styles/theme.css), which is the
+ * live values in dark and a derived paper-and-ink set in light. Type scale, radii and the accent-word recipe are
+ * copied from the live stylesheet so the kit renders exactly like oneagency.com.
+ */
+@theme inline {
+  --color-ground: var(--ui-ground);
+  --color-void: var(--ui-void);
+  --color-surface: var(--ui-surface);
+  --color-surface-2: var(--ui-surface-2);
+  --color-band: var(--ui-band);
+  --color-raised: var(--ui-raised);
+  --color-nav-hover: var(--ui-nav-hover);
+  /* Status tags (Badge): light blue fill, navy text, the same in both themes. */
+  --color-tag: var(--kit-lilac-100);
+  --color-on-tag: var(--kit-lilac-900);
+  --color-edge: var(--ui-edge);
+  --color-edge-soft: var(--ui-edge-soft);
+  --color-edge-strong: var(--ui-edge-strong);
+  --color-text: var(--ui-text);
+  --color-text-2: var(--ui-text-2);
+  --color-text-3: var(--ui-text-3);
+  --color-text-4: var(--ui-text-4);
+  --color-on-text: var(--ui-on-text);
+  /* Accent as text, icon or ring: rose on dark, the derived rose 700 on light. Fills use rose. */
+  --color-accent: var(--ui-accent);
+  --color-info: var(--ui-info);
+  --color-proposed: var(--ui-proposed);
+  --color-rose: var(--rose);
+  --color-rose-deep: var(--rose-deep);
+  --color-lilac: var(--lilac);
+  --color-lilac-deep: var(--lilac-deep);
+  --color-on-accent: var(--on-accent);
+  --color-lavender: var(--lavender);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-pos: var(--pos);
+  --color-lavender-text: var(--ui-on-ghost);
+  --color-form-copy: var(--form-copy);
+  /* Kit UI only (guideline do/don't marks), not brand colours. */
+  --color-do: var(--ui-do);
+  --color-dont: var(--ui-dont);
+  --shadow-card: var(--ui-shadow);
+}
+
+/* Faces and type steps: the live site's --font-* and --step-* values. */
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-accent: "Metal", Georgia, serif;
+  --font-num: "Lato", "Geist", ui-sans-serif, system-ui, sans-serif;
+  /*
+   * No monospace anywhere in the hub: token names, hex values, file names and commands set in Sora (font-code). The
+   * mono utility is removed and <code>, <kbd>, <pre> and <samp> default to Sora too.
+   */
+  --font-code: "Sora", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: initial;
+  --default-mono-font-family: var(--font-code);
+  --text-step--1: clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem);
+  --text-step-0: clamp(1.0625rem, 1.03rem + 0.14vw, 1.125rem);
+  --text-step-1: clamp(1.125rem, 1.07rem + 0.22vw, 1.25rem);
+  --text-step-2: clamp(1.5rem, 1.3rem + 0.9vw, 1.875rem);
+  --text-step-3: clamp(2.125rem, 1.7rem + 1.75vw, 3rem);
+  --text-step-4: clamp(2.25rem, 1.6rem + 2.7vw, 3.8rem);
+  --text-step-small: 0.8125rem;
+  /* Kit step below small: the sidebar group separators (tracked caps, so 11px stays legible). */
+  --text-step-micro: 0.6875rem;
+  --leading-display: 1.04;
+  /* Site tracking values: eyebrow, award org line, award 'Awarded to', award tag. */
+  --tracking-eyebrow: 0.14em;
+  --tracking-caps: 0.16em;
+  --tracking-label: 0.28em;
+  --tracking-tag: 0.32em;
+  --text-step-num: clamp(2.1875rem, 2.07rem + 0.5vw, 2.5rem);
+  --radius-site: 14px;
+  --radius-site-sm: 8px;
+  /* Kit layout rhythm. */
+  --spacing-section: clamp(4.5rem, 3rem + 6vw, 9rem);
+  --spacing-gutter: clamp(24px, 4vw, 64px);
+  --spacing-touch: 44px;
+  --spacing-nav: 64px;
+  --spacing-sidebar: 288px;
+}
+
+@layer base {
+  :root {
+    /* Site value: accent words run 1.27x the surrounding type. */
+    --accent-size: 1.27em;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    /* Anchors land below the top bar on phones and tablets; the sidebar layout has no fixed header. */
+    scroll-padding-top: calc(var(--spacing-nav) + 16px);
+    scroll-behavior: smooth;
+  }
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-top: 16px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    background: var(--ui-ground);
+    color: var(--ui-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  /*
+   * A subtree that pins a theme (data-theme="dark" stages on a light page, and the reverse) also resets its text colour:
+   * the tokens switch, but an inherited colour was already resolved by the page around it (ink on a dark stage).
+   */
+  [data-theme] {
+    color: var(--ui-text);
+  }
+  ::selection {
+    background: var(--rose);
+    color: var(--on-accent);
+  }
+  /* Site value: one rose ring, 3px out (the derived rose 700 on light, for 3:1 against paper). */
+  :focus-visible {
+    outline: 2px solid var(--ui-accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  /* The site's .serif accent word: Metal, the signature gradient clipped to the glyphs, lit by the neon filter. */
+  .accent-word {
+    font-family: var(--font-accent);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--accent-size);
+    letter-spacing: normal;
+    background: var(--ui-accent-fill);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding-bottom: 0.12em;
+    padding-inline-end: 0.04em;
+    filter: var(--ui-accent-glow);
+    mix-blend-mode: var(--ui-accent-blend);
+  }
+  .container-site {
+    width: 100%;
+    max-width: 1324px;
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+  /* The site's .eyebrow: tracked caps in rose. */
+  .eyebrow {
+    font-size: var(--text-step-small);
+    font-weight: 600;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ui-accent);
+  }
+  /* The site's .stat-num: Lato 700, gradient filled, lit like the accent words. */
+  .stat-num {
+    font-family: var(--font-num);
+    font-weight: 700;
+    line-height: 1.24;
+    background: var(--ui-accent-fill);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: var(--ui-accent-glow);
+    mix-blend-mode: var(--ui-accent-blend);
+  }
+  /* Site rule: on phones, tablets and touch screens the SVG light is drawn in software, so stat figures take the soft glow. */
+  @media (max-width: 1023px), (pointer: coarse) {
+    .stat-num {
+      filter: var(--ui-accent-glow-soft);
+    }
+  }
+  /* While text is selected (lib/neon.ts), lit text drops its light so the highlight stays a normal highlight. */
+  .oa-selecting :is(.accent-word, .stat-num) {
+    filter: none;
+    mix-blend-mode: normal;
+  }
+  /*
+   * Forced colours (Windows contrast themes) drop gradient backgrounds but keep the transparent text, so lit words and
+   * figures would vanish: set them in the system text colour, unlit.
+   */
+  @media (forced-colors: active) {
+    :is(.accent-word, .stat-num) {
+      background: none;
+      color: CanvasText;
+      filter: none;
+      mix-blend-mode: normal;
+    }
+  }
+  /* More contrast asked for: the gradient stays, the neon light and its blend go, so the glyph edges stay crisp. */
+  @media (prefers-contrast: more) {
+    :is(.accent-word, .stat-num) {
+      filter: none;
+      mix-blend-mode: normal;
+    }
+  }
+  /*
+   * The site's hero glow field: rose top-left, lilac bottom-right, on the ground. Sized in % of the box, the same
+   * proportions as the downloadable one-agency_element_glow-field.svg (ellipses 62x42% and 68x48%, linear falloff), so a
+   * small stage shows the same composition as the file: two separate glows with night-navy between, not one wash.
+   */
+  .glow-field {
+    background:
+      radial-gradient(62% 42% at 14% -6%, color-mix(in srgb, var(--rose) 42%, transparent), transparent),
+      radial-gradient(68% 48% at 92% 96%, color-mix(in srgb, var(--lilac) 55%, transparent), transparent),
+      var(--ground);
+  }
+  /* Transparency checkerboard behind alpha swatches. */
+  .checker {
+    background:
+      repeating-conic-gradient(var(--ui-surface-2) 0% 25%, var(--ui-surface) 0% 50%) 0 0 / 16px 16px;
+  }
+  /* The hub's own glow field (Overview hero): the site's rose and lilac glows, on the current theme's ground. */
+  .ui-glow-field {
+    background:
+      radial-gradient(72ch 44ch at 14% -6%, var(--ui-glow-a), transparent 66%),
+      radial-gradient(76ch 50ch at 92% 96%, var(--ui-glow-b), transparent 72%),
+      var(--ui-ground);
+  }
+  /*
+   * Overview hero scrim: the theme's ground over the left of the Möbius loop, so the lockup keeps AA contrast. Phones
+   * stack the text over the whole loop, so the scrim covers it all.
+   */
+  .hero-scrim {
+    background: color-mix(in srgb, var(--ui-scrim) var(--ui-scrim-cover), transparent);
+  }
+  /*
+   * From tablets up the scrim is anchored to the text column, not to a share of the hero: it holds at 92% to the end
+   * of the lede (container offset + gutter + 36rem, the lede's max-w-xl), then fades out over the next 20rem. With the
+   * old percentage stops the lede's right end sat over a 25 to 40% scrim at 768 to 1280 px, where the loop is brightest.
+   * On wide screens the loop on the right stays clear as before.
+   */
+  @media (min-width: 768px) {
+    .hero-scrim {
+      --hero-text-end: calc(max(0px, (100% - 1324px) / 2) + var(--spacing-gutter) + 36rem);
+      background: linear-gradient(
+        90deg,
+        var(--ui-scrim) 0,
+        color-mix(in srgb, var(--ui-scrim) 92%, transparent) var(--hero-text-end),
+        color-mix(in srgb, var(--ui-scrim) 50%, transparent) calc(var(--hero-text-end) + 8rem),
+        transparent calc(var(--hero-text-end) + 20rem)
+      );
+    }
+  }
+  /*
+   * Highlight band: a solid band behind the lower ~40% of the selected words, from just under the baseline to about
+   * mid x-height, starting 0.15em before the first word and running 0.15em past the last (measured on the reference,
+   * "Convert AI searches into recommendations"). Padding and matching negative margin widen the band without moving the text; clone repeats
+   * it on every line. --hl-reveal (0 to 100%) is the wipe-in, animated by HighlightText.
+   */
+  .highlight-band {
+    --hl-height: 0.36em;
+    --hl-bottom: 0.2em;
+    background-image: linear-gradient(var(--ui-highlight), var(--ui-highlight));
+    background-repeat: no-repeat;
+    background-size: var(--hl-reveal, 100%) var(--hl-height);
+    background-position: 0 calc(100% - var(--hl-bottom));
+    padding-inline: 0.15em;
+    margin-inline: -0.15em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  /*
+   * The title (or line) that holds a band clips it at its own left and right edges. Mid-line, the 0.15em lead runs into
+   * the word space as in the reference; when a highlighted fragment starts a line, the lead would otherwise hang past
+   * the text column (the band read as starting before the line), so that fragment's band starts flush with its first
+   * word instead. Each wrapped line keeps its own band (clone above). overflow-x: clip leaves the vertical axis
+   * visible, so word rise, accent glyphs and focus are untouched.
+   */
+  :where(*):has(> .highlight-band) {
+    overflow-x: clip;
+  }
+  /* A busy, photo-like field for the misuse example (stands in for a photo). */
+  .busy-field {
+    background:
+      radial-gradient(circle at 20% 30%, var(--paper) 0 8%, transparent 9%),
+      radial-gradient(circle at 70% 60%, var(--pos) 0 12%, transparent 13%),
+      radial-gradient(circle at 45% 80%, var(--lilac) 0 10%, transparent 11%),
+      repeating-linear-gradient(35deg, var(--text-2) 0 6px, var(--ink-3) 6px 14px, var(--rose) 14px 18px);
+  }
+  /* Thin scrollbars for horizontal strips. */
+  .scroll-strip {
+    scrollbar-width: thin;
+    scrollbar-color: var(--edge-strong) transparent;
+  }
+}
+
+/* The site's stat divider: a vertical gradient rule before a stat in a row. */
+@utility stat-divided {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6%;
+    bottom: 6%;
+    width: 1px;
+    background: var(--stat-divider);
+  }
+}

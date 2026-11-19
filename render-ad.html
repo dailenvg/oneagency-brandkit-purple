@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <title>ONE Agency · Creative ad render</title>
+    <!--
+      Render page for scripts/export-creative-ads.mjs (not part of the hub, not in the nav): one creative ad at true pixel
+      size. Preview by hand at /render-ad.html?concept=growth-audit&format=square.
+    -->
+    <style>
+      html, body { margin: 0; background: #0e0f12; }
+    </style>
+  </head>
+  <body>
+    <!-- The live site's accent light, copied from index.html (Chrome does not load filters from external SVGs). -->
+    <svg aria-hidden="true" focusable="false" style="position: absolute; width: 0; height: 0; overflow: hidden">
+      <filter id="oa-neon" x="-25%" y="-60%" width="150%" height="220%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="core" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="glow" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="bloom" />
+        <feComposite in="core" in2="glow" operator="arithmetic" k2="0.55" k3="0.75" result="cg" />
+        <feComposite in="cg" in2="bloom" operator="arithmetic" k2="1" k3="0.8" result="light" />
+        <feComposite in="SourceGraphic" in2="light" operator="arithmetic" k2="1" k3="1" />
+      </filter>
+    </svg>
+    <div id="root"></div>
+    <script type="module" src="/src/render-ad.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "ONE Agency Brand Kit",
+  "short_name": "ONE Brand Kit",
+  "icons": [
+    { "src": "/kit/logos/favicon/one-agency_logo_app-icon_192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/kit/logos/favicon/one-agency_logo_app-icon_512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#01030f",
+  "background_color": "#01030f",
+  "display": "standalone"
+}

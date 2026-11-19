@@ -1,0 +1,331 @@
+{
+  "title": "ONE Agency copy bank",
+  "version": "Brand kit v1.1 · Updated 2026-11-18",
+  "groups": [
+    {
+      "id": "headline",
+      "label": "Headlines",
+      "lines": [
+        {
+          "id": "h-lead",
+          "text": "We don't stop at the lead.",
+          "source": "Positioning v4 (brand doc)",
+          "date": "October 2026",
+          "note": "Proposed, pending client test. Homepage headline."
+        },
+        {
+          "id": "h-units",
+          "text": "Measured in tours, bookings, patients and enrollments. Not leads.",
+          "source": "Positioning v4 (brand doc)",
+          "date": "October 2026",
+          "note": "Proposed, pending client test. Alternate homepage headline, from buyer language. On vertical pages, use one unit per page."
+        },
+        {
+          "id": "h-ai-sales-force",
+          "text": "The acquisition agency with its own AI sales force.",
+          "source": "Positioning v4 (brand doc)",
+          "date": "October 2026",
+          "note": "Proposed. Use in decks and paid media."
+        },
+        {
+          "id": "h-holes",
+          "text": "Find and close the holes in your business",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "Sample ad A. Accent word: holes."
+        },
+        {
+          "id": "h-results",
+          "text": "Results delivered. In any industry.",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "Sample ad B. Accent word: any."
+        },
+        {
+          "id": "h-award",
+          "text": "Best AI Product",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "Sample ad C. The award belongs to ConversionIQ.ai: always run it with \"Awarded to ConversionIQ.ai\"."
+        },
+        {
+          "id": "h-eight",
+          "text": "Eight services, one accountable team",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "h-converts",
+          "text": "Most agencies buy you traffic. We built the system that converts it.",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "h-leaking",
+          "text": "Not sure which channel is leaking budget?",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "h-convert",
+          "text": "Convert visitors into leads, leads into customers, ad spend into revenue, AI searches into recommendations, and 5 minutes into your growth plan",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "Hero sequence. Each \"Convert X into Y\" pair also works alone; in headlines, prefer the pairs without \"growth\"."
+        }
+      ]
+    },
+    {
+      "id": "tagline",
+      "label": "Taglines",
+      "lines": [
+        {
+          "id": "t-cracks",
+          "text": "Nothing falls between the cracks.",
+          "source": "Positioning v4 (brand doc)",
+          "date": "October 2026",
+          "note": "Proposed, pending client test. Brand-line candidate 1 of 3."
+        },
+        {
+          "id": "t-inquiry",
+          "text": "No inquiry goes unanswered.",
+          "source": "Positioning v4 (brand doc)",
+          "date": "October 2026",
+          "note": "Proposed, pending client test. Brand-line candidate 2 of 3."
+        },
+        {
+          "id": "t-click",
+          "text": "From first click to closed sale. No leaks, no handoffs.",
+          "source": "Positioning v4 (brand doc)",
+          "date": "October 2026",
+          "note": "Proposed, pending client test. Brand-line candidate 3 of 3."
+        },
+        {
+          "id": "t-yours",
+          "text": "Results in 5 minutes. Yours to keep.",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "t-ready",
+          "text": "Free AI Growth Audit · Ready for you in 5 minutes",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "t-pays",
+          "text": "Marketing that pays for itself.",
+          "source": "Film: The Free Business Audit",
+          "date": "Undated; source pack 2026-11-17"
+        },
+        {
+          "id": "t-free",
+          "text": "Free. Customized. Yours to keep.",
+          "source": "Film: The Free Business Audit",
+          "date": "Undated; source pack 2026-11-17"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "label": "CTAs",
+      "lines": [
+        {
+          "id": "c-audit",
+          "text": "Start My 5-Minute Audit",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "c-free",
+          "text": "Run My Free Audit",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "c-talk",
+          "text": "Talk to ONE Agency",
+          "source": "Sample ad C, approved 2026-11-17",
+          "date": "2026-11-17"
+        },
+        {
+          "id": "c-growth",
+          "text": "Run the growth audit",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "c-chattibiz",
+          "text": "Run my ChattiBiz Growth Audit",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "c-contact",
+          "text": "Contact ONE Agency",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "c-call",
+          "text": "Call (689) 205-9923",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        }
+      ]
+    },
+    {
+      "id": "proof",
+      "label": "Proof points",
+      "lines": [
+        {
+          "id": "p-leads",
+          "text": "10M+ Qualified leads generated",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "As published on oneagency.com, November 2026. No internal source on file, so always run it with this line."
+        },
+        {
+          "id": "p-media",
+          "text": "$100M+ Media under management",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "As published on oneagency.com, November 2026. No internal source on file, so always run it with this line."
+        },
+        {
+          "id": "p-impressions",
+          "text": "7B+ Brand impressions delivered",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "As published on oneagency.com, November 2026. No internal source on file, so always run it with this line."
+        },
+        {
+          "id": "p-ecom",
+          "text": "450K+ E-commerce transactions",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "As published on oneagency.com, November 2026. No internal source on file, so always run it with this line."
+        },
+        {
+          "id": "p-marriott",
+          "text": "Over 80k leads delivered · Marriott Vacation Club Grande Vista",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "As published on oneagency.com, November 2026."
+        },
+        {
+          "id": "p-cruise",
+          "text": "522 cruise-sale leads in 23 days · Cruise Planners",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "As published on oneagency.com, November 2026."
+        },
+        {
+          "id": "p-gymguyz",
+          "text": "335 franchise-development leads · GYMGUYZ",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "As published on oneagency.com, November 2026."
+        },
+        {
+          "id": "p-millard",
+          "text": "6%+ click-through rate on Meta · Millard Plastic Surgery",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "As published on oneagency.com, November 2026."
+        },
+        {
+          "id": "p-smokehouse",
+          "text": "$9,000+ in one day from one email · Country Smokehouse",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "As published on oneagency.com, November 2026."
+        },
+        {
+          "id": "p-gurus",
+          "text": "Vacation Gurus: net cost per acquisition $125 to $104, April to May 2026.",
+          "source": "Proof set, Positioning v4",
+          "date": "April 2026 vs May 1 to 19, 2026",
+          "note": "Measured. Lead with net CPA, not the +61% revenue line."
+        },
+        {
+          "id": "p-sharelife",
+          "text": "Sharelife: 2,342 leads at $2.16 blended cost per lead in 58 days.",
+          "source": "Proof set, Positioning v4",
+          "date": "January to March 2026",
+          "note": "Measured. Label as leads."
+        },
+        {
+          "id": "p-boccia",
+          "text": "Boccia: AI answers recommending Boccia rose from 24% to 30%; in Queens from 4% to 17%.",
+          "source": "Proof set, Positioning v4",
+          "date": "September 2026 vs July baseline",
+          "note": "Measured. Reconcile with the site set before publishing; use one window, dated."
+        },
+        {
+          "id": "p-cookshack",
+          "text": "Cookshack: 22 of 62 event attendees from ONE's enriched list, in the client's words.",
+          "source": "Proof set, Positioning v4",
+          "date": "Anaheim event, May 2026",
+          "note": "Client-reported, an estimate (\"I think 22\"). Attendance, not sales. Label it client-reported."
+        }
+      ]
+    },
+    {
+      "id": "legal",
+      "label": "Legal and disclaimers",
+      "lines": [
+        {
+          "id": "l-figures",
+          "text": "Figures as published on oneagency.com, November 2026.",
+          "source": "Sample ad B, approved 2026-11-17",
+          "date": "2026-11-17"
+        },
+        {
+          "id": "l-award",
+          "text": "Awarded to ConversionIQ.ai",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "Required wherever the award appears."
+        },
+        {
+          "id": "l-ardy",
+          "text": "Best AI Product · 2026 ARDY Awards, American Resort Development Association · Awarded to ConversionIQ.ai",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "l-powered",
+          "text": "Powered by ChattiBiz AI.",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "l-sister",
+          "text": "ConversionIQ.ai is our sister company: same founders, separate company.",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "l-soc2",
+          "text": "ConversionIQ.ai, the AI platform we deploy, is SOC 2 Type II certified and GDPR compliant.",
+          "source": "oneagency.com",
+          "date": "November 2026",
+          "note": "The certification belongs to the platform, not to ONE Agency as an agency."
+        },
+        {
+          "id": "l-copyright",
+          "text": "© 2026 ONE Agency, LLC. All rights reserved.",
+          "source": "oneagency.com",
+          "date": "November 2026"
+        },
+        {
+          "id": "l-contact",
+          "text": "(689) 205-9923 · oneagency.com",
+          "source": "Sample ad C, approved 2026-11-17",
+          "date": "2026-11-17"
+        }
+      ]
+    }
+  ]
+}

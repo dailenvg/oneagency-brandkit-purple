@@ -1,0 +1,6440 @@
+{
+  "source": "https://oneagency.com/assets/css/home.bundle.css?v=746d4bae1d",
+  "snapshot": "2026-11-17",
+  "note": "Values copied verbatim from the live production CSS. Only the \"derived\" ramps are computed; they are not on the live site.",
+  "tokens": [
+    {
+      "name": "--void",
+      "cssVar": "var(--void)",
+      "value": "#01030f",
+      "scope": ":root",
+      "group": "surface",
+      "role": "Deepest ground: same value as --ground, used for page backdrops and shadows.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 42,
+      "usage": [
+        {
+          "property": "background",
+          "count": 37
+        },
+        {
+          "property": "shadow / glow",
+          "count": 4
+        },
+        {
+          "property": "token alias",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 2,
+        "link": 0,
+        "state": 2
+      },
+      "topSelectors": [
+        ".svc-hero-photo::after",
+        ".v2-hero--center .v2-hero-photo::after",
+        ".hero"
+      ],
+      "hex": "#01030f",
+      "rgb": "rgb(1, 3, 15)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--ground",
+      "cssVar": "var(--ground)",
+      "value": "#01030f",
+      "scope": ":root",
+      "group": "brand",
+      "role": "Page ground: the night-navy behind every section.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 15,
+      "usage": [
+        {
+          "property": "background",
+          "count": 13
+        },
+        {
+          "property": "text",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 1,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        "body",
+        ".hero",
+        ".finale"
+      ],
+      "hex": "#01030f",
+      "rgb": "rgb(1, 3, 15)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--surface",
+      "cssVar": "var(--surface)",
+      "value": "#0a0e1f",
+      "scope": ":root",
+      "group": "surface",
+      "role": "First raised step above the ground: cards, panels.",
+      "siteNote": "derived",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": true,
+      "usageCount": 38,
+      "usage": [
+        {
+          "property": "background",
+          "count": 35
+        },
+        {
+          "property": "token alias",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 1,
+        "state": 1
+      },
+      "topSelectors": [
+        ".section.alt",
+        ".cap",
+        ".case"
+      ],
+      "hex": "#0a0e1f",
+      "rgb": "rgb(10, 14, 31)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--surface-2",
+      "cssVar": "var(--surface-2)",
+      "value": "#141a30",
+      "scope": ":root",
+      "group": "surface",
+      "role": "Second raised step: nested cards, inputs.",
+      "siteNote": "derived",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": true,
+      "usageCount": 27,
+      "usage": [
+        {
+          "property": "background",
+          "count": 25
+        },
+        {
+          "property": "token alias",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 1,
+        "link": 1,
+        "state": 6
+      },
+      "topSelectors": [
+        ".case",
+        ".related a:hover",
+        ".prose code"
+      ],
+      "hex": "#141a30",
+      "rgb": "rgb(20, 26, 48)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--edge",
+      "cssVar": "var(--edge)",
+      "value": "#1f212c",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Decorative dividers.",
+      "siteNote": "decorative dividers: white @ .12 on navy, derived",
+      "siteNoteSource": "live CSS comment, punctuation normalised",
+      "siteMarkedDerived": true,
+      "usageCount": 83,
+      "usage": [
+        {
+          "property": "border / outline",
+          "count": 76
+        },
+        {
+          "property": "background",
+          "count": 4
+        },
+        {
+          "property": "token alias",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 1,
+        "link": 1,
+        "state": 1
+      },
+      "topSelectors": [
+        ".defs",
+        ".mobile-nav",
+        ".section .quotes .quote + .quote"
+      ],
+      "hex": "#1f212c",
+      "rgb": "rgb(31, 33, 44)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--edge-soft",
+      "cssVar": "var(--edge-soft)",
+      "value": "#131520",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Faint dividers.",
+      "siteNote": "white @ .07 on navy, derived",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": true,
+      "usageCount": 33,
+      "usage": [
+        {
+          "property": "border / outline",
+          "count": 30
+        },
+        {
+          "property": "background",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 1,
+        "state": 0
+      },
+      "topSelectors": [
+        ".svc-grid",
+        ".beats",
+        ".vgrid"
+      ],
+      "hex": "#131520",
+      "rgb": "rgb(19, 21, 32)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--edge-strong",
+      "cssVar": "var(--edge-strong)",
+      "value": "#808187",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Interactive boundaries (inputs, outlined buttons).",
+      "siteNote": "interactive boundaries: OA rgba(255,255,255,.5) flattened on navy; 4.2:1 on raised",
+      "siteNoteSource": "live CSS comment, punctuation normalised",
+      "siteMarkedDerived": false,
+      "usageCount": 19,
+      "usage": [
+        {
+          "property": "border / outline",
+          "count": 16
+        },
+        {
+          "property": "token alias",
+          "count": 1
+        },
+        {
+          "property": "background",
+          "count": 1
+        },
+        {
+          "property": "other",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 1,
+        "link": 0,
+        "state": 2
+      },
+      "topSelectors": [
+        ".case-filter .chip:hover",
+        ".trust span::before",
+        ".nav-toggle"
+      ],
+      "hex": "#808187",
+      "rgb": "rgb(128, 129, 135)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--band",
+      "cssVar": "var(--band)",
+      "value": "#11162a",
+      "scope": ":root",
+      "group": "surface",
+      "role": "Alternating section band.",
+      "siteNote": "derived",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": true,
+      "usageCount": 6,
+      "usage": [
+        {
+          "property": "background",
+          "count": 4
+        },
+        {
+          "property": "token alias",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".section.alt",
+        ".logostrip",
+        ".v2-feat-frame::after"
+      ],
+      "hex": "#11162a",
+      "rgb": "rgb(17, 22, 42)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--raised",
+      "cssVar": "var(--raised)",
+      "value": "#181e35",
+      "scope": ":root",
+      "group": "surface",
+      "role": "Cards sitting on a band; the lightest dark ground.",
+      "siteNote": "derived",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": true,
+      "usageCount": 19,
+      "usage": [
+        {
+          "property": "background",
+          "count": 15
+        },
+        {
+          "property": "token alias",
+          "count": 4
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 3
+      },
+      "topSelectors": [
+        ".section.alt",
+        ".section.alt .cap",
+        ".section.alt .photo-frame"
+      ],
+      "hex": "#181e35",
+      "rgb": "rgb(24, 30, 53)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--text",
+      "cssVar": "var(--text)",
+      "value": "#ffffff",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Primary text on dark.",
+      "siteNote": "OA text on dark; 16.5:1",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 202,
+      "usage": [
+        {
+          "property": "text",
+          "count": 166
+        },
+        {
+          "property": "background",
+          "count": 18
+        },
+        {
+          "property": "border / outline",
+          "count": 10
+        },
+        {
+          "property": "shadow / glow",
+          "count": 5
+        },
+        {
+          "property": "mask",
+          "count": 2
+        },
+        {
+          "property": "token alias",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 9,
+        "link": 25,
+        "state": 17
+      },
+      "topSelectors": [
+        ".v2-fin-rings",
+        ".v2-header__trigger[aria-expanded=\"true\"]",
+        ".v2-header__burger"
+      ],
+      "hex": "#ffffff",
+      "rgb": "rgb(255, 255, 255)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--text-2",
+      "cssVar": "var(--text-2)",
+      "value": "#b0b2c1",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Secondary body copy on dark.",
+      "siteNote": "OA secondary grey (form labels); 7.8:1, secondary body copy",
+      "siteNoteSource": "live CSS comment, punctuation normalised",
+      "siteMarkedDerived": false,
+      "usageCount": 106,
+      "usage": [
+        {
+          "property": "text",
+          "count": 105
+        },
+        {
+          "property": "svg",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 4,
+        "link": 3,
+        "state": 1
+      },
+      "topSelectors": [
+        ".lede",
+        ".body-2",
+        ".hero-assure"
+      ],
+      "hex": "#b0b2c1",
+      "rgb": "rgb(176, 178, 193)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--text-3",
+      "cssVar": "var(--text-3)",
+      "value": "#9a9db0",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Captions and labels on dark.",
+      "siteNote": "derived; 6.1:1, captions, labels",
+      "siteNoteSource": "live CSS comment, punctuation normalised",
+      "siteMarkedDerived": true,
+      "usageCount": 57,
+      "usage": [
+        {
+          "property": "text",
+          "count": 49
+        },
+        {
+          "property": "border / outline",
+          "count": 6
+        },
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 2,
+        "state": 1
+      },
+      "topSelectors": [
+        ".faq summary::after",
+        ".v2-aeo-model::after",
+        ".v2-b10-entry-h::after"
+      ],
+      "hex": "#9a9db0",
+      "rgb": "rgb(154, 157, 176)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--text-4",
+      "cssVar": "var(--text-4)",
+      "value": "#767a90",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Decorative text only; never carries meaning.",
+      "siteNote": "derived; decorative only: never carries meaning",
+      "siteNoteSource": "live CSS comment, punctuation normalised",
+      "siteMarkedDerived": true,
+      "usageCount": 3,
+      "usage": [
+        {
+          "property": "text",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".prose li::marker",
+        ".legal-toc li",
+        ".v2-faq-numbered .v2-faq-q::before"
+      ],
+      "hex": "#767a90",
+      "rgb": "rgb(118, 122, 144)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--placeholder",
+      "cssVar": "var(--placeholder)",
+      "value": "#8a8da0",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Input placeholder text.",
+      "siteNote": "derived; 5.0:1 (OA has no placeholder rule)",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": true,
+      "usageCount": 2,
+      "usage": [
+        {
+          "property": "text",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".v2-aeo-composer-text",
+        ".v2-b08-input::placeholder"
+      ],
+      "hex": "#8a8da0",
+      "rgb": "rgb(138, 141, 160)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--rose",
+      "cssVar": "var(--rose)",
+      "value": "#ffa0aa",
+      "scope": ":root",
+      "group": "brand",
+      "role": "Primary accent: pill buttons, focus ring, accent-word gradient start.",
+      "siteNote": "OA --wpex-accent",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 214,
+      "usage": [
+        {
+          "property": "text",
+          "count": 82
+        },
+        {
+          "property": "background",
+          "count": 61
+        },
+        {
+          "property": "border / outline",
+          "count": 47
+        },
+        {
+          "property": "token alias",
+          "count": 10
+        },
+        {
+          "property": "shadow / glow",
+          "count": 8
+        },
+        {
+          "property": "svg",
+          "count": 6
+        }
+      ],
+      "contexts": {
+        "button": 11,
+        "link": 37,
+        "state": 89
+      },
+      "topSelectors": [
+        ".btn-primary",
+        ".plat-step:not(:last-child)::after",
+        ".stat-band"
+      ],
+      "hex": "#ffa0aa",
+      "rgb": "rgb(255, 160, 170)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--rose-deep",
+      "cssVar": "var(--rose-deep)",
+      "value": "#e8808c",
+      "scope": ":root",
+      "group": "accent",
+      "role": "Pressed or hover step of rose.",
+      "siteNote": "derived, not from OA",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": true,
+      "usageCount": 9,
+      "usage": [
+        {
+          "property": "border / outline",
+          "count": 6
+        },
+        {
+          "property": "text",
+          "count": 2
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 2,
+        "link": 0,
+        "state": 3
+      },
+      "topSelectors": [
+        ".r-stamp",
+        ".issuer-stamp",
+        ".v2-b08-pill .btn-primary:hover"
+      ],
+      "hex": "#e8808c",
+      "rgb": "rgb(232, 128, 140)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--lilac",
+      "cssVar": "var(--lilac)",
+      "value": "#378df0",
+      "scope": ":root",
+      "group": "brand",
+      "role": "Secondary accent (the site's blue): gradient end, links and highlights.",
+      "siteNote": "OA blue; 4.9:1 on raised, fine for text",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 84,
+      "usage": [
+        {
+          "property": "background",
+          "count": 45
+        },
+        {
+          "property": "text",
+          "count": 20
+        },
+        {
+          "property": "token alias",
+          "count": 9
+        },
+        {
+          "property": "shadow / glow",
+          "count": 5
+        },
+        {
+          "property": "border / outline",
+          "count": 4
+        },
+        {
+          "property": "svg",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 3,
+        "link": 1,
+        "state": 1
+      },
+      "topSelectors": [
+        ".plat-step:not(:last-child)::after",
+        ".stat-band",
+        ".stat-num"
+      ],
+      "hex": "#378df0",
+      "rgb": "rgb(55, 141, 240)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--lilac-deep",
+      "cssVar": "var(--lilac-deep)",
+      "value": "#6d92de",
+      "scope": ":root",
+      "group": "accent",
+      "role": "End of the gradient rule (--bar).",
+      "siteNote": "OA gradient-bar end",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "topSelectors": [
+        ".v2-chip[aria-pressed=\"true\"]"
+      ],
+      "hex": "#6d92de",
+      "rgb": "rgb(109, 146, 222)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--on-accent",
+      "cssVar": "var(--on-accent)",
+      "value": "#01030f",
+      "scope": ":root",
+      "group": "accent",
+      "role": "Text on rose buttons and chips.",
+      "siteNote": "OA --wpex-on-accent (text on pink)",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 14,
+      "usage": [
+        {
+          "property": "text",
+          "count": 13
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 4,
+        "link": 0,
+        "state": 4
+      },
+      "topSelectors": [
+        "::selection",
+        ".btn-primary",
+        ".btn-ghost:hover"
+      ],
+      "hex": "#01030f",
+      "rgb": "rgb(1, 3, 15)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--lavender",
+      "cssVar": "var(--lavender)",
+      "value": "#f4f3fe",
+      "scope": ":root",
+      "group": "accent",
+      "role": "Primary-button hover text on dark; pale tint panels.",
+      "siteNote": "OA lavender-white: primary-button hover text on dark",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 1,
+        "link": 0,
+        "state": 1
+      },
+      "topSelectors": [
+        ".btn-primary:hover"
+      ],
+      "hex": "#f4f3fe",
+      "rgb": "rgb(244, 243, 254)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--bar",
+      "cssVar": "var(--bar)",
+      "value": "linear-gradient(90deg,#F59FAE 0%,#6D92DE 100%)",
+      "scope": ":root",
+      "group": "gradient",
+      "role": "Gradient rule: header, footer and card tops.",
+      "siteNote": "OA gradient rule: header, footer, card tops",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 12,
+      "usage": [
+        {
+          "property": "background",
+          "count": 11
+        },
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 1,
+        "link": 1,
+        "state": 0
+      },
+      "topSelectors": [
+        ".site-header::after",
+        ".site-footer::before",
+        ".mega::after"
+      ],
+      "hex": null,
+      "rgb": null,
+      "alpha": 1,
+      "stops": [
+        "#F59FAE",
+        "#6D92DE"
+      ]
+    },
+    {
+      "name": "--pos",
+      "cssVar": "var(--pos)",
+      "value": "#E8B87D",
+      "scope": ":root",
+      "group": "state",
+      "role": "Positive / highlight tag colour (amber).",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 23,
+      "usage": [
+        {
+          "property": "text",
+          "count": 11
+        },
+        {
+          "property": "background",
+          "count": 7
+        },
+        {
+          "property": "border / outline",
+          "count": 2
+        },
+        {
+          "property": "token alias",
+          "count": 2
+        },
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "topSelectors": [
+        ".v2-b05-pill--key",
+        ".v2-b05-award",
+        ".v2-b05-medal"
+      ],
+      "hex": "#e8b87d",
+      "rgb": "rgb(232, 184, 125)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--form-card-bg",
+      "cssVar": "var(--form-card-bg)",
+      "value": "linear-gradient(160deg,rgba(255,255,255,.20),rgba(255,255,255,.08) 60%),color-mix(in srgb,#01030f 30%,transparent)",
+      "scope": ":root",
+      "group": "gradient",
+      "role": "Glass fill of the audit form card.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 3,
+      "usage": [
+        {
+          "property": "background",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".leadcard",
+        ".ga-modal",
+        ".hx-card"
+      ],
+      "hex": null,
+      "rgb": null,
+      "alpha": 1,
+      "stops": [
+        "rgba(255,255,255,.20)",
+        "rgba(255,255,255,.08)",
+        "#01030f",
+        "transparent"
+      ]
+    },
+    {
+      "name": "--form-copy",
+      "cssVar": "var(--form-copy)",
+      "value": "#e2e4ec",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Copy inside the audit form card.",
+      "siteNote": "labels and secondary copy on the glass",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 6,
+      "usage": [
+        {
+          "property": "text",
+          "count": 6
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 1,
+        "state": 0
+      },
+      "topSelectors": [
+        ".leadcard .sub",
+        ".field label",
+        ".award-org"
+      ],
+      "hex": "#e2e4ec",
+      "rgb": "rgb(226, 228, 236)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--form-field-bg",
+      "cssVar": "var(--form-field-bg)",
+      "value": "rgba(255,255,255,.09)",
+      "scope": ":root",
+      "group": "surface",
+      "role": "Form field fill on dark (white at 9%).",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".field input"
+      ],
+      "hex": "#ffffff",
+      "rgb": "rgba(255, 255, 255, 0.09)",
+      "alpha": 0.09,
+      "stops": null
+    },
+    {
+      "name": "--form-field-bg-focus",
+      "cssVar": "var(--form-field-bg-focus)",
+      "value": "rgba(255,255,255,.14)",
+      "scope": ":root",
+      "group": "state",
+      "role": "Form field fill when focused (white at 14%).",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "topSelectors": [
+        ".field input:focus"
+      ],
+      "hex": "#ffffff",
+      "rgb": "rgba(255, 255, 255, 0.14)",
+      "alpha": 0.14,
+      "stops": null
+    },
+    {
+      "name": "--form-field-edge",
+      "cssVar": "var(--form-field-edge)",
+      "value": "rgba(255,255,255,.5)",
+      "scope": ":root",
+      "group": "state",
+      "role": "Form field border at rest.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".field input"
+      ],
+      "hex": "#ffffff",
+      "rgb": "rgba(255, 255, 255, 0.5)",
+      "alpha": 0.5,
+      "stops": null
+    },
+    {
+      "name": "--form-field-edge-hover",
+      "cssVar": "var(--form-field-edge-hover)",
+      "value": "rgba(255,255,255,.7)",
+      "scope": ":root",
+      "group": "state",
+      "role": "Form field border on hover.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "topSelectors": [
+        ".field input:hover"
+      ],
+      "hex": "#ffffff",
+      "rgb": "rgba(255, 255, 255, 0.7)",
+      "alpha": 0.7,
+      "stops": null
+    },
+    {
+      "name": "--form-placeholder",
+      "cssVar": "var(--form-placeholder)",
+      "value": "rgba(255,255,255,.74)",
+      "scope": ":root",
+      "group": "state",
+      "role": "Form placeholder text on the audit card.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".field input::placeholder"
+      ],
+      "hex": "#ffffff",
+      "rgb": "rgba(255, 255, 255, 0.74)",
+      "alpha": 0.74,
+      "stops": null
+    },
+    {
+      "name": "--accent-fill",
+      "cssVar": "var(--accent-fill)",
+      "value": "linear-gradient(90deg,var(--rose) 0%,var(--lilac) 100%)",
+      "scope": ":root",
+      "group": "gradient",
+      "role": "Signature gradient: Metal accent words, rose to lilac.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 2,
+      "usage": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "topSelectors": [
+        ".serif",
+        ".ops-panel.is-open .ops-title .serif"
+      ],
+      "hex": null,
+      "rgb": null,
+      "alpha": 1,
+      "stops": [
+        "--rose #ffa0aa",
+        "--lilac #378df0"
+      ]
+    },
+    {
+      "name": "--paper",
+      "cssVar": "var(--paper)",
+      "value": "#ffffff",
+      "scope": ":root",
+      "group": "surface",
+      "role": "White paper: case-study receipt, light panels.",
+      "siteNote": "OA white",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".receipt"
+      ],
+      "hex": "#ffffff",
+      "rgb": "rgb(255, 255, 255)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--paper-2",
+      "cssVar": "var(--paper-2)",
+      "value": "#f6f9fe",
+      "scope": ":root",
+      "group": "surface",
+      "role": "Pale-blue paper band.",
+      "siteNote": "OA pale-blue band",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".issuer"
+      ],
+      "hex": "#f6f9fe",
+      "rgb": "rgb(246, 249, 254)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--ink",
+      "cssVar": "var(--ink)",
+      "value": "#01030f",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Text on paper (same value as --ground).",
+      "siteNote": "OA near-black; 20.6:1 on paper",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 4,
+      "usage": [
+        {
+          "property": "text",
+          "count": 2
+        },
+        {
+          "property": "border / outline",
+          "count": 1
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".receipt",
+        ".r-rule.solid",
+        ".r-bar"
+      ],
+      "hex": "#01030f",
+      "rgb": "rgb(1, 3, 15)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--ink-2",
+      "cssVar": "var(--ink-2)",
+      "value": "#444444",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Secondary text on paper.",
+      "siteNote": "derived; 9.7:1",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": true,
+      "usageCount": 8,
+      "usage": [
+        {
+          "property": "text",
+          "count": 8
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".r-head span",
+        ".r-sec",
+        ".r-foot"
+      ],
+      "hex": "#444444",
+      "rgb": "rgb(68, 68, 68)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--ink-3",
+      "cssVar": "var(--ink-3)",
+      "value": "#616161",
+      "scope": ":root",
+      "group": "neutral",
+      "role": "Body grey on paper.",
+      "siteNote": "OA body grey on white; 6.2:1",
+      "siteNoteSource": "live CSS comment",
+      "siteMarkedDerived": false,
+      "usageCount": 5,
+      "usage": [
+        {
+          "property": "border / outline",
+          "count": 3
+        },
+        {
+          "property": "text",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".r-rule",
+        ".r-row .dots",
+        ".r-row.zero .v"
+      ],
+      "hex": "#616161",
+      "rgb": "rgb(97, 97, 97)",
+      "alpha": 1,
+      "stops": null
+    },
+    {
+      "name": "--v2-hairline",
+      "cssVar": "var(--v2-hairline)",
+      "value": "linear-gradient(90deg,transparent,color-mix(in srgb,var(--rose) 55%,transparent) 35%,color-mix(in srgb,var(--lilac) 55%,transparent) 65%,transparent)",
+      "scope": ":root",
+      "group": "gradient",
+      "role": "1px rose-to-lilac hairline that fades at both ends.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 3,
+      "usage": [
+        {
+          "property": "background",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".v2-section::before",
+        ".v2-hero::before",
+        ".v2-section + .section::before"
+      ],
+      "hex": null,
+      "rgb": null,
+      "alpha": 1,
+      "stops": [
+        "transparent",
+        "--rose #ffa0aa",
+        "transparent",
+        "--lilac #378df0",
+        "transparent",
+        "transparent"
+      ]
+    },
+    {
+      "name": "--v2-lit-edge",
+      "cssVar": "var(--v2-lit-edge)",
+      "value": "linear-gradient(90deg,transparent,var(--rose) 30%,var(--lilac) 70%,transparent)",
+      "scope": ":root",
+      "group": "gradient",
+      "role": "Lit top edge of featured cards.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 4,
+      "usage": [
+        {
+          "property": "background",
+          "count": 4
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".v2-hero::after",
+        ".v2-fin::after",
+        ".v2-ai::after"
+      ],
+      "hex": null,
+      "rgb": null,
+      "alpha": 1,
+      "stops": [
+        "transparent",
+        "--rose #ffa0aa",
+        "--lilac #378df0",
+        "transparent"
+      ]
+    },
+    {
+      "name": "--v2-alt-bg",
+      "cssVar": "var(--v2-alt-bg)",
+      "value": "linear-gradient(160deg,var(--raised) 0%,var(--band) 48%,var(--surface) 100%)",
+      "scope": ":root",
+      "group": "gradient",
+      "role": "Alternate section background.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 4,
+      "usage": [
+        {
+          "property": "background",
+          "count": 4
+        }
+      ],
+      "contexts": {
+        "button": 1,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".v2-section--alt",
+        ".v2-stmt-cta",
+        ".v2-proc.v2-section--alt"
+      ],
+      "hex": null,
+      "rgb": null,
+      "alpha": 1,
+      "stops": [
+        "--raised #181e35",
+        "--band #11162a",
+        "--surface #0a0e1f"
+      ]
+    },
+    {
+      "name": "--stat-divider",
+      "cssVar": "var(--stat-divider)",
+      "value": "linear-gradient(180deg,transparent,color-mix(in srgb,var(--rose) 70%,transparent) 30%,color-mix(in srgb,var(--lilac) 70%,transparent) 70%,transparent)",
+      "scope": ".stat-band",
+      "group": "gradient",
+      "role": "Vertical divider between stats.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 1,
+      "usage": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".stat-item + .stat-item::before"
+      ],
+      "hex": null,
+      "rgb": null,
+      "alpha": 1,
+      "stops": [
+        "transparent",
+        "--rose #ffa0aa",
+        "transparent",
+        "--lilac #378df0",
+        "transparent",
+        "transparent"
+      ]
+    },
+    {
+      "name": "--stat-divider-h",
+      "cssVar": "var(--stat-divider-h)",
+      "value": "linear-gradient(90deg,transparent,color-mix(in srgb,var(--rose) 70%,transparent) 30%,color-mix(in srgb,var(--lilac) 70%,transparent) 70%,transparent)",
+      "scope": ".stat-band",
+      "group": "gradient",
+      "role": "Horizontal divider between stacked stats.",
+      "siteNote": null,
+      "siteNoteSource": null,
+      "siteMarkedDerived": false,
+      "usageCount": 2,
+      "usage": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "topSelectors": [
+        ".stat-item:nth-child(n+3)::after",
+        ".stat-row--grid .stat-item:nth-child(n+3)::after"
+      ],
+      "hex": null,
+      "rgb": null,
+      "alpha": 1,
+      "stops": [
+        "transparent",
+        "--rose #ffa0aa",
+        "transparent",
+        "--lilac #378df0",
+        "transparent",
+        "transparent"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "name": "--accent-glow",
+      "cssVar": "var(--accent-glow)",
+      "value": "drop-shadow(0 0 .08em color-mix(in srgb,var(--rose) 75%,transparent)) drop-shadow(0 0 .32em color-mix(in srgb,var(--lilac) 45%,transparent))",
+      "role": "Glow filter on accent words."
+    },
+    {
+      "name": "--v2-shadow",
+      "cssVar": "var(--v2-shadow)",
+      "value": "0 30px 60px -36px color-mix(in srgb,var(--void) 95%,transparent)",
+      "role": "Card drop shadow."
+    },
+    {
+      "name": "--form-card-shadow",
+      "cssVar": "var(--form-card-shadow)",
+      "value": "0 40px 80px -30px rgba(1,3,15,.96)",
+      "role": "Audit form card shadow."
+    }
+  ],
+  "componentAliases": [
+    {
+      "name": "--v2-card-bg",
+      "values": [
+        "var(--surface)",
+        "var(--raised)",
+        "color-mix(in srgb,var(--raised) 78%,transparent)",
+        "color-mix(in srgb,var(--surface) 84%,transparent)",
+        "var(--band)",
+        "var(--surface-2)"
+      ]
+    },
+    {
+      "name": "--v2-card-border",
+      "values": [
+        "var(--edge)",
+        "color-mix(in srgb,var(--edge-strong) 45%,transparent)",
+        "color-mix(in srgb,var(--pos) 45%,transparent)"
+      ]
+    },
+    {
+      "name": "--v2-card-border-hover",
+      "values": [
+        "color-mix(in srgb,var(--text) 24%,transparent)",
+        "color-mix(in srgb,var(--lilac) 35%,var(--edge))",
+        "var(--rose)",
+        "var(--v2-card-border)",
+        "color-mix(in srgb,var(--pos) 70%,transparent)"
+      ]
+    },
+    {
+      "name": "--v2-focus-ring",
+      "values": [
+        "2px solid var(--rose)"
+      ]
+    }
+  ],
+  "derived": {
+    "label": "Derived, not on the live site",
+    "method": "OKLab mix of the site value toward --paper (tints) or --ink (shades). Rose and lilac: step 500 is the site value. Ground: step 900 is the site value.",
+    "ramps": [
+      {
+        "base": "--rose",
+        "steps": [
+          {
+            "step": 50,
+            "name": "--kit-rose-50",
+            "hex": "#fff8f8",
+            "rgb": "rgb(255, 248, 248)",
+            "isSiteValue": false
+          },
+          {
+            "step": 100,
+            "name": "--kit-rose-100",
+            "hex": "#fff0f1",
+            "rgb": "rgb(255, 240, 241)",
+            "isSiteValue": false
+          },
+          {
+            "step": 200,
+            "name": "--kit-rose-200",
+            "hex": "#ffe1e3",
+            "rgb": "rgb(255, 225, 227)",
+            "isSiteValue": false
+          },
+          {
+            "step": 300,
+            "name": "--kit-rose-300",
+            "hex": "#ffd0d4",
+            "rgb": "rgb(255, 208, 212)",
+            "isSiteValue": false
+          },
+          {
+            "step": 400,
+            "name": "--kit-rose-400",
+            "hex": "#ffb9c0",
+            "rgb": "rgb(255, 185, 192)",
+            "isSiteValue": false
+          },
+          {
+            "step": 500,
+            "name": "--kit-rose-500",
+            "hex": "#ffa0aa",
+            "rgb": "rgb(255, 160, 170)",
+            "isSiteValue": true
+          },
+          {
+            "step": 600,
+            "name": "--kit-rose-600",
+            "hex": "#c9808b",
+            "rgb": "rgb(201, 128, 139)",
+            "isSiteValue": false
+          },
+          {
+            "step": 700,
+            "name": "--kit-rose-700",
+            "hex": "#95616e",
+            "rgb": "rgb(149, 97, 110)",
+            "isSiteValue": false
+          },
+          {
+            "step": 800,
+            "name": "--kit-rose-800",
+            "hex": "#644351",
+            "rgb": "rgb(100, 67, 81)",
+            "isSiteValue": false
+          },
+          {
+            "step": 900,
+            "name": "--kit-rose-900",
+            "hex": "#372836",
+            "rgb": "rgb(55, 40, 54)",
+            "isSiteValue": false
+          }
+        ]
+      },
+      {
+        "base": "--lilac",
+        "steps": [
+          {
+            "step": 50,
+            "name": "--kit-lilac-50",
+            "hex": "#f0f6ff",
+            "rgb": "rgb(240, 246, 255)",
+            "isSiteValue": false
+          },
+          {
+            "step": 100,
+            "name": "--kit-lilac-100",
+            "hex": "#e0edfe",
+            "rgb": "rgb(224, 237, 254)",
+            "isSiteValue": false
+          },
+          {
+            "step": 200,
+            "name": "--kit-lilac-200",
+            "hex": "#c1dcfd",
+            "rgb": "rgb(193, 220, 253)",
+            "isSiteValue": false
+          },
+          {
+            "step": 300,
+            "name": "--kit-lilac-300",
+            "hex": "#9fc8fb",
+            "rgb": "rgb(159, 200, 251)",
+            "isSiteValue": false
+          },
+          {
+            "step": 400,
+            "name": "--kit-lilac-400",
+            "hex": "#70acf6",
+            "rgb": "rgb(112, 172, 246)",
+            "isSiteValue": false
+          },
+          {
+            "step": 500,
+            "name": "--kit-lilac-500",
+            "hex": "#378df0",
+            "rgb": "rgb(55, 141, 240)",
+            "isSiteValue": true
+          },
+          {
+            "step": 600,
+            "name": "--kit-lilac-600",
+            "hex": "#2b70c2",
+            "rgb": "rgb(43, 112, 194)",
+            "isSiteValue": false
+          },
+          {
+            "step": 700,
+            "name": "--kit-lilac-700",
+            "hex": "#1f5496",
+            "rgb": "rgb(31, 84, 150)",
+            "isSiteValue": false
+          },
+          {
+            "step": 800,
+            "name": "--kit-lilac-800",
+            "hex": "#143a6c",
+            "rgb": "rgb(20, 58, 108)",
+            "isSiteValue": false
+          },
+          {
+            "step": 900,
+            "name": "--kit-lilac-900",
+            "hex": "#0a2245",
+            "rgb": "rgb(10, 34, 69)",
+            "isSiteValue": false
+          }
+        ]
+      },
+      {
+        "base": "--ground",
+        "steps": [
+          {
+            "step": 50,
+            "name": "--kit-ground-50",
+            "hex": "#ecedef",
+            "rgb": "rgb(236, 237, 239)",
+            "isSiteValue": false
+          },
+          {
+            "step": 100,
+            "name": "--kit-ground-100",
+            "hex": "#dadbde",
+            "rgb": "rgb(218, 219, 222)",
+            "isSiteValue": false
+          },
+          {
+            "step": 200,
+            "name": "--kit-ground-200",
+            "hex": "#b6b9be",
+            "rgb": "rgb(182, 185, 190)",
+            "isSiteValue": false
+          },
+          {
+            "step": 300,
+            "name": "--kit-ground-300",
+            "hex": "#8e929a",
+            "rgb": "rgb(142, 146, 154)",
+            "isSiteValue": false
+          },
+          {
+            "step": 400,
+            "name": "--kit-ground-400",
+            "hex": "#6d727d",
+            "rgb": "rgb(109, 114, 125)",
+            "isSiteValue": false
+          },
+          {
+            "step": 500,
+            "name": "--kit-ground-500",
+            "hex": "#4e5460",
+            "rgb": "rgb(78, 84, 96)",
+            "isSiteValue": false
+          },
+          {
+            "step": 600,
+            "name": "--kit-ground-600",
+            "hex": "#313745",
+            "rgb": "rgb(49, 55, 69)",
+            "isSiteValue": false
+          },
+          {
+            "step": 700,
+            "name": "--kit-ground-700",
+            "hex": "#181f2d",
+            "rgb": "rgb(24, 31, 45)",
+            "isSiteValue": false
+          },
+          {
+            "step": 800,
+            "name": "--kit-ground-800",
+            "hex": "#080e1d",
+            "rgb": "rgb(8, 14, 29)",
+            "isSiteValue": false
+          },
+          {
+            "step": 900,
+            "name": "--kit-ground-900",
+            "hex": "#01030f",
+            "rgb": "rgb(1, 3, 15)",
+            "isSiteValue": true
+          }
+        ]
+      }
+    ]
+  },
+  "derivedStyle": {
+    "label": "Derived, not on the live site (v1.1 style)",
+    "method": "Highlight band: CSS color-mix in sRGB of the live tokens (hex shown for reference). Violet ground: sampled from the reference ads. Light accent: hand-tuned rose and blue that clear 3:1 on every light ground.",
+    "tokens": [
+      {
+        "name": "--kit-highlight",
+        "value": "color-mix(in srgb, var(--lilac) 40%, var(--ground))",
+        "hex": "#173a69",
+        "role": "Highlight band on dark grounds, white text on top. Reference sample #172C78 to #11306A."
+      },
+      {
+        "name": "--kit-highlight-light",
+        "value": "color-mix(in srgb, var(--lilac) 40%, var(--paper))",
+        "hex": "#afd1f9",
+        "role": "Highlight band on light grounds, ink text on top."
+      },
+      {
+        "name": "--kit-violet",
+        "value": "#2a004c",
+        "hex": "#2a004c",
+        "role": "Violet ground, top left (sampled from the reference ads)."
+      },
+      {
+        "name": "--kit-night",
+        "value": "#0e0f12",
+        "hex": "#0e0f12",
+        "role": "Near-black the violet ground runs into (sampled)."
+      },
+      {
+        "name": "--kit-accent-light-from",
+        "value": "#e0446b",
+        "hex": "#e0446b",
+        "role": "Accent gradient start on light grounds (hand-tuned rose, full chroma)."
+      },
+      {
+        "name": "--kit-accent-light-mid",
+        "value": "#a057d6",
+        "hex": "#a057d6",
+        "role": "Accent gradient midpoint on light grounds, for sRGB blending (keeps the middle violet, not grey)."
+      },
+      {
+        "name": "--kit-accent-light-to",
+        "value": "#2f7be6",
+        "hex": "#2f7be6",
+        "role": "Accent gradient end on light grounds (hand-tuned blue, full chroma)."
+      }
+    ]
+  },
+  "contrast": [
+    {
+      "text": "--text",
+      "background": "--ground",
+      "textHex": "#ffffff",
+      "backgroundHex": "#01030f",
+      "ratio": 20.56,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--ink",
+      "background": "--paper",
+      "textHex": "#01030f",
+      "backgroundHex": "#ffffff",
+      "ratio": 20.56,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--ink",
+      "background": "--paper-2",
+      "textHex": "#01030f",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 19.49,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text",
+      "background": "--surface",
+      "textHex": "#ffffff",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 19.17,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--lavender",
+      "background": "--ground",
+      "textHex": "#f4f3fe",
+      "backgroundHex": "#01030f",
+      "ratio": 18.7,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--ink",
+      "background": "--lavender",
+      "textHex": "#01030f",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 18.7,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text",
+      "background": "--band",
+      "textHex": "#ffffff",
+      "backgroundHex": "#11162a",
+      "ratio": 17.92,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--lavender",
+      "background": "--surface",
+      "textHex": "#f4f3fe",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 17.43,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text",
+      "background": "--surface-2",
+      "textHex": "#ffffff",
+      "backgroundHex": "#141a30",
+      "ratio": 17.21,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text",
+      "background": "--raised",
+      "textHex": "#ffffff",
+      "backgroundHex": "#181e35",
+      "ratio": 16.46,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--lavender",
+      "background": "--band",
+      "textHex": "#f4f3fe",
+      "backgroundHex": "#11162a",
+      "ratio": 16.29,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-copy",
+      "background": "--ground",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#01030f",
+      "ratio": 16.2,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--lavender",
+      "background": "--surface-2",
+      "textHex": "#f4f3fe",
+      "backgroundHex": "#141a30",
+      "ratio": 15.65,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-copy",
+      "background": "--surface",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 15.1,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--lavender",
+      "background": "--raised",
+      "textHex": "#f4f3fe",
+      "backgroundHex": "#181e35",
+      "ratio": 14.97,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-copy",
+      "background": "--band",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#11162a",
+      "ratio": 14.11,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-copy",
+      "background": "--surface-2",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#141a30",
+      "ratio": 13.56,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-copy",
+      "background": "--raised",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#181e35",
+      "ratio": 12.96,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--pos",
+      "background": "--ground",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#01030f",
+      "ratio": 11.34,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--ground",
+      "textHex": "#bdbdc1",
+      "backgroundHex": "#01030f",
+      "ratio": 10.98,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--rose",
+      "background": "--ground",
+      "textHex": "#ffa0aa",
+      "backgroundHex": "#01030f",
+      "ratio": 10.64,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--ink",
+      "background": "--rose",
+      "textHex": "#01030f",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 10.64,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--pos",
+      "background": "--surface",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 10.57,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--surface",
+      "textHex": "#bfc0c5",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 10.55,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--band",
+      "textHex": "#c1c2c8",
+      "backgroundHex": "#11162a",
+      "ratio": 10.08,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--rose",
+      "background": "--surface",
+      "textHex": "#ffa0aa",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 9.91,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--pos",
+      "background": "--band",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#11162a",
+      "ratio": 9.88,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--surface-2",
+      "textHex": "#c2c3c9",
+      "backgroundHex": "#141a30",
+      "ratio": 9.79,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text-2",
+      "background": "--ground",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#01030f",
+      "ratio": 9.78,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--ink-2",
+      "background": "--paper",
+      "textHex": "#444444",
+      "backgroundHex": "#ffffff",
+      "ratio": 9.74,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--raised",
+      "textHex": "#c3c5ca",
+      "backgroundHex": "#181e35",
+      "ratio": 9.53,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--pos",
+      "background": "--surface-2",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#141a30",
+      "ratio": 9.49,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--rose",
+      "background": "--band",
+      "textHex": "#ffa0aa",
+      "backgroundHex": "#11162a",
+      "ratio": 9.27,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--ink-2",
+      "background": "--paper-2",
+      "textHex": "#444444",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 9.23,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text-2",
+      "background": "--surface",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 9.11,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--pos",
+      "background": "--raised",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#181e35",
+      "ratio": 9.08,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--rose",
+      "background": "--surface-2",
+      "textHex": "#ffa0aa",
+      "backgroundHex": "#141a30",
+      "ratio": 8.9,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--ink-2",
+      "background": "--lavender",
+      "textHex": "#444444",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 8.86,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text-2",
+      "background": "--band",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#11162a",
+      "ratio": 8.52,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--rose",
+      "background": "--raised",
+      "textHex": "#ffa0aa",
+      "backgroundHex": "#181e35",
+      "ratio": 8.51,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text-2",
+      "background": "--surface-2",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#141a30",
+      "ratio": 8.18,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text-2",
+      "background": "--raised",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#181e35",
+      "ratio": 7.82,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--ground",
+      "textHex": "#e8808c",
+      "backgroundHex": "#01030f",
+      "ratio": 7.73,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text-3",
+      "background": "--ground",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#01030f",
+      "ratio": 7.66,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--surface",
+      "textHex": "#e8808c",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 7.21,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--text-3",
+      "background": "--surface",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 7.14,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": true
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--band",
+      "textHex": "#e8808c",
+      "backgroundHex": "#11162a",
+      "ratio": 6.74,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-3",
+      "background": "--band",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#11162a",
+      "ratio": 6.68,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--ground",
+      "textHex": "#6d92de",
+      "backgroundHex": "#01030f",
+      "ratio": 6.67,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--surface-2",
+      "textHex": "#e8808c",
+      "backgroundHex": "#141a30",
+      "ratio": 6.47,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-3",
+      "background": "--surface-2",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#141a30",
+      "ratio": 6.41,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--ground",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#01030f",
+      "ratio": 6.27,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--surface",
+      "textHex": "#6d92de",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 6.22,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--raised",
+      "textHex": "#e8808c",
+      "backgroundHex": "#181e35",
+      "ratio": 6.19,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--paper",
+      "textHex": "#616161",
+      "backgroundHex": "#ffffff",
+      "ratio": 6.19,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-3",
+      "background": "--raised",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#181e35",
+      "ratio": 6.13,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac",
+      "background": "--ground",
+      "textHex": "#378df0",
+      "backgroundHex": "#01030f",
+      "ratio": 6.1,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink",
+      "background": "--lilac",
+      "textHex": "#01030f",
+      "backgroundHex": "#378df0",
+      "ratio": 6.1,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--paper-2",
+      "textHex": "#616161",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 5.87,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--surface",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 5.84,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--band",
+      "textHex": "#6d92de",
+      "backgroundHex": "#11162a",
+      "ratio": 5.82,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac",
+      "background": "--surface",
+      "textHex": "#378df0",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 5.69,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--lavender",
+      "textHex": "#616161",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 5.63,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--surface-2",
+      "textHex": "#6d92de",
+      "backgroundHex": "#141a30",
+      "ratio": 5.59,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--band",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#11162a",
+      "ratio": 5.46,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--raised",
+      "textHex": "#6d92de",
+      "backgroundHex": "#181e35",
+      "ratio": 5.34,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac",
+      "background": "--band",
+      "textHex": "#378df0",
+      "backgroundHex": "#11162a",
+      "ratio": 5.32,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--surface-2",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#141a30",
+      "ratio": 5.24,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac",
+      "background": "--surface-2",
+      "textHex": "#378df0",
+      "backgroundHex": "#141a30",
+      "ratio": 5.11,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-2",
+      "background": "--rose",
+      "textHex": "#444444",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 5.04,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--raised",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#181e35",
+      "ratio": 5.01,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac",
+      "background": "--raised",
+      "textHex": "#378df0",
+      "backgroundHex": "#181e35",
+      "ratio": 4.88,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--ground",
+      "textHex": "#767a90",
+      "backgroundHex": "#01030f",
+      "ratio": 4.85,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--surface",
+      "textHex": "#767a90",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 4.52,
+      "aaNormal": true,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--paper",
+      "textHex": "#767a90",
+      "backgroundHex": "#ffffff",
+      "ratio": 4.24,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--band",
+      "textHex": "#767a90",
+      "backgroundHex": "#11162a",
+      "ratio": 4.23,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--surface-2",
+      "textHex": "#767a90",
+      "backgroundHex": "#141a30",
+      "ratio": 4.06,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--paper-2",
+      "textHex": "#767a90",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 4.01,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--raised",
+      "textHex": "#767a90",
+      "backgroundHex": "#181e35",
+      "ratio": 3.88,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--lavender",
+      "textHex": "#767a90",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 3.85,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac",
+      "background": "--paper",
+      "textHex": "#378df0",
+      "backgroundHex": "#ffffff",
+      "ratio": 3.37,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text",
+      "background": "--lilac",
+      "textHex": "#ffffff",
+      "backgroundHex": "#378df0",
+      "ratio": 3.37,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--ground",
+      "textHex": "#616161",
+      "backgroundHex": "#01030f",
+      "ratio": 3.32,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--paper",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#ffffff",
+      "ratio": 3.28,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--rose",
+      "textHex": "#616161",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 3.2,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac",
+      "background": "--paper-2",
+      "textHex": "#378df0",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 3.19,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--paper-2",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 3.11,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--surface",
+      "textHex": "#616161",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 3.1,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--paper",
+      "textHex": "#6d92de",
+      "backgroundHex": "#ffffff",
+      "ratio": 3.08,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac",
+      "background": "--lavender",
+      "textHex": "#378df0",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 3.07,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lavender",
+      "background": "--lilac",
+      "textHex": "#f4f3fe",
+      "backgroundHex": "#378df0",
+      "ratio": 3.07,
+      "aaNormal": false,
+      "aaLarge": true,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--lavender",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 2.98,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--paper-2",
+      "textHex": "#6d92de",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 2.92,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--band",
+      "textHex": "#616161",
+      "backgroundHex": "#11162a",
+      "ratio": 2.89,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-2",
+      "background": "--lilac",
+      "textHex": "#444444",
+      "backgroundHex": "#378df0",
+      "ratio": 2.89,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--lavender",
+      "textHex": "#6d92de",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 2.8,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--surface-2",
+      "textHex": "#616161",
+      "backgroundHex": "#141a30",
+      "ratio": 2.78,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-3",
+      "background": "--paper",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#ffffff",
+      "ratio": 2.68,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--raised",
+      "textHex": "#616161",
+      "backgroundHex": "#181e35",
+      "ratio": 2.66,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--paper",
+      "textHex": "#e8808c",
+      "backgroundHex": "#ffffff",
+      "ratio": 2.66,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-copy",
+      "background": "--lilac",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#378df0",
+      "ratio": 2.65,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-3",
+      "background": "--paper-2",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 2.54,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--paper-2",
+      "textHex": "#e8808c",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 2.52,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--lilac",
+      "textHex": "#cbe1fb",
+      "backgroundHex": "#378df0",
+      "ratio": 2.52,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-3",
+      "background": "--lavender",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 2.44,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--lavender",
+      "textHex": "#e8808c",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 2.42,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--rose",
+      "textHex": "#767a90",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 2.19,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-2",
+      "background": "--ground",
+      "textHex": "#444444",
+      "backgroundHex": "#01030f",
+      "ratio": 2.11,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-2",
+      "background": "--paper",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#ffffff",
+      "ratio": 2.1,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-2",
+      "background": "--paper-2",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 1.99,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-2",
+      "background": "--surface",
+      "textHex": "#444444",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 1.97,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose",
+      "background": "--paper",
+      "textHex": "#ffa0aa",
+      "backgroundHex": "#ffffff",
+      "ratio": 1.93,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text",
+      "background": "--rose",
+      "textHex": "#ffffff",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.93,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-2",
+      "background": "--lavender",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 1.91,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--pos",
+      "background": "--lilac",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#378df0",
+      "ratio": 1.86,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-2",
+      "background": "--band",
+      "textHex": "#444444",
+      "backgroundHex": "#11162a",
+      "ratio": 1.84,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-3",
+      "background": "--lilac",
+      "textHex": "#616161",
+      "backgroundHex": "#378df0",
+      "ratio": 1.84,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose",
+      "background": "--paper-2",
+      "textHex": "#ffa0aa",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 1.83,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--pos",
+      "background": "--paper",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#ffffff",
+      "ratio": 1.81,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-2",
+      "background": "--surface-2",
+      "textHex": "#444444",
+      "backgroundHex": "#141a30",
+      "ratio": 1.77,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose",
+      "background": "--lavender",
+      "textHex": "#ffa0aa",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 1.76,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lavender",
+      "background": "--rose",
+      "textHex": "#f4f3fe",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.76,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac",
+      "background": "--rose",
+      "textHex": "#378df0",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.74,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose",
+      "background": "--lilac",
+      "textHex": "#ffa0aa",
+      "backgroundHex": "#378df0",
+      "ratio": 1.74,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--pos",
+      "background": "--paper-2",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 1.72,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--rose",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.7,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink-2",
+      "background": "--raised",
+      "textHex": "#444444",
+      "backgroundHex": "#181e35",
+      "ratio": 1.69,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--pos",
+      "background": "--lavender",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 1.65,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--rose",
+      "textHex": "#ffe6e9",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.63,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-2",
+      "background": "--lilac",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#378df0",
+      "ratio": 1.6,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--rose",
+      "textHex": "#6d92de",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.59,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-copy",
+      "background": "--rose",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.52,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-3",
+      "background": "--rose",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.39,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--rose",
+      "textHex": "#e8808c",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.38,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-copy",
+      "background": "--paper",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#ffffff",
+      "ratio": 1.27,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--rose-deep",
+      "background": "--lilac",
+      "textHex": "#e8808c",
+      "backgroundHex": "#378df0",
+      "ratio": 1.27,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-3",
+      "background": "--lilac",
+      "textHex": "#9a9db0",
+      "backgroundHex": "#378df0",
+      "ratio": 1.26,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-4",
+      "background": "--lilac",
+      "textHex": "#767a90",
+      "backgroundHex": "#378df0",
+      "ratio": 1.26,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink",
+      "background": "--raised",
+      "textHex": "#01030f",
+      "backgroundHex": "#181e35",
+      "ratio": 1.25,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-copy",
+      "background": "--paper-2",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 1.2,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink",
+      "background": "--surface-2",
+      "textHex": "#01030f",
+      "backgroundHex": "#141a30",
+      "ratio": 1.19,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink",
+      "background": "--band",
+      "textHex": "#01030f",
+      "backgroundHex": "#11162a",
+      "ratio": 1.15,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-copy",
+      "background": "--lavender",
+      "textHex": "#e2e4ec",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 1.15,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lavender",
+      "background": "--paper",
+      "textHex": "#f4f3fe",
+      "backgroundHex": "#ffffff",
+      "ratio": 1.1,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text",
+      "background": "--lavender",
+      "textHex": "#ffffff",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 1.1,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text-2",
+      "background": "--rose",
+      "textHex": "#b0b2c1",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.09,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lilac-deep",
+      "background": "--lilac",
+      "textHex": "#6d92de",
+      "backgroundHex": "#378df0",
+      "ratio": 1.09,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--ink",
+      "background": "--surface",
+      "textHex": "#01030f",
+      "backgroundHex": "#0a0e1f",
+      "ratio": 1.07,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--lavender",
+      "textHex": "#fcfcff",
+      "backgroundHex": "#f4f3fe",
+      "ratio": 1.07,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--pos",
+      "background": "--rose",
+      "textHex": "#e8b87d",
+      "backgroundHex": "#ffa0aa",
+      "ratio": 1.07,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--text",
+      "background": "--paper-2",
+      "textHex": "#ffffff",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 1.06,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--paper-2",
+      "textHex": "#fdfdff",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 1.04,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--lavender",
+      "background": "--paper-2",
+      "textHex": "#f4f3fe",
+      "backgroundHex": "#f6f9fe",
+      "ratio": 1.04,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--placeholder",
+      "background": "--lilac",
+      "textHex": "#8a8da0",
+      "backgroundHex": "#378df0",
+      "ratio": 1.03,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    },
+    {
+      "text": "--form-placeholder",
+      "background": "--paper",
+      "textHex": "#ffffff",
+      "backgroundHex": "#ffffff",
+      "ratio": 1,
+      "aaNormal": false,
+      "aaLarge": false,
+      "aaaNormal": false
+    }
+  ],
+  "literals": [
+    {
+      "value": "#000",
+      "count": 32,
+      "byProperty": [
+        {
+          "property": "mask",
+          "count": 32
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#fff",
+      "count": 16,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 6
+        },
+        {
+          "property": "background",
+          "count": 6
+        },
+        {
+          "property": "border / outline",
+          "count": 4
+        }
+      ],
+      "contexts": {
+        "button": 6,
+        "link": 1,
+        "state": 5
+      },
+      "hex": "#ffffff",
+      "alpha": 1,
+      "matchesTokens": [
+        "--text",
+        "--paper"
+      ]
+    },
+    {
+      "value": "rgba(255,255,255,.06)",
+      "count": 12,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 7
+        },
+        {
+          "property": "background",
+          "count": 3
+        },
+        {
+          "property": "border / outline",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.06,
+      "matchesTokens": []
+    },
+    {
+      "value": "#ececec",
+      "count": 11,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 8
+        },
+        {
+          "property": "background",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ececec",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#6d92de",
+      "count": 9,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 9
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#6d92de",
+      "alpha": 1,
+      "matchesTokens": [
+        "--lilac-deep"
+      ]
+    },
+    {
+      "value": "rgba(255,160,170,.55)",
+      "count": 7,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 7
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.55,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.6)",
+      "count": 7,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 6
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.6,
+      "matchesTokens": []
+    },
+    {
+      "value": "#b4b4b4",
+      "count": 6,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 3
+        },
+        {
+          "property": "border / outline",
+          "count": 2
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#b4b4b4",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.12)",
+      "count": 6,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 4
+        },
+        {
+          "property": "border / outline",
+          "count": 1
+        },
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.12,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(7,11,28,0)",
+      "count": 6,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 6
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#070b1c",
+      "alpha": 0,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.5)",
+      "count": 5,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 5
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.5,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.08)",
+      "count": 5,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 3
+        },
+        {
+          "property": "shadow / glow",
+          "count": 1
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.08,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.22)",
+      "count": 5,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 4
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.22,
+      "matchesTokens": []
+    },
+    {
+      "value": "#d4d6e0",
+      "count": 5,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 5
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 1,
+        "state": 0
+      },
+      "hex": "#d4d6e0",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#070b1c",
+      "count": 5,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 5
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#070b1c",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.25)",
+      "count": 5,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 5
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.25,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.45)",
+      "count": 4,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        },
+        {
+          "property": "shadow / glow",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.45,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.18)",
+      "count": 4,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 3
+        },
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.18,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.18)",
+      "count": 4,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 3
+        },
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.18,
+      "matchesTokens": []
+    },
+    {
+      "value": "#2f2f2f",
+      "count": 4,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 4
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#2f2f2f",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.1)",
+      "count": 4,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 2
+        },
+        {
+          "property": "shadow / glow",
+          "count": 1
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#ffffff",
+      "alpha": 0.1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.07)",
+      "count": 4,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 4
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.07,
+      "matchesTokens": []
+    },
+    {
+      "value": "#ffd6dc",
+      "count": 4,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 4
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffd6dc",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(7,11,28,.92)",
+      "count": 4,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 4
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#070b1c",
+      "alpha": 0.92,
+      "matchesTokens": []
+    },
+    {
+      "value": "#ffa0aa",
+      "count": 4,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 2
+        },
+        {
+          "property": "border / outline",
+          "count": 1
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 2
+      },
+      "hex": "#ffa0aa",
+      "alpha": 1,
+      "matchesTokens": [
+        "--rose"
+      ]
+    },
+    {
+      "value": "rgba(255,255,255,.35)",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        },
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.35,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.22)",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.22,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.16)",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.16,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.5)",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 1
+        },
+        {
+          "property": "background",
+          "count": 1
+        },
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 1,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.5,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.9)",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.9,
+      "matchesTokens": []
+    },
+    {
+      "value": "#212121",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        },
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#212121",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#424242",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#424242",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.04)",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.04,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(9,12,20,.5)",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#090c14",
+      "alpha": 0.5,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.14)",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.14,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.6)",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 2
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.6,
+      "matchesTokens": []
+    },
+    {
+      "value": "#7a7e95",
+      "count": 3,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 3
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#7a7e95",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.94)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.94,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.42)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.42,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.9)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        },
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.9,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.55)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.55,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.24)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.24,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,184,125,.45)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e8b87d",
+      "alpha": 0.45,
+      "matchesTokens": []
+    },
+    {
+      "value": "#bababa",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 1,
+        "state": 2
+      },
+      "hex": "#bababa",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,184,125,.1)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e8b87d",
+      "alpha": 0.1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.05)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.05,
+      "matchesTokens": []
+    },
+    {
+      "value": "#3a3a3a",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 1
+        },
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#3a3a3a",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#303030",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#303030",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#14112b",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#14112b",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.85)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.85,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.09)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        },
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#ffffff",
+      "alpha": 0.09,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.26)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.26,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.16)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "mask",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.16,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.55)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.55,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.14)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        },
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.14,
+      "matchesTokens": []
+    },
+    {
+      "value": "#e3e4ec",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e3e4ec",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#c99be0",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#c99be0",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.10)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        },
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.7)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.7,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.015)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.015,
+      "matchesTokens": []
+    },
+    {
+      "value": "#03040d",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#03040d",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(245,159,174,0)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#f59fae",
+      "alpha": 0,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(245,159,174,.7)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#f59fae",
+      "alpha": 0.7,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(109,146,222,.7)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#6d92de",
+      "alpha": 0.7,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(109,146,222,0)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#6d92de",
+      "alpha": 0,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(7,11,28,.85)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#070b1c",
+      "alpha": 0.85,
+      "matchesTokens": []
+    },
+    {
+      "value": "#a9acc0",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 1,
+        "state": 0
+      },
+      "hex": "#a9acc0",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#8a8ea5",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#8a8ea5",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgb(1789176/.6)",
+      "count": 2,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 2
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#1b4cf801NaN",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#12131a",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 1,
+        "state": 0
+      },
+      "hex": "#12131a",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.1)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.58)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.58,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.34)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.34,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.30)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.3,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.72)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.72,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.05)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.05,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.95)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.95,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,1)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 1,
+      "matchesTokens": [
+        "--lilac"
+      ]
+    },
+    {
+      "value": "rgba(55,141,240,.38)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.38,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.30)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.3,
+      "matchesTokens": []
+    },
+    {
+      "value": "#ffffff",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 1,
+      "matchesTokens": [
+        "--text",
+        "--paper"
+      ]
+    },
+    {
+      "value": "#01030f",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 1,
+      "matchesTokens": [
+        "--void",
+        "--ground",
+        "--on-accent",
+        "--ink"
+      ]
+    },
+    {
+      "value": "rgba(245,159,174,.55)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#f59fae",
+      "alpha": 0.55,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(109,146,222,.55)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#6d92de",
+      "alpha": 0.55,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,184,125,.14)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e8b87d",
+      "alpha": 0.14,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,184,125,.6)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e8b87d",
+      "alpha": 0.6,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,184,125,.16)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e8b87d",
+      "alpha": 0.16,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.10)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#6b7489",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#6b7489",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.07)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.07,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.12)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.12,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.1)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.05)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.05,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.028)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.028,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.72)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.72,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(9,12,20,.88)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#090c14",
+      "alpha": 0.88,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.5)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 1,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.5,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.018)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.018,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,128,140,.22)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e8808c",
+      "alpha": 0.22,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,128,140,.18)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#e8808c",
+      "alpha": 0.18,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.45)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.45,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.15)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.15,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(3,5,9,.66)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#030509",
+      "alpha": 0.66,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(21,27,42,.62)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#151b2a",
+      "alpha": 0.62,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.02)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.02,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.20)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.2,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.025)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.025,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.08)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.08,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,184,125,.5)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e8b87d",
+      "alpha": 0.5,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,184,125,.38)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e8b87d",
+      "alpha": 0.38,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(232,184,125,.06)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e8b87d",
+      "alpha": 0.06,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.18)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.18,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.022)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.022,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.88)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.88,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.34)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.34,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.7)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.7,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.32)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.32,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.20)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.2,
+      "matchesTokens": []
+    },
+    {
+      "value": "#a9cdfb",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#a9cdfb",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.1)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.92)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.92,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.97)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.97,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,0)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.9)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.9,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.96)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.96,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.6)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.6,
+      "matchesTokens": []
+    },
+    {
+      "value": "#151b33",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#151b33",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#0c1024",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#0c1024",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#2a2348",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#2a2348",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#11142b",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#11142b",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#0d1226",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#0d1226",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,214,220,.14)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffd6dc",
+      "alpha": 0.14,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.75)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.75,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(109,146,222,.3)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#6d92de",
+      "alpha": 0.3,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(109,146,222,.45)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#6d92de",
+      "alpha": 0.45,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.045)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.045,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.02)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 1
+      },
+      "hex": "#ffffff",
+      "alpha": 0.02,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.4)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.4,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.01)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.01,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(10,14,32,.5)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#0a0e20",
+      "alpha": 0.5,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.08)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.08,
+      "matchesTokens": []
+    },
+    {
+      "value": "#141a33",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#141a33",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#0a0e20",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#0a0e20",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(7,11,28,.6)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#070b1c",
+      "alpha": 0.6,
+      "matchesTokens": []
+    },
+    {
+      "value": "#e6e7ef",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#e6e7ef",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(7,11,28,.86)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#070b1c",
+      "alpha": 0.86,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(7,11,28,.95)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#070b1c",
+      "alpha": 0.95,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(10,14,32,.45)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#0a0e20",
+      "alpha": 0.45,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(55,141,240,.2)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 0.2,
+      "matchesTokens": []
+    },
+    {
+      "value": "#2a2f45",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "border / outline",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#2a2f45",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,160,170,.32)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffa0aa",
+      "alpha": 0.32,
+      "matchesTokens": []
+    },
+    {
+      "value": "#378df0",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#378df0",
+      "alpha": 1,
+      "matchesTokens": [
+        "--lilac"
+      ]
+    },
+    {
+      "value": "#403862",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#403862",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#373055",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#373055",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "#2d2747",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#2d2747",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.75)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.75,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(255,255,255,.22)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#ffffff",
+      "alpha": 0.22,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(109,146,222,.6)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#6d92de",
+      "alpha": 0.6,
+      "matchesTokens": []
+    },
+    {
+      "value": "#3a3e52",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "text",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#3a3e52",
+      "alpha": 1,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(7,11,28,.96)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#070b1c",
+      "alpha": 0.96,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(0,0,0,.8)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#000000",
+      "alpha": 0.8,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.7)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "shadow / glow",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.7,
+      "matchesTokens": []
+    },
+    {
+      "value": "rgba(1,3,15,.45)",
+      "count": 1,
+      "byProperty": [
+        {
+          "property": "background",
+          "count": 1
+        }
+      ],
+      "contexts": {
+        "button": 0,
+        "link": 0,
+        "state": 0
+      },
+      "hex": "#01030f",
+      "alpha": 0.45,
+      "matchesTokens": []
+    }
+  ]
+}

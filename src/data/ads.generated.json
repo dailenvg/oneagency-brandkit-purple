@@ -1,0 +1,1362 @@
+{
+  "version": "1.0",
+  "generated": "2026-11-17",
+  "brandKitUrl": "https://www.magnific.com/app/brand-kits/j7NxLD0Vkf",
+  "folderUrl": "https://www.magnific.com/app/projects/2ec0b013-16b0-451a-a365-7560a3a3ae11",
+  "notes": "Editable source for every template and sample is the Magnific design at magnificUrl (private to the ONE Agency Magnific account). JPG q85 and WebP q82 made locally from the Magnific PNG export.",
+  "items": [
+    {
+      "id": "template-social-square-1080x1080",
+      "group": "template",
+      "channel": "social",
+      "concept": null,
+      "name": "Social template · square · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/social/one-agency_template-social_square_1080x1080.png",
+        "jpg": "/kit/templates/social/one-agency_template-social_square_1080x1080.jpg",
+        "webp": "/kit/templates/social/one-agency_template-social_square_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/8a6J41ZIrU",
+      "notes": "Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-social-portrait-1080x1350",
+      "group": "template",
+      "channel": "social",
+      "concept": null,
+      "name": "Social template · portrait · 1080x1350",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "png": "/kit/templates/social/one-agency_template-social_portrait_1080x1350.png",
+        "jpg": "/kit/templates/social/one-agency_template-social_portrait_1080x1350.jpg",
+        "webp": "/kit/templates/social/one-agency_template-social_portrait_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/8a6J41ZIrU",
+      "notes": "Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-social-story-1080x1920",
+      "group": "template",
+      "channel": "social",
+      "concept": null,
+      "name": "Social template · story · 1080x1920",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "png": "/kit/templates/social/one-agency_template-social_story_1080x1920.png",
+        "jpg": "/kit/templates/social/one-agency_template-social_story_1080x1920.jpg",
+        "webp": "/kit/templates/social/one-agency_template-social_story_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/8a6J41ZIrU",
+      "notes": "Content kept inside the story safe zone (top 220px, bottom 340px clear). Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-social-carousel-card-1-hook-1080x1080",
+      "group": "template",
+      "channel": "social-carousel",
+      "concept": null,
+      "name": "Social carousel template · card 1 hook · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-1-hook_1080x1080.png",
+        "jpg": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-1-hook_1080x1080.jpg",
+        "webp": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-1-hook_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/9ZFvxzKNYZ",
+      "notes": "Card 1 of 5: hook. Gradient line runs continuously across all five cards. Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-social-carousel-card-2-point-1080x1080",
+      "group": "template",
+      "channel": "social-carousel",
+      "concept": null,
+      "name": "Social carousel template · card 2 point · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-2-point_1080x1080.png",
+        "jpg": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-2-point_1080x1080.jpg",
+        "webp": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-2-point_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/9ZFvxzKNYZ",
+      "notes": "Card 2 of 5: point 01. Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-social-carousel-card-3-point-1080x1080",
+      "group": "template",
+      "channel": "social-carousel",
+      "concept": null,
+      "name": "Social carousel template · card 3 point · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-3-point_1080x1080.png",
+        "jpg": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-3-point_1080x1080.jpg",
+        "webp": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-3-point_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/9ZFvxzKNYZ",
+      "notes": "Card 3 of 5: point 02. Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-social-carousel-card-4-point-1080x1080",
+      "group": "template",
+      "channel": "social-carousel",
+      "concept": null,
+      "name": "Social carousel template · card 4 point · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-4-point_1080x1080.png",
+        "jpg": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-4-point_1080x1080.jpg",
+        "webp": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-4-point_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/9ZFvxzKNYZ",
+      "notes": "Card 4 of 5: point 03. Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-social-carousel-card-5-cta-1080x1080",
+      "group": "template",
+      "channel": "social-carousel",
+      "concept": null,
+      "name": "Social carousel template · card 5 cta · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-5-cta_1080x1080.png",
+        "jpg": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-5-cta_1080x1080.jpg",
+        "webp": "/kit/templates/social-carousel/one-agency_template-social-carousel_card-5-cta_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/9ZFvxzKNYZ",
+      "notes": "Card 5 of 5: CTA; the line ends on a dot (ends on a result). Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-linkedin-landscape-1200x627",
+      "group": "template",
+      "channel": "linkedin",
+      "concept": null,
+      "name": "LinkedIn template · landscape · 1200x627",
+      "width": 1200,
+      "height": 627,
+      "files": {
+        "png": "/kit/templates/linkedin/one-agency_template-linkedin_landscape_1200x627.png",
+        "jpg": "/kit/templates/linkedin/one-agency_template-linkedin_landscape_1200x627.jpg",
+        "webp": "/kit/templates/linkedin/one-agency_template-linkedin_landscape_1200x627.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/LwoMCN7swO",
+      "notes": "Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-linkedin-square-1080x1080",
+      "group": "template",
+      "channel": "linkedin",
+      "concept": null,
+      "name": "LinkedIn template · square · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/linkedin/one-agency_template-linkedin_square_1080x1080.png",
+        "jpg": "/kit/templates/linkedin/one-agency_template-linkedin_square_1080x1080.jpg",
+        "webp": "/kit/templates/linkedin/one-agency_template-linkedin_square_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/LwoMCN7swO",
+      "notes": "Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-google-display-landscape-1200x628",
+      "group": "template",
+      "channel": "google-display",
+      "concept": null,
+      "name": "Google display template · landscape · 1200x628",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "png": "/kit/templates/google-display/one-agency_template-google-display_landscape_1200x628.png",
+        "jpg": "/kit/templates/google-display/one-agency_template-google-display_landscape_1200x628.jpg",
+        "webp": "/kit/templates/google-display/one-agency_template-google-display_landscape_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/SymdF2sUb8",
+      "notes": "Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-google-display-square-1200x1200",
+      "group": "template",
+      "channel": "google-display",
+      "concept": null,
+      "name": "Google display template · square · 1200x1200",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/templates/google-display/one-agency_template-google-display_square_1200x1200.png",
+        "jpg": "/kit/templates/google-display/one-agency_template-google-display_square_1200x1200.jpg",
+        "webp": "/kit/templates/google-display/one-agency_template-google-display_square_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/SymdF2sUb8",
+      "notes": "Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-google-display-logo-square-1200x1200",
+      "group": "template",
+      "channel": "google-display",
+      "concept": null,
+      "name": "Google display template · logo square · 1200x1200",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/templates/google-display/one-agency_template-google-display_logo-square_1200x1200.png",
+        "jpg": "/kit/templates/google-display/one-agency_template-google-display_logo-square_1200x1200.jpg",
+        "webp": "/kit/templates/google-display/one-agency_template-google-display_logo-square_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/SymdF2sUb8",
+      "notes": "Google Ads square logo asset. Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-google-display-logo-landscape-1200x300",
+      "group": "template",
+      "channel": "google-display",
+      "concept": null,
+      "name": "Google display template · logo landscape · 1200x300",
+      "width": 1200,
+      "height": 300,
+      "files": {
+        "png": "/kit/templates/google-display/one-agency_template-google-display_logo-landscape_1200x300.png",
+        "jpg": "/kit/templates/google-display/one-agency_template-google-display_logo-landscape_1200x300.jpg",
+        "webp": "/kit/templates/google-display/one-agency_template-google-display_logo-landscape_1200x300.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/SymdF2sUb8",
+      "notes": "Google Ads landscape logo asset (4:1). Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-web-banners-billboard-970x250",
+      "group": "template",
+      "channel": "web-banners",
+      "concept": null,
+      "name": "Web banners template · billboard · 970x250",
+      "width": 970,
+      "height": 250,
+      "files": {
+        "png": "/kit/templates/web-banners/one-agency_template-web-banners_billboard_970x250.png",
+        "jpg": "/kit/templates/web-banners/one-agency_template-web-banners_billboard_970x250.jpg",
+        "webp": "/kit/templates/web-banners/one-agency_template-web-banners_billboard_970x250.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/CqziDSnEEy",
+      "notes": "Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-web-banners-leaderboard-728x90",
+      "group": "template",
+      "channel": "web-banners",
+      "concept": null,
+      "name": "Web banners template · leaderboard · 728x90",
+      "width": 728,
+      "height": 90,
+      "files": {
+        "png": "/kit/templates/web-banners/one-agency_template-web-banners_leaderboard_728x90.png",
+        "jpg": "/kit/templates/web-banners/one-agency_template-web-banners_leaderboard_728x90.jpg",
+        "webp": "/kit/templates/web-banners/one-agency_template-web-banners_leaderboard_728x90.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/CqziDSnEEy",
+      "notes": "Simplified: logo, one-line headline, CTA. Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-web-banners-half-page-300x600",
+      "group": "template",
+      "channel": "web-banners",
+      "concept": null,
+      "name": "Web banners template · half page · 300x600",
+      "width": 300,
+      "height": 600,
+      "files": {
+        "png": "/kit/templates/web-banners/one-agency_template-web-banners_half-page_300x600.png",
+        "jpg": "/kit/templates/web-banners/one-agency_template-web-banners_half-page_300x600.jpg",
+        "webp": "/kit/templates/web-banners/one-agency_template-web-banners_half-page_300x600.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/CqziDSnEEy",
+      "notes": "Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-web-banners-medium-rectangle-300x250",
+      "group": "template",
+      "channel": "web-banners",
+      "concept": null,
+      "name": "Web banners template · medium rectangle · 300x250",
+      "width": 300,
+      "height": 250,
+      "files": {
+        "png": "/kit/templates/web-banners/one-agency_template-web-banners_medium-rectangle_300x250.png",
+        "jpg": "/kit/templates/web-banners/one-agency_template-web-banners_medium-rectangle_300x250.jpg",
+        "webp": "/kit/templates/web-banners/one-agency_template-web-banners_medium-rectangle_300x250.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/CqziDSnEEy",
+      "notes": "Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-web-banners-wide-skyscraper-160x600",
+      "group": "template",
+      "channel": "web-banners",
+      "concept": null,
+      "name": "Web banners template · wide skyscraper · 160x600",
+      "width": 160,
+      "height": 600,
+      "files": {
+        "png": "/kit/templates/web-banners/one-agency_template-web-banners_wide-skyscraper_160x600.png",
+        "jpg": "/kit/templates/web-banners/one-agency_template-web-banners_wide-skyscraper_160x600.jpg",
+        "webp": "/kit/templates/web-banners/one-agency_template-web-banners_wide-skyscraper_160x600.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/CqziDSnEEy",
+      "notes": "Simplified: logo, short headline, CTA. Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "template-web-banners-mobile-banner-320x50",
+      "group": "template",
+      "channel": "web-banners",
+      "concept": null,
+      "name": "Web banners template · mobile banner · 320x50",
+      "width": 320,
+      "height": 50,
+      "files": {
+        "png": "/kit/templates/web-banners/one-agency_template-web-banners_mobile-banner_320x50.png",
+        "jpg": "/kit/templates/web-banners/one-agency_template-web-banners_mobile-banner_320x50.jpg",
+        "webp": "/kit/templates/web-banners/one-agency_template-web-banners_mobile-banner_320x50.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/CqziDSnEEy",
+      "notes": "Simplified: ONE icon, short headline, CTA. Placeholder copy from the source pack; edit in Magnific (one page per size)."
+    },
+    {
+      "id": "sample-growth-audit-1080x1080",
+      "group": "sample",
+      "channel": "social",
+      "concept": "growth-audit",
+      "name": "Sample ad · Growth Audit · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1080x1080.png",
+        "jpg": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1080x1080.jpg",
+        "webp": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/jUBVbQfLD0",
+      "notes": "Concept A. Copy verbatim from the source pack (live site). Accent word: holes."
+    },
+    {
+      "id": "sample-growth-audit-1080x1350",
+      "group": "sample",
+      "channel": "social",
+      "concept": "growth-audit",
+      "name": "Sample ad · Growth Audit · 1080x1350",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "png": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1080x1350.png",
+        "jpg": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1080x1350.jpg",
+        "webp": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/jUBVbQfLD0",
+      "notes": "Concept A. Copy verbatim from the source pack (live site). Accent word: holes."
+    },
+    {
+      "id": "sample-growth-audit-1080x1920",
+      "group": "sample",
+      "channel": "social",
+      "concept": "growth-audit",
+      "name": "Sample ad · Growth Audit · 1080x1920",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "png": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1080x1920.png",
+        "jpg": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1080x1920.jpg",
+        "webp": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/jUBVbQfLD0",
+      "notes": "Concept A. Copy verbatim from the source pack (live site). Accent word: holes."
+    },
+    {
+      "id": "sample-growth-audit-1200x627",
+      "group": "sample",
+      "channel": "linkedin",
+      "concept": "growth-audit",
+      "name": "Sample ad · Growth Audit · 1200x627",
+      "width": 1200,
+      "height": 627,
+      "files": {
+        "png": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1200x627.png",
+        "jpg": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1200x627.jpg",
+        "webp": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1200x627.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/jUBVbQfLD0",
+      "notes": "Concept A. Copy verbatim from the source pack (live site). Accent word: holes."
+    },
+    {
+      "id": "sample-growth-audit-1200x628",
+      "group": "sample",
+      "channel": "google-display",
+      "concept": "growth-audit",
+      "name": "Sample ad · Growth Audit · 1200x628",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "png": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1200x628.png",
+        "jpg": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1200x628.jpg",
+        "webp": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/jUBVbQfLD0",
+      "notes": "Concept A. Copy verbatim from the source pack (live site). Accent word: holes."
+    },
+    {
+      "id": "sample-growth-audit-300x250",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "growth-audit",
+      "name": "Sample ad · Growth Audit · 300x250",
+      "width": 300,
+      "height": 250,
+      "files": {
+        "png": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_300x250.png",
+        "jpg": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_300x250.jpg",
+        "webp": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_300x250.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/jUBVbQfLD0",
+      "notes": "Concept A. Copy verbatim from the source pack (live site). Accent word: holes. Eyebrow and sub dropped for size."
+    },
+    {
+      "id": "sample-growth-audit-300x600",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "growth-audit",
+      "name": "Sample ad · Growth Audit · 300x600",
+      "width": 300,
+      "height": 600,
+      "files": {
+        "png": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_300x600.png",
+        "jpg": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_300x600.jpg",
+        "webp": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_300x600.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/jUBVbQfLD0",
+      "notes": "Concept A. Copy verbatim from the source pack (live site). Accent word: holes."
+    },
+    {
+      "id": "sample-growth-audit-728x90",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "growth-audit",
+      "name": "Sample ad · Growth Audit · 728x90",
+      "width": 728,
+      "height": 90,
+      "files": {
+        "png": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_728x90.png",
+        "jpg": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_728x90.jpg",
+        "webp": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_728x90.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/jUBVbQfLD0",
+      "notes": "Concept A. Copy verbatim from the source pack (live site). Accent word: holes. Headline + CTA only."
+    },
+    {
+      "id": "sample-growth-audit-970x250",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "growth-audit",
+      "name": "Sample ad · Growth Audit · 970x250",
+      "width": 970,
+      "height": 250,
+      "files": {
+        "png": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_970x250.png",
+        "jpg": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_970x250.jpg",
+        "webp": "/kit/templates/samples/growth-audit/one-agency_ad-growth-audit_970x250.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/jUBVbQfLD0",
+      "notes": "Concept A. Copy verbatim from the source pack (live site). Accent word: holes. Eyebrow and sub dropped for size."
+    },
+    {
+      "id": "sample-proof-1080x1080",
+      "group": "sample",
+      "channel": "social",
+      "concept": "proof",
+      "name": "Sample ad · Proof · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/samples/proof/one-agency_ad-proof_1080x1080.png",
+        "jpg": "/kit/templates/samples/proof/one-agency_ad-proof_1080x1080.jpg",
+        "webp": "/kit/templates/samples/proof/one-agency_ad-proof_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/P3umJ9g42C",
+      "notes": "Concept B. Proof figures as published on oneagency.com, 2026-11-17; legal line on every size. Accent word: any."
+    },
+    {
+      "id": "sample-proof-1080x1350",
+      "group": "sample",
+      "channel": "social",
+      "concept": "proof",
+      "name": "Sample ad · Proof · 1080x1350",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "png": "/kit/templates/samples/proof/one-agency_ad-proof_1080x1350.png",
+        "jpg": "/kit/templates/samples/proof/one-agency_ad-proof_1080x1350.jpg",
+        "webp": "/kit/templates/samples/proof/one-agency_ad-proof_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/P3umJ9g42C",
+      "notes": "Concept B. Proof figures as published on oneagency.com, 2026-11-17; legal line on every size. Accent word: any."
+    },
+    {
+      "id": "sample-proof-1080x1920",
+      "group": "sample",
+      "channel": "social",
+      "concept": "proof",
+      "name": "Sample ad · Proof · 1080x1920",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "png": "/kit/templates/samples/proof/one-agency_ad-proof_1080x1920.png",
+        "jpg": "/kit/templates/samples/proof/one-agency_ad-proof_1080x1920.jpg",
+        "webp": "/kit/templates/samples/proof/one-agency_ad-proof_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/P3umJ9g42C",
+      "notes": "Concept B. Proof figures as published on oneagency.com, 2026-11-17; legal line on every size. Accent word: any. Lead size."
+    },
+    {
+      "id": "sample-proof-1200x627",
+      "group": "sample",
+      "channel": "linkedin",
+      "concept": "proof",
+      "name": "Sample ad · Proof · 1200x627",
+      "width": 1200,
+      "height": 627,
+      "files": {
+        "png": "/kit/templates/samples/proof/one-agency_ad-proof_1200x627.png",
+        "jpg": "/kit/templates/samples/proof/one-agency_ad-proof_1200x627.jpg",
+        "webp": "/kit/templates/samples/proof/one-agency_ad-proof_1200x627.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/P3umJ9g42C",
+      "notes": "Concept B. Proof figures as published on oneagency.com, 2026-11-17; legal line on every size. Accent word: any."
+    },
+    {
+      "id": "sample-proof-1200x628",
+      "group": "sample",
+      "channel": "google-display",
+      "concept": "proof",
+      "name": "Sample ad · Proof · 1200x628",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "png": "/kit/templates/samples/proof/one-agency_ad-proof_1200x628.png",
+        "jpg": "/kit/templates/samples/proof/one-agency_ad-proof_1200x628.jpg",
+        "webp": "/kit/templates/samples/proof/one-agency_ad-proof_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/P3umJ9g42C",
+      "notes": "Concept B. Proof figures as published on oneagency.com, 2026-11-17; legal line on every size. Accent word: any."
+    },
+    {
+      "id": "sample-proof-300x250",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "proof",
+      "name": "Sample ad · Proof · 300x250",
+      "width": 300,
+      "height": 250,
+      "files": {
+        "png": "/kit/templates/samples/proof/one-agency_ad-proof_300x250.png",
+        "jpg": "/kit/templates/samples/proof/one-agency_ad-proof_300x250.jpg",
+        "webp": "/kit/templates/samples/proof/one-agency_ad-proof_300x250.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/P3umJ9g42C",
+      "notes": "Concept B. Proof figures as published on oneagency.com, 2026-11-17; legal line on every size. Accent word: any. Proof bar dropped for size; legal kept."
+    },
+    {
+      "id": "sample-proof-300x600",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "proof",
+      "name": "Sample ad · Proof · 300x600",
+      "width": 300,
+      "height": 600,
+      "files": {
+        "png": "/kit/templates/samples/proof/one-agency_ad-proof_300x600.png",
+        "jpg": "/kit/templates/samples/proof/one-agency_ad-proof_300x600.jpg",
+        "webp": "/kit/templates/samples/proof/one-agency_ad-proof_300x600.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/P3umJ9g42C",
+      "notes": "Concept B. Proof figures as published on oneagency.com, 2026-11-17; legal line on every size. Accent word: any."
+    },
+    {
+      "id": "sample-proof-728x90",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "proof",
+      "name": "Sample ad · Proof · 728x90",
+      "width": 728,
+      "height": 90,
+      "files": {
+        "png": "/kit/templates/samples/proof/one-agency_ad-proof_728x90.png",
+        "jpg": "/kit/templates/samples/proof/one-agency_ad-proof_728x90.jpg",
+        "webp": "/kit/templates/samples/proof/one-agency_ad-proof_728x90.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/P3umJ9g42C",
+      "notes": "Concept B. Proof figures as published on oneagency.com, 2026-11-17; legal line on every size. Accent word: any. Headline, legal line and CTA only."
+    },
+    {
+      "id": "sample-proof-970x250",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "proof",
+      "name": "Sample ad · Proof · 970x250",
+      "width": 970,
+      "height": 250,
+      "files": {
+        "png": "/kit/templates/samples/proof/one-agency_ad-proof_970x250.png",
+        "jpg": "/kit/templates/samples/proof/one-agency_ad-proof_970x250.jpg",
+        "webp": "/kit/templates/samples/proof/one-agency_ad-proof_970x250.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/P3umJ9g42C",
+      "notes": "Concept B. Proof figures as published on oneagency.com, 2026-11-17; legal line on every size. Accent word: any. Proof bar dropped for size; legal kept."
+    },
+    {
+      "id": "sample-award-1080x1080",
+      "group": "sample",
+      "channel": "social",
+      "concept": "award",
+      "name": "Sample ad · Award · 1080x1080",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "png": "/kit/templates/samples/award/one-agency_ad-award_1080x1080.png",
+        "jpg": "/kit/templates/samples/award/one-agency_ad-award_1080x1080.jpg",
+        "webp": "/kit/templates/samples/award/one-agency_ad-award_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/gOtdUeCSXO",
+      "notes": "Concept C. Award belongs to ConversionIQ.ai; 'Awarded to ConversionIQ.ai' on every size. Accent word: AI."
+    },
+    {
+      "id": "sample-award-1080x1350",
+      "group": "sample",
+      "channel": "social",
+      "concept": "award",
+      "name": "Sample ad · Award · 1080x1350",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "png": "/kit/templates/samples/award/one-agency_ad-award_1080x1350.png",
+        "jpg": "/kit/templates/samples/award/one-agency_ad-award_1080x1350.jpg",
+        "webp": "/kit/templates/samples/award/one-agency_ad-award_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/gOtdUeCSXO",
+      "notes": "Concept C. Award belongs to ConversionIQ.ai; 'Awarded to ConversionIQ.ai' on every size. Accent word: AI."
+    },
+    {
+      "id": "sample-award-1080x1920",
+      "group": "sample",
+      "channel": "social",
+      "concept": "award",
+      "name": "Sample ad · Award · 1080x1920",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "png": "/kit/templates/samples/award/one-agency_ad-award_1080x1920.png",
+        "jpg": "/kit/templates/samples/award/one-agency_ad-award_1080x1920.jpg",
+        "webp": "/kit/templates/samples/award/one-agency_ad-award_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/gOtdUeCSXO",
+      "notes": "Concept C. Award belongs to ConversionIQ.ai; 'Awarded to ConversionIQ.ai' on every size. Accent word: AI."
+    },
+    {
+      "id": "sample-award-1200x627",
+      "group": "sample",
+      "channel": "linkedin",
+      "concept": "award",
+      "name": "Sample ad · Award · 1200x627",
+      "width": 1200,
+      "height": 627,
+      "files": {
+        "png": "/kit/templates/samples/award/one-agency_ad-award_1200x627.png",
+        "jpg": "/kit/templates/samples/award/one-agency_ad-award_1200x627.jpg",
+        "webp": "/kit/templates/samples/award/one-agency_ad-award_1200x627.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/gOtdUeCSXO",
+      "notes": "Concept C. Award belongs to ConversionIQ.ai; 'Awarded to ConversionIQ.ai' on every size. Accent word: AI."
+    },
+    {
+      "id": "sample-award-1200x628",
+      "group": "sample",
+      "channel": "google-display",
+      "concept": "award",
+      "name": "Sample ad · Award · 1200x628",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "png": "/kit/templates/samples/award/one-agency_ad-award_1200x628.png",
+        "jpg": "/kit/templates/samples/award/one-agency_ad-award_1200x628.jpg",
+        "webp": "/kit/templates/samples/award/one-agency_ad-award_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/gOtdUeCSXO",
+      "notes": "Concept C. Award belongs to ConversionIQ.ai; 'Awarded to ConversionIQ.ai' on every size. Accent word: AI."
+    },
+    {
+      "id": "sample-award-300x250",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "award",
+      "name": "Sample ad · Award · 300x250",
+      "width": 300,
+      "height": 250,
+      "files": {
+        "png": "/kit/templates/samples/award/one-agency_ad-award_300x250.png",
+        "jpg": "/kit/templates/samples/award/one-agency_ad-award_300x250.jpg",
+        "webp": "/kit/templates/samples/award/one-agency_ad-award_300x250.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/gOtdUeCSXO",
+      "notes": "Concept C. Award belongs to ConversionIQ.ai; 'Awarded to ConversionIQ.ai' on every size. Accent word: AI. Eyebrow and sub dropped for size; attribution kept."
+    },
+    {
+      "id": "sample-award-300x600",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "award",
+      "name": "Sample ad · Award · 300x600",
+      "width": 300,
+      "height": 600,
+      "files": {
+        "png": "/kit/templates/samples/award/one-agency_ad-award_300x600.png",
+        "jpg": "/kit/templates/samples/award/one-agency_ad-award_300x600.jpg",
+        "webp": "/kit/templates/samples/award/one-agency_ad-award_300x600.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/gOtdUeCSXO",
+      "notes": "Concept C. Award belongs to ConversionIQ.ai; 'Awarded to ConversionIQ.ai' on every size. Accent word: AI."
+    },
+    {
+      "id": "sample-award-728x90",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "award",
+      "name": "Sample ad · Award · 728x90",
+      "width": 728,
+      "height": 90,
+      "files": {
+        "png": "/kit/templates/samples/award/one-agency_ad-award_728x90.png",
+        "jpg": "/kit/templates/samples/award/one-agency_ad-award_728x90.jpg",
+        "webp": "/kit/templates/samples/award/one-agency_ad-award_728x90.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/gOtdUeCSXO",
+      "notes": "Concept C. Award belongs to ConversionIQ.ai; 'Awarded to ConversionIQ.ai' on every size. Accent word: AI. Headline, attribution and CTA only."
+    },
+    {
+      "id": "sample-award-970x250",
+      "group": "sample",
+      "channel": "web-banners",
+      "concept": "award",
+      "name": "Sample ad · Award · 970x250",
+      "width": 970,
+      "height": 250,
+      "files": {
+        "png": "/kit/templates/samples/award/one-agency_ad-award_970x250.png",
+        "jpg": "/kit/templates/samples/award/one-agency_ad-award_970x250.jpg",
+        "webp": "/kit/templates/samples/award/one-agency_ad-award_970x250.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/designer/gOtdUeCSXO",
+      "notes": "Concept C. Award belongs to ConversionIQ.ai; 'Awarded to ConversionIQ.ai' on every size. Accent word: AI. Eyebrow and sub dropped for size; attribution kept."
+    },
+    {
+      "id": "image-resort-guests-master",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · resort guests · 1:1 master",
+      "width": 2048,
+      "height": 2048,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-resort-guests_master.jpg",
+        "webp": "/kit/imagery/one-agency_image-resort-guests_master.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/TdUjBm2VNR",
+      "notes": "Vacation ownership: resort guests arriving at golden hour. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1 master."
+    },
+    {
+      "id": "image-resort-guests-1080x1080",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · resort guests · 1:1",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-resort-guests_1080x1080.jpg",
+        "webp": "/kit/imagery/one-agency_image-resort-guests_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/TdUjBm2VNR",
+      "notes": "Vacation ownership: resort guests arriving at golden hour. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1."
+    },
+    {
+      "id": "image-resort-guests-1080x1350",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · resort guests · 4:5",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-resort-guests_1080x1350.jpg",
+        "webp": "/kit/imagery/one-agency_image-resort-guests_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/TdUjBm2VNR",
+      "notes": "Vacation ownership: resort guests arriving at golden hour. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 4:5."
+    },
+    {
+      "id": "image-resort-guests-1080x1920",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · resort guests · 9:16",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-resort-guests_1080x1920.jpg",
+        "webp": "/kit/imagery/one-agency_image-resort-guests_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/TdUjBm2VNR",
+      "notes": "Vacation ownership: resort guests arriving at golden hour. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 9:16."
+    },
+    {
+      "id": "image-resort-guests-1200x628",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · resort guests · 1.91:1",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-resort-guests_1200x628.jpg",
+        "webp": "/kit/imagery/one-agency_image-resort-guests_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/TdUjBm2VNR",
+      "notes": "Vacation ownership: resort guests arriving at golden hour. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1.91:1."
+    },
+    {
+      "id": "image-cruise-booking-master",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · cruise booking · 1:1 master",
+      "width": 2048,
+      "height": 2048,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-cruise-booking_master.jpg",
+        "webp": "/kit/imagery/one-agency_image-cruise-booking_master.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Xm4wvqGBfo",
+      "notes": "Hotels and cruises: couple planning a cruise at home. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1 master."
+    },
+    {
+      "id": "image-cruise-booking-1080x1080",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · cruise booking · 1:1",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-cruise-booking_1080x1080.jpg",
+        "webp": "/kit/imagery/one-agency_image-cruise-booking_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Xm4wvqGBfo",
+      "notes": "Hotels and cruises: couple planning a cruise at home. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1."
+    },
+    {
+      "id": "image-cruise-booking-1080x1350",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · cruise booking · 4:5",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-cruise-booking_1080x1350.jpg",
+        "webp": "/kit/imagery/one-agency_image-cruise-booking_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Xm4wvqGBfo",
+      "notes": "Hotels and cruises: couple planning a cruise at home. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 4:5."
+    },
+    {
+      "id": "image-cruise-booking-1080x1920",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · cruise booking · 9:16",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-cruise-booking_1080x1920.jpg",
+        "webp": "/kit/imagery/one-agency_image-cruise-booking_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Xm4wvqGBfo",
+      "notes": "Hotels and cruises: couple planning a cruise at home. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 9:16."
+    },
+    {
+      "id": "image-cruise-booking-1200x628",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · cruise booking · 1.91:1",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-cruise-booking_1200x628.jpg",
+        "webp": "/kit/imagery/one-agency_image-cruise-booking_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Xm4wvqGBfo",
+      "notes": "Hotels and cruises: couple planning a cruise at home. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1.91:1."
+    },
+    {
+      "id": "image-sales-agent-master",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · sales agent · 1:1 master",
+      "width": 2048,
+      "height": 2048,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-sales-agent_master.jpg",
+        "webp": "/kit/imagery/one-agency_image-sales-agent_master.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/ovNJfrm829",
+      "notes": "Sales / call centre: agent answering a lead warmly. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1 master."
+    },
+    {
+      "id": "image-sales-agent-1080x1080",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · sales agent · 1:1",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-sales-agent_1080x1080.jpg",
+        "webp": "/kit/imagery/one-agency_image-sales-agent_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/ovNJfrm829",
+      "notes": "Sales / call centre: agent answering a lead warmly. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1."
+    },
+    {
+      "id": "image-sales-agent-1080x1350",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · sales agent · 4:5",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-sales-agent_1080x1350.jpg",
+        "webp": "/kit/imagery/one-agency_image-sales-agent_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/ovNJfrm829",
+      "notes": "Sales / call centre: agent answering a lead warmly. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 4:5."
+    },
+    {
+      "id": "image-sales-agent-1080x1920",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · sales agent · 9:16",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-sales-agent_1080x1920.jpg",
+        "webp": "/kit/imagery/one-agency_image-sales-agent_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/ovNJfrm829",
+      "notes": "Sales / call centre: agent answering a lead warmly. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 9:16."
+    },
+    {
+      "id": "image-sales-agent-1200x628",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · sales agent · 1.91:1",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-sales-agent_1200x628.jpg",
+        "webp": "/kit/imagery/one-agency_image-sales-agent_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/ovNJfrm829",
+      "notes": "Sales / call centre: agent answering a lead warmly. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1.91:1."
+    },
+    {
+      "id": "image-franchise-owner-master",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · franchise owner · 1:1 master",
+      "width": 2048,
+      "height": 2048,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-franchise-owner_master.jpg",
+        "webp": "/kit/imagery/one-agency_image-franchise-owner_master.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/iGbEnIM3uK",
+      "notes": "Franchise: owner at her studio at dawn. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1 master."
+    },
+    {
+      "id": "image-franchise-owner-1080x1080",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · franchise owner · 1:1",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-franchise-owner_1080x1080.jpg",
+        "webp": "/kit/imagery/one-agency_image-franchise-owner_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/iGbEnIM3uK",
+      "notes": "Franchise: owner at her studio at dawn. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1."
+    },
+    {
+      "id": "image-franchise-owner-1080x1350",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · franchise owner · 4:5",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-franchise-owner_1080x1350.jpg",
+        "webp": "/kit/imagery/one-agency_image-franchise-owner_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/iGbEnIM3uK",
+      "notes": "Franchise: owner at her studio at dawn. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 4:5."
+    },
+    {
+      "id": "image-franchise-owner-1080x1920",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · franchise owner · 9:16",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-franchise-owner_1080x1920.jpg",
+        "webp": "/kit/imagery/one-agency_image-franchise-owner_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/iGbEnIM3uK",
+      "notes": "Franchise: owner at her studio at dawn. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 9:16."
+    },
+    {
+      "id": "image-franchise-owner-1200x628",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · franchise owner · 1.91:1",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-franchise-owner_1200x628.jpg",
+        "webp": "/kit/imagery/one-agency_image-franchise-owner_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/iGbEnIM3uK",
+      "notes": "Franchise: owner at her studio at dawn. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1.91:1."
+    },
+    {
+      "id": "image-healthcare-front-desk-master",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · healthcare front desk · 1:1 master",
+      "width": 2048,
+      "height": 2048,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-healthcare-front-desk_master.jpg",
+        "webp": "/kit/imagery/one-agency_image-healthcare-front-desk_master.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/DoJlI6mpcl",
+      "notes": "Healthcare: front desk greeting a patient. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1 master."
+    },
+    {
+      "id": "image-healthcare-front-desk-1080x1080",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · healthcare front desk · 1:1",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-healthcare-front-desk_1080x1080.jpg",
+        "webp": "/kit/imagery/one-agency_image-healthcare-front-desk_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/DoJlI6mpcl",
+      "notes": "Healthcare: front desk greeting a patient. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1."
+    },
+    {
+      "id": "image-healthcare-front-desk-1080x1350",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · healthcare front desk · 4:5",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-healthcare-front-desk_1080x1350.jpg",
+        "webp": "/kit/imagery/one-agency_image-healthcare-front-desk_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/DoJlI6mpcl",
+      "notes": "Healthcare: front desk greeting a patient. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 4:5."
+    },
+    {
+      "id": "image-healthcare-front-desk-1080x1920",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · healthcare front desk · 9:16",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-healthcare-front-desk_1080x1920.jpg",
+        "webp": "/kit/imagery/one-agency_image-healthcare-front-desk_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/DoJlI6mpcl",
+      "notes": "Healthcare: front desk greeting a patient. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 9:16."
+    },
+    {
+      "id": "image-healthcare-front-desk-1200x628",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · healthcare front desk · 1.91:1",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-healthcare-front-desk_1200x628.jpg",
+        "webp": "/kit/imagery/one-agency_image-healthcare-front-desk_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/DoJlI6mpcl",
+      "notes": "Healthcare: front desk greeting a patient. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1.91:1."
+    },
+    {
+      "id": "image-admissions-master",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · admissions · 1:1 master",
+      "width": 2048,
+      "height": 2048,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-admissions_master.jpg",
+        "webp": "/kit/imagery/one-agency_image-admissions_master.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/LwoDJEZswO",
+      "notes": "Higher education: admissions conversation. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1 master."
+    },
+    {
+      "id": "image-admissions-1080x1080",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · admissions · 1:1",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-admissions_1080x1080.jpg",
+        "webp": "/kit/imagery/one-agency_image-admissions_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/LwoDJEZswO",
+      "notes": "Higher education: admissions conversation. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1."
+    },
+    {
+      "id": "image-admissions-1080x1350",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · admissions · 4:5",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-admissions_1080x1350.jpg",
+        "webp": "/kit/imagery/one-agency_image-admissions_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/LwoDJEZswO",
+      "notes": "Higher education: admissions conversation. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 4:5."
+    },
+    {
+      "id": "image-admissions-1080x1920",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · admissions · 9:16",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-admissions_1080x1920.jpg",
+        "webp": "/kit/imagery/one-agency_image-admissions_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/LwoDJEZswO",
+      "notes": "Higher education: admissions conversation. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 9:16."
+    },
+    {
+      "id": "image-admissions-1200x628",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · admissions · 1.91:1",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-admissions_1200x628.jpg",
+        "webp": "/kit/imagery/one-agency_image-admissions_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/LwoDJEZswO",
+      "notes": "Higher education: admissions conversation. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1.91:1."
+    },
+    {
+      "id": "image-orlando-night-master",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · orlando night · 1:1 master",
+      "width": 2048,
+      "height": 2048,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-orlando-night_master.jpg",
+        "webp": "/kit/imagery/one-agency_image-orlando-night_master.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/bxVnLaU5Y2",
+      "notes": "Orlando-style skyline at night in navy, rose and blue light (AI evocation, not a photo of the real skyline). AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1 master."
+    },
+    {
+      "id": "image-orlando-night-1080x1080",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · orlando night · 1:1",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-orlando-night_1080x1080.jpg",
+        "webp": "/kit/imagery/one-agency_image-orlando-night_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/bxVnLaU5Y2",
+      "notes": "Orlando-style skyline at night in navy, rose and blue light (AI evocation, not a photo of the real skyline). AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1."
+    },
+    {
+      "id": "image-orlando-night-1080x1350",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · orlando night · 4:5",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-orlando-night_1080x1350.jpg",
+        "webp": "/kit/imagery/one-agency_image-orlando-night_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/bxVnLaU5Y2",
+      "notes": "Orlando-style skyline at night in navy, rose and blue light (AI evocation, not a photo of the real skyline). AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 4:5."
+    },
+    {
+      "id": "image-orlando-night-1080x1920",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · orlando night · 9:16",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-orlando-night_1080x1920.jpg",
+        "webp": "/kit/imagery/one-agency_image-orlando-night_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/bxVnLaU5Y2",
+      "notes": "Orlando-style skyline at night in navy, rose and blue light (AI evocation, not a photo of the real skyline). AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 9:16."
+    },
+    {
+      "id": "image-orlando-night-1200x628",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · orlando night · 1.91:1",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-orlando-night_1200x628.jpg",
+        "webp": "/kit/imagery/one-agency_image-orlando-night_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/bxVnLaU5Y2",
+      "notes": "Orlando-style skyline at night in navy, rose and blue light (AI evocation, not a photo of the real skyline). AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1.91:1."
+    },
+    {
+      "id": "image-small-business-owner-master",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · small business owner · 1:1 master",
+      "width": 2048,
+      "height": 2048,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-small-business-owner_master.jpg",
+        "webp": "/kit/imagery/one-agency_image-small-business-owner_master.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/yiEmRSwPW9",
+      "notes": "Small business: barbecue shop owner taking an order by phone. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1 master."
+    },
+    {
+      "id": "image-small-business-owner-1080x1080",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · small business owner · 1:1",
+      "width": 1080,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-small-business-owner_1080x1080.jpg",
+        "webp": "/kit/imagery/one-agency_image-small-business-owner_1080x1080.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/yiEmRSwPW9",
+      "notes": "Small business: barbecue shop owner taking an order by phone. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1:1."
+    },
+    {
+      "id": "image-small-business-owner-1080x1350",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · small business owner · 4:5",
+      "width": 1080,
+      "height": 1350,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-small-business-owner_1080x1350.jpg",
+        "webp": "/kit/imagery/one-agency_image-small-business-owner_1080x1350.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/yiEmRSwPW9",
+      "notes": "Small business: barbecue shop owner taking an order by phone. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 4:5."
+    },
+    {
+      "id": "image-small-business-owner-1080x1920",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · small business owner · 9:16",
+      "width": 1080,
+      "height": 1920,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-small-business-owner_1080x1920.jpg",
+        "webp": "/kit/imagery/one-agency_image-small-business-owner_1080x1920.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/yiEmRSwPW9",
+      "notes": "Small business: barbecue shop owner taking an order by phone. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 9:16."
+    },
+    {
+      "id": "image-small-business-owner-1200x628",
+      "group": "imagery",
+      "channel": null,
+      "concept": null,
+      "name": "Image · small business owner · 1.91:1",
+      "width": 1200,
+      "height": 628,
+      "files": {
+        "jpg": "/kit/imagery/one-agency_image-small-business-owner_1200x628.jpg",
+        "webp": "/kit/imagery/one-agency_image-small-business-owner_1200x628.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/yiEmRSwPW9",
+      "notes": "Small business: barbecue shop owner taking an order by phone. AI-generated in Magnific (model: Magnific One, with the ONE Agency brand kit), owned by ONE Agency per Magnific plan terms. No real identifiable people, no third-party logos. Crop: 1.91:1."
+    }
+  ],
+  "urlsNote": "Design and creation links are the webUrls Magnific returned. Magnific returns no web link for brand kits or projects, so brandKitUrl and folderUrl follow the app URL pattern and should be checked once in a browser (brand kit: Library > Brand kits > ONE Agency; project: ONE Agency Brand Kit)."
+}

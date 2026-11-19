@@ -1,0 +1,170 @@
+/*
+ * Kit UI theme: the colours the hub itself is drawn in, dark (the live site) and light.
+ *
+ * The live tokens in tokens.css are never redefined: swatches, the contrast matrix and every brand specimen read them
+ * as they are. The hub reads these --ui-* variables instead (mapped to Tailwind in index.css). Dark is the live site's
+ * own values. Light is DERIVED from the site's paper and ink tokens (the live site is dark-only).
+ *
+ * The theme sits on <html data-theme> (set before paint by the inline script in index.html). Any element can pin a
+ * theme for its subtree with data-theme="dark" or "light": brand specimens (logo on dark, element stages, ad text)
+ * stay on the brand's night ground in both themes.
+ */
+
+/*
+ * The derived v1.1 style tokens (--kit-highlight, --kit-highlight-light, --kit-violet, --kit-night) live in the
+ * generated tokens.css, in its labelled "derived, not on the live site" block (scripts/extract-tokens.mjs).
+ */
+
+/* ------------------------------------------------------------------ dark: the live site */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --ui-ground: var(--ground);
+  --ui-void: var(--void);
+  --ui-surface: var(--surface);
+  --ui-surface-2: var(--surface-2);
+  --ui-band: var(--band);
+  --ui-raised: var(--raised);
+  /* Sidebar item hover: one step up from the ground. */
+  --ui-nav-hover: var(--surface);
+  --ui-edge: var(--edge);
+  --ui-edge-soft: var(--edge-soft);
+  --ui-edge-strong: var(--edge-strong);
+  --ui-text: var(--text);
+  --ui-text-2: var(--text-2);
+  --ui-text-3: var(--text-3);
+  --ui-text-4: var(--text-4);
+  /* Text on a --ui-text fill (secondary button hover). */
+  --ui-on-text: var(--ground);
+  /* Primary button hover: transparent pill, this text. */
+  --ui-on-ghost: var(--lavender);
+  /* Accent as text, icon or ring (fills stay --rose). */
+  --ui-accent: var(--rose);
+  --ui-info: var(--lilac);
+  --ui-proposed: var(--pos);
+  --ui-do: var(--color-emerald-400);
+  --ui-dont: var(--color-red-500);
+  --ui-accent-fill: var(--accent-fill);
+  /*
+   * Accent light, as on the live site: the #oa-neon filter (index.html) Add-blended onto the ground. The soft step is
+   * the site's no-JS drop-shadow, used where the filter would redraw every frame (counting stats on touch screens).
+   */
+  --ui-accent-glow: url(#oa-neon);
+  --ui-accent-glow-soft: var(--accent-glow);
+  --ui-accent-blend: plus-lighter;
+  --ui-shadow: var(--v2-shadow);
+  --ui-highlight: var(--kit-highlight);
+  --ui-scrim: var(--ground);
+  /* Phones: the hero text sits over the whole loop, so the scrim covers it all at this strength. */
+  --ui-scrim-cover: 80%;
+  --ui-glow-a: color-mix(in srgb, var(--rose) 42%, transparent);
+  --ui-glow-b: color-mix(in srgb, var(--lilac) 55%, transparent);
+
+  /* Glass (codified from the reference ads). */
+  --glass-tint: color-mix(in srgb, var(--ground) 55%, transparent);
+  --glass-fill: linear-gradient(155deg, color-mix(in srgb, var(--paper) 13%, transparent), color-mix(in srgb, var(--paper) 4%, transparent) 55%, color-mix(in srgb, var(--rose) 9%, transparent));
+  --glass-rim: var(--rose);
+  --glass-rim-fade: color-mix(in srgb, var(--rose) 18%, transparent);
+  --glass-inner-glow: inset 0 0 28px -6px color-mix(in srgb, var(--rose) 45%, transparent), inset 0 1px 0 color-mix(in srgb, var(--paper) 30%, transparent);
+  --glass-shadow: 0 32px 64px -30px color-mix(in srgb, var(--void) 95%, transparent), 0 0 44px -12px color-mix(in srgb, var(--rose) 32%, transparent);
+  --glass-specular: color-mix(in srgb, var(--paper) 30%, transparent);
+  --glass-icon-from: var(--paper);
+  --glass-icon-to: var(--text-2);
+  --glass-divider: color-mix(in srgb, var(--paper) 28%, transparent);
+  --glass-under-glow: color-mix(in srgb, var(--rose) 50%, transparent);
+  --glass-dots: var(--rose);
+  --glass-stream-from: var(--paper);
+  --glass-stream-to: var(--rose);
+  --grain-opacity: 0.14;
+  --grain-blend: overlay;
+  /* Violet ground (highlight reference, glass-toggle ad): violet top left into near-black. */
+  --glass-ground-from: var(--kit-violet);
+  --glass-ground-to: var(--kit-night);
+  --glass-streak-a: var(--rose);
+  --glass-streak-b: var(--lilac);
+}
+
+/* ------------------------------------------------------------------ light: DERIVED from --paper, --paper-2, --lavender and --ink */
+[data-theme="light"] {
+  color-scheme: light;
+  --ui-ground: var(--paper-2);
+  --ui-void: var(--paper);
+  --ui-surface: var(--paper);
+  --ui-surface-2: var(--lavender);
+  --ui-band: color-mix(in srgb, var(--lavender) 60%, var(--paper-2));
+  --ui-raised: var(--paper);
+  /* Sidebar item hover: a soft rose wash, not white on near-white; distinct from the active item's lavender pill. */
+  --ui-nav-hover: color-mix(in srgb, var(--rose) 16%, var(--paper-2));
+  --ui-edge: color-mix(in srgb, var(--ink) 12%, var(--paper));
+  --ui-edge-soft: color-mix(in srgb, var(--ink) 7%, var(--paper));
+  --ui-edge-strong: color-mix(in srgb, var(--ink) 45%, var(--paper));
+  --ui-text: var(--ink);
+  --ui-text-2: var(--ink-2);
+  --ui-text-3: var(--ink-3);
+  --ui-text-4: var(--ink-3);
+  --ui-on-text: var(--paper);
+  --ui-on-ghost: var(--ink);
+  /* Rose and lilac are too light for text on paper: the derived 700 steps pass AA on every light ground. */
+  --ui-accent: var(--kit-rose-700);
+  --ui-info: var(--kit-lilac-700);
+  --ui-proposed: color-mix(in srgb, var(--pos) 55%, var(--ink));
+  --ui-do: var(--color-emerald-700);
+  --ui-dont: var(--color-red-700);
+  /*
+   * Saturated, not shaded: the 700/600 steps mix toward grey and read muddy as a fill. The derived light accent tokens
+   * (tokens.css) keep the rose and lilac hues at full chroma and still clear 3:1 (large display text) on every light
+   * ground: rose 3.67 to 4.03, blue 3.75 to 4.12 (lavender to paper). The sRGB fallback passes through the violet
+   * midpoint; below, oklch blends straight from one to the other where supported, so the middle stays vivid.
+   */
+  --ui-accent-fill: linear-gradient(90deg, var(--kit-accent-light-from) 0%, var(--kit-accent-light-mid) 50%, var(--kit-accent-light-to) 100%);
+  /* The accent light is dark mode only: on paper, gradient text is the plain fill with a normal blend. */
+  --ui-accent-glow: none;
+  --ui-accent-glow-soft: none;
+  --ui-accent-blend: normal;
+  --ui-shadow: 0 24px 48px -30px color-mix(in srgb, var(--ink) 35%, transparent);
+  --ui-highlight: var(--kit-highlight-light);
+  --ui-scrim: var(--paper-2);
+  /* Stronger on light: at 80% a pink loop line under --ink-3 (credit line) dropped to about 4.4:1; 88% keeps it near 5:1. */
+  --ui-scrim-cover: 88%;
+  --ui-glow-a: color-mix(in srgb, var(--rose) 30%, transparent);
+  --ui-glow-b: color-mix(in srgb, var(--lilac) 18%, transparent);
+
+  --glass-tint: color-mix(in srgb, var(--paper) 55%, transparent);
+  --glass-fill: linear-gradient(155deg, color-mix(in srgb, var(--paper) 85%, transparent), color-mix(in srgb, var(--paper) 50%, transparent) 55%, color-mix(in srgb, var(--rose) 12%, transparent));
+  --glass-rim: var(--kit-rose-600);
+  --glass-rim-fade: color-mix(in srgb, var(--rose) 30%, transparent);
+  --glass-inner-glow: inset 0 0 24px -8px color-mix(in srgb, var(--rose) 55%, transparent), inset 0 1px 0 var(--paper);
+  --glass-shadow: 0 24px 48px -24px color-mix(in srgb, var(--ink) 22%, transparent), 0 0 32px -12px color-mix(in srgb, var(--rose) 45%, transparent);
+  --glass-specular: color-mix(in srgb, var(--paper) 90%, transparent);
+  --glass-icon-from: var(--ink-2);
+  --glass-icon-to: var(--ink);
+  --glass-divider: color-mix(in srgb, var(--ink) 18%, transparent);
+  --glass-under-glow: color-mix(in srgb, var(--rose) 45%, transparent);
+  --glass-dots: var(--kit-rose-600);
+  --glass-stream-from: var(--kit-lilac-400);
+  --glass-stream-to: var(--kit-rose-600);
+  --grain-opacity: 0.1;
+  --grain-blend: multiply;
+  --glass-ground-from: color-mix(in srgb, var(--lilac) 16%, var(--lavender));
+  --glass-ground-to: var(--paper-2);
+  --glass-streak-a: var(--kit-rose-600);
+  --glass-streak-b: var(--kit-lilac-500);
+}
+
+/* Custom properties never fall back, so the oklch blend replaces the three-stop sRGB one only where it is supported. */
+@supports (background: linear-gradient(in oklch, red, blue)) {
+  [data-theme="light"] {
+    --ui-accent-fill: linear-gradient(90deg in oklch, var(--kit-accent-light-from) 0%, var(--kit-accent-light-to) 100%);
+  }
+}
+
+/* Shape and depth do not change with the theme. */
+:root {
+  --glass-blur: 18px;
+  --glass-radius: 24px;
+  --glass-radius-tile: 18px;
+  --glass-radius-sm: 12px;
+  /* Back layers of a depth stack: scale, opacity, blur. */
+  --glass-depth-1: 0.9;
+  --glass-depth-2: 0.8;
+}

@@ -1,0 +1,452 @@
+{
+  "version": "1.1",
+  "generated": "2026-11-17",
+  "source": "design/magnific/glass/log.md",
+  "items": [
+    {
+      "id": "illustration-magnifier-on-dark",
+      "kind": "illustration",
+      "name": "Search magnifier (on-dark)",
+      "subject": "magnifier",
+      "theme": "dark",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-magnifier_on-dark_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-magnifier_on-dark_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/UPhI5Jewny",
+      "notes": "AI search visibility: glass icon tile with a silver magnifier. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+    },
+    {
+      "id": "illustration-magnifier-transparent",
+      "kind": "illustration",
+      "name": "Search magnifier (transparent)",
+      "subject": "magnifier",
+      "theme": "any",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-magnifier_transparent_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-magnifier_transparent_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Ifi9DvotvE",
+      "notes": "AI search visibility: glass icon tile with a silver magnifier. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+    },
+    {
+      "id": "illustration-magnifier-on-light",
+      "kind": "illustration",
+      "name": "Search magnifier (on-light)",
+      "subject": "magnifier",
+      "theme": "light",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-magnifier_on-light_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-magnifier_on-light_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Ifi9DvotvE",
+      "notes": "AI search visibility: glass icon tile with a silver magnifier. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+    },
+    {
+      "id": "illustration-seo-document-on-dark",
+      "kind": "illustration",
+      "name": "SEO document (on-dark)",
+      "subject": "seo-document",
+      "theme": "dark",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-seo-document_on-dark_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-seo-document_on-dark_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/DoJU2BYpcl",
+      "notes": "SEO audit: glass page with placeholder lines and a silver magnifier. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+    },
+    {
+      "id": "illustration-seo-document-transparent",
+      "kind": "illustration",
+      "name": "SEO document (transparent)",
+      "subject": "seo-document",
+      "theme": "any",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-seo-document_transparent_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-seo-document_transparent_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/iGbFJGD3uK",
+      "notes": "SEO audit: glass page with placeholder lines and a silver magnifier. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+    },
+    {
+      "id": "illustration-seo-document-on-light",
+      "kind": "illustration",
+      "name": "SEO document (on-light)",
+      "subject": "seo-document",
+      "theme": "light",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-seo-document_on-light_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-seo-document_on-light_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/iGbFJGD3uK",
+      "notes": "SEO audit: glass page with placeholder lines and a silver magnifier. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+    },
+    {
+      "id": "illustration-review-star-on-dark",
+      "kind": "illustration",
+      "name": "Review star (on-dark)",
+      "subject": "review-star",
+      "theme": "dark",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-review-star_on-dark_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-review-star_on-dark_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/lJIBHyagv9",
+      "notes": "Online reviews audit: smoked glass star with rose rim light. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+    },
+    {
+      "id": "illustration-review-star-transparent",
+      "kind": "illustration",
+      "name": "Review star (transparent)",
+      "subject": "review-star",
+      "theme": "any",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-review-star_transparent_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-review-star_transparent_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/gOtok4RSXO",
+      "notes": "Online reviews audit: smoked glass star with rose rim light. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+    },
+    {
+      "id": "illustration-review-star-on-light",
+      "kind": "illustration",
+      "name": "Review star (on-light)",
+      "subject": "review-star",
+      "theme": "light",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-review-star_on-light_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-review-star_on-light_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/gOtok4RSXO",
+      "notes": "Online reviews audit: smoked glass star with rose rim light. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+    },
+    {
+      "id": "illustration-cro-window-on-dark",
+      "kind": "illustration",
+      "name": "Website CRO window (on-dark)",
+      "subject": "cro-window",
+      "theme": "dark",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-cro-window_on-dark_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-cro-window_on-dark_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/VXwgRI3MMU",
+      "notes": "Website CRO audit: glass browser window, rose button, cursor. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+    },
+    {
+      "id": "illustration-cro-window-transparent",
+      "kind": "illustration",
+      "name": "Website CRO window (transparent)",
+      "subject": "cro-window",
+      "theme": "any",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-cro-window_transparent_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-cro-window_transparent_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/UPhIriowny",
+      "notes": "Website CRO audit: glass browser window, rose button, cursor. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+    },
+    {
+      "id": "illustration-cro-window-on-light",
+      "kind": "illustration",
+      "name": "Website CRO window (on-light)",
+      "subject": "cro-window",
+      "theme": "light",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-cro-window_on-light_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-cro-window_on-light_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/UPhIriowny",
+      "notes": "Website CRO audit: glass browser window, rose button, cursor. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+    },
+    {
+      "id": "illustration-growth-stairs-on-dark",
+      "kind": "illustration",
+      "name": "Growth stairs (on-dark)",
+      "subject": "growth-stairs",
+      "theme": "dark",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-growth-stairs_on-dark_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-growth-stairs_on-dark_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/fHGZBpSCDY",
+      "notes": "Tactical steps to scale up: glass staircase with a rose arrow (second take; first take read as a bar chart). Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+    },
+    {
+      "id": "illustration-growth-stairs-transparent",
+      "kind": "illustration",
+      "name": "Growth stairs (transparent)",
+      "subject": "growth-stairs",
+      "theme": "any",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-growth-stairs_transparent_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-growth-stairs_transparent_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/cpgLAf20eP",
+      "notes": "Tactical steps to scale up: glass staircase with a rose arrow (second take; first take read as a bar chart). Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+    },
+    {
+      "id": "illustration-growth-stairs-on-light",
+      "kind": "illustration",
+      "name": "Growth stairs (on-light)",
+      "subject": "growth-stairs",
+      "theme": "light",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-growth-stairs_on-light_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-growth-stairs_on-light_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/cpgLAf20eP",
+      "notes": "Tactical steps to scale up: glass staircase with a rose arrow (second take; first take read as a bar chart). Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+    },
+    {
+      "id": "illustration-profile-stack-on-dark",
+      "kind": "illustration",
+      "name": "Profile card stack (on-dark)",
+      "subject": "profile-stack",
+      "theme": "dark",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-profile-stack_on-dark_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-profile-stack_on-dark_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Bh9yYq0oQR",
+      "notes": "Customers / lead activation: depth stack of 3 glass profile cards with a rose check badge. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+    },
+    {
+      "id": "illustration-profile-stack-transparent",
+      "kind": "illustration",
+      "name": "Profile card stack (transparent)",
+      "subject": "profile-stack",
+      "theme": "any",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-profile-stack_transparent_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-profile-stack_transparent_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Lwodb9RswO",
+      "notes": "Customers / lead activation: depth stack of 3 glass profile cards with a rose check badge. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+    },
+    {
+      "id": "illustration-profile-stack-on-light",
+      "kind": "illustration",
+      "name": "Profile card stack (on-light)",
+      "subject": "profile-stack",
+      "theme": "light",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-profile-stack_on-light_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-profile-stack_on-light_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/Lwodb9RswO",
+      "notes": "Customers / lead activation: depth stack of 3 glass profile cards with a rose check badge. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+    },
+    {
+      "id": "illustration-toggle-check-on-dark",
+      "kind": "illustration",
+      "name": "Toggle with check (on-dark)",
+      "subject": "toggle-check",
+      "theme": "dark",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-toggle-check_on-dark_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-toggle-check_on-dark_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/WDljNa6cXe",
+      "notes": "Violet-to-blue variant: glass toggle switched on, rose knob with check, light streaks. Use alone, not next to the rose-only look. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+    },
+    {
+      "id": "illustration-toggle-check-transparent",
+      "kind": "illustration",
+      "name": "Toggle with check (transparent)",
+      "subject": "toggle-check",
+      "theme": "any",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-toggle-check_transparent_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-toggle-check_transparent_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/WDljRIwcXe",
+      "notes": "Violet-to-blue variant: glass toggle switched on, rose knob with check, light streaks. Use alone, not next to the rose-only look. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+    },
+    {
+      "id": "illustration-toggle-check-on-light",
+      "kind": "illustration",
+      "name": "Toggle with check (on-light)",
+      "subject": "toggle-check",
+      "theme": "light",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-toggle-check_on-light_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-toggle-check_on-light_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/WDljRIwcXe",
+      "notes": "Violet-to-blue variant: glass toggle switched on, rose knob with check, light streaks. Use alone, not next to the rose-only look. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+    },
+    {
+      "id": "illustration-lead-flow-on-dark",
+      "kind": "illustration",
+      "name": "Leads flowing out of a browser (on-dark)",
+      "subject": "lead-flow",
+      "theme": "dark",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-lead-flow_on-dark_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-lead-flow_on-dark_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/TdUl2RiVNR",
+      "notes": "Convert visitors into leads: particle stream into a glass browser, lead cards flying out (second take). Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+    },
+    {
+      "id": "illustration-lead-flow-transparent",
+      "kind": "illustration",
+      "name": "Leads flowing out of a browser (transparent)",
+      "subject": "lead-flow",
+      "theme": "any",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-lead-flow_transparent_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-lead-flow_transparent_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/gOtornESXO",
+      "notes": "Convert visitors into leads: particle stream into a glass browser, lead cards flying out (second take). Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+    },
+    {
+      "id": "illustration-lead-flow-on-light",
+      "kind": "illustration",
+      "name": "Leads flowing out of a browser (on-light)",
+      "subject": "lead-flow",
+      "theme": "light",
+      "width": 1200,
+      "height": 1200,
+      "files": {
+        "png": "/kit/illustrations/one-agency_illustration-lead-flow_on-light_1200x1200.png",
+        "webp": "/kit/illustrations/one-agency_illustration-lead-flow_on-light_1200x1200.webp"
+      },
+      "magnificUrl": "https://www.magnific.com/app/creation/gOtornESXO",
+      "notes": "Convert visitors into leads: particle stream into a glass browser, lead cards flying out (second take). Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+    },
+    {
+      "id": "texture-halftone-arc",
+      "kind": "texture",
+      "name": "Rose halftone dot arc",
+      "subject": "halftone-arc",
+      "theme": "any",
+      "width": 2048,
+      "height": 1024,
+      "files": {
+        "png": "/kit/textures/one-agency_texture-halftone-arc_2048x1024.png",
+        "webp": "/kit/textures/one-agency_texture-halftone-arc_2048x1024.webp",
+        "svg": "/kit/textures/one-agency_texture-halftone-arc_2048x1024.svg"
+      },
+      "notes": "Hex-grid rose #FFA0AA dots on an arc band; dots shrink toward the band edges and ends. Transparent. SVG is the vector source (2,381 circles). Built locally (Pillow)."
+    },
+    {
+      "id": "texture-particle-stream",
+      "kind": "texture",
+      "name": "Particle stream wave",
+      "subject": "particle-stream",
+      "theme": "dark",
+      "width": 2048,
+      "height": 768,
+      "files": {
+        "png": "/kit/textures/one-agency_texture-particle-stream_2048x768.png",
+        "webp": "/kit/textures/one-agency_texture-particle-stream_2048x768.webp",
+        "svg": "/kit/textures/one-agency_texture-particle-stream_2048x768.svg"
+      },
+      "notes": "Fine dotted strands flowing in a wave, white on the left to rose on the right, converging. Transparent; made for dark grounds (white dots vanish on white). SVG is vector (5,545 circles + 12 paths). Built locally."
+    },
+    {
+      "id": "texture-grain",
+      "kind": "texture",
+      "name": "Fine grain tile",
+      "subject": "grain",
+      "theme": "any",
+      "width": 512,
+      "height": 512,
+      "files": {
+        "png": "/kit/textures/one-agency_texture-grain_512x512.png"
+      },
+      "notes": "Tileable luminance noise (wrap-safe), black/white pixels at up to ~12.5% alpha. Use as background-repeat at 1x; lower opacity further on light grounds. Built locally."
+    },
+    {
+      "id": "texture-rose-underglow",
+      "kind": "texture",
+      "name": "Rose under-glow",
+      "subject": "rose-underglow",
+      "theme": "dark",
+      "width": 2048,
+      "height": 768,
+      "files": {
+        "png": "/kit/textures/one-agency_texture-rose-underglow_2048x768.png",
+        "webp": "/kit/textures/one-agency_texture-rose-underglow_2048x768.webp"
+      },
+      "notes": "Soft elliptical rose pool with a lighter core, transparent, dithered against banding. Place under glass objects. Built locally."
+    },
+    {
+      "id": "texture-violet-streaks",
+      "kind": "texture",
+      "name": "Violet-blue light-streak ground",
+      "subject": "violet-streaks",
+      "theme": "dark",
+      "width": 1920,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/textures/one-agency_texture-violet-streaks_1920x1080.jpg",
+        "webp": "/kit/textures/one-agency_texture-violet-streaks_1920x1080.webp"
+      },
+      "notes": "Violet #2A004C top-left to deep blue to near-black #0E0F12 right, rose and blue light streaks with screen-blend glow and bokeh, light grain. Matches the highlight-bar reference ground. Built locally."
+    },
+    {
+      "id": "texture-ground-rose-glow",
+      "kind": "texture",
+      "name": "Near-black ground with rose glow",
+      "subject": "ground-rose-glow",
+      "theme": "dark",
+      "width": 1920,
+      "height": 1080,
+      "files": {
+        "jpg": "/kit/textures/one-agency_texture-ground-rose-glow_1920x1080.jpg",
+        "webp": "/kit/textures/one-agency_texture-ground-rose-glow_1920x1080.webp"
+      },
+      "notes": "#01030F ground with a rose glow pool low-centre and a faint lilac lift top-right, grain-dithered. Built locally."
+    }
+  ]
+}
