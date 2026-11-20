@@ -1,7 +1,8 @@
 # ONE Agency Brand Kit
 
 The hosted ONE Agency brand kit: guidelines plus every downloadable asset (logos, colour, type, motion, templates,
-imagery, copy, glass and texture). Digital only: RGB, px, SVG/PNG/JPG/WebP and web fonts. Version 1.1, 2026-11-18.
+imagery, copy, glass and texture). Digital only: RGB, px, SVG/PNG/JPG/WebP and web fonts. Version 1.1, 2026-11-20, rebranded
+to the new identity (moodboard palette and logo, Unbounded and Geist, concept 01 "Nova" for everything else).
 
 ## The hub (v1.1)
 
@@ -15,14 +16,14 @@ used ZIPs are on Overview. The v1.0 anchors (`#logo`, `#top`) still work and are
   (labels, nav groups, icons, eyebrow numbers, document titles). Each view is a lazy chunk
   (`src/components/layout/view-loaders.ts`), preloaded on nav hover or focus.
 - **Shell** (`src/components/layout/`): `AppShell` (sidebar, `TopBar`, `NavDrawer`, `ViewOutlet`, `Footer`).
-  `ViewOutlet` runs the page transition (AnimatePresence `mode="wait"`, the site's cubic-bezier, plain fade for reduced
+  `ViewOutlet` runs the page transition (AnimatePresence `mode="wait"`, Nova's out curve, plain fade for reduced
   motion), scrolls to the top between views, sets the document title, and catches load errors with a reload action.
   After a navigation the view's h1 takes focus.
 - **Theme** (`src/styles/theme.css`, `src/lib/theme.ts`): `data-theme` on `<html>`, set before first paint by the inline
   script in `index.html` (saved choice in `localStorage` key `oa-kit-theme`, else `prefers-color-scheme`). The hub draws
-  with `--ui-*` variables: the live tokens in dark, a derived paper-and-ink set in light (the live site is dark-only).
-  Live tokens are never redefined, so swatches and the contrast matrix stay true. Brand specimens (logo on dark,
-  element stages, ad text, CTA rows) pin their ground with `data-theme="dark"` or `"light"` on the stage.
+  with `--ui-*` variables: navy in dark (the page on the derived `--void`, cards on Navy), white with Mist surfaces and
+  Sky panels in light. Brand tokens are never redefined, so swatches and the contrast matrix stay true. Brand specimens
+  (logo on navy, element stages, ad text, CTA rows) pin their ground with `data-theme="dark"` (Navy) or `"light"`.
 - **Möbius loop**: `public/vendor/ciq/ciq-loop.js` is ConversionIQ's key visual, copied byte for byte with its README.
   Live, it runs behind the Overview hero (`src/components/overview/MobiusLoop.tsx`): it follows the hub theme, pauses
   while the tab is hidden and is removed when you leave the view. In the kit it ships as stills
@@ -32,18 +33,23 @@ used ZIPs are on Overview. The v1.0 anchors (`#logo`, `#top`) still work and are
 
 ## Sources
 
-Everything is derived from the live site, snapshotted on 2026-11-17 into `design/source/`:
+The identity comes from the rebrand moodboard (Figma file Ex4UgCrCeAKPnv8H6BdHMm, node 133:305, exported 2026-11-20),
+in `design/source/rebrand/`:
 
-| File | Live URL |
+| File | What it is |
 | --- | --- |
-| `design/source/home.css` | https://oneagency.com/assets/css/home.bundle.css?v=746d4bae1d |
-| `design/source/one-agency-logo.svg` | https://oneagency.com/assets/img/one-agency-logo.svg |
+| `brand-tokens.json` | Hand-authored colour source: the five board colours (Navy, Mint, Ultra Violet, Sky, Mist), white, the logo gradient, and every derived token with its recipe. `npm run kit:tokens` builds everything from it. |
+| `logo_*.svg`, `wordmark-one_gradient.svg`, `mark_*.svg`, `icon_*.svg` | The logo masters, verified against the board (written by `build-source.mjs`). The only logo source. |
+| `paths.json`, `moodboard_figma-133-305.png` | The three logo paths and the board itself, for reference. |
 
-To refresh, download the current files over these two and rerun `npm run kit`. Colour values and token names are
-copied verbatim. Three sets of colours are computed, and each is labelled as derived wherever it appears: the tint/shade ramps; the hub's light theme (paper, ink and the 700 steps of rose and lilac, because the live
-site is dark-only); and the v1.1 style tokens `--kit-highlight`, `--kit-highlight-light`, `--kit-violet` and
-`--kit-night` (the highlight band, and the violet ground sampled from the reference ads). Motion follows the film
-"ONE Agency: The Free Business Audit".
+Five colours, white and the logo gradient are the board's. Everything else is computed and labelled derived wherever
+it appears: the system colours (surfaces, text greys, edges, `--violet-light`, pressed steps), the tint/shade ramps,
+the hub's light theme and the highlight band tokens. Type is Unbounded (display) and Geist (body). Radii, the "Frames
+in orbit" pattern, the photo set and the UI motion tokens come from concept 01 "Nova" (`one-agency-rebrand-v2`);
+the brand moves follow the film "ONE Agency: The Free Business Audit".
+
+The old live-site snapshots (`design/source/home.css`, `design/source/one-agency-logo.svg`) are kept for reference but
+no script reads them.
 
 ## Stack
 
@@ -59,9 +65,9 @@ Playwright (asset rendering). Python 3 with `fonttools` and `brotli` for the fon
 | `npm run build` | Type-check and production build to `dist/`. |
 | `npm run lint` | oxlint (generated bundles in `public/kit/motion` are ignored). |
 | `npm run kit` | Regenerates every kit asset below, in order. |
-| `npm run kit:tokens` | `scripts/extract-tokens.mjs`: parses the live CSS into `src/data/tokens.ts`, `src/styles/tokens.css` and `public/kit/colour/one-agency_tokens_web.{css,json}` (tokens, usage counts, derived ramps, WCAG contrast table, literal colours). |
-| `npm run kit:fonts` | `scripts/fetch-fonts.py`: downloads Geist 400/500/600/700 (vercel/geist-font v1.9.2), Lato 700 and Metal 400 (google/fonts) with their OFL licences. Full TTF + WOFF2 to `public/kit/fonts/`, Latin WOFF2 subsets to `src/assets/fonts/`. |
-| `npm run kit:logos` | `scripts/build-logos.mjs`: logo lockups and variants (SVG + PNG @1x/@2x/@4x), favicons, social avatar and OG image to `public/kit/logos/`, plus `src/data/logos.ts`. Add `-- --contact <file.png>` for a review contact sheet. Needs `kit:tokens` first. |
+| `npm run kit:tokens` | `scripts/extract-tokens.mjs`: builds `src/data/tokens.ts`, `src/styles/tokens.css` and `public/kit/colour/one-agency_tokens_web.{css,json}` from `design/source/rebrand/brand-tokens.json` (board and derived tokens, ramps, WCAG contrast table). |
+| `npm run kit:fonts` | `scripts/fetch-fonts.py`: downloads Geist 400/500/600/700 (vercel/geist-font v1.9.2) and Unbounded 500/600/700 (static instances of the google/fonts variable font) with their OFL licences. Full TTF + WOFF2 to `public/kit/fonts/`, Latin WOFF2 subsets (Geist, Unbounded 600, Sora) to `src/assets/fonts/`. Removes font files it no longer writes. |
+| `npm run kit:logos` | `scripts/build-logos.mjs`: from the moodboard masters, the horizontal (primary), stacked, wordmark and mark lockups in four variants (gradient on light, Mint and white on navy, Navy, white) as SVG + PNG @1x/@2x/@4x, the three app tiles, favicons, social avatar and OG image to `public/kit/logos/`, plus `src/data/logos.ts`. Add `-- --contact <file.png>` for a review contact sheet. Needs `kit:tokens` first. |
 | `npm run kit:motion` | `scripts/build-motion.mjs`: bundles the framework-free motion runtime to `public/kit/motion/one-motion.{js,mjs}`. |
 | `npm run kit:elements` | `scripts/build-elements.mjs`: graphic elements as SVG + PNG and the Phosphor ad icons to `public/kit/elements/` (list in `src/data/elements.ts`). The signature devices, patterns and illustrations are the React components in `src/kit/graphics/`, rendered to static SVG through Vite's SSR loader, once on dark and once on light. |
 | `npm run kit:mobius` | `scripts/build-mobius.mjs`: the Möbius loop (`public/vendor/ciq/ciq-loop.js`) held on one frame in Playwright and placed big and cropped, bleeding off the frame like the hub's Overview hero, in five crops (sweep, band top, band bottom, side, frame), energy and strings looks, flattened on navy and paper (JPG) and transparent (PNG), at 1080x1080, 1080x1350, 1080x1920 and 1200x628, to `public/kit/elements/mobius/` (crops and placements in `src/data/mobius.ts`), with half-size WebP previews in `public/previews/elements/mobius/` (display only). |
@@ -75,14 +81,14 @@ Playwright (asset rendering). Python 3 with `fonttools` and `brotli` for the fon
 ## Structure
 
 ```
-design/source/        live-site snapshots the scripts read
+design/source/        rebrand/: the moodboard masters and brand-tokens.json the scripts read (plus the retired live-site snapshots)
 scripts/              asset generators (scripts/lib: shared colour maths)
 public/kit/           the downloads, served as-is (see below)
 src/
   components/         views (*Section.tsx), with their parts in a folder per view (overview/, glass/, ...)
     layout/ ui/       app shell, sidebar, drawer, view outlet, footer, view header; buttons, filters, toasts, lightbox
   kit/motion/         motion components + vanilla.ts runtime
-  kit/glass/          GlassCard, GlassIcon, CheckBadge, HalftoneArc, ParticleStream, Grain, GlowGround, LightStreaks
+  kit/glass/          GlassCard, GlassIcon, CheckBadge, HalftoneArc, ParticleStream, Grain, LightStreaks (no glow anywhere)
   kit/type/           HighlightText (the highlight band)
   kit/graphics/       the element artwork as pure-SVG components (devices, patterns, illustrations), shared by the
                       hub and scripts/build-elements.mjs
@@ -97,13 +103,13 @@ src/
 
 | Folder | Contents |
 | --- | --- |
-| `logos/` | `stacked/`, `horizontal/`, `icon/` (each in `on-dark`, `on-light`, `white`, `ink`), `favicon/`, `social/` |
+| `logos/` | `horizontal/`, `stacked/`, `wordmark/`, `mark/` (each in `on-light`, `on-navy`, `navy`, `white`), `tile/` (Sky, Navy, Mint app tiles), `favicon/`, `social/` |
 | `colour/` | `one-agency_tokens_web.css`, `one-agency_tokens_web.json` |
-| `fonts/` | Geist, Lato, Metal as TTF + WOFF2, with OFL licence texts |
-| `elements/` | signature devices, patterns and illustrations (SVG + PNG, on dark and on light), halo, glow field, laurel, CTA buttons, proof bar, award badge (SVG + PNG); `mobius/` the Möbius loop stills (JPG and PNG); `icons/` |
+| `fonts/` | Unbounded and Geist as TTF + WOFF2, with OFL licence texts |
+| `elements/` | signature devices, patterns and illustrations (SVG + PNG, on dark and on light), laurel, CTA buttons, proof bar, award badge (SVG + PNG); `mobius/` the Möbius loop stills (JPG and PNG); `icons/` |
 | `motion/` | `one-motion.js` (global `OneMotion`), `one-motion.mjs`; `ads/` HTML5 sources; `exports/` MP4, GIF, PNG, HTML5 ZIP |
 | `copy/` | the copy bank, Markdown and JSON |
-| `templates/`, `imagery/` | written by the Magnific export, with `src/data/ads.generated.json` (not generated here) |
+| `templates/`, `imagery/` | written by the Magnific export, with `src/data/ads.generated.json` (not generated here); `imagery/photos/` holds the Nova photo set (`src/data/imagery-photos.ts`, Unsplash ids) |
 | `illustrations/`, `textures/` | glass illustrations and textures, written by the Magnific export with `src/data/glass.generated.json` |
 | `ads/creative/` | the creative ads, PNG and WebP per concept and size (`npm run kit:ads`); in their own ZIP (`one-agency_kit_ads.zip`), not in the full kit |
 | `references/` | the nine reference ads the glass style comes from (`npm run kit:references`) |
@@ -113,12 +119,12 @@ Download groups are folders under `public/kit/`, except `glass`, which collects 
 `references/` and `public/vendor/ciq/README.md` (the loop's credit; the kit carries the loop as stills, not the script). The groups and
 their paths are in `src/lib/kit.ts`. To stay under GitHub's 100 MiB file limit, `one-agency_kit_full.zip` carries
 illustrations as PNG only (their WebP twins are in the glass ZIP), leaves out the Möbius stills (`elements/mobius/`, in
-the elements ZIP) and the creative ads (`ads/creative/`, in the ads ZIP), and says so in its README.txt. Watch its size
-when adding files (the current size is printed by `npm run kit:zips`). The next lever, if it is needed: leave the six 1080 px
-motion GIFs out of the full ZIP only (the MP4s carry the same ads).
+the elements ZIP), the creative ads (`ads/creative/`, in the ads ZIP) and the six 1080 px motion GIFs
+(in the motion ZIP; the MP4s carry the same ads), and says so in its README.txt. Watch its size when adding files (the
+current size is printed by `npm run kit:zips`).
 
 File names follow `one-agency_[asset]_[variant]_[size].[ext]`, for example
-`one-agency_logo_stacked-on-dark_2x.png` or `one-agency_font_geist-700.woff2`. SVGs carry no size segment.
+`one-agency_logo_horizontal-on-navy_2x.png` or `one-agency_font_geist-700.woff2`. SVGs carry no size segment.
 
 ### The Magnific manifest
 
@@ -140,15 +146,16 @@ The Glass & texture view codifies the nine reference ads: components in `src/kit
 glass versus flat, do and don't, the references themselves and the Magnific files. Rules and copy live in
 `src/data/glass-rules.ts`.
 
-The highlight band (`HighlightText`, `.highlight-band`, `--kit-highlight` / `--kit-highlight-light`, both derived) is
+The highlight band (`HighlightText`, `.highlight-band`, `--kit-highlight` derived / `--kit-highlight-light` = Sky) is
 documented on the Type view with a live rebuild of the reference line. `WordRise` takes `highlight={[from, to]}`
 (word indices), which `Section` passes through for view titles (Glass, Copy, Assets).
 
 ## Motion
 
 Tokens live in `src/lib/motion.ts` (durations, the film's exact easing functions, overshoots, staggers, springs,
-variants). React components in `src/kit/motion/` all accept `inView` (play once on scroll, default) and `delay`, and
-honour reduced motion: `WordRise`, `LetterHop`, `Pop` (also the logo scale-in), `LineDraw`, `Halo`, `GradientBar`,
+variants). The UI tokens (micro duration, the `out` and `emphasized` curves, page and reveal transitions, photo zoom)
+follow concept 01 "Nova". React components in `src/kit/motion/` all accept `inView` (play once on scroll, default) and `delay`, and
+honour reduced motion: `WordRise`, `LetterHop`, `Pop` (also the logo scale-in), `LineDraw`, `GradientBar`,
 `GradientWipe`, `GradientText`.
 
 For HTML5 ads, `one-motion.js` runs the same moves as pure functions of time, so any frame can be rendered exactly:
@@ -164,5 +171,5 @@ For HTML5 ads, `one-motion.js` runs the same moves as pure functions of time, so
 </script>
 ```
 
-Accent words get the class `acc`; style it with the `.accent-word` recipe from `src/index.css` (Metal and
-`--accent-fill`).
+Accent words get the class `acc`; style it with the `.accent-word` recipe from `src/index.css` (Unbounded 600 and the
+signature gradient).

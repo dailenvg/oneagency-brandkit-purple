@@ -7,7 +7,7 @@ interface GlassDefsProps {
 
 /**
  * Shared paint for the glass illustrations, after the hub's glass tokens: body, rim light and specular lit from the
- * top left, a soft shadow, the signature gradient and the focal glow. Put inside <defs>.
+ * top left, and the signature gradient. No glow and no blur filters. Put inside <defs>.
  */
 export function GlassDefs({ c, id }: GlassDefsProps) {
   return (
@@ -30,13 +30,6 @@ export function GlassDefs({ c, id }: GlassDefsProps) {
         <stop offset="0" stopColor={c.from} />
         <stop offset="1" stopColor={c.to} />
       </linearGradient>
-      <radialGradient id={id('glow')}>
-        <stop offset="0" stopColor={c.focal} stopOpacity={c.alpha.glow} />
-        <stop offset="1" stopColor={c.focal} stopOpacity="0" />
-      </radialGradient>
-      <filter id={id('soft')} x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="16" />
-      </filter>
     </>
   )
 }

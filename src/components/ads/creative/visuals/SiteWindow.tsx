@@ -4,13 +4,13 @@ import { GlassCard } from '../../../../kit/glass/GlassCard'
 
 const BAR = 'block h-2 rounded-full bg-[color:var(--glass-divider)]'
 
-/** A glass website window: browser dots, a hero with headline bars and an image, three cards and a rose button. */
+/** A glass website window: browser dots, a hero with headline bars and an image, three cards and a Mint button. */
 export function SiteWindow({ width, className, style }: { width: number; className?: string; style?: CSSProperties }) {
   return (
     <div className={`absolute ${className ?? ''}`} style={{ width, ...style }}>
       <GlassCard depth={1} recede="right" className="flex flex-col gap-4 p-5">
         <div className="flex gap-1.5">
-          {['bg-rose', 'bg-[color:var(--pos)]', 'bg-[color:var(--glass-divider)]'].map((c) => (
+          {['bg-mint', 'bg-violet-light', 'bg-[color:var(--glass-divider)]'].map((c) => (
             <span key={c} className={`size-2.5 rounded-full ${c}`} />
           ))}
         </div>
@@ -32,7 +32,7 @@ export function SiteWindow({ width, className, style }: { width: number; classNa
             </GlassCard>
           ))}
         </div>
-        <span className="mx-auto h-6 w-2/5 rounded-full bg-rose shadow-[0_0_24px_-4px_var(--rose)]" />
+        <span className="mx-auto h-6 w-2/5 rounded-full bg-mint" />
       </GlassCard>
     </div>
   )

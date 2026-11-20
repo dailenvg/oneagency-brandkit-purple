@@ -1,15 +1,15 @@
 import { AD_TEXT_STYLES, type AdTextStyle } from '../../data/ad-styles'
 
-const FACE_CLASS = { Geist: 'font-sans', Lato: 'font-num', Metal: 'font-accent' } as const
+const FACE_CLASS = { Geist: 'font-sans', Unbounded: 'font-display' } as const
 
 /** Sample in the style, at banner size so the row stays compact. */
 function Sample({ s }: { s: AdTextStyle }) {
-  const filled = s.colour === '--accent-fill'
+  const filled = s.colour === '--gradient'
   const cta = s.id === 'cta'
   const text = { eyebrow: 'Free AI Growth Audit', headline: 'Best AI Product', accent: 'holes', subhead: 'Yours to keep.', body: 'Results in 5 minutes.', stat: '10M+', statLabel: 'Qualified leads generated', cta: 'Run My Free Audit', legal: 'Figures as published on oneagency.com, November 2026.' }[s.id]
   return (
     <span
-      className={`${FACE_CLASS[s.face]} ${filled ? (s.id === 'stat' ? 'stat-num' : 'accent-word') : ''} ${cta ? 'inline-block rounded-full bg-rose px-3 py-1.5' : ''} ${s.uppercase ? 'uppercase' : ''}`}
+      className={`${FACE_CLASS[s.face]} ${filled ? (s.id === 'stat' ? 'stat-num' : 'accent-word') : ''} ${cta ? 'inline-block rounded-full bg-mint px-3 py-1.5' : ''} ${s.uppercase ? 'uppercase' : ''}`}
       style={{
         fontWeight: s.weight,
         fontSize: s.banner * 1.5,
@@ -51,10 +51,10 @@ export function AdTextStyles() {
               <td className="p-3 whitespace-nowrap text-text-2">
                 {s.face} {s.weight}
               </td>
-              <td className="p-3 font-num text-step-0 whitespace-nowrap text-text">{s.social} px</td>
-              <td className="p-3 font-num text-step-0 whitespace-nowrap text-text">{s.banner} px</td>
-              <td className="p-3 font-num whitespace-nowrap text-text-2">{s.lineHeight}</td>
-              <td className="p-3 font-num whitespace-nowrap text-text-2">{s.tracking} em</td>
+              <td className="p-3 tabular-nums text-step-0 whitespace-nowrap text-text">{s.social} px</td>
+              <td className="p-3 tabular-nums text-step-0 whitespace-nowrap text-text">{s.banner} px</td>
+              <td className="p-3 tabular-nums whitespace-nowrap text-text-2">{s.lineHeight}</td>
+              <td className="p-3 tabular-nums whitespace-nowrap text-text-2">{s.tracking} em</td>
               <td className="p-3 font-code whitespace-nowrap text-text-2">{s.colour}</td>
             </tr>
           ))}

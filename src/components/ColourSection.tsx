@@ -18,15 +18,15 @@ import { ZipButton } from './ui/ZipButton'
 const CSS_URL = '/kit/colour/one-agency_tokens_web.css'
 const JSON_URL = '/kit/colour/one-agency_tokens_web.json'
 
-/** Colour: every live-site token by group, derived ramps, the contrast matrix and the ad accent rules. */
+/** Colour: the board palette and derived tokens by group, ramps, the contrast matrix and the ad accent rules. */
 export function ColourSection() {
   return (
     <Section
       id="colour"
       eyebrow="Colour"
-      title="Night-navy, rose and the site blue"
-      accent={[5]}
-      lede="Value for value from the live site's production CSS, with the site's own token names. Tap or click any value to copy it."
+      title="Navy, Mint and Ultra Violet"
+      accent={[1]}
+      lede="Five colours from the moodboard, and everything the kit derives from them, labelled. Tap or click any value to copy it."
       actions={
         <>
           <DownloadLink url={CSS_URL} label="CSS tokens" />
@@ -53,7 +53,7 @@ export function ColourSection() {
 
         <div>
           <SubHeading title="Tints and shades" badge={<Badge>{DERIVED_RAMPS.label}</Badge>}>
-            {DERIVED_RAMPS.method} ● marks the site value. Tap or click a step to copy its HEX.
+            {DERIVED_RAMPS.method} ● marks the board value. Tap or click a step to copy its HEX.
           </SubHeading>
           <Reveal className="flex flex-col gap-6">
             {RAMPS.map((ramp) => (
@@ -63,7 +63,7 @@ export function ColourSection() {
         </div>
 
         <div>
-          <SubHeading title="Text on ground: approved pairs">WCAG 2.1 contrast for every text token on every ground, drawn with the live variables.</SubHeading>
+          <SubHeading title="Text on ground: approved pairs">WCAG 2.1 contrast for every text token on every ground, drawn with the token variables.</SubHeading>
           <ContrastMatrix />
         </div>
 
@@ -83,16 +83,15 @@ export function ColourSection() {
         </div>
 
         <div>
-          <SubHeading title="Light theme for this hub" badge={<Badge>Derived: the live site is dark-only</Badge>}>
-            The sun and moon switch swaps each role from its live dark token to a paper-and-ink one. Rose and lilac are too light for text on paper, so
-            text uses their derived 700 steps, which pass AA on every light ground.
+          <SubHeading title="Light theme for this hub" badge={<Badge>Derived</Badge>}>
+            The sun and moon switch swaps each role from its navy token to a white, Mist and Sky one. Mint never sets text on light grounds, so accent text
+            and the focus ring use Ultra Violet.
           </SubHeading>
           <LightThemeTokens />
         </div>
 
         <SourceNote>
-          Pulled from <a href={TOKEN_SOURCE.url}>the live stylesheet</a> on {TOKEN_SOURCE.snapshot}. {TOKEN_SOURCE.note} The rebrand task&apos;s palette (Ink, White,
-          Vermilion, Stone; &ldquo;no blue, no gradients&rdquo;) is not used: the kit's rule is that the live site wins for colour.
+          From the {TOKEN_SOURCE.name} ({TOKEN_SOURCE.figma}, exported {TOKEN_SOURCE.exported}). {TOKEN_SOURCE.note}
         </SourceNote>
       </div>
     </Section>

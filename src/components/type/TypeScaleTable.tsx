@@ -31,7 +31,7 @@ export function TypeScaleTable() {
                 {step.token === '--step-num' ? '450K+' : 'Ag'}
               </td>
               {VIEWPORTS.map((v) => (
-                <td key={v} className="p-3 font-num whitespace-nowrap text-text">
+                <td key={v} className="p-3 tabular-nums whitespace-nowrap text-text">
                   {Math.round(clampPx(step.value, v) * 10) / 10} px
                 </td>
               ))}

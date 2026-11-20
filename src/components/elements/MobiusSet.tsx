@@ -24,9 +24,9 @@ const checker = (a: string, b: string): CSSProperties => ({ background: `repeati
 const STAGE: Record<string, { className: string; style?: CSSProperties; theme?: 'dark' | 'light' }> = {
   'on-navy': { className: 'bg-surface-2' },
   'on-paper': { className: 'bg-surface-2' },
-  'clear-dark': { className: '', style: checker('var(--ground)', 'var(--surface)'), theme: 'dark' },
-  'clear-light': { className: '', style: checker('var(--paper)', 'var(--lavender)'), theme: 'light' },
-  clear: { className: '', style: checker('var(--ground)', 'var(--surface)'), theme: 'dark' },
+  'clear-dark': { className: '', style: checker('var(--navy)', 'var(--surface-2)'), theme: 'dark' },
+  'clear-light': { className: '', style: checker('var(--paper)', 'var(--mist)'), theme: 'light' },
+  clear: { className: '', style: checker('var(--navy)', 'var(--surface-2)'), theme: 'dark' },
 }
 
 /** A ground the new look lacks maps to its nearest one: the two transparent sets of energy and the one of strings. */
@@ -120,7 +120,7 @@ export function MobiusSet() {
                       layout for all four keeps the row aligned. */}
                   <figcaption className="flex flex-col gap-0.5 text-step-small">
                     <span className="font-semibold whitespace-nowrap text-text">{frame.label}</span>
-                    <span className="font-num whitespace-nowrap text-text-3">{frame.dims}</span>
+                    <span className="tabular-nums whitespace-nowrap text-text-3">{frame.dims}</span>
                   </figcaption>
                 </figure>
               </motion.li>

@@ -1,9 +1,10 @@
 import type { ReactNode } from 'react'
 
 /**
- * Status label: Proposed, Derived, Live site, counts. One look everywhere, in both themes: a light blue filled tag
- * (--kit-lilac-100) with navy text (--kit-lilac-900), about 13:1. The words carry the meaning, not the colour.
+ * Status label: Proposed, Derived, counts. One look everywhere, in both themes: a Sky filled tag with Navy text,
+ * 14.3:1. The words carry the meaning, not the colour.
  */
 export function Badge({ children }: { children: ReactNode }) {
-  return <span className="inline-flex items-center rounded-site-sm bg-tag px-2.5 py-0.5 text-step-small font-semibold text-on-tag">{children}</span>
+  // font-sans and tracking-normal: a badge inside a display h2 (SubHeading) stays Geist, the same as everywhere else.
+  return <span className="inline-flex items-center rounded-site-sm bg-tag px-3 py-0.5 font-sans text-step-small font-semibold tracking-normal text-on-tag">{children}</span>
 }

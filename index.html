@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ONE Agency · Brand Kit</title>
     <meta name="description" content="ONE Agency brand kit v1.1: logos, colour, type, glass and texture, motion and templates, with downloads." />
-    <meta name="theme-color" content="#01030f" />
+    <meta name="theme-color" content="#010138" />
     <meta name="color-scheme" content="dark light" />
     <!--
       Theme before first paint, so there is no flash of the wrong one: the saved choice (src/lib/theme.ts, same key),
@@ -21,7 +21,7 @@
         var root = document.documentElement
         root.dataset.theme = theme
         root.style.colorScheme = theme
-        if (theme === 'light') document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f6f9fe')
+        if (theme === 'light') document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
       })()
     </script>
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
@@ -42,28 +42,13 @@
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="ONE Agency brand kit: the headline Brand kit beside the Möbius loop on night navy." />
+    <meta property="og:image:alt" content="ONE Agency brand kit: the headline Brand kit beside the Möbius loop on navy." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ONE Agency · Brand Kit" />
     <meta name="twitter:description" content="ONE Agency brand kit v1.1: logos, colour, type, glass and texture, motion and templates, with downloads." />
     <meta name="twitter:image" content="https://oneagency-brandkit-five.vercel.app/og/one-agency_brand-kit_og-image_1200x630.jpg" />
   </head>
   <body>
-    <!--
-      The live site's accent light (oneagency.com neon.js, #oa-neon): blurred copies of the glyphs are added back onto
-      them, so gradient text brightens toward a white-hot core while the edges and bloom keep the rose-to-blue colour.
-      CSS drop-shadow can only glow underneath the fill. Inline because Chrome does not load filters from external SVGs.
-    -->
-    <svg aria-hidden="true" focusable="false" style="position: absolute; width: 0; height: 0; overflow: hidden">
-      <filter id="oa-neon" x="-25%" y="-60%" width="150%" height="220%" color-interpolation-filters="sRGB">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="core" />
-        <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="glow" />
-        <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="bloom" />
-        <feComposite in="core" in2="glow" operator="arithmetic" k2="0.55" k3="0.75" result="cg" />
-        <feComposite in="cg" in2="bloom" operator="arithmetic" k2="1" k3="0.8" result="light" />
-        <feComposite in="SourceGraphic" in2="light" operator="arithmetic" k2="1" k3="1" />
-      </filter>
-    </svg>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

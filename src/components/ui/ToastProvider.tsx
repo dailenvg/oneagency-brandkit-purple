@@ -29,7 +29,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   return (
     <ToastContext.Provider value={api}>
       {children}
-      <div role="status" aria-live="polite" className="pointer-events-none fixed inset-x-0 bottom-4 z-70 flex flex-col items-center gap-2 px-4">
+      <div role="status" aria-live="polite" className="pointer-events-none fixed inset-x-0 bottom-[max(16px,env(safe-area-inset-bottom))] z-70 flex flex-col items-center gap-2 px-4">
         <AnimatePresence initial={false}>
           {toasts.map((t) => (
             <motion.p
@@ -39,7 +39,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               initial="hidden"
               animate="show"
               exit="exit"
-              className="flex items-center gap-2 rounded-full border border-edge bg-raised px-4 py-2.5 text-step-small font-medium text-text shadow-card"
+              className="flex items-center gap-2 rounded-full border border-edge bg-raised px-4 py-3 text-step-small font-medium text-text shadow-card"
             >
               {t.tone === 'ok' ? <CheckCircle className="size-4 shrink-0 text-do" aria-hidden /> : <WarningCircle className="size-4 shrink-0 text-dont" aria-hidden />}
               {t.message}

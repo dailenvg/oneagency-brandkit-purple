@@ -2,7 +2,7 @@ import { distance, duration, ease, overshoot, stagger } from '../lib/motion'
 
 /** Each move from the film, with its values read from src/lib/motion.ts so the page never drifts from the code. */
 
-export type MoveId = 'word-rise' | 'letter-hop' | 'pop' | 'logo-in' | 'out' | 'line-draw' | 'halo' | 'bar' | 'wipe' | 'hold'
+export type MoveId = 'word-rise' | 'letter-hop' | 'pop' | 'logo-in' | 'out' | 'line-draw' | 'bar' | 'wipe' | 'hold'
 
 export interface Move {
   id: MoveId
@@ -85,16 +85,6 @@ export const MOVES: Move[] = [
       ['Ring', `${s(duration.ring)}, scales to ${distance.ringScale}x, once`],
     ],
     use: 'Connects steps, left to right and upward, and always ends on a result.',
-  },
-  {
-    id: 'halo',
-    name: 'Halo',
-    api: 'OneMotion.halo · <Halo>',
-    values: [
-      ['Fade', `${s(duration.haloFade)}, opacity ${distance.haloOpacity.join(' to ')}`],
-      ['Swell', `${s(duration.haloScale)}, scale ${distance.haloScale.join(' to ')}`],
-    ],
-    use: 'Behind the logo or one hero number. Swells once and holds; never loops.',
   },
   {
     id: 'bar',

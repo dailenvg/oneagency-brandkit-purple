@@ -1,15 +1,21 @@
 import type { ReactNode } from 'react'
+import { HalftoneArc } from '../../../../kit/glass/HalftoneArc'
 import { FitBox } from '../FitBox'
-import { Backlight, type BacklightArc, type BacklightGlow } from './Backlight'
 import { useHalftone } from './halftone-context'
 import type { VisualPlacement } from './visual-props'
+
+/** Arc width, ad px, and its top edge relative to the drawing (negative runs above it); `left` is its centre. */
+export interface StageArc {
+  width: number
+  top: number
+  left?: string
+}
 
 interface StageProps {
   /** Natural size of the drawing, ad px. */
   width: number
   height: number
-  arc?: BacklightArc
-  glow?: BacklightGlow
+  arc?: StageArc
   placement: VisualPlacement
   bleed?: number
   className?: string
@@ -22,18 +28,18 @@ const ARC_DOT_TOP = 0.06
 const SIDE_ARC = { left: '72%', maxWidth: 1.45 } as const
 
 /**
- * A visual's stage: the drawing fitted to its slot, with its halftone arc and under-glow. Below a headline the arc's
- * rise is fitted as headroom, so the dots never reach the copy above; beside the copy the arc sweeps right only. With the
- * Möbius loop behind the ad there is no arc.
+ * A visual's stage: the drawing fitted to its slot, with its halftone arc behind it (no glow). Below a headline the
+ * arc's rise is fitted as headroom, so the dots never reach the copy above; beside the copy the arc sweeps right only.
+ * With the Möbius loop behind the ad there is no arc.
  */
-export function Stage({ width, height, glow, placement, bleed, className, children, ...props }: StageProps) {
+export function Stage({ width, height, placement, bleed, className, children, ...props }: StageProps) {
   const side = placement === 'side'
   const arc = useHalftone() ? props.arc : undefined
-  const lit = arc && side ? { ...arc, left: SIDE_ARC.left, width: Math.min(arc.width, width * SIDE_ARC.maxWidth) } : arc
+  const drawn = arc && side ? { ...arc, left: SIDE_ARC.left, width: Math.min(arc.width, width * SIDE_ARC.maxWidth) } : arc
   const headroom = arc && !side ? Math.max(0, -(arc.top + ARC_DOT_TOP * arc.width)) : 0
   return (
     <FitBox width={width} height={height} headroom={headroom} bleed={bleed} className={className}>
-      <Backlight arc={lit} glow={glow} />
+      {drawn && <HalftoneArc rows={15} density={1.7} className="absolute -translate-x-1/2" style={{ width: drawn.width, top: drawn.top, left: drawn.left ?? '50%' }} />}
       {children}
     </FitBox>
   )

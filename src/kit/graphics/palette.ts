@@ -1,11 +1,11 @@
 import { RAMPS, STYLE_TOKENS, TOKENS } from '../../data/tokens'
 
-/** Which ground a graphic is drawn for: night-navy (dark) or paper and lavender (light). */
+/** Which ground a graphic is drawn for: Navy (dark) or Sky (light). */
 export type Tone = 'dark' | 'light'
 
 const RAMP_STEPS = RAMPS.flatMap((r) => r.steps)
 
-/** A token's hex, from the live tokens, the derived ramps or the derived style tokens. Never a literal. */
+/** A token's hex, from the brand tokens, the derived ramps or the derived style tokens. Never a literal. */
 function hex(name: string) {
   const value =
     TOKENS.find((t) => t.name === name)?.hex ?? RAMP_STEPS.find((s) => s.name === name)?.hex ?? STYLE_TOKENS.find((s) => s.name === name)?.hex
@@ -23,7 +23,11 @@ export interface GraphicPalette {
   /** Signature gradient, start and end. */
   from: string
   to: string
-  /** The focal point's colour: dot, glow, highlighted node. */
+  /** The full signature gradient for fills (Mint to Ultra Violet in both tones): frames and other solid artwork. */
+  signature: readonly [string, string]
+  /** Solid frame fills beside the gradient one: the accent, then the neutral. */
+  frames: readonly [string, string]
+  /** The focal point's colour: dot, highlighted node. */
   focal: string
   /** Text and marks that sit on a gradient or focal fill. */
   onFocal: string
@@ -37,73 +41,70 @@ export interface GraphicPalette {
   /** Glass tint under the body (--glass-tint): what makes it read as frosted, not clear. */
   tint: string
   tintAlpha: number
-  /** Drop shadow under glass. */
-  shadow: string
-  shadowAlpha: number
   /** Opacity scale, so every graphic uses the same steps. */
-  alpha: { hairline: number; grid: number; structure: number; secondary: number; glow: number }
+  alpha: { hairline: number; grid: number; structure: number; secondary: number; area: number }
   /** Patterns: opacity multiplier, set so every pattern still reads on a phone (a 1080 frame shown about 360 px wide). */
   patternGain: number
 }
 
+/** On navy: Mint into the derived light violet (full Ultra Violet is 2.1:1 on navy), Mint focal point, navy marks on it. */
 const DARK: GraphicPalette = {
-  ground: hex('--ground'),
+  ground: hex('--navy'),
   line: hex('--paper'),
   text: hex('--text-2'),
-  from: hex('--rose'),
-  to: hex('--lilac'),
-  focal: hex('--lilac'),
+  from: hex('--mint'),
+  to: hex('--violet-light'),
+  signature: [hex('--mint'), hex('--violet')],
+  frames: [hex('--mint'), hex('--mist')],
+  focal: hex('--mint'),
   onFocal: hex('--on-accent'),
   glass: [
     [0, hex('--paper'), 0.13],
     [0.55, hex('--paper'), 0.04],
-    [1, hex('--rose'), 0.09],
+    [1, hex('--mint'), 0.08],
   ],
   rimStops: [
-    [0, hex('--rose'), 0.9],
-    [0.45, hex('--rose'), 0.18],
+    [0, hex('--mint'), 0.9],
+    [0.45, hex('--mint'), 0.18],
     [1, hex('--paper'), 0.1],
   ],
   specular: 0.3,
   paper: hex('--paper'),
-  tint: hex('--ground'),
+  tint: hex('--navy'),
   tintAlpha: 0.55,
-  shadow: hex('--void'),
-  shadowAlpha: 0.9,
-  alpha: { hairline: 0.07, grid: 0.12, structure: 0.22, secondary: 0.5, glow: 0.55 },
+  alpha: { hairline: 0.07, grid: 0.12, structure: 0.22, secondary: 0.5, area: 0.2 },
   patternGain: 2.5,
 }
 
 /**
- * Rose and lilac are too pale on paper: the gradient and focal point use the hub's light accent pair (derived tokens,
- * 3.67:1 or better on paper, paper-2 and lavender). Marks on the focal fill are ink: 4.7 to 5.1:1 across the gradient,
- * where white is only about 4:1.
+ * On Sky: Mint would vanish, so the gradient runs from the derived deep Mint (--mint-800, 4:1 on Sky) into Ultra Violet,
+ * and the focal point is Ultra Violet with white marks on it (8.6:1).
  */
 const LIGHT: GraphicPalette = {
-  ground: hex('--lavender'),
+  ground: hex('--sky'),
   line: hex('--ink'),
   text: hex('--ink-3'),
-  from: hex('--kit-accent-light-from'),
-  to: hex('--kit-accent-light-to'),
-  focal: hex('--kit-accent-light-to'),
-  onFocal: hex('--ink'),
+  from: hex('--mint-800'),
+  to: hex('--violet'),
+  signature: [hex('--mint'), hex('--violet')],
+  frames: [hex('--violet'), hex('--paper')],
+  focal: hex('--violet'),
+  onFocal: hex('--paper'),
   glass: [
     [0, hex('--paper'), 0.85],
     [0.55, hex('--paper'), 0.5],
-    [1, hex('--rose'), 0.12],
+    [1, hex('--violet'), 0.08],
   ],
   rimStops: [
-    [0, hex('--kit-rose-600'), 0.8],
-    [0.45, hex('--rose'), 0.3],
+    [0, hex('--violet'), 0.8],
+    [0.45, hex('--violet'), 0.25],
     [1, hex('--ink'), 0.08],
   ],
   specular: 0.9,
   paper: hex('--paper'),
   tint: hex('--paper'),
   tintAlpha: 0.55,
-  shadow: hex('--ink'),
-  shadowAlpha: 0.14,
-  alpha: { hairline: 0.07, grid: 0.11, structure: 0.2, secondary: 0.5, glow: 0.24 },
+  alpha: { hairline: 0.07, grid: 0.11, structure: 0.2, secondary: 0.5, area: 0.1 },
   patternGain: 1.8,
 }
 

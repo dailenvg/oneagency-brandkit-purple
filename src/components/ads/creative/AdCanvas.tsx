@@ -1,6 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react'
 import { CREATIVE_AD_UNIT, STORY_SAFE, type CreativeAdSize, type CreativeFormat } from '../../../data/ad-creative'
-import { GlowGround } from '../../../kit/glass/GlowGround'
 import { Grain } from '../../../kit/glass/Grain'
 import { LightStreaks } from '../../../kit/glass/LightStreaks'
 
@@ -16,7 +15,7 @@ interface AdCanvasProps {
   label: string
   /** A full-bleed still under everything but the ground (the Möbius loop): placed and nudged, never reshaped. */
   still?: { src: string; x?: number; y?: number }
-  /** Glow, arcs and streams behind the layout, free to run into the margins and the story safe zones. */
+  /** Arcs and streams behind the layout, free to run into the margins and the story safe zones. */
   backdrop?: ReactNode
   children: ReactNode
 }
@@ -33,14 +32,10 @@ const INSET: Record<CreativeFormat, CSSProperties> = {
 
 const LOGO_WIDTH: Record<CreativeFormat, number> = { square: 100, portrait: 108, story: 112, landscape: 84 }
 
-/** Night ground: --kit-night with a faint violet lift top right and bottom left, as in the reference ads. */
-const NIGHT: CSSProperties = {
-  background:
-    'radial-gradient(70% 55% at 88% 0%, color-mix(in srgb, var(--kit-violet) 55%, transparent), transparent 72%), radial-gradient(60% 45% at 0% 100%, color-mix(in srgb, var(--kit-violet) 38%, transparent), transparent 70%), var(--kit-night)',
-}
+
 
 /**
- * Fixed-pixel artboard for one creative ad: the brand's night (or violet) ground pinned to the dark theme, the stacked
+ * Fixed-pixel artboard for one creative ad: the brand's navy (or violet) ground pinned to the dark theme, the stacked
  * logo, the format's safe content box and film grain over everything. Laid out at half size and drawn at 2x (scale 1),
  * so the kit's glass components keep their proportions; the hub scales the whole board to fit.
  */
@@ -51,11 +46,11 @@ export function AdCanvas({ size, scale = 1, ground = 'night', logo = 'left', lab
       <div
         data-theme="dark"
         className="absolute top-0 left-0 isolate overflow-hidden font-sans text-text"
-        style={{ width: width / U, height: height / U, transform: `scale(${U * scale})`, transformOrigin: '0 0', ...(ground === 'night' ? NIGHT : { background: 'var(--kit-night)' }) }}
+        style={{ width: width / U, height: height / U, transform: `scale(${U * scale})`, transformOrigin: '0 0', background: 'var(--navy)' }}
       >
         {ground === 'violet' && (
           <>
-            <GlowGround variant="violet" />
+            <div aria-hidden className="violet-ground absolute inset-0" />
             {/* The streaks would compete with the Möbius strands, so a still replaces them. */}
             {!still && <LightStreaks className="opacity-70" />}
           </>
@@ -75,7 +70,7 @@ export function AdCanvas({ size, scale = 1, ground = 'night', logo = 'left', lab
           {backdrop}
         </div>
         <div className={`absolute flex flex-col ${logo === 'centre' ? 'items-center text-center' : 'items-start'}`} style={INSET[format]}>
-          <img src="/kit/logos/stacked/one-agency_logo_stacked-on-dark.svg" alt="" width={LOGO_WIDTH[format]} height={Math.round(LOGO_WIDTH[format] * 0.385)} className="relative z-10 shrink-0" />
+          <img src="/kit/logos/stacked/one-agency_logo_stacked-on-navy.svg" alt="" width={LOGO_WIDTH[format]} height={Math.round((LOGO_WIDTH[format] * 567.08) / 1223.2)} className="relative z-10 shrink-0" />
           <div className="flex min-h-0 w-full flex-1 flex-col">{children}</div>
         </div>
         {!still && <Grain className="z-20" />}

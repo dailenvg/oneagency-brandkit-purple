@@ -85,8 +85,6 @@ export function FreeAudit({ tone, idPrefix, label, className }: GraphicProps) {
       </g>
 
       <g {...anim('focal')}>
-        <ellipse cx={LENS.cx + 8} cy={LENS.cy + 12} rx="120" ry="100" fill={url('glow')} />
-        <path d={linePath([[hx, hy], [ex, ey]])} stroke={c.shadow} strokeOpacity={c.shadowAlpha * 0.6} strokeWidth="18" strokeLinecap="round" filter={url('soft')} />
         <path d={linePath([[hx, hy], [ex, ey]])} stroke={c.line} strokeOpacity={c.alpha.structure} strokeWidth="16" strokeLinecap="round" />
         <path d={linePath([[hx, hy], [ex, ey]])} stroke={url('glass')} strokeWidth="14" strokeLinecap="round" />
         <circle cx={LENS.cx} cy={LENS.cy} r={LENS.r} fill={url('glass')} />

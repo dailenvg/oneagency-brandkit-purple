@@ -18,10 +18,10 @@ interface Row {
 const ROWS: Row[] = [
   {
     variant: 'primary',
-    label: 'Primary: rose pill',
+    label: 'Primary: Mint pill',
     source: 'live',
     light: false,
-    pinned: { Hover: 'bg-transparent! text-lavender-text!', Focus: 'outline-2 outline-offset-3 outline-text', Pressed: 'bg-rose-deep! border-rose-deep!' },
+    pinned: { Hover: 'bg-transparent! text-on-ghost!', Focus: 'outline-2 outline-offset-3 outline-text', Pressed: 'bg-fill-pressed! border-fill-pressed!' },
   },
   {
     variant: 'secondary',
@@ -32,7 +32,7 @@ const ROWS: Row[] = [
   },
   {
     variant: 'on-light',
-    label: 'On light: ink pill',
+    label: 'On light: Navy pill',
     source: 'proposed',
     light: true,
     pinned: { Hover: 'bg-transparent! text-ink!', Focus: 'outline-2 outline-offset-3 outline-ink', Pressed: 'bg-ink-2! border-ink-2!' },

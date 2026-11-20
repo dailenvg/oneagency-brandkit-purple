@@ -23,7 +23,7 @@ export const adMinPx = (id: AdTextStyle['id'], format: CreativeFormat, fit = 1) 
   return min ? (format === 'landscape' ? min.landscape : min.social) / fit : 0
 }
 
-const FACE: Record<AdTextStyle['face'], string> = { Geist: 'var(--font-sans)', Lato: 'var(--font-num)', Metal: 'var(--font-accent)' }
+const FACE: Record<AdTextStyle['face'], string> = { Geist: 'var(--font-sans)', Unbounded: 'var(--font-display)' }
 
 /** Ad px (CSS px inside the canvas, half the exported px) for a text style in a format, never below its floor. */
 export const adPx = (id: AdTextStyle['id'], format: CreativeFormat, scale = 1, fit = 1) =>
@@ -45,6 +45,6 @@ export function adText(id: AdTextStyle['id'], format: CreativeFormat, scale = 1,
     lineHeight: s.lineHeight,
     letterSpacing: `${s.tracking}em`,
     textTransform: s.uppercase ? 'uppercase' : undefined,
-    color: s.colour === '--accent-fill' ? undefined : `var(${s.colour})`,
+    color: s.colour === '--gradient' ? undefined : `var(${s.colour})`,
   }
 }

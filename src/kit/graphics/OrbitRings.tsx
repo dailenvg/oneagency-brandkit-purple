@@ -38,10 +38,6 @@ export function OrbitRings({ tone, idPrefix, label, className }: GraphicProps) {
           <stop offset="0.5" stopColor={c.from} stopOpacity="0.8" />
           <stop offset="1" stopColor={c.to} />
         </linearGradient>
-        <radialGradient id={id('glow')}>
-          <stop offset="0" stopColor={c.focal} stopOpacity={c.alpha.glow} />
-          <stop offset="1" stopColor={c.focal} stopOpacity="0" />
-        </radialGradient>
       </defs>
 
       <g {...anim('structure')} stroke={c.line} strokeWidth={STROKE.hairline}>
@@ -63,7 +59,6 @@ export function OrbitRings({ tone, idPrefix, label, className }: GraphicProps) {
 
       <path {...anim('draw')} d={arcPath(C, C, outer, TRAIL_FROM, HIGHLIGHT)} stroke={url('trail')} strokeWidth={STROKE.focal} strokeLinecap="round" />
       <g {...anim('focal')}>
-        <circle cx={hx} cy={hy} r="52" fill={url('glow')} />
         <circle cx={hx} cy={hy} r="13" stroke={c.focal} strokeOpacity={c.alpha.secondary} strokeWidth={STROKE.line} />
         <circle cx={hx} cy={hy} r="6" fill={c.focal} />
       </g>

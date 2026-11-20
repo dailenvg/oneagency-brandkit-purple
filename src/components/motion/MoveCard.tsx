@@ -25,7 +25,7 @@ export function MoveCard({ move }: { move: Move }) {
           {move.values.map(([k, v]) => (
             <div key={k} className="contents">
               <dt className="text-text-3">{k}</dt>
-              <dd className="font-num text-text">{v}</dd>
+              <dd className="tabular-nums text-text">{v}</dd>
             </div>
           ))}
         </dl>

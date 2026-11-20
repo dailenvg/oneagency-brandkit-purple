@@ -29,14 +29,14 @@ export function CreativeAdCard({ concept, size, onOpen, style, sizeOnly = false 
         <TrueSizeButton concept={concept} size={size} onOpen={onOpen} />
       </motion.div>
       {sizeOnly ? (
-        <p className="font-num text-step-small text-text-3">
+        <p className="tabular-nums text-step-small text-text-3">
           {size.label} {dims}
         </p>
       ) : (
         <div className="flex flex-col gap-1">
           <p className="flex flex-wrap items-baseline gap-x-3">
             <span className="font-semibold text-text">{concept.name}</span>
-            <span className="font-num text-step-small text-text-3">
+            <span className="tabular-nums text-step-small text-text-3">
               {size.label} {dims}
             </span>
           </p>

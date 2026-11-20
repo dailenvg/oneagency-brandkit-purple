@@ -5,7 +5,7 @@ import { setTheme, useTheme } from '../../lib/theme'
 
 /**
  * Dark mode switch: a 44px track (the same height as every button, see button-styles.ts) showing both ends (sun left,
- * moon right), with a rose thumb that covers the active one and carries it. role="switch" with a fixed name
+ * moon right), with a Mint thumb that covers the active one and carries it. role="switch" with a fixed name
  * ("Dark mode") and aria-checked for the state; the title says what a press does. Reduced motion: the thumb jumps and
  * the icon swaps with no turn, scale or fade.
  */
@@ -29,8 +29,8 @@ export function ThemeToggle() {
       {/* Both ends stay visible, centred under where the thumb sits (3px inset + 18px half thumb). */}
       <Sun aria-hidden className="absolute top-1/2 left-[13px] size-4 -translate-y-1/2 text-text-3 transition-colors group-hover:text-text-2" />
       <Moon aria-hidden className="absolute top-1/2 right-[13px] size-4 -translate-y-1/2 text-text-3 transition-colors group-hover:text-text-2" />
-      {/* The ring in --ui-accent separates the rose thumb from the pale light-theme track (rose alone is under 3:1 there). */}
-      <motion.span aria-hidden layout={!reduced} transition={spring.snappy} className="relative grid size-9 place-items-center rounded-full bg-rose text-on-accent ring-1 ring-accent">
+      {/* The thumb is the theme's fill (Mint on dark, Ultra Violet on light); the --ui-accent ring keeps its edge on the track. */}
+      <motion.span aria-hidden layout={!reduced} transition={spring.snappy} className="relative grid size-9 place-items-center rounded-full bg-fill text-on-fill ring-1 ring-accent">
         {reduced ? (
           icon
         ) : (

@@ -46,7 +46,7 @@ export function Sidebar({ current, layoutId, onNavigate, showBrand = true }: Sid
           <a href={viewHref('overview')} onClick={onNavigate} aria-label="ONE Agency brand kit, overview" className="flex min-h-touch items-center rounded-site-sm">
             <BrandLogo lockup="horizontal" alt="" eager className="h-6 w-auto" />
           </a>
-          <span className="rounded-full border border-edge px-2 py-0.5 font-num text-step-small text-text-3">v{KIT.version}</span>
+          <span className="rounded-full border border-edge px-2 py-0.5 tabular-nums text-step-small text-text-3">v{KIT.version}</span>
         </div>
       )}
       {/* scroll-py-8 keeps a focused item clear of the 32px fade when Tab scrolls the list. */}

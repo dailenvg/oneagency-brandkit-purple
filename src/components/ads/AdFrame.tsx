@@ -48,7 +48,7 @@ export function AdFrame({ item, fit, onOpen }: AdFrameProps) {
               type="button"
               onClick={onOpen}
               aria-label={`Open ${item.name} at full size`}
-              className="group absolute inset-0 min-h-touch cursor-zoom-in rounded-site-sm focus-visible:-outline-offset-4"
+              className="group absolute inset-0 min-h-touch cursor-zoom-in rounded-site-sm focus-visible:-outline-offset-4 focus-visible:outline-paper focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-inset"
             >
               {/* Decorative cue (the whole image is the target): 32 px at a 4 px inset so it fits the 44 px minimum box. */}
               <span className="absolute top-1 right-1 grid size-8 place-items-center rounded-full bg-void/70 text-text opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100 [@media(hover:none)]:opacity-100" aria-hidden>
@@ -61,7 +61,7 @@ export function AdFrame({ item, fit, onOpen }: AdFrameProps) {
       <figcaption className="flex flex-col gap-2">
         <p className="flex flex-wrap items-baseline gap-x-3">
           <span className="font-semibold text-text">{item.name}</span>
-          <span className="font-num text-step-small text-text-3">{formatSize(item.width, item.height)}</span>
+          <span className="tabular-nums text-step-small text-text-3">{formatSize(item.width, item.height)}</span>
           {item.channel === 'other' && item.channelLabel && <span className="text-step-small text-text-3">{item.channelLabel}</span>}
         </p>
         {description && <p className="max-w-md text-step-small text-text-2">{description}</p>}

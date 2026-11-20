@@ -72,7 +72,7 @@ const top = (label: string): Subsection => ({ id: slug(label), label, top: true 
  * Copy and Assets have no headed subsections (a dashboard and two filterable lists), so they stay plain links.
  */
 export const SUBSECTIONS: Partial<Record<ViewId, Subsection[]>> = {
-  logo: [top('Composition'), sub('Clear space'), sub('Minimum size'), sub('Misuse'), sub('Favicon and social avatar')],
+  logo: [top('Composition'), sub('Clear space'), sub('Minimum size'), sub('Misuse'), sub('App tiles, favicon and social', 'App tiles and favicon')],
   colour: [
     top('Palette'),
     sub('Tints and shades'),
@@ -102,7 +102,7 @@ export const SUBSECTIONS: Partial<Record<ViewId, Subsection[]>> = {
     sub('Illustrations and textures'),
   ],
   motion: [top('Principles'), sub('The moves')],
-  imagery: [top('Direction'), sub('Starter library')],
+  imagery: [top('Direction'), sub('Photo set'), sub('Starter library')],
   voice: [sub('Four pillars'), sub('Voice traits'), sub('Words we never use'), sub('Headline patterns')],
   ads: [top('Featured'), sub('Creative ads'), sub('Reference ads'), sub('Templates and samples', 'Templates'), sub('Animated ads')],
 }

@@ -12,8 +12,8 @@ interface AdHeadlineProps {
 }
 
 /**
- * Headline in Geist 700 with its one accent word in Metal and the signature gradient. A quote is set without quote marks:
- * the rose quote glyph beside it carries that.
+ * Headline in Unbounded 600 with its one accent word in Unbounded and the signature gradient. A quote is set without quote marks:
+ * the Mint quote glyph beside it carries that.
  */
 export function AdHeadline({ concept, format, scale = 1, className }: AdHeadlineProps) {
   const words = concept.headline.split(' ')
@@ -23,7 +23,7 @@ export function AdHeadline({ concept, format, scale = 1, className }: AdHeadline
       {words.map((word, i) => {
         return (
           <Fragment key={i}>
-            {i === concept.accent ? <GradientText className="leading-[0.82]">{word}</GradientText> : word}
+            {i === concept.accent ? <GradientText>{word}</GradientText> : word}
             {i < last && ' '}
           </Fragment>
         )

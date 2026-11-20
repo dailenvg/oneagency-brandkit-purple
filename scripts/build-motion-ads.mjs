@@ -30,34 +30,34 @@ const CLICK_URL = 'https://oneagency.com'
 /** Files each ad folder carries, from where they are built. */
 const SHARED = {
   'one-motion.js': 'public/kit/motion/one-motion.js',
-  'logo-stacked.svg': 'public/kit/logos/stacked/one-agency_logo_stacked-on-dark.svg',
-  'logo-horizontal.svg': 'public/kit/logos/horizontal/one-agency_logo_horizontal-on-dark.svg',
-  'logo-icon.svg': 'public/kit/logos/icon/one-agency_logo_icon-on-dark.svg',
+  'logo-stacked.svg': 'public/kit/logos/stacked/one-agency_logo_stacked-on-navy.svg',
+  'logo-horizontal.svg': 'public/kit/logos/horizontal/one-agency_logo_horizontal-on-navy.svg',
+  'logo-icon.svg': 'public/kit/logos/mark/one-agency_logo_mark-on-navy.svg',
   'laurel.svg': 'public/kit/elements/one-agency_element_laurel.svg',
   'fonts/geist-500.woff2': 'src/assets/fonts/geist-500.woff2',
   'fonts/geist-600.woff2': 'src/assets/fonts/geist-600.woff2',
   'fonts/geist-700.woff2': 'src/assets/fonts/geist-700.woff2',
-  'fonts/lato-700.woff2': 'src/assets/fonts/lato-700.woff2',
-  'fonts/metal-400.woff2': 'src/assets/fonts/metal-400.woff2',
+  'fonts/unbounded-600.woff2': 'src/assets/fonts/unbounded-600.woff2',
 }
 
 /* ------------------------------------------------------------------ styles */
 
 const token = (name) => TOKENS.find((t) => t.name === name)
-const TOKEN_CSS = ['--ground', '--rose', '--rose-deep', '--lilac', '--text', '--text-2', '--on-accent', '--form-copy', '--edge', '--surface', '--bar']
-  .map((n) => `${n}:${token(n).value}`)
+/** Brand tokens the ads use, written as resolved values (an ad folder carries no tokens.css). */
+const TOKEN_CSS = ['--navy', '--mint', '--violet', '--violet-light', '--text', '--text-2', '--on-accent', '--edge', '--surface']
+  .map((n) => `${n}:${token(n).hex}`)
   .join(';')
 
 const style = (id, scale) => {
   const s = AD_TEXT_STYLES.find((x) => x.id === id)
-  return `font-family:${s.face === 'Lato' ? 'Lato' : s.face === 'Metal' ? 'Metal' : 'Geist'};font-weight:${s.weight};font-size:${s[scale]}px;line-height:${s.lineHeight};letter-spacing:${s.tracking}em${s.uppercase ? ';text-transform:uppercase' : ''}`
+  return `font-family:${s.face};font-weight:${s.weight};font-size:${s[scale]}px;line-height:${s.lineHeight};letter-spacing:${s.tracking}em${s.uppercase ? ';text-transform:uppercase' : ''}`
 }
 
 /** Spacing per format, px: outer padding, the gap between blocks, and the logo width. */
 const LAYOUT = {
   '1080x1920': { pad: 120, gap: 84, logo: 480, laurel: 340, line: 220 },
   '1080x1080': { pad: 72, gap: 30, logo: 360, laurel: 190, line: 80 },
-  '300x250': { pad: 16, gap: 7, logo: 64, laurel: 52, line: 0 },
+  '300x250': { pad: 16, gap: 7, logo: 40, laurel: 52, line: 0 },
 }
 
 const fontFaces = Object.keys(SHARED)
@@ -75,34 +75,32 @@ function css(size) {
   return `${fontFaces}
 :root{${TOKEN_CSS}}
 *{box-sizing:border-box;margin:0}
-html,body{width:${size.width}px;height:${size.height}px;overflow:hidden;background:var(--ground)}
+html,body{width:${size.width}px;height:${size.height}px;overflow:hidden;background:var(--navy)}
 #ad{position:relative;display:block;width:${size.width}px;height:${size.height}px;overflow:hidden;color:var(--text);text-decoration:none;font-family:Geist,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-.ground{position:absolute;inset:0;background:radial-gradient(72% 46% at 14% -6%,color-mix(in srgb,var(--rose) 34%,transparent),transparent 66%),radial-gradient(76% 50% at 92% 104%,color-mix(in srgb,var(--lilac) 48%,transparent),transparent 72%),var(--ground)}
-.halo{position:absolute;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--lilac) 45%,transparent),color-mix(in srgb,var(--lilac) 16%,transparent) 55%,transparent);opacity:0}
 .stack{position:absolute;inset:${L.pad}px;display:flex;flex-direction:column;justify-content:center;gap:${L.gap}px;${banner ? 'align-items:flex-start;text-align:left' : 'align-items:center;text-align:center'}}
 .logo{display:block;width:${L.logo}px;height:auto}
-.bar{display:block;height:${banner ? 3 : 8}px;width:${banner ? 48 : 180}px;border-radius:8px;background:var(--bar);transform-origin:left center;transform:scaleX(0)}
-.eyebrow{${style('eyebrow', scale)};color:var(--rose)}
+.bar{display:block;height:${banner ? 3 : 8}px;width:${banner ? 48 : 180}px;border-radius:8px;background:linear-gradient(90deg,var(--mint) 0%,var(--violet) 100%);transform-origin:left center;transform:scaleX(0)}
+.eyebrow{${style('eyebrow', scale)};color:var(--mint)}
 .tag{display:inline-block;padding:${banner ? '3px 6px 2px' : '12px 24px 10px'};border:${banner ? 1 : 2}px solid color-mix(in srgb,var(--text) 70%,transparent);${style('eyebrow', scale)};letter-spacing:0.32em;color:var(--text)}
 .headline{${style('headline', scale)};max-width:${banner ? 268 : 900}px;text-wrap:balance}
-.acc{font-family:Metal,Georgia,serif;font-weight:400;font-size:1.27em;line-height:.82;letter-spacing:0;background:linear-gradient(90deg,var(--rose) 0%,var(--lilac) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:.1em .05em .14em;margin:-.1em 0 -.14em}
+.acc{background:linear-gradient(90deg,var(--mint) 0%,var(--violet-light) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:.1em .05em .14em;margin:-.1em 0 -.14em}
 .sub{${style('subhead', scale)};color:var(--text-2);max-width:${banner ? 268 : 860}px;text-wrap:balance}
 .attr{${style('subhead', scale)};font-weight:700;color:var(--text)}
-.cta{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:var(--rose);color:var(--on-accent);${style('cta', scale)};padding:${banner ? '7px 14px' : '30px 60px'};box-shadow:0 ${banner ? 6 : 24}px ${banner ? 16 : 60}px -${banner ? 6 : 20}px color-mix(in srgb,var(--rose) 70%,transparent);opacity:0}
+.cta{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:var(--mint);color:var(--on-accent);${style('cta', scale)};padding:${banner ? '7px 14px' : '30px 60px'};opacity:0}
 .small{${style('legal', scale)};color:var(--text-2)}
 .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:${banner ? 6 : L.gap}px;width:100%}
 .stat{position:relative;display:flex;flex-direction:column;align-items:${banner ? 'flex-start' : 'center'};gap:${banner ? 1 : 8}px;padding-inline:${banner ? 0 : 16}px;opacity:0}
-.stat:nth-child(even)::before{content:"";position:absolute;left:${banner ? -8 : 0}px;top:6%;bottom:6%;width:1px;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--rose) 70%,transparent) 30%,color-mix(in srgb,var(--lilac) 70%,transparent) 70%,transparent)}
-.num{${style('stat', scale)};background:linear-gradient(90deg,var(--rose),var(--lilac));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat:nth-child(even)::before{content:"";position:absolute;left:${banner ? -8 : 0}px;top:6%;bottom:6%;width:1px;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--mint) 70%,transparent) 30%,color-mix(in srgb,var(--violet-light) 70%,transparent) 70%,transparent)}
+.num{${style('stat', scale)};background:linear-gradient(90deg,var(--mint),var(--violet-light));-webkit-background-clip:text;background-clip:text;color:transparent}
 .label{${style('statLabel', scale)}}
 .line{display:block;width:100%;height:${L.line}px;overflow:visible}
 .line path{opacity:0}
 .line circle{transform-box:fill-box;transform-origin:center;opacity:0}
 .laurel{position:relative;display:grid;place-items:center;width:${L.laurel}px;height:${L.laurel}px;opacity:0}
 .laurel img{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
-.laurel b{position:relative;font-family:Lato;font-weight:700;font-size:${Math.round(L.laurel * 0.19)}px;letter-spacing:.04em}
+.laurel b{position:relative;font-family:Unbounded;font-weight:600;font-size:${Math.round(L.laurel * 0.19)}px;letter-spacing:.04em}
 .wipe{position:relative;display:inline-block}
-.sweep{position:absolute;top:-10%;bottom:-10%;left:0;width:${banner ? 4 : 14}px;background:linear-gradient(180deg,#F59FAE 0%,#6D92DE 100%);box-shadow:0 0 ${banner ? 12 : 60}px ${banner ? 3 : 14}px color-mix(in srgb,var(--rose) 45%,transparent);opacity:0}
+.sweep{position:absolute;top:-10%;bottom:-10%;left:0;width:${banner ? 4 : 14}px;background:linear-gradient(180deg,var(--mint) 0%,var(--violet) 100%);opacity:0}
 .corner{position:absolute;top:${L.pad}px;right:${L.pad}px;width:${L.logo}px;height:auto}
 .row{display:flex;align-items:center;gap:10px}`
 }
@@ -125,7 +123,7 @@ function lineSvg(width, height) {
   ]
   const d = pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join(' ')
   const [ex, ey] = pts.at(-1)
-  return `<svg class="line" id="line" viewBox="0 0 ${w} ${h}" aria-hidden="true"><defs><linearGradient id="lg" gradientUnits="userSpaceOnUse" x1="8" x2="${w - 16}" y1="0" y2="0"><stop stop-color="var(--rose)" style="stop-color:var(--rose)"/><stop offset="1" style="stop-color:var(--lilac)"/></linearGradient></defs><path id="line-path" pathLength="1" d="${d}" fill="none" stroke="url(#lg)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle id="line-ring" cx="${ex}" cy="${ey}" r="12" fill="none" stroke-width="4" style="stroke:var(--lilac)"/><circle id="line-dot" cx="${ex}" cy="${ey}" r="12" style="fill:var(--lilac)"/></svg>`
+  return `<svg class="line" id="line" viewBox="0 0 ${w} ${h}" aria-hidden="true"><defs><linearGradient id="lg" gradientUnits="userSpaceOnUse" x1="8" x2="${w - 16}" y1="0" y2="0"><stop style="stop-color:var(--mint)"/><stop offset="1" style="stop-color:var(--violet-light)"/></linearGradient></defs><path id="line-path" pathLength="1" d="${d}" fill="none" stroke="url(#lg)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle id="line-ring" cx="${ex}" cy="${ey}" r="12" fill="none" stroke-width="4" style="stroke:var(--violet-light)"/><circle id="line-dot" cx="${ex}" cy="${ey}" r="12" style="fill:var(--violet-light)"/></svg>`
 }
 
 function body(concept, size) {
@@ -173,7 +171,6 @@ function body(concept, size) {
 
 const TIMELINES = {
   audit: (accent) => `
-  M.halo(el.halo, t, 0)
   M.logoIn(el.logo, t, 0)
   M.bar(el.bar, t, 0.6)
   M.pop(el.eyebrow, t, 0.9)
@@ -182,7 +179,6 @@ const TIMELINES = {
   M.pop(el.cta, t, 3.1)
   M.rise(el.small, t, 3.5)`,
   proof: (accent) => `
-  M.halo(el.halo, t, 0)
   M.logoIn(el.logo, t, 0)
   M.rise(el.headline, t, 0.5, { accent: [${accent}] })
   if (el.linePath) M.lineDraw({ path: el.linePath, dot: el.lineDot, ring: el.lineRing }, t, 1.3)
@@ -190,7 +186,6 @@ const TIMELINES = {
   M.pop(el.cta, t, 3.3)
   M.rise(el.small, t, 3.7)`,
   award: (accent) => `
-  M.halo(el.halo, t, 0)
   M.pop(el.laurel, t, 0.1)
   M.hop(el.eyebrow, t, 0.5)
   M.rise(el.headline, t, 0.85, { accent: [${accent}] })
@@ -204,7 +199,6 @@ const TIMELINES = {
 function html(concept, size) {
   const c = AD_CONCEPTS.find((x) => x.id === concept)
   const dims = `${size.width}x${size.height}`
-  const halo = size.scale === 'banner' ? { s: 260, x: size.width - 170, y: -60 } : { s: size.width * 1.1, x: size.width * -0.05, y: size.height * 0.5 - size.width * 0.75 }
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -219,8 +213,6 @@ ${css(size)}
 </head>
 <body>
 <a id="ad" href="${CLICK_URL}" target="_blank" rel="noopener">
-<div class="ground"></div>
-<div class="halo" id="halo" style="left:${halo.x}px;top:${halo.y}px;width:${halo.s}px;height:${halo.s}px"></div>
 ${body(concept, size)}
 </a>
 <script src="one-motion.js"></script>
@@ -231,7 +223,7 @@ document.getElementById('ad').addEventListener('click', function (e) { e.prevent
   var M = window.OneMotion
   var $ = function (id) { return document.getElementById(id) }
   var el = {
-    halo: $('halo'), logo: $('logo'), bar: $('bar'), eyebrow: $('eyebrow'), headline: $('headline'), sub: $('sub'),
+    logo: $('logo'), bar: $('bar'), eyebrow: $('eyebrow'), headline: $('headline'), sub: $('sub'),
     attr: $('attr'), sweep: $('sweep'), laurel: $('laurel'), cta: $('cta'), small: $('small'),
     linePath: $('line-path'), lineDot: $('line-dot'), lineRing: $('line-ring'),
     stats: Array.prototype.slice.call(document.querySelectorAll('.stat'))

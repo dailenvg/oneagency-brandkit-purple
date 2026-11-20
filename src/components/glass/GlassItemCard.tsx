@@ -49,7 +49,7 @@ export function GlassItemCard({ items, onOpen }: GlassItemCardProps) {
           className={`aspect-square ${stage.className}`}
           imgClassName="size-full object-contain"
           overlay={
-            <button type="button" onClick={() => onOpen(item)} aria-label={`Open ${item.name} at full size`} className="group absolute inset-0 cursor-zoom-in focus-visible:-outline-offset-4">
+            <button type="button" onClick={() => onOpen(item)} aria-label={`Open ${item.name} at full size`} className="group absolute inset-0 cursor-zoom-in focus-visible:-outline-offset-4 focus-visible:outline-paper focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-inset">
               <span
                 aria-hidden
                 className="absolute right-3 bottom-3 grid size-touch place-items-center rounded-full bg-void/70 text-text opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100 [@media(hover:none)]:opacity-100"

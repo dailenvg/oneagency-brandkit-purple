@@ -13,7 +13,7 @@ export function NotFoundView({ path }: { path: string }) {
   return (
     <section aria-labelledby={TITLE_ID} className="container-site flex flex-col items-start gap-6 pt-12 pb-section lg:pt-16">
       <Compass className="size-10 text-info" aria-hidden />
-      <h1 id={TITLE_ID} tabIndex={-1} className="text-step-4 font-bold leading-display tracking-tight outline-none">
+      <h1 id={TITLE_ID} tabIndex={-1} className="display text-step-4 outline-none">
         There is no &ldquo;{path}&rdquo; view
       </h1>
       <p className="max-w-2xl text-step-1 text-text-2">The link may be from an older version of the kit. Start from the overview, or pick a view.</p>

@@ -15,7 +15,7 @@ const FEATURED: { concept: CreativeConceptId; format: CreativeFormat; place: str
 ]
 
 /**
- * The lead of the Ads view: live creative ads on a soft brand glow, each opening at true size. Phones get a swipe strip
+ * The lead of the Ads view: live creative ads, each opening at true size. Phones get a swipe strip
  * at one readable height (20rem, the next ad peeking in); from 640 px up the ads sit as a stepped collage.
  */
 export function CreativeHero() {
@@ -24,10 +24,7 @@ export function CreativeHero() {
   const edges = useScrollEdges(listRef)
   return (
     <>
-      {/* The lightbox stays outside the isolated glow wrapper: inside it, the fixed sidebar would paint over the dialog. */}
-      <div className="relative isolate">
-        {/* Never wider than the page gutter (24 px minimum), so the glow never makes the page scroll sideways. */}
-        <div aria-hidden className="ui-glow-field absolute -inset-x-4 -inset-y-6 -z-10 rounded-site opacity-70 blur-2xl sm:-inset-x-6" />
+      <div className="relative">
         <motion.ul
           ref={listRef}
           role="list"
@@ -53,9 +50,8 @@ export function CreativeHero() {
                     <ScaledAd concept={concept} size={size} />
                     <TrueSizeButton concept={concept} size={size} rounded="rounded-site" onOpen={() => setOpen({ concept, size })} />
                   </div>
-                  {/* text-2, not text-3: the caption can sit on the brightest part of the lilac glow (text-3 there is about 4.4:1). */}
                   <figcaption className="text-step-small text-text-2">
-                    <span className="font-semibold text-text">{concept.name}</span> · <span className="font-num">{size.label} {size.width}×{size.height}</span>
+                    <span className="font-semibold text-text">{concept.name}</span> · <span className="tabular-nums">{size.label} {size.width}×{size.height}</span>
                   </figcaption>
                 </motion.figure>
               </motion.li>

@@ -1,6 +1,6 @@
 /*
- * The three faces oneagency.com loads, plus Sora for the hub itself, self-hosted as Latin subsets (scripts/fetch-fonts.py).
- * Geist: headings, body, buttons. Lato 700: stat numerals (--font-num). Metal: accent words (--font-accent).
+ * The two brand faces, plus Sora for the hub itself, self-hosted as Latin subsets (scripts/fetch-fonts.py).
+ * Unbounded 600: headlines, stat numerals and accent words (--font-display). Geist: body, buttons and labels.
  * Sora: token names, values, file names and commands (--font-code). The hub uses no monospace.
  */
 @font-face {
@@ -36,17 +36,9 @@
 }
 
 @font-face {
-  font-family: "Lato";
-  src: url("../assets/fonts/lato-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Metal";
-  src: url("../assets/fonts/metal-400.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Unbounded";
+  src: url("../assets/fonts/unbounded-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }

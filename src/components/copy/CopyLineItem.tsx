@@ -38,7 +38,7 @@ export function CopyLineItem({ line, ref }: CopyLineItemProps) {
           <span className="flex flex-wrap gap-x-3 gap-y-1 text-step-small text-text-3">
             <span>{line.source}</span>
             <span aria-hidden>·</span>
-            <span className="font-num">{line.date}</span>
+            <span className="tabular-nums">{line.date}</span>
           </span>
           {line.note && <span className="text-step-small text-text-2">{line.note}</span>}
         </span>

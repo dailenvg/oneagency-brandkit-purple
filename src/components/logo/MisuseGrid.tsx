@@ -1,7 +1,7 @@
 import { X } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
 import { MISUSE } from '../../data/logo-rules'
-import { pressCard, reveal } from '../../lib/motion'
+import { reveal } from '../../lib/motion'
 import { Reveal } from '../ui/Reveal'
 import { MisuseExample } from './MisuseExample'
 
@@ -10,7 +10,7 @@ export function MisuseGrid() {
   return (
     <Reveal as="ul" stagger className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {MISUSE.map((m) => (
-        <motion.li key={m.id} variants={reveal} {...pressCard} className="overflow-hidden rounded-site border border-edge bg-surface">
+        <motion.li key={m.id} variants={reveal} className="overflow-hidden rounded-site border border-edge bg-surface">
           <div data-theme="dark" className="relative aspect-video overflow-hidden" aria-hidden>
             <MisuseExample id={m.id} />
             <span className="absolute top-3 right-3 grid size-8 place-items-center rounded-full bg-dont text-paper shadow-card">

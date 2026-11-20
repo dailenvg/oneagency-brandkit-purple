@@ -59,7 +59,7 @@ export function EditorialFrame({ tone, idPrefix, label, className }: GraphicProp
         ))}
       </g>
 
-      <g {...anim('node')} fontFamily="Lato" fontWeight="700" fontSize="17" letterSpacing="1.5">
+      <g {...anim('node')} fontFamily="Unbounded" fontWeight="600" fontSize="14" letterSpacing="0.5">
         <text x={INNER} y={RULE_Y} dominantBaseline="central" fill={c.line}>
           {num(INDEX)}
         </text>

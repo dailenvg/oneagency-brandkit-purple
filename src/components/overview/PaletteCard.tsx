@@ -5,16 +5,16 @@ import { press } from '../../lib/motion'
 import { useCopy } from '../../lib/toast'
 import { DashboardCard } from './DashboardCard'
 
-/** The core palette, in the order a layout reaches for it. */
-const NAMES = ['--ground', '--rose', '--lilac', '--rose-deep', '--lilac-deep', '--lavender', '--paper', '--pos']
+/** The board palette, in the order a layout reaches for it, then white. */
+const NAMES = ['--navy', '--mint', '--violet', '--sky', '--mist', '--paper']
 
 const SWATCHES = NAMES.flatMap((name) => {
   const token = TOKENS.find((t) => t.name === name)
   return token?.hex ? [{ name, hex: token.hex.toUpperCase() }] : []
 })
 
-/** The live signature gradient, as the site writes it. */
-const GRADIENT = 'linear-gradient(90deg, var(--rose) 0%, var(--lilac) 100%)'
+/** The signature gradient, as tokens.css writes it. */
+const GRADIENT = 'linear-gradient(90deg, var(--mint) 0%, var(--violet) 100%)'
 
 /** Palette strip: each chip copies its HEX; the gradient bar copies its CSS. */
 export function PaletteCard({ className }: { className?: string }) {
@@ -23,7 +23,7 @@ export function PaletteCard({ className }: { className?: string }) {
     <DashboardCard title="Palette" view="colour" linkLabel="All colour" className={className}>
       {/* Columns follow the card's own width (container query), so token names never truncate in a narrow card. */}
       <div className="@container">
-        <ul className="grid grid-cols-2 gap-2 @lg:grid-cols-4">
+        <ul className="grid grid-cols-2 gap-2 @lg:grid-cols-3">
           {SWATCHES.map((s) => {
             const ink = readableOn(s.hex) === 'ink'
             return (
@@ -46,15 +46,15 @@ export function PaletteCard({ className }: { className?: string }) {
       </div>
       <motion.button
         type="button"
-        onClick={() => copy(GRADIENT, '--accent-fill')}
-        aria-label="Copy the signature gradient, --accent-fill"
+        onClick={() => copy(GRADIENT, '--gradient')}
+        aria-label="Copy the signature gradient, --gradient"
         className="flex min-h-touch items-end rounded-site-sm border border-edge p-3 text-left font-code text-step-small font-semibold text-on-accent focus-visible:outline-text"
-        style={{ background: 'var(--accent-fill)' }}
+        style={{ background: 'var(--gradient)' }}
         {...press}
       >
-        --accent-fill · rose to blue
+        --gradient · Mint to Violet
       </motion.button>
-      <p className="text-step-small text-text-3">Tap or click a colour to copy its HEX. Values are the live site&apos;s.</p>
+      <p className="text-step-small text-text-3">Tap or click a colour to copy its HEX. Values are the moodboard&apos;s.</p>
     </DashboardCard>
   )
 }

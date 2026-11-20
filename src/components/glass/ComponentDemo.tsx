@@ -3,7 +3,6 @@ import type { GlassComponentName } from '../../data/glass-rules'
 import { CheckBadge } from '../../kit/glass/CheckBadge'
 import { GlassCard } from '../../kit/glass/GlassCard'
 import { GlassIcon } from '../../kit/glass/GlassIcon'
-import { GlowGround } from '../../kit/glass/GlowGround'
 import { Grain } from '../../kit/glass/Grain'
 import { HalftoneArc } from '../../kit/glass/HalftoneArc'
 import { ParticleStream } from '../../kit/glass/ParticleStream'
@@ -36,16 +35,8 @@ export function ComponentDemo({ name }: { name: GlassComponentName }) {
     case 'Grain':
       return (
         <>
-          <div className="absolute inset-0 bg-[radial-gradient(closest-side,var(--glass-under-glow),transparent)]" />
+          <div className="violet-ground absolute inset-0" />
           <Grain className="opacity-60!" />
-        </>
-      )
-    case 'GlowGround':
-      return (
-        <>
-          <GlowGround variant="violet" />
-          <GlowGround className="bottom-4 left-1/2 h-16 w-48 -translate-x-1/2" />
-          <GlassCard shape="pill" className="relative h-12 w-28" />
         </>
       )
   }

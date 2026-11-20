@@ -30,7 +30,8 @@ export function ImageryCard({ subject, onOpen }: { subject: ImagerySubject; onOp
             type="button"
             onClick={onOpen}
             aria-label={`View ${name} larger`}
-            className="group absolute inset-0 cursor-zoom-in focus-visible:-outline-offset-4"
+            // Two-tone ring (navy edge, white inside) so focus shows on any photo.
+            className="group absolute inset-0 cursor-zoom-in focus-visible:-outline-offset-4 focus-visible:outline-paper focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-inset"
             whileTap={pressCard.whileTap}
           >
             <span

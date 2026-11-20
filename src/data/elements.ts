@@ -3,7 +3,7 @@
  * public/kit/elements/, so it stays import-free.
  *
  * File names follow the kit convention one-agency_element_[id](-[variant]).[ext]:
- *   one-agency_element_halo.svg                       one file per format
+ *   one-agency_element_laurel.svg                     one file per format
  *   one-agency_element_conversion-curve-on-dark.svg   one file per tone and format
  */
 
@@ -24,7 +24,8 @@ export interface ElementFile {
   /** File base name without variant, size or extension. */
   base: string
   title: string
-  source: 'live' | 'film' | 'proposed'
+  /** live: the live site; film: the brand film; nova: concept 01 "Nova"; proposed: drawn for the kit. */
+  source: 'live' | 'film' | 'nova' | 'proposed'
   use: string
   /** Describes the artwork for screen readers (the card heading already gives the title). Falls back to the title. */
   alt?: string
@@ -72,8 +73,6 @@ export const ELEMENTS: ElementFile[] = [
   el('editorial-frame', 'device', 'Editorial frame', 'proposed', 'Corner marks and a series index for 1:1 ads. Set copy inside the marks. The index reads 01 of 04; change it to match your series.',
     toned('Corner marks with a series index reading 01 of 04'),
   ),
-  el('halo', 'classic', 'Halo', 'film', 'Soft lilac glow behind the logo or a hero number. One per frame.'),
-  el('glow-field', 'classic', 'Glow field', 'live', "The site's hero ground: rose glow top left, blue glow bottom right, on night-navy."),
   el('pattern-dots', 'pattern', 'Dot grid', 'proposed', 'A fine dot grid, strongest in the middle and fading to the edges. Behind proof numbers and data.',
     toned('Dot grid fading out from the centre'),
   ),
@@ -85,6 +84,9 @@ export const ELEMENTS: ElementFile[] = [
   ),
   el('pattern-flow', 'pattern', 'Flow lines', 'proposed', 'Soft diagonal waves, quiet at the top left. A calm ground for testimonials and offers.',
     toned('Diagonal wave lines fading toward the top left'),
+  ),
+  el('frames-orbit', 'pattern', 'Frames in orbit', 'nova', 'Three tall capsule frames in the accent, the gradient and a neutral, circled by thin Mint-to-Violet orbit lines. Put a face in every frame; orbit lines always run Mint to Violet.',
+    toned('Three capsule frames, the middle one raised and filled with the Mint-to-Violet gradient, circled by thin orbit lines'),
   ),
   el('illustration-answering-leads', 'illustration', 'Answering leads', 'proposed', 'Phone, chat and the five-minute reply. For lead handling and call answering.',
     toned('Phone with chat bubbles and a five-minute reply timer'),
@@ -98,10 +100,10 @@ export const ELEMENTS: ElementFile[] = [
   el('illustration-paid-media', 'illustration', 'Paid media', 'proposed', 'Two ad cards and a line that climbs from the click into a target. For search and social advertising.',
     toned('Two ad cards and a results line climbing into a target'),
   ),
-  el('cta-primary', 'classic', 'CTA, primary', 'live', 'Rose pill, navy text. One per ad.'),
+  el('cta-primary', 'classic', 'CTA, primary', 'live', 'Mint pill, Navy text. One per ad.'),
   el('cta-secondary', 'classic', 'CTA, secondary', 'live', 'White outline pill for a second, quieter action on dark.'),
-  el('cta-on-light', 'classic', 'CTA, on light', 'proposed', 'Ink pill for paper grounds, where rose fails contrast.'),
-  el('stat-bar', 'classic', 'Proof bar', 'live', 'Lato numbers in the gradient, white labels, gradient dividers, the source line underneath.'),
+  el('cta-on-light', 'classic', 'CTA, on light', 'proposed', 'Navy pill for white grounds, where Mint fails contrast.'),
+  el('stat-bar', 'classic', 'Proof bar', 'live', 'Unbounded numbers in the gradient, white labels, gradient dividers, the source line underneath.'),
   el('award-badge', 'classic', 'Award badge', 'live', 'Always says it was awarded to ConversionIQ.ai.'),
   el('laurel', 'classic', 'Laurel', 'live', 'The award laurel from the live banner, white.'),
 ]

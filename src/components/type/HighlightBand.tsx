@@ -1,6 +1,5 @@
 import { CheckCircle } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
-import { GlowGround } from '../../kit/glass/GlowGround'
 import { LightStreaks } from '../../kit/glass/LightStreaks'
 import { HighlightText } from '../../kit/type/HighlightText'
 import { reveal } from '../../lib/motion'
@@ -13,12 +12,12 @@ const RULES = [
   'The band sits behind the lower 40% of the words: from just under the baseline to about mid x-height.',
   'It starts about 0.15 em before the first highlighted word and runs about 0.15 em past the last.',
   'When a highlighted fragment starts a line, the band starts flush with its first word.',
-  'On dark: the derived blue band with white text. On light: lilac at 40% into paper, with ink text.',
+  'On dark: the derived violet band (Ultra Violet at 55% into Navy) with white text. On light: Sky, with Navy text.',
 ]
 
 const TOKENS = [
-  { name: '--kit-highlight', value: 'color-mix(in srgb, var(--lilac) 40%, var(--ground))', label: 'Dark' },
-  { name: '--kit-highlight-light', value: 'color-mix(in srgb, var(--lilac) 40%, var(--paper))', label: 'Light' },
+  { name: '--kit-highlight', value: 'color-mix(in srgb, var(--violet) 55%, var(--navy))', label: 'Dark' },
+  { name: '--kit-highlight-light', value: 'var(--sky)', label: 'Light' },
 ]
 
 /** The reference line, rebuilt live: on dark, the violet ground with light streaks; on light, plain paper so the band reads. */
@@ -27,11 +26,11 @@ function Demo({ theme }: { theme: 'dark' | 'light' }) {
     <figure data-theme={theme} className={`relative isolate flex min-h-64 items-center overflow-hidden rounded-site border border-edge px-5 py-12 sm:px-12 ${theme === 'dark' ? 'bg-ground' : 'bg-paper'}`}>
       {theme === 'dark' && (
         <>
-          <GlowGround variant="violet" className="-z-10" />
+          <div aria-hidden className="violet-ground absolute inset-0 -z-10" />
           <LightStreaks className="-z-10" />
         </>
       )}
-      <p className="max-w-[12em] text-step-3 leading-display font-bold tracking-tight text-text sm:text-step-4">
+      <p className="display max-w-[12em] text-step-3 text-text sm:text-step-4">
         Convert <HighlightText>AI searches</HighlightText> into <HighlightText delay={0.3}>recommendations</HighlightText>
       </p>
       <figcaption className="absolute right-4 bottom-3 text-step-small text-text-2">{theme === 'dark' ? 'Reference recreated, on dark' : 'Reference recreated, on light'}</figcaption>
@@ -67,7 +66,7 @@ export function HighlightBand() {
               <CopyButton value={t.value} label={t.value} description={`CSS value of ${t.name}`} />
             </div>
           ))}
-          <p className="text-step-small text-text-3">Derived, not on the live site. Sampled from the reference band (#172C78 to #11306A).</p>
+          <p className="text-step-small text-text-3">The dark band is derived, not on the board. The light band is Sky.</p>
         </div>
       </div>
     </div>

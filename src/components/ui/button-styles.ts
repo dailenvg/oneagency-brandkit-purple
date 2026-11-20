@@ -13,13 +13,13 @@ const FOCUS = 'focus-visible:outline-2 focus-visible:outline-offset-3'
 const BASE = `inline-flex h-touch items-center justify-center gap-2 rounded-full border text-center text-step--1 font-semibold leading-none whitespace-nowrap transition-colors duration-200 select-none [&_svg]:size-4.5 [&_svg]:shrink-0 ${FOCUS} aria-disabled:pointer-events-none aria-disabled:opacity-45 disabled:pointer-events-none disabled:opacity-45`
 
 /**
- * The live site's .btn-primary / .btn-ghost colour states, plus the pressed step (--rose-deep, "pressed or hover step
- * of rose") and a proposed on-light pill (ink on paper). Quiet is the soft chip for single files; ghost and link have
+ * Primary is the theme's fill pill (Mint with navy text on dark, Ultra Violet with white text on light) with its
+ * pressed step (--mint-deep / --violet-deep), plus a proposed on-light pill (navy on white). Quiet is the soft chip for single files; ghost and link have
  * no outline (menus, toggles, "Open" links) and only show their pill on hover.
  */
 const VARIANTS: Record<ButtonVariant, string> = {
   primary:
-    'border-rose bg-rose text-on-accent hover:bg-transparent hover:text-lavender-text active:border-rose-deep active:bg-rose-deep active:text-on-accent focus-visible:outline-text',
+    'border-fill bg-fill text-on-fill hover:bg-transparent hover:text-on-ghost active:border-fill-pressed active:bg-fill-pressed active:text-on-fill focus-visible:outline-text',
   secondary:
     'border-text bg-transparent text-text hover:bg-text hover:text-on-text active:border-text-2 active:bg-text-2 active:text-on-text focus-visible:outline-text',
   'on-light':

@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { BRAND_PHOTOS } from '../data/imagery-photos'
 import { adDescription } from '../data/visitor-descriptions'
-import { displaySrc, manifestItems, type AdItem } from '../lib/ads'
+import { displaySrc, manifestItems } from '../lib/ads'
 import { imagerySubjects } from '../lib/imagery'
 import { DirectionList } from './imagery/DirectionList'
 import { ImageryCard } from './imagery/ImageryCard'
+import { PhotoCard } from './imagery/PhotoCard'
 import { Section } from './layout/Section'
 import { SubHeading } from './layout/SubHeading'
 import { Badge } from './ui/Badge'
@@ -16,10 +18,19 @@ import { ZipButton } from './ui/ZipButton'
 const DO = ['Real client work', 'Real customer moments', 'Client work, full-bleed']
 const DONT = ['Stock offices', 'Robot hands', 'Glowing AI brains']
 
-/** Imagery: the direction, then the starter library from the Magnific manifest. */
+/** What the lightbox shows: any image in the view, at its own size. */
+interface LightboxImage {
+  title: string
+  src: string
+  alt: string
+  width: number
+  height: number
+}
+
+/** Imagery: the direction, the Nova photo set, then the starter library from the Magnific manifest. */
 export function ImagerySection() {
   const subjects = imagerySubjects(manifestItems('imagery'))
-  const [open, setOpen] = useState<AdItem | null>(null)
+  const [open, setOpen] = useState<LightboxImage | null>(null)
 
   return (
     <Section
@@ -36,6 +47,17 @@ export function ImagerySection() {
           <DirectionList kind="dont" items={DONT} />
         </Reveal>
         <div>
+          <SubHeading title="Photo set" badge={<Badge>Concept 01 Nova</Badge>}>
+            Five abstract photos from concept 01 &ldquo;Nova&rdquo;, one for each mood of the palette. Use them as grounds and texture behind type. Each links to its
+            source on Unsplash.
+          </SubHeading>
+          <Reveal as="ul" stagger className="columns-1 gap-4 sm:columns-2 xl:columns-3 [&>li]:mb-4 [&>li]:break-inside-avoid">
+            {BRAND_PHOTOS.map((photo) => (
+              <PhotoCard key={photo.id} photo={photo} onOpen={() => setOpen({ title: photo.title, src: photo.url, alt: photo.alt, width: photo.width, height: photo.height })} />
+            ))}
+          </Reveal>
+        </div>
+        <div>
           <SubHeading title="Starter library" badge={<Badge>AI-generated</Badge>}>
             AI-generated in Magnific. No real people or real clients. Use these as stand-ins until you have real client work and real customer moments. Tap or click an
             image to see it larger.
@@ -43,7 +65,19 @@ export function ImagerySection() {
           {subjects.length ? (
             <Reveal as="ul" stagger className="columns-1 gap-4 sm:columns-2 xl:columns-3 [&>li]:mb-4 [&>li]:break-inside-avoid">
               {subjects.map((subject) => (
-                <ImageryCard key={subject.id} subject={subject} onOpen={() => setOpen(subject.master)} />
+                <ImageryCard
+                  key={subject.id}
+                  subject={subject}
+                  onOpen={() =>
+                    setOpen({
+                      title: subject.name,
+                      src: displaySrc(subject.master.files)!,
+                      alt: adDescription(subject.master) ?? subject.name,
+                      width: subject.master.width,
+                      height: subject.master.height,
+                    })
+                  }
+                />
               ))}
             </Reveal>
           ) : (
@@ -51,8 +85,8 @@ export function ImagerySection() {
           )}
         </div>
       </div>
-      <Lightbox open={!!open} onClose={() => setOpen(null)} title={open?.name ?? ''}>
-        {open && <img src={displaySrc(open.files)!} alt={adDescription(open) ?? open.name} width={open.width} height={open.height} className="mx-auto h-auto max-w-full rounded-site-sm" />}
+      <Lightbox open={!!open} onClose={() => setOpen(null)} title={open?.title ?? ''}>
+        {open && <img src={open.src} alt={open.alt} width={open.width} height={open.height} className="mx-auto h-auto max-w-full rounded-site-sm" />}
       </Lightbox>
     </Section>
   )

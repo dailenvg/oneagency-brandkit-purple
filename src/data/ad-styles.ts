@@ -1,10 +1,10 @@
 /**
- * Ad text styles. PROPOSED: scaled from the film's 1080-wide type (base.css: headline 104px, sub 62px, button 46px)
- * and the live site's eyebrow, stat and legal treatments; not yet signed off. The animated ads
+ * Ad text styles. PROPOSED: scaled from the film's 1080-wide type (base.css: headline 104px, sub 62px, button 46px),
+ * with display set in Unbounded at 0.8 of the film size for its width; not yet signed off. The animated ads
  * (scripts/build-motion-ads.mjs) and the Typography section both read this file. Import-free on purpose.
  */
 
-export type AdFace = 'Geist' | 'Lato' | 'Metal'
+export type AdFace = 'Geist' | 'Unbounded'
 
 export interface AdTextStyle {
   id: 'eyebrow' | 'headline' | 'accent' | 'subhead' | 'body' | 'stat' | 'statLabel' | 'cta' | 'legal'
@@ -35,18 +35,18 @@ export const AD_TEXT_STYLES: AdTextStyle[] = [
     lineHeight: 1.2,
     tracking: 0.14,
     uppercase: true,
-    colour: '--rose',
-    note: 'Three words max. The site eyebrow: rose, tracked caps.',
+    colour: '--mint',
+    note: 'Three words max. The eyebrow: Mint, tracked caps.',
   },
   {
     id: 'headline',
     label: 'Headline',
-    face: 'Geist',
-    weight: 700,
-    social: 96,
-    banner: 22,
-    lineHeight: 1.04,
-    tracking: -0.03,
+    face: 'Unbounded',
+    weight: 600,
+    social: 76,
+    banner: 18,
+    lineHeight: 1.08,
+    tracking: -0.02,
     uppercase: false,
     colour: '--text',
     note: 'Two short lines. One accent word per headline.',
@@ -54,15 +54,15 @@ export const AD_TEXT_STYLES: AdTextStyle[] = [
   {
     id: 'accent',
     label: 'Accent word',
-    face: 'Metal',
-    weight: 400,
-    social: 122,
-    banner: 28,
-    lineHeight: 0.82,
-    tracking: 0,
+    face: 'Unbounded',
+    weight: 600,
+    social: 76,
+    banner: 18,
+    lineHeight: 1.08,
+    tracking: -0.02,
     uppercase: false,
-    colour: '--accent-fill',
-    note: '1.27x the headline (the site value), filled with the signature gradient.',
+    colour: '--gradient',
+    note: 'The headline size and face, filled with the signature gradient.',
   },
   {
     id: 'subhead',
@@ -93,15 +93,15 @@ export const AD_TEXT_STYLES: AdTextStyle[] = [
   {
     id: 'stat',
     label: 'Stat number',
-    face: 'Lato',
-    weight: 700,
-    social: 88,
-    banner: 20,
+    face: 'Unbounded',
+    weight: 600,
+    social: 70,
+    banner: 16,
     lineHeight: 1.1,
-    tracking: 0,
+    tracking: -0.02,
     uppercase: false,
-    colour: '--accent-fill',
-    note: 'Lato 700, the site stat numeral, gradient filled. Always with a label and a source line.',
+    colour: '--gradient',
+    note: 'Unbounded 600, gradient filled. Always with a label and a source line.',
   },
   {
     id: 'statLabel',
@@ -127,7 +127,7 @@ export const AD_TEXT_STYLES: AdTextStyle[] = [
     tracking: -0.01,
     uppercase: false,
     colour: '--on-accent',
-    note: 'Inside the rose pill. One CTA per ad.',
+    note: 'Inside the Mint pill. One CTA per ad.',
   },
   {
     id: 'legal',

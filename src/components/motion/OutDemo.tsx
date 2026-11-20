@@ -24,7 +24,7 @@ export function OutDemo() {
       <AnimatePresence mode="wait">
         <motion.p
           key={index}
-          className="text-center text-step-2 font-bold tracking-tight"
+          className="display text-center text-step-2"
           variants={{ ...wordRise, ...out }}
           initial={index ? 'hidden' : false}
           animate="show"

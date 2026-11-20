@@ -29,6 +29,7 @@ interface ElementCardProps {
 const SOURCE_BADGE = {
   live: <Badge>Live site</Badge>,
   film: <Badge>Film</Badge>,
+  nova: <Badge>Concept 01 Nova</Badge>,
   proposed: <Badge>Proposed</Badge>,
 }
 

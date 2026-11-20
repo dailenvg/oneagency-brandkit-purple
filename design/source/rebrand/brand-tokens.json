@@ -1,0 +1,72 @@
+{
+  "$comment": "Hand-authored brand colour source for the kit. scripts/extract-tokens.mjs reads this file and writes src/styles/tokens.css, src/data/tokens.ts and public/kit/colour/one-agency_tokens_web.{css,json}. The five brand colours, white and the logo gradient are from the Figma moodboard; every other value is derived from them and labelled so. Derivations: mix = OKLab mix of the first colour toward the second by the amount; alpha = the colour at that opacity; value = written as is (aliases, gradients, effects).",
+  "source": {
+    "name": "ONE Agency rebrand moodboard",
+    "figma": "Figma file Ex4UgCrCeAKPnv8H6BdHMm, node 133:305",
+    "board": "design/source/rebrand/moodboard_figma-133-305.png",
+    "exported": "2026-11-20"
+  },
+  "brand": [
+    { "name": "--navy", "label": "Navy", "hex": "#020257", "role": "Brand ground: specimens, the reversed lockup and app tile, AGENCY in the lockup, ink on light grounds." },
+    { "name": "--mint", "label": "Mint", "hex": "#00FAB3", "role": "Accent on navy: ONE in the reversed lockup, the CTA fill, focus and highlights on dark. Never text on light grounds." },
+    { "name": "--violet", "label": "Ultra Violet", "hex": "#6203D0", "role": "Primary accent on light: links, accent text and buttons on light grounds. Holds most of the logo gradient." },
+    { "name": "--sky", "label": "Sky", "hex": "#D0E6FD", "role": "Light panels, tags, the highlight band on light and the light app tile." },
+    { "name": "--mist", "label": "Mist", "hex": "#EBEBED", "role": "Supporting neutral: light surfaces and panels." }
+  ],
+  "white": { "name": "--paper", "label": "White", "hex": "#FFFFFF", "role": "White: the light ground, and type on navy." },
+  "logoGradient": {
+    "name": "--gradient-logo",
+    "role": "The logo gradient as drawn in the masters: Ultra Violet held to 49% (wordmark) or 40% (mark), then to #00FDBA toward the upper left. Use the SVG files for the logo; this CSS value is an approximation for reference.",
+    "endNote": "The Figma end stop is #00FDBA, a hair off palette Mint #00FAB3: kept as drawn.",
+    "wordmark": { "x1": 537, "y1": 127.5, "x2": 292.512, "y2": -165.376, "stops": [[0.491978, "#6203D0"], [1, "#00FDBA"]] },
+    "mark": { "x1": 345.5, "y1": 234, "x2": 73.0102, "y2": 12.862, "stops": [[0.395886, "#6203D0"], [1, "#00FDBA"]] },
+    "css": "linear-gradient(140deg, #00FDBA 0%, #6203D0 51%)"
+  },
+  "ramps": {
+    "$comment": "Tints toward white (positive) and shades (negative) toward navy for the accents, toward black for navy. 0 is the board value.",
+    "--mint": { "toward": ["#FFFFFF", "--navy"], "steps": { "50": 0.92, "100": 0.84, "200": 0.68, "300": 0.5, "400": 0.26, "500": 0, "600": -0.18, "700": -0.36, "800": -0.54, "900": -0.72 } },
+    "--violet": { "toward": ["#FFFFFF", "--navy"], "steps": { "50": 0.92, "100": 0.84, "200": 0.68, "300": 0.5, "400": 0.26, "500": 0, "600": -0.18, "700": -0.36, "800": -0.54, "900": -0.72 } },
+    "--navy": { "toward": ["#FFFFFF", "#000000"], "steps": { "50": 0.94, "100": 0.88, "200": 0.76, "300": 0.62, "400": 0.5, "500": 0.38, "600": 0.26, "700": 0.15, "800": 0.07, "900": 0, "950": -0.25 } }
+  },
+  "system": [
+    { "name": "--on-accent", "group": "accent", "value": "var(--navy)", "role": "Text and icons on Mint and Sky fills (13.3:1 on Mint)." },
+    { "name": "--mint-deep", "group": "accent", "mix": ["--mint", "--navy", 0.18], "role": "Pressed step of a Mint fill." },
+    { "name": "--violet-deep", "group": "accent", "mix": ["--violet", "--navy", 0.18], "role": "Pressed step of a Violet fill." },
+    { "name": "--violet-light", "group": "accent", "mix": ["--violet", "#FFFFFF", 0.45], "role": "Violet as text, icon or line on navy, where full Ultra Violet is too dark to read." },
+
+    { "name": "--void", "group": "surface", "mix": ["--navy", "#000000", 0.25], "role": "Deepest ground: the hub's dark page, backdrops and shadows." },
+    { "name": "--band", "group": "surface", "mix": ["--navy", "#000000", 0.12], "role": "Alternating band between the page and a card." },
+    { "name": "--surface", "group": "surface", "value": "var(--navy)", "role": "Cards and panels on the dark page: the brand navy." },
+    { "name": "--surface-2", "group": "surface", "mix": ["--navy", "#FFFFFF", 0.07], "role": "Nested cards and inputs on navy." },
+    { "name": "--raised", "group": "surface", "mix": ["--navy", "#FFFFFF", 0.13], "role": "The lightest dark ground: cards on a card, hover steps." },
+    { "name": "--mist-light", "group": "surface", "mix": ["--mist", "#FFFFFF", 0.5], "role": "Half Mist into white: a quieter light band." },
+
+    { "name": "--text", "group": "neutral", "value": "#ffffff", "role": "Primary text on navy." },
+    { "name": "--text-2", "group": "neutral", "mix": ["#FFFFFF", "--navy", 0.2], "role": "Secondary text on navy." },
+    { "name": "--text-3", "group": "neutral", "mix": ["#FFFFFF", "--navy", 0.32], "role": "Captions and labels on navy." },
+    { "name": "--text-4", "group": "neutral", "mix": ["#FFFFFF", "--navy", 0.52], "role": "Decorative text only; never carries meaning." },
+    { "name": "--ink", "group": "neutral", "value": "var(--navy)", "role": "Text on light grounds: the brand navy." },
+    { "name": "--ink-2", "group": "neutral", "mix": ["--navy", "#FFFFFF", 0.22], "role": "Secondary text on light grounds." },
+    { "name": "--ink-3", "group": "neutral", "mix": ["--navy", "#FFFFFF", 0.36], "role": "Captions and labels on light grounds." },
+    { "name": "--edge", "group": "neutral", "mix": ["--navy", "#FFFFFF", 0.2], "role": "Dividers on navy." },
+    { "name": "--edge-soft", "group": "neutral", "mix": ["--navy", "#FFFFFF", 0.12], "role": "Faint dividers on navy." },
+    { "name": "--edge-strong", "group": "neutral", "mix": ["--navy", "#FFFFFF", 0.5], "role": "Interactive boundaries on navy (inputs, outlined buttons): 3:1 or better." },
+
+    { "name": "--gradient", "group": "gradient", "value": "linear-gradient(90deg, var(--mint) 0%, var(--violet) 100%)", "role": "Signature gradient, Mint to Ultra Violet: rules, card tops and fills. As text on navy its end steps up to --violet-light (see the hub's accent fill)." },
+    { "name": "--gradient-logo", "group": "gradient", "value": "linear-gradient(140deg, #00FDBA 0%, #6203D0 51%)", "role": "The logo gradient as drawn (approximation; use the logo files)." },
+    { "name": "--hairline", "group": "gradient", "value": "linear-gradient(90deg, transparent, color-mix(in srgb, var(--mint) 55%, transparent) 35%, color-mix(in srgb, var(--violet-light) 55%, transparent) 65%, transparent)", "role": "1px Mint-to-Violet hairline that fades at both ends." },
+    { "name": "--stat-divider", "group": "gradient", "value": "linear-gradient(180deg, transparent, color-mix(in srgb, var(--mint) 70%, transparent) 30%, color-mix(in srgb, var(--violet-light) 70%, transparent) 70%, transparent)", "role": "Vertical divider between stats." },
+    { "name": "--stat-divider-h", "group": "gradient", "value": "linear-gradient(90deg, transparent, color-mix(in srgb, var(--mint) 70%, transparent) 30%, color-mix(in srgb, var(--violet-light) 70%, transparent) 70%, transparent)", "role": "Horizontal divider between stacked stats." }
+  ],
+  "effects": [
+    { "name": "--shadow", "value": "0 30px 60px -36px color-mix(in srgb, var(--void) 95%, transparent)", "role": "Card drop shadow on navy." }
+  ],
+  "style": [
+    { "name": "--kit-highlight", "value": "color-mix(in srgb, var(--violet) 55%, var(--navy))", "role": "Highlight band on navy, white text on top." },
+    { "name": "--kit-highlight-light", "value": "var(--sky)", "role": "Highlight band on light grounds, navy text on top: Sky." }
+  ],
+  "contrast": {
+    "text": ["--text", "--text-2", "--text-3", "--text-4", "--mint", "--violet-light", "--sky", "--ink", "--ink-2", "--ink-3", "--violet", "--paper"],
+    "background": ["--navy", "--void", "--surface-2", "--raised", "--violet", "--paper", "--mist", "--mist-light", "--sky", "--mint"]
+  }
+}

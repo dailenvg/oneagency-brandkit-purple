@@ -2,17 +2,17 @@ import { LOGOS, type LogoLockup } from '../../data/logos'
 import { useTheme } from '../../lib/theme'
 
 interface BrandLogoProps {
-  lockup: Exclude<LogoLockup, 'icon'>
+  lockup: Extract<LogoLockup, 'horizontal' | 'stacked'>
   className?: string
   /** Empty when a parent link already names it. */
   alt?: string
   eager?: boolean
 }
 
-/** The hub's own logo: the on-dark master in dark mode, the on-light variant in light mode. */
+/** The hub's own logo: Mint and white in dark mode, the gradient version in light mode. */
 export function BrandLogo({ lockup, className, alt = 'ONE Agency', eager }: BrandLogoProps) {
   const theme = useTheme()
-  const variant = theme === 'light' ? 'on-light' : 'on-dark'
+  const variant = theme === 'light' ? 'on-light' : 'on-navy'
   const { svg } = LOGOS.find((l) => l.lockup === lockup && l.variant === variant)!
   return (
     <img

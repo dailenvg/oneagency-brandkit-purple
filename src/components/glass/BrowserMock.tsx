@@ -20,7 +20,7 @@ export function BrowserMock({ depth = 0, className }: { depth?: 0 | 1 | 2; class
         </GlassCard>
         <GlassCard shape="tile" className="flex items-center gap-3 px-3 py-2.5">
           <CheckBadge size="sm" />
-          <span className="h-2 w-3/4 rounded-full bg-rose" />
+          <span className="h-2 w-3/4 rounded-full bg-mint" />
         </GlassCard>
         {[0.6, 0.45].map((w) => (
           <GlassCard key={w} shape="tile" className="flex items-center gap-3 px-3 py-2.5 opacity-80">

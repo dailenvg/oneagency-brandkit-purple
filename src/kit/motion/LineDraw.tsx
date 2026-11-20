@@ -18,7 +18,7 @@ interface LineDrawProps extends MotionTriggerProps {
   label?: string
 }
 
-/** Line draw: a rose-to-lilac stroke draws across, lands on a dot, and the dot's ring pulses out once. */
+/** Line draw: a Mint-to-Violet stroke draws across, lands on a dot, and the dot's ring pulses out once. */
 export function LineDraw({ points, width, height, strokeWidth = 6, dotRadius = 10, className, label, inView = true, delay = 0 }: LineDrawProps) {
   const reduced = useReducedMotion()
   const id = useId()
@@ -33,8 +33,8 @@ export function LineDraw({ points, width, height, strokeWidth = 6, dotRadius = 1
     <motion.svg viewBox={`0 0 ${width} ${height}`} className={className} overflow="visible" {...a11y} {...trigger(inView)} variants={reduced ? fade : undefined}>
       <defs>
         <linearGradient id={`${id}-stroke`} gradientUnits="userSpaceOnUse" x1={Math.min(...xs)} x2={Math.max(...xs)} y1={0} y2={0}>
-          <stop style={{ stopColor: 'var(--rose)' }} />
-          <stop offset={1} style={{ stopColor: 'var(--lilac)' }} />
+          <stop style={{ stopColor: 'var(--mint)' }} />
+          <stop offset={1} style={{ stopColor: 'var(--ui-info)' }} />
         </linearGradient>
       </defs>
       <motion.path
@@ -46,9 +46,9 @@ export function LineDraw({ points, width, height, strokeWidth = 6, dotRadius = 1
         strokeLinejoin="round"
         variants={reduced ? undefined : v.path}
       />
-      <motion.circle cx={ex} cy={ey} r={dotRadius} style={{ ...origin, fill: 'var(--lilac)' }} variants={reduced ? undefined : v.dot} />
+      <motion.circle cx={ex} cy={ey} r={dotRadius} style={{ ...origin, fill: 'var(--ui-info)' }} variants={reduced ? undefined : v.dot} />
       {!reduced && (
-        <motion.circle cx={ex} cy={ey} r={dotRadius} fill="none" strokeWidth={strokeWidth / 2} style={{ ...origin, stroke: 'var(--lilac)' }} variants={v.ring} />
+        <motion.circle cx={ex} cy={ey} r={dotRadius} fill="none" strokeWidth={strokeWidth / 2} style={{ ...origin, stroke: 'var(--ui-info)' }} variants={v.ring} />
       )}
     </motion.svg>
   )

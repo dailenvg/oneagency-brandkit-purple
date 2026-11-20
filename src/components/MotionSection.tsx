@@ -32,7 +32,7 @@ export function MotionSection() {
         <Reveal as="ol" stagger className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
           {PRINCIPLES.map((p, i) => (
             <motion.li key={p.title} variants={reveal} className="flex flex-col gap-2 rounded-site border border-edge bg-surface p-5">
-              <span className="font-num text-step-small text-accent">0{i + 1}</span>
+              <span className="tabular-nums text-step-small text-accent">0{i + 1}</span>
               <span className="font-semibold text-text">{p.title}</span>
               <span className="text-step-small text-text-2">{p.body}</span>
             </motion.li>

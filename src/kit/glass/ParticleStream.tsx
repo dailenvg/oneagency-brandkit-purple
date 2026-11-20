@@ -35,7 +35,7 @@ function strandPath(i: number, count: number) {
 }
 
 /**
- * Particle stream: fine dots and lines flowing in a wave, white to rose (lilac to rose on light). Drifts one wave left
+ * Particle stream: fine dots and lines flowing in a wave, white to Mint (Sky to Violet on light). Drifts one wave left
  * to right the first time it comes into view, then holds (the strands repeat every wave, so the end frame matches the
  * start). Reduced motion: still from the start. Decorative.
  */

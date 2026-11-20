@@ -2,11 +2,11 @@ import type { ViewId } from '../lib/views'
 
 /** One line per view for the Overview shortcuts. */
 export const VIEW_SUMMARIES: Record<Exclude<ViewId, 'overview'>, string> = {
-  logo: 'The chrome ONE mark in every lockup and colour, with clear space, sizes and misuse.',
+  logo: 'The ONE mark in every lockup and colour, with clear space, sizes and misuse.',
   colour: 'Every live-site token, derived ramps, the contrast matrix and accent rules.',
-  type: 'Geist, Lato and Metal, the type scale, ad text styles and the highlight band.',
+  type: 'Unbounded and Geist, the type scale, ad text styles and the highlight band.',
   elements: 'Signature devices, patterns, illustrations, CTAs, proof bar, award badge and icons.',
-  glass: 'Frosted glass with a rose rim light: components, rules and the reference ads.',
+  glass: 'Frosted glass with a Mint rim light: components, rules and the reference ads.',
   motion: "The film's moves, live, with exact values and the HTML5 ad runtime.",
   imagery: 'Direction for real work and real customers, plus an AI-generated starter library.',
   voice: 'Pillars, traits, rules, banned words and headline patterns.',
