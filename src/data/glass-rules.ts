@@ -4,7 +4,7 @@
 export const GLASS_ANATOMY = [
   { part: 'Rim light', value: '1.25 px gradient border: Mint at two corners (Ultra Violet on light), fading to clear along the edges.', token: '--glass-rim' },
   { part: 'Fill', value: 'Navy tint at 55% under a white sheen (13% to 4%), Mint 8% in the far corner.', token: '--glass-fill' },
-  { part: 'Specular highlight', value: 'A soft white bloom at the top left (30%), as if lit from above.', token: '--glass-specular' },
+  { part: 'Specular highlight', value: 'A soft white highlight at the top left (30%), as if lit from above.', token: '--glass-specular' },
   { part: 'Edge', value: 'A solid 1 px edge under the rim light, so the card holds its shape where the rim fades; a 1 px white line along the top.', token: '--ui-edge' },
   { part: 'Radius', value: '24 px cards, 12 px icon tiles and small parts, full pill for toggles.', token: '--glass-radius' },
 ] as const
@@ -36,7 +36,7 @@ export const USE_FLAT = [
 export const GLASS_DO = [
   'Navy ground (or the violet variant), so the rim light carries.',
   'One glass object or stack per layout, at a slight perspective.',
-  'Mint for rim, glow, dots and checks; white or silver icons.',
+  'Mint for the rim light, dots and checks; white or silver icons.',
   'Halftone arc or particle stream behind the object, not over it.',
 ]
 
@@ -45,12 +45,12 @@ export const GLASS_DONT = [
   'Rim light in a colour other than Mint (Ultra Violet on light).',
   'Text inside the blur or the halftone without a solid panel.',
   'Stacks deeper than three, or every element in glass.',
-  'No glow, halo or backlight effects.',
+  'Any glow, halo or backlight effect.',
 ]
 
 /** One entry per kit component in src/kit/glass/: what it is for and the call that draws it. */
 export const GLASS_COMPONENTS = [
-  { name: 'GlassCard', use: 'The glass body: fill, blur, rim light, highlight, glow. Optional depth stack.', code: '<GlassCard depth={2}>…</GlassCard>' },
+  { name: 'GlassCard', use: 'The glass body: fill, blur, rim light, highlight and a soft drop shadow. Optional depth stack.', code: '<GlassCard depth={2}>…</GlassCard>' },
   { name: 'GlassIcon', use: 'Icon tile with a vertical divider and a label, as in the offer grids.', code: '<GlassIcon icon={MagnifyingGlass} label="SEO audit" />' },
   { name: 'CheckBadge', use: 'Mint glass circle with a navy check: the result marker.', code: '<CheckBadge size="lg" />' },
   { name: 'HalftoneArc', use: 'Mint dot arc behind objects; dots shrink toward the ends and edges.', code: '<HalftoneArc className="w-full" />' },

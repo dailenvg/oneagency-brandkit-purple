@@ -49,8 +49,8 @@ export function TypeSection() {
         </div>
 
         <SourceNote>
-          Unbounded and Geist come with the rebrand (concept 01 &ldquo;Nova&rdquo;, moodboard {KIT.board}). Lato and Metal, the old site&apos;s faces, are
-          retired.
+          Unbounded and Geist come with the rebrand (concept 01 &ldquo;Nova&rdquo;, moodboard {KIT.board}). They replace Lato and Metal, the old site&apos;s
+          faces, which are retired.
         </SourceNote>
       </div>
     </Section>

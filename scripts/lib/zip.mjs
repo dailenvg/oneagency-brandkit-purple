@@ -7,8 +7,8 @@ import { crc32, deflateRawSync } from 'node:zlib'
 /** Formats that are already compressed: deflating them again only costs time. */
 const STORED = /\.(png|jpe?g|webp|gif|mp4|webm|woff2?|zip)$/i
 
-/** 2026-11-18 00:00, the kit's release date, in MS-DOS date/time format. */
-const DOS_DATE = ((2026 - 1980) << 9) | (11 << 5) | 18
+/** 2026-11-20 00:00, the kit's release date (v2.0), in MS-DOS date/time format. */
+const DOS_DATE = ((2026 - 1980) << 9) | (11 << 5) | 20
 const DOS_TIME = 0
 
 /**

@@ -53,7 +53,7 @@ Folders
               (elements/mobius/, not in the full kit), laurel, CTA buttons, proof bar, award badge, icons
   illustrations/, textures/  glass illustrations (AI-generated in Magnific) and textures (made in code)
   references/ the nine reference ads the glass and texture style comes from
-  vendor/ciq/ ConversionIQ's README for the Möbius loop, the source of its credit
+  vendor/ciq/ ConversionIQ's README for the Möbius loop, the source of its credit, and RECOLOUR.md (the Mint recolour)
   templates/  ad templates and sample ads (editable versions live in Magnific)
   ads/        the creative ads: ten concepts in four sizes, PNG and WebP (not in the full kit). Three of them
               (technology, results, vacation-ownership) are built on the Möbius loop stills.
@@ -66,9 +66,10 @@ Licences
   Unbounded and Geist are under the SIL Open Font License 1.1 (see fonts/*_ofl.txt).
   Logos and all other brand assets belong to ONE Agency, LLC. Use them only for ONE Agency work.
   The 2026 ARDY Award belongs to ConversionIQ.ai; say so wherever it appears.
-  The Möbius loop is ConversionIQ's key visual, used as supplied: the stills in elements/mobius/ and the three ads
-  in ads/ built on them. Never edit, redraw or recolour it, and credit it wherever it appears:
-  "Möbius loop: ConversionIQ key visual, used as supplied."
+  The Möbius loop is ConversionIQ's key visual, recoloured to Mint for ONE Agency (vendor/ciq/RECOLOUR.md): the
+  stills in elements/mobius/ and the three ads in ads/ built on them. The recolour changes colour only. Never edit or
+  redraw it, and credit it wherever it appears:
+  "Möbius loop: ConversionIQ key visual, recoloured to Mint."
 
 Sources
   Colour and logo: the rebrand moodboard (${KIT.board}, exported ${KIT.boardExported})

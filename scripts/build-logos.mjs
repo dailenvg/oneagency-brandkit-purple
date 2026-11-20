@@ -51,10 +51,10 @@ const SCALES = [1, 2, 4]
  * The first two are the board's colourways; the one-colour versions are for single-colour reproduction.
  */
 const VARIANTS = {
-  'on-light': { label: 'Gradient on light', ground: '--paper', one: 'gradient', agency: NAVY, note: 'As drawn on the board: the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.' },
-  'on-navy': { label: 'Mint and white on navy', ground: '--navy', one: MINT, agency: PAPER, note: 'The reversed version from the board: ONE in Mint, AGENCY in white. For Navy and dark photos.' },
-  navy: { label: 'Navy (one colour)', ground: '--paper', one: NAVY, agency: NAVY, note: 'Single colour Navy, as on the board. When the gradient cannot print or render.' },
-  white: { label: 'White (one colour)', ground: '--navy', one: PAPER, agency: PAPER, note: 'Single colour white for dark grounds and photos where Mint would clash.' },
+  'on-light': { label: 'Gradient on light', ground: '--paper', one: 'gradient', agency: NAVY, note: 'As drawn on the board: ONE in the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.' },
+  'on-navy': { label: 'Mint and white on navy', ground: '--navy', one: MINT, agency: PAPER, note: 'The reversed version from the board: ONE in Mint, AGENCY in white. For Navy grounds and dark photos.' },
+  navy: { label: 'Navy (one colour)', ground: '--paper', one: NAVY, agency: NAVY, note: 'One-colour Navy, as on the board. For light grounds where the gradient cannot print or render.' },
+  white: { label: 'White (one colour)', ground: '--navy', one: PAPER, agency: PAPER, note: 'One-colour white, for dark grounds and photos where Mint would clash.' },
 }
 
 /** App tiles from the board: 855 square, radius 210, the mark centred. */
@@ -161,7 +161,7 @@ async function writeLockup(lockup, spec, variant, master) {
   const { label, ground, note } = VARIANTS[variant]
   const meta = { label, ground, note }
   // ONE alone and the mark have no AGENCY: the reversed version is Mint only.
-  if (master.shapes.length === 1 && variant === 'on-navy') Object.assign(meta, { label: 'Mint on navy', note: 'The reversed colour from the board: Mint on Navy and dark photos.' })
+  if (master.shapes.length === 1 && variant === 'on-navy') Object.assign(meta, { label: 'Mint on navy', note: 'The reversed version from the board, in Mint. For Navy grounds and dark photos.' })
   if (master.shapes.length === 1 && variant === 'on-light') Object.assign(meta, { note: 'As drawn on the board: the Violet-to-Mint gradient. For white, Mist and Sky grounds.' })
   return { lockup, variant, primary: spec.primary, lockupLabel: spec.label, ...meta, svg: { ...file, width: master.width, height: master.height }, pngs }
 }

@@ -9,8 +9,9 @@
  * oneagency.com hero. Each crop puts one point of the loop (an anchor on its bounding box) at one point of the format,
  * at two to three times the format's short side, and whatever falls outside is cut off.
  *
- * The loop is the vendored <ciq-loop> web component (public/vendor/ciq/ciq-loop.js), drawn with WebGL, so these are
- * rasters only. The file is loaded as is; everything below happens in the capture page around it:
+ * The loop is the vendored <ciq-loop> web component in its ONE Agency recolour (public/vendor/ciq/ciq-loop.one-agency.js,
+ * written by scripts/recolour-mobius.mjs from ConversionIQ's original ciq-loop.js; run `npm run kit:mobius-colour`
+ * first), drawn with WebGL, so these are rasters only. The file is loaded as is; everything below happens in the capture page around it:
  *
  *   One moment. Math.random is seeded and requestAnimationFrame is driven by the script, so the loop's clock walks to
  *   FRAME_MS the same way every run; then it is paused. Every still shows the same frame.
@@ -38,7 +39,7 @@ import { TOKENS } from '../src/data/tokens.ts'
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = resolve(ROOT, `public${MOBIUS_DIR}`)
 const PREVIEWS = resolve(ROOT, `public${MOBIUS_PREVIEWS_DIR}`)
-const LOOP_JS = resolve(ROOT, 'public/vendor/ciq/ciq-loop.js')
+const LOOP_JS = resolve(ROOT, 'public/vendor/ciq/ciq-loop.one-agency.js')
 
 /** The chosen moment, ms on the loop's clock: both half-twists read, top and bottom centre. */
 const FRAME_MS = 44000

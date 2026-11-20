@@ -55,7 +55,7 @@ export function AdCanvas({ size, scale = 1, ground = 'night', logo = 'left', lab
             {!still && <LightStreaks className="opacity-70" />}
           </>
         )}
-        {/* The still is used as supplied: the grain goes under it, so nothing is blended into the loop. */}
+        {/* The still is placed unchanged (the Mint recolour is already in it): the grain goes under it, so nothing is blended into the loop. */}
         {still && <Grain />}
         {still && (
           <img

@@ -12,7 +12,7 @@ const RULES = [
   'The band sits behind the lower 40% of the words: from just under the baseline to about mid x-height.',
   'It starts about 0.15 em before the first highlighted word and runs about 0.15 em past the last.',
   'When a highlighted fragment starts a line, the band starts flush with its first word.',
-  'On dark: the derived violet band (Ultra Violet at 55% into Navy) with white text. On light: Sky, with Navy text.',
+  'On dark: the derived violet band (55% Ultra Violet mixed into Navy) with white text. On light: Sky with Navy text.',
 ]
 
 const TOKENS = [
@@ -66,7 +66,7 @@ export function HighlightBand() {
               <CopyButton value={t.value} label={t.value} description={`CSS value of ${t.name}`} />
             </div>
           ))}
-          <p className="text-step-small text-text-3">The dark band is derived, not on the board. The light band is Sky.</p>
+          <p className="text-step-small text-text-3">The dark band is derived and not on the board. The light band is Sky, a board colour.</p>
         </div>
       </div>
     </div>

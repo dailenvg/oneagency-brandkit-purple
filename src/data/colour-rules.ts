@@ -2,10 +2,10 @@ import type { TokenGroup } from './tokens'
 
 export const GROUP_LABELS: Record<TokenGroup, { label: string; note: string }> = {
   brand: { label: 'Brand', note: 'The five colours from the moodboard: Navy, Mint, Ultra Violet, Sky and Mist.' },
-  accent: { label: 'Accent', note: 'Text on the accents, pressed steps, and the light Violet for text on navy. Derived.' },
-  surface: { label: 'Surface', note: 'White from the board, then the derived navy grounds, darkest first, and a light Mist step.' },
+  accent: { label: 'Accent', note: 'Derived: text on the accents, pressed steps, and the light Violet for text on navy.' },
+  surface: { label: 'Surface', note: 'White from the board, then the derived navy grounds (darkest first) and a light Mist step.' },
   neutral: { label: 'Neutral', note: 'Text, edges and ink, derived from Navy and white.' },
-  gradient: { label: 'Gradient', note: 'The signature Mint-to-Violet fill, the logo gradient, rules and dividers.' },
+  gradient: { label: 'Gradient', note: 'The signature Mint-to-Violet gradient, the logo gradient, the hairline rule and the stat dividers.' },
 }
 
 export const GROUP_ORDER: TokenGroup[] = ['brand', 'accent', 'surface', 'neutral', 'gradient']

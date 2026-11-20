@@ -41,7 +41,7 @@ export function GlassSection() {
       eyebrow="Glass & texture"
       title="Frosted glass with a Mint rim light"
       highlight={[4, 6]}
-      lede="The style of the nine reference ads: frosted glass objects floating at a slight angle on a near-black ground, lit with a rose rim, stacked in depth, with halftone arcs and particle streams behind them."
+      lede="The style of the nine reference ads, repainted in the new palette: frosted glass objects at a slight angle on a navy ground, edged with a Mint rim light, stacked in depth, with halftone arcs and particle streams behind them."
       actions={<ZipButton group="glass" label="All glass & texture" />}
     >
       <div className="flex flex-col gap-section">
@@ -95,8 +95,8 @@ export function GlassSection() {
         </div>
 
         <SourceNote>
-          Codified from nine ONE Agency reference ads (November 2026), repainted in the new palette. Rim, glow and dots use Mint (--mint, #00FAB3) on navy and Ultra
-          Violet on light. The violet ground runs from the derived --violet-800 into --void; both are labelled derived.
+          Codified from nine ONE Agency reference ads (November 2026); the kit repaints that style in the new palette. The rim light and dots use Mint (--mint, #00FAB3) on navy and
+          Ultra Violet on light. No glow, halo or backlight. The violet ground runs from the derived --violet-800 into --void; both are labelled derived.
         </SourceNote>
       </div>
     </Section>

@@ -68,7 +68,7 @@ export function OverviewHero() {
           </motion.div>
           {loop !== 'error' && (
             <motion.p variants={reveal} className="text-step-small text-text-3">
-              Möbius loop: ConversionIQ key visual, used as supplied.
+              Möbius loop: ConversionIQ key visual, recoloured to Mint.
             </motion.p>
           )}
         </motion.div>

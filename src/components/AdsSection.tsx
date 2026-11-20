@@ -56,7 +56,8 @@ export function AdsSection() {
 
         <div>
           <SubHeading title="Reference ads" badge={<Badge>{GLASS_REFERENCES.length}</Badge>}>
-            The originals the glass style is codified from. One difference by design: their serif italic accent word is set here in Unbounded with the signature gradient.
+            The originals the glass style is codified from, in the old palette. The kit repaints the style in Mint and Violet without the glow, and sets their serif
+            italic accent word in Unbounded with the signature gradient.
           </SubHeading>
           <ReferenceGallery />
         </div>

@@ -51,7 +51,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Horizontal (primary, master layout)",
     "label": "Gradient on light",
     "ground": "--paper",
-    "note": "As drawn on the board: the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.",
+    "note": "As drawn on the board: ONE in the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.",
     "svg": {
       "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-light.svg",
       "bytes": 4063,
@@ -89,7 +89,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Horizontal (primary, master layout)",
     "label": "Mint and white on navy",
     "ground": "--navy",
-    "note": "The reversed version from the board: ONE in Mint, AGENCY in white. For Navy and dark photos.",
+    "note": "The reversed version from the board: ONE in Mint, AGENCY in white. For Navy grounds and dark photos.",
     "svg": {
       "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-navy.svg",
       "bytes": 3801,
@@ -127,7 +127,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Horizontal (primary, master layout)",
     "label": "Navy (one colour)",
     "ground": "--paper",
-    "note": "Single colour Navy, as on the board. When the gradient cannot print or render.",
+    "note": "One-colour Navy, as on the board. For light grounds where the gradient cannot print or render.",
     "svg": {
       "url": "/kit/logos/horizontal/one-agency_logo_horizontal-navy.svg",
       "bytes": 3801,
@@ -165,7 +165,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Horizontal (primary, master layout)",
     "label": "White (one colour)",
     "ground": "--navy",
-    "note": "Single colour white for dark grounds and photos where Mint would clash.",
+    "note": "One-colour white, for dark grounds and photos where Mint would clash.",
     "svg": {
       "url": "/kit/logos/horizontal/one-agency_logo_horizontal-white.svg",
       "bytes": 3801,
@@ -203,7 +203,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Stacked",
     "label": "Gradient on light",
     "ground": "--paper",
-    "note": "As drawn on the board: the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.",
+    "note": "As drawn on the board: ONE in the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.",
     "svg": {
       "url": "/kit/logos/stacked/one-agency_logo_stacked-on-light.svg",
       "bytes": 4065,
@@ -241,7 +241,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Stacked",
     "label": "Mint and white on navy",
     "ground": "--navy",
-    "note": "The reversed version from the board: ONE in Mint, AGENCY in white. For Navy and dark photos.",
+    "note": "The reversed version from the board: ONE in Mint, AGENCY in white. For Navy grounds and dark photos.",
     "svg": {
       "url": "/kit/logos/stacked/one-agency_logo_stacked-on-navy.svg",
       "bytes": 3809,
@@ -279,7 +279,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Stacked",
     "label": "Navy (one colour)",
     "ground": "--paper",
-    "note": "Single colour Navy, as on the board. When the gradient cannot print or render.",
+    "note": "One-colour Navy, as on the board. For light grounds where the gradient cannot print or render.",
     "svg": {
       "url": "/kit/logos/stacked/one-agency_logo_stacked-navy.svg",
       "bytes": 3809,
@@ -317,7 +317,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Stacked",
     "label": "White (one colour)",
     "ground": "--navy",
-    "note": "Single colour white for dark grounds and photos where Mint would clash.",
+    "note": "One-colour white, for dark grounds and photos where Mint would clash.",
     "svg": {
       "url": "/kit/logos/stacked/one-agency_logo_stacked-white.svg",
       "bytes": 3809,
@@ -393,7 +393,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Wordmark (ONE)",
     "label": "Mint on navy",
     "ground": "--navy",
-    "note": "The reversed colour from the board: Mint on Navy and dark photos.",
+    "note": "The reversed version from the board, in Mint. For Navy grounds and dark photos.",
     "svg": {
       "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-navy.svg",
       "bytes": 957,
@@ -431,7 +431,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Wordmark (ONE)",
     "label": "Navy (one colour)",
     "ground": "--paper",
-    "note": "Single colour Navy, as on the board. When the gradient cannot print or render.",
+    "note": "One-colour Navy, as on the board. For light grounds where the gradient cannot print or render.",
     "svg": {
       "url": "/kit/logos/wordmark/one-agency_logo_wordmark-navy.svg",
       "bytes": 957,
@@ -469,7 +469,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Wordmark (ONE)",
     "label": "White (one colour)",
     "ground": "--navy",
-    "note": "Single colour white for dark grounds and photos where Mint would clash.",
+    "note": "One-colour white, for dark grounds and photos where Mint would clash.",
     "svg": {
       "url": "/kit/logos/wordmark/one-agency_logo_wordmark-white.svg",
       "bytes": 957,
@@ -545,7 +545,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Mark (the O)",
     "label": "Mint on navy",
     "ground": "--navy",
-    "note": "The reversed colour from the board: Mint on Navy and dark photos.",
+    "note": "The reversed version from the board, in Mint. For Navy grounds and dark photos.",
     "svg": {
       "url": "/kit/logos/mark/one-agency_logo_mark-on-navy.svg",
       "bytes": 567,
@@ -583,7 +583,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Mark (the O)",
     "label": "Navy (one colour)",
     "ground": "--paper",
-    "note": "Single colour Navy, as on the board. When the gradient cannot print or render.",
+    "note": "One-colour Navy, as on the board. For light grounds where the gradient cannot print or render.",
     "svg": {
       "url": "/kit/logos/mark/one-agency_logo_mark-navy.svg",
       "bytes": 567,
@@ -621,7 +621,7 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Mark (the O)",
     "label": "White (one colour)",
     "ground": "--navy",
-    "note": "Single colour white for dark grounds and photos where Mint would clash.",
+    "note": "One-colour white, for dark grounds and photos where Mint would clash.",
     "svg": {
       "url": "/kit/logos/mark/one-agency_logo_mark-white.svg",
       "bytes": 567,
@@ -831,6 +831,6 @@ export const SOCIAL_IMAGES: IconFile[] = [
     "width": 1200,
     "height": 630,
     "url": "/kit/logos/social/one-agency_logo_og-image_1200x630.png",
-    "bytes": 21001
+    "bytes": 21952
   }
 ]

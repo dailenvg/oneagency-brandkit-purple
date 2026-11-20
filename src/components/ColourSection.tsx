@@ -26,7 +26,7 @@ export function ColourSection() {
       eyebrow="Colour"
       title="Navy, Mint and Ultra Violet"
       accent={[1]}
-      lede="Five colours from the moodboard, and everything the kit derives from them, labelled. Tap or click any value to copy it."
+      lede="Five colours from the moodboard, plus everything the kit derives from them, labelled as derived. Tap or click any value to copy it."
       actions={
         <>
           <DownloadLink url={CSS_URL} label="CSS tokens" />
@@ -84,8 +84,8 @@ export function ColourSection() {
 
         <div>
           <SubHeading title="Light theme for this hub" badge={<Badge>Derived</Badge>}>
-            The sun and moon switch swaps each role from its navy token to a white, Mist and Sky one. Mint never sets text on light grounds, so accent text
-            and the focus ring use Ultra Violet.
+            The sun and moon switch moves each role from its navy token to a white, Mist or Sky one. Mint never sets text on light grounds, so accent text and
+            the focus ring use Ultra Violet.
           </SubHeading>
           <LightThemeTokens />
         </div>

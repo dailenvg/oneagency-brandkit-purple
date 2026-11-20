@@ -4,8 +4,11 @@ import { loadScriptOnce } from '../../lib/load-script'
 import { duration, ease } from '../../lib/motion'
 import { useTheme } from '../../lib/theme'
 
-/** ConversionIQ's key visual, vendored byte for byte. Loaded only when the Overview mounts. */
-const SRC = '/vendor/ciq/ciq-loop.js'
+/**
+ * ConversionIQ's key visual in the ONE Agency recolour (Mint for pink, no glow ground), written by
+ * scripts/recolour-mobius.mjs from the original. Loaded only when the Overview mounts.
+ */
+const SRC = '/vendor/ciq/ciq-loop.one-agency.js'
 
 type Status = 'loading' | 'ready' | 'error'
 
@@ -15,7 +18,7 @@ const subscribeVisibility = (onChange: () => void) => {
 }
 
 /**
- * The Möbius loop behind the Overview hero, used as supplied: look "energy", shape "mobius", placed right, on the
+ * The Möbius loop behind the Overview hero, in its Mint recolour: look "energy", shape "mobius", placed right, on the
  * hub's own ground (background "none"), in the hub's theme. It stops itself off screen and holds still for reduced
  * motion; this wrapper also pauses it while the tab is hidden, and unmounting the view removes it. If the script
  * fails, the hero simply goes without it.

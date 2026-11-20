@@ -27,7 +27,7 @@ export type MobiusCropId = 'sweep' | 'band-top' | 'band-bottom' | 'side' | 'fram
 
 /**
  * The Möbius loop (ConversionIQ's key visual) behind a concept, in place of the halftone arc: a transparent still from
- * public/kit/elements/mobius/, used as supplied. Placed full width; `shift` only moves it away from an edge the loop
+ * public/kit/elements/mobius/, recoloured to Mint and otherwise unchanged. Placed full width; `shift` only moves it away from an edge the loop
  * never touches, so every cut stays at the frame edge.
  */
 export interface CreativeMobius {

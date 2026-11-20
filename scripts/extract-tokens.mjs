@@ -11,7 +11,7 @@
  *
  * The five brand colours, white and the logo gradient are copied from the board. Everything else is computed and
  * labelled "derived" wherever it appears: the system colours (surfaces, text, edges), the tint/shade ramps and the
- * v1.1 style tokens (the highlight band).
+ * style tokens (the highlight band).
  *
  * Usage: node scripts/extract-tokens.mjs [path/to/brand-tokens.json]
  */
@@ -44,7 +44,7 @@ const data = {
     method: 'OKLab mix of the board value toward white (tints) or toward navy (Mint and Violet shades) or black (Navy shades). Step 500 is the board value for Mint and Violet, step 900 for Navy.',
     ramps,
   },
-  derivedStyle: { label: 'Derived, not on the board (v1.1 style)', method: 'CSS color-mix in sRGB of the brand tokens (hex shown for reference).', tokens: styleTokens },
+  derivedStyle: { label: 'Derived, not on the board (highlight band)', method: 'CSS color-mix in sRGB of the brand tokens (hex shown for reference).', tokens: styleTokens },
   contrast,
 }
 
@@ -211,7 +211,7 @@ ${rampCss}
 }
 
 /*
- * DERIVED, NOT ON THE BOARD (v1.1 style).
+ * DERIVED, NOT ON THE BOARD (highlight band).
  * ${data.derivedStyle.method}
  */
 :root {
@@ -295,7 +295,7 @@ export const LOGO_GRADIENT = ${json(data.logoGradient)} as const
 
 export const EFFECT_TOKENS: EffectToken[] = ${json(effects)}
 
-/** Derived, not on the board (v1.1 style): the highlight band. */
+/** Derived, not on the board: the highlight band. */
 export const STYLE_TOKENS: StyleToken[] = ${json(styleTokens)}
 
 /** Derived, not on the board. */

@@ -41,7 +41,7 @@ function SourceNotes() {
       <div>
         <h2 className="mb-3 font-semibold text-text">Fonts</h2>
         <p>
-          <ExternalLink href={FONT_PAGES.unbounded}>Unbounded</ExternalLink> for display and <ExternalLink href={FONT_PAGES.geist}>Geist</ExternalLink> for body, both
+          <ExternalLink href={FONT_PAGES.unbounded}>Unbounded</ExternalLink> for display and numerals, <ExternalLink href={FONT_PAGES.geist}>Geist</ExternalLink> for body, both
           SIL Open Font License 1.1.
         </p>
       </div>
@@ -53,8 +53,9 @@ function SourceNotes() {
         </p>
       </div>
       <p className="sm:col-span-3">
-        Logo masters: the rebrand moodboard (design/source/rebrand/). Motion follows the film &ldquo;ONE Agency: The Free Business Audit&rdquo;. The
-        glass and texture style comes from nine ONE Agency reference ads. Möbius loop: ConversionIQ key visual, used as supplied. © {KIT.updated.slice(0, 4)} ONE Agency, LLC.
+        Logo masters: the rebrand moodboard (design/source/rebrand/). Radii, UI motion timing, the Frames in orbit pattern and the photo set (from Unsplash) come
+        from concept 01 &ldquo;Nova&rdquo;. The brand moves follow the film &ldquo;ONE Agency: The Free Business Audit&rdquo;. The glass and texture style comes from
+        nine ONE Agency reference ads; the kit repaints that style in the new palette. Möbius loop: ConversionIQ key visual, recoloured to Mint. © {KIT.updated.slice(0, 4)} ONE Agency, LLC.
       </p>
     </div>
   )

@@ -30,7 +30,7 @@ export function CreativeAdLightbox({ open, onClose }: { open: OpenCreativeAd | n
           <MobiusCredit concept={open.concept} />
           {open.size.format === 'story' && (
             <p className="text-step-small text-text-3">
-              Story safe zone: the top {STORY_SAFE.top} px and bottom {STORY_SAFE.bottom} px carry only ground, glow and texture.
+              Story safe zone: the top {STORY_SAFE.top} px and bottom {STORY_SAFE.bottom} px carry only ground and texture.
             </p>
           )}
           {files.png ? (

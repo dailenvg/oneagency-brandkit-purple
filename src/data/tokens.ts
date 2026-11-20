@@ -583,7 +583,7 @@ export const EFFECT_TOKENS: EffectToken[] = [
   }
 ]
 
-/** Derived, not on the board (v1.1 style): the highlight band. */
+/** Derived, not on the board: the highlight band. */
 export const STYLE_TOKENS: StyleToken[] = [
   {
     "name": "--kit-highlight",

@@ -754,7 +754,7 @@
     ]
   },
   "derivedStyle": {
-    "label": "Derived, not on the board (v1.1 style)",
+    "label": "Derived, not on the board (highlight band)",
     "method": "CSS color-mix in sRGB of the brand tokens (hex shown for reference).",
     "tokens": [
       {
