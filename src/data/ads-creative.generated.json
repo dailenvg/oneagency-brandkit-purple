@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T20:43:05.379Z",
+  "generatedAt": "2026-11-20T21:03:26.141Z",
   "items": [
     {
       "concept": "ai-visibility",
@@ -9,11 +9,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/ai-visibility/one-agency_ad-ai-visibility_1080x1080.png",
-          "bytes": 797109
+          "bytes": 575212
         },
         "webp": {
           "url": "/kit/ads/creative/ai-visibility/one-agency_ad-ai-visibility_1080x1080.webp",
-          "bytes": 84010
+          "bytes": 81538
         }
       }
     },
@@ -25,11 +25,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/ai-visibility/one-agency_ad-ai-visibility_1080x1350.png",
-          "bytes": 992479
+          "bytes": 620413
         },
         "webp": {
           "url": "/kit/ads/creative/ai-visibility/one-agency_ad-ai-visibility_1080x1350.webp",
-          "bytes": 98808
+          "bytes": 95864
         }
       }
     },
@@ -41,11 +41,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/ai-visibility/one-agency_ad-ai-visibility_1080x1920.png",
-          "bytes": 1305907
+          "bytes": 764365
         },
         "webp": {
           "url": "/kit/ads/creative/ai-visibility/one-agency_ad-ai-visibility_1080x1920.webp",
-          "bytes": 110806
+          "bytes": 108486
         }
       }
     },
@@ -57,11 +57,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/ai-visibility/one-agency_ad-ai-visibility_1200x627.png",
-          "bytes": 615490
+          "bytes": 475733
         },
         "webp": {
           "url": "/kit/ads/creative/ai-visibility/one-agency_ad-ai-visibility_1200x627.webp",
-          "bytes": 67788
+          "bytes": 66138
         }
       }
     },
@@ -73,11 +73,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/growth-audit/one-agency_ad-growth-audit_1080x1080.png",
-          "bytes": 865139
+          "bytes": 558310
         },
         "webp": {
           "url": "/kit/ads/creative/growth-audit/one-agency_ad-growth-audit_1080x1080.webp",
-          "bytes": 100300
+          "bytes": 97312
         }
       }
     },
@@ -89,11 +89,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/growth-audit/one-agency_ad-growth-audit_1080x1350.png",
-          "bytes": 1163644
+          "bytes": 765757
         },
         "webp": {
           "url": "/kit/ads/creative/growth-audit/one-agency_ad-growth-audit_1080x1350.webp",
-          "bytes": 123768
+          "bytes": 121716
         }
       }
     },
@@ -105,11 +105,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/growth-audit/one-agency_ad-growth-audit_1080x1920.png",
-          "bytes": 1383141
+          "bytes": 818221
         },
         "webp": {
           "url": "/kit/ads/creative/growth-audit/one-agency_ad-growth-audit_1080x1920.webp",
-          "bytes": 117268
+          "bytes": 114146
         }
       }
     },
@@ -121,11 +121,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/growth-audit/one-agency_ad-growth-audit_1200x627.png",
-          "bytes": 581132
+          "bytes": 372026
         },
         "webp": {
           "url": "/kit/ads/creative/growth-audit/one-agency_ad-growth-audit_1200x627.webp",
-          "bytes": 68974
+          "bytes": 66356
         }
       }
     },
@@ -137,11 +137,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/paid-search/one-agency_ad-paid-search_1080x1080.png",
-          "bytes": 808080
+          "bytes": 556074
         },
         "webp": {
           "url": "/kit/ads/creative/paid-search/one-agency_ad-paid-search_1080x1080.webp",
-          "bytes": 119522
+          "bytes": 115406
         }
       }
     },
@@ -153,11 +153,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/paid-search/one-agency_ad-paid-search_1080x1350.png",
-          "bytes": 977033
+          "bytes": 583241
         },
         "webp": {
           "url": "/kit/ads/creative/paid-search/one-agency_ad-paid-search_1080x1350.webp",
-          "bytes": 126656
+          "bytes": 123038
         }
       }
     },
@@ -169,11 +169,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/paid-search/one-agency_ad-paid-search_1080x1920.png",
-          "bytes": 1269265
+          "bytes": 696396
         },
         "webp": {
           "url": "/kit/ads/creative/paid-search/one-agency_ad-paid-search_1080x1920.webp",
-          "bytes": 130206
+          "bytes": 126820
         }
       }
     },
@@ -185,11 +185,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/paid-search/one-agency_ad-paid-search_1200x627.png",
-          "bytes": 600799
+          "bytes": 419414
         },
         "webp": {
           "url": "/kit/ads/creative/paid-search/one-agency_ad-paid-search_1200x627.webp",
-          "bytes": 80356
+          "bytes": 77674
         }
       }
     },
@@ -201,11 +201,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/paid-social/one-agency_ad-paid-social_1080x1080.png",
-          "bytes": 801833
+          "bytes": 522831
         },
         "webp": {
           "url": "/kit/ads/creative/paid-social/one-agency_ad-paid-social_1080x1080.webp",
-          "bytes": 106846
+          "bytes": 103336
         }
       }
     },
@@ -217,11 +217,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/paid-social/one-agency_ad-paid-social_1080x1350.png",
-          "bytes": 988294
+          "bytes": 588142
         },
         "webp": {
           "url": "/kit/ads/creative/paid-social/one-agency_ad-paid-social_1080x1350.webp",
-          "bytes": 131760
+          "bytes": 129292
         }
       }
     },
@@ -233,11 +233,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/paid-social/one-agency_ad-paid-social_1080x1920.png",
-          "bytes": 1342771
+          "bytes": 772865
         },
         "webp": {
           "url": "/kit/ads/creative/paid-social/one-agency_ad-paid-social_1080x1920.webp",
-          "bytes": 156546
+          "bytes": 153456
         }
       }
     },
@@ -249,11 +249,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/paid-social/one-agency_ad-paid-social_1200x627.png",
-          "bytes": 607147
+          "bytes": 418772
         },
         "webp": {
           "url": "/kit/ads/creative/paid-social/one-agency_ad-paid-social_1200x627.webp",
-          "bytes": 90432
+          "bytes": 87886
         }
       }
     },
@@ -265,11 +265,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/local-seo/one-agency_ad-local-seo_1080x1080.png",
-          "bytes": 822371
+          "bytes": 586034
         },
         "webp": {
           "url": "/kit/ads/creative/local-seo/one-agency_ad-local-seo_1080x1080.webp",
-          "bytes": 87160
+          "bytes": 84648
         }
       }
     },
@@ -281,11 +281,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/local-seo/one-agency_ad-local-seo_1080x1350.png",
-          "bytes": 944086
+          "bytes": 540390
         },
         "webp": {
           "url": "/kit/ads/creative/local-seo/one-agency_ad-local-seo_1080x1350.webp",
-          "bytes": 91680
+          "bytes": 88906
         }
       }
     },
@@ -297,11 +297,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/local-seo/one-agency_ad-local-seo_1080x1920.png",
-          "bytes": 1314865
+          "bytes": 744551
         },
         "webp": {
           "url": "/kit/ads/creative/local-seo/one-agency_ad-local-seo_1080x1920.webp",
-          "bytes": 108690
+          "bytes": 105718
         }
       }
     },
@@ -313,11 +313,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/local-seo/one-agency_ad-local-seo_1200x627.png",
-          "bytes": 633834
+          "bytes": 484423
         },
         "webp": {
           "url": "/kit/ads/creative/local-seo/one-agency_ad-local-seo_1200x627.webp",
-          "bytes": 70998
+          "bytes": 68996
         }
       }
     },
@@ -329,11 +329,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/web-design/one-agency_ad-web-design_1080x1080.png",
-          "bytes": 702603
+          "bytes": 395961
         },
         "webp": {
           "url": "/kit/ads/creative/web-design/one-agency_ad-web-design_1080x1080.webp",
-          "bytes": 72334
+          "bytes": 69968
         }
       }
     },
@@ -345,11 +345,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/web-design/one-agency_ad-web-design_1080x1350.png",
-          "bytes": 988912
+          "bytes": 616796
         },
         "webp": {
           "url": "/kit/ads/creative/web-design/one-agency_ad-web-design_1080x1350.webp",
-          "bytes": 97468
+          "bytes": 94346
         }
       }
     },
@@ -361,11 +361,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/web-design/one-agency_ad-web-design_1080x1920.png",
-          "bytes": 1328103
+          "bytes": 765644
         },
         "webp": {
           "url": "/kit/ads/creative/web-design/one-agency_ad-web-design_1080x1920.webp",
-          "bytes": 111280
+          "bytes": 107892
         }
       }
     },
@@ -377,11 +377,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/web-design/one-agency_ad-web-design_1200x627.png",
-          "bytes": 547471
+          "bytes": 369118
         },
         "webp": {
           "url": "/kit/ads/creative/web-design/one-agency_ad-web-design_1200x627.webp",
-          "bytes": 59212
+          "bytes": 56848
         }
       }
     },
@@ -393,11 +393,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/technology/one-agency_ad-technology_1080x1080.png",
-          "bytes": 1087541
+          "bytes": 1015577
         },
         "webp": {
           "url": "/kit/ads/creative/technology/one-agency_ad-technology_1080x1080.webp",
-          "bytes": 95816
+          "bytes": 96132
         }
       }
     },
@@ -409,11 +409,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/technology/one-agency_ad-technology_1080x1350.png",
-          "bytes": 1325664
+          "bytes": 1235754
         },
         "webp": {
           "url": "/kit/ads/creative/technology/one-agency_ad-technology_1080x1350.webp",
-          "bytes": 111192
+          "bytes": 109334
         }
       }
     },
@@ -425,11 +425,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/technology/one-agency_ad-technology_1080x1920.png",
-          "bytes": 1919169
+          "bytes": 1762703
         },
         "webp": {
           "url": "/kit/ads/creative/technology/one-agency_ad-technology_1080x1920.webp",
-          "bytes": 127954
+          "bytes": 126782
         }
       }
     },
@@ -441,11 +441,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/technology/one-agency_ad-technology_1200x627.png",
-          "bytes": 788930
+          "bytes": 715711
         },
         "webp": {
           "url": "/kit/ads/creative/technology/one-agency_ad-technology_1200x627.webp",
-          "bytes": 65648
+          "bytes": 63920
         }
       }
     },
@@ -457,11 +457,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/results/one-agency_ad-results_1080x1080.png",
-          "bytes": 943653
+          "bytes": 863231
         },
         "webp": {
           "url": "/kit/ads/creative/results/one-agency_ad-results_1080x1080.webp",
-          "bytes": 80682
+          "bytes": 76816
         }
       }
     },
@@ -473,11 +473,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/results/one-agency_ad-results_1080x1350.png",
-          "bytes": 1194063
+          "bytes": 1091205
         },
         "webp": {
           "url": "/kit/ads/creative/results/one-agency_ad-results_1080x1350.webp",
-          "bytes": 81168
+          "bytes": 78812
         }
       }
     },
@@ -489,11 +489,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/results/one-agency_ad-results_1080x1920.png",
-          "bytes": 1780856
+          "bytes": 1608672
         },
         "webp": {
           "url": "/kit/ads/creative/results/one-agency_ad-results_1080x1920.webp",
-          "bytes": 103530
+          "bytes": 101306
         }
       }
     },
@@ -505,11 +505,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/results/one-agency_ad-results_1200x627.png",
-          "bytes": 727840
+          "bytes": 644263
         },
         "webp": {
           "url": "/kit/ads/creative/results/one-agency_ad-results_1200x627.webp",
-          "bytes": 59980
+          "bytes": 58368
         }
       }
     },
@@ -521,11 +521,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/vacation-ownership/one-agency_ad-vacation-ownership_1080x1080.png",
-          "bytes": 826801
+          "bytes": 646961
         },
         "webp": {
           "url": "/kit/ads/creative/vacation-ownership/one-agency_ad-vacation-ownership_1080x1080.webp",
-          "bytes": 85424
+          "bytes": 83478
         }
       }
     },
@@ -537,11 +537,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/vacation-ownership/one-agency_ad-vacation-ownership_1080x1350.png",
-          "bytes": 994810
+          "bytes": 661763
         },
         "webp": {
           "url": "/kit/ads/creative/vacation-ownership/one-agency_ad-vacation-ownership_1080x1350.webp",
-          "bytes": 107274
+          "bytes": 105422
         }
       }
     },
@@ -553,11 +553,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/vacation-ownership/one-agency_ad-vacation-ownership_1080x1920.png",
-          "bytes": 1433553
+          "bytes": 977920
         },
         "webp": {
           "url": "/kit/ads/creative/vacation-ownership/one-agency_ad-vacation-ownership_1080x1920.webp",
-          "bytes": 119674
+          "bytes": 117928
         }
       }
     },
@@ -569,11 +569,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/vacation-ownership/one-agency_ad-vacation-ownership_1200x627.png",
-          "bytes": 579635
+          "bytes": 455943
         },
         "webp": {
           "url": "/kit/ads/creative/vacation-ownership/one-agency_ad-vacation-ownership_1200x627.webp",
-          "bytes": 67134
+          "bytes": 67014
         }
       }
     },
@@ -585,11 +585,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/testimonial/one-agency_ad-testimonial_1080x1080.png",
-          "bytes": 942347
+          "bytes": 669916
         },
         "webp": {
           "url": "/kit/ads/creative/testimonial/one-agency_ad-testimonial_1080x1080.webp",
-          "bytes": 72634
+          "bytes": 69024
         }
       }
     },
@@ -601,11 +601,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/testimonial/one-agency_ad-testimonial_1080x1350.png",
-          "bytes": 1189867
+          "bytes": 834564
         },
         "webp": {
           "url": "/kit/ads/creative/testimonial/one-agency_ad-testimonial_1080x1350.webp",
-          "bytes": 85486
+          "bytes": 80576
         }
       }
     },
@@ -617,11 +617,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/testimonial/one-agency_ad-testimonial_1080x1920.png",
-          "bytes": 1552936
+          "bytes": 1009569
         },
         "webp": {
           "url": "/kit/ads/creative/testimonial/one-agency_ad-testimonial_1080x1920.webp",
-          "bytes": 94746
+          "bytes": 89886
         }
       }
     },
@@ -633,11 +633,11 @@
       "files": {
         "png": {
           "url": "/kit/ads/creative/testimonial/one-agency_ad-testimonial_1200x627.png",
-          "bytes": 603897
+          "bytes": 442014
         },
         "webp": {
           "url": "/kit/ads/creative/testimonial/one-agency_ad-testimonial_1200x627.webp",
-          "bytes": 83912
+          "bytes": 81200
         }
       }
     }
