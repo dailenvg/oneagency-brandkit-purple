@@ -6,7 +6,7 @@ interface GradientTextProps {
 }
 
 /**
- * Accent word: Metal, filled with the signature --accent-fill gradient (rose to lilac), with the site's soft glow.
+ * Accent word: Unbounded 600, filled with the theme's accent gradient (Mint to Violet on navy, Violet to Navy on light). No glow.
  * Static on purpose; animate it by placing it inside WordRise (`accent` prop) or Pop.
  */
 export function GradientText({ children, className }: GradientTextProps) {

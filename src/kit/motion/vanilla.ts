@@ -84,7 +84,7 @@ export function splitLetters(el: HTMLElement): HTMLElement[] {
 export interface RiseOptions {
   /** Start of the word-by-word exit, if the line leaves. */
   out?: number
-  /** Word indices set as accent words (Metal, gradient fill). */
+  /** Word indices set as accent words (Unbounded, gradient fill). */
   accent?: number[]
   /** Seconds between words. */
   stagger?: number
@@ -184,15 +184,7 @@ export function lineDraw(parts: LineParts, t: number, t0: number) {
   parts.ring.style.transform = `scale(${fixed(1 + (distance.ringScale - 1) * easeOutCubic(r))})`
 }
 
-/** Halo: the soft glow behind the logo swells once (opacity 0.55 to 0.9, scale 0.85 to 1.05) and holds. */
-export function halo(el: Styled, t: number, t0: number) {
-  const [o0, o1] = distance.haloOpacity
-  const [s0, s1] = distance.haloScale
-  el.style.opacity = fixed(lerp(o0, o1, easeOutCubic(seg(t, t0, t0 + duration.haloFade))) * clamp01((t - t0) * 4))
-  el.style.transform = `scale(${fixed(lerp(s0, s1, easeOutCubic(seg(t, t0, t0 + duration.haloScale))), 4)})`
-}
-
-/** Gradient bar: the --bar rule grows from the left. Set transform-origin: left center. */
+/** Gradient bar: the --gradient rule grows from the left. Set transform-origin: left center. */
 export function bar(el: Styled, t: number, t0: number) {
   el.style.transform = `scaleX(${fixed(easeOutCubic(seg(t, t0, t0 + duration.bar)), 4)})`
 }

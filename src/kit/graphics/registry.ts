@@ -8,11 +8,12 @@ import { DotGridPattern } from './DotGridPattern'
 import { EditorialFrame } from './EditorialFrame'
 import { FreeAudit } from './FreeAudit'
 import { FlowPattern } from './FlowPattern'
+import { FramesOrbit } from './FramesOrbit'
 import { GridPattern } from './GridPattern'
 import { OrbitRings } from './OrbitRings'
 import { PaidMedia } from './PaidMedia'
 import { SignalRibbon } from './SignalRibbon'
-import { CONVERSION_CURVE_SIZE, CONVERSION_STAGES_SIZE, EDITORIAL_FRAME_SIZE, ILLUSTRATION_SIZE, ORBIT_SIZE, PATTERN_SIZE, SIGNAL_RIBBON_SIZE } from './sizes'
+import { CONVERSION_CURVE_SIZE, CONVERSION_STAGES_SIZE, EDITORIAL_FRAME_SIZE, FRAMES_ORBIT_SIZE, ILLUSTRATION_SIZE, ORBIT_SIZE, PATTERN_SIZE, SIGNAL_RIBBON_SIZE } from './sizes'
 import type { GraphicProps } from './types'
 
 export interface GraphicEntry {
@@ -39,6 +40,7 @@ export const GRAPHICS: GraphicEntry[] = [
   entry('pattern-contours', ContourPattern, PATTERN_SIZE),
   entry('pattern-grid', GridPattern, PATTERN_SIZE),
   entry('pattern-flow', FlowPattern, PATTERN_SIZE),
+  entry('frames-orbit', FramesOrbit, FRAMES_ORBIT_SIZE),
   entry('illustration-answering-leads', AnsweringLeads, ILLUSTRATION_SIZE),
   entry('illustration-free-audit', FreeAudit, ILLUSTRATION_SIZE),
   entry('illustration-ai-search', AiSearch, ILLUSTRATION_SIZE),

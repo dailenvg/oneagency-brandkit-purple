@@ -72,8 +72,8 @@ export function SidebarNav({ current, layoutId, onNavigate }: SidebarNavProps) {
                   <li key={id}>
                     <div className="relative flex items-center">
                       {active && (
-                        // The site blue (--lilac, #378DF0) in both themes, with near-black text: about 6.1:1 (white would be 3.4:1).
-                        <motion.span layoutId={layoutId} transition={spring.layout} aria-hidden className="absolute inset-0 rounded-site-sm bg-lilac" />
+                        // The theme fill, as on FilterTabs: Mint with Navy text in dark (13.3:1), Ultra Violet with white in light (8.6:1).
+                        <motion.span layoutId={layoutId} transition={spring.layout} aria-hidden className="absolute inset-0 rounded-site-sm bg-fill" />
                       )}
                       <a
                         href={viewHref(id)}
@@ -81,8 +81,12 @@ export function SidebarNav({ current, layoutId, onNavigate }: SidebarNavProps) {
                         onClick={onNavigate}
                         onPointerEnter={() => preloadView(id)}
                         onFocus={() => preloadView(id)}
-                        className={`relative flex min-h-touch flex-1 items-center gap-3 rounded-site-sm px-3 text-step--1 font-semibold transition-colors focus-visible:outline-offset-0 ${
-                          active ? 'text-on-accent' : 'group text-text-2 hover:bg-nav-hover hover:text-text active:bg-surface-2'
+                        // The active item's ring sits inside the pill in the on-fill colour (Navy on Mint, white on Violet): an
+                        // outside accent ring would merge with the pill and show no focus at all.
+                        className={`relative flex min-h-touch flex-1 items-center gap-3 rounded-site-sm px-3 text-step--1 font-semibold transition-colors ${
+                          active
+                            ? 'text-on-fill focus-visible:-outline-offset-4 focus-visible:outline-on-fill'
+                            : 'group text-text-2 hover:bg-nav-hover hover:text-text active:bg-surface-2 focus-visible:outline-offset-0'
                         }`}
                       >
                         <IconComponent className={`relative size-5 shrink-0 transition-colors ${active ? '' : 'group-hover:text-accent'}`} aria-hidden />
@@ -95,8 +99,10 @@ export function SidebarNav({ current, layoutId, onNavigate }: SidebarNavProps) {
                           aria-expanded={expanded}
                           aria-controls={listId}
                           aria-label={`${view.label} sections`}
-                          className={`relative grid size-touch shrink-0 place-items-center rounded-site-sm transition-colors focus-visible:outline-offset-0 ${
-                            active ? 'text-on-accent hover:bg-on-accent/10 active:bg-on-accent/15' : 'text-text-3 hover:bg-nav-hover hover:text-text active:bg-surface-2'
+                          className={`relative grid size-touch shrink-0 place-items-center rounded-site-sm transition-colors ${
+                            active
+                              ? 'text-on-fill hover:bg-on-fill/10 active:bg-on-fill/15 focus-visible:-outline-offset-4 focus-visible:outline-on-fill'
+                              : 'text-text-3 hover:bg-nav-hover hover:text-text active:bg-surface-2 focus-visible:outline-offset-0'
                           }`}
                         >
                           <motion.span aria-hidden className="grid" animate={{ rotate: expanded ? 180 : 0 }} transition={spring.snappy}>

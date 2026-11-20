@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Fetch the three typefaces oneagency.com loads (and Sora, the hub's own UI face) and write the font files.
+"""Fetch the two brand typefaces (and Sora, the hub's own UI face) and write the font files.
 
 Sources (all SIL Open Font License 1.1):
-  Geist 400/500/600/700  official release zip, github.com/vercel/geist-font
-  Lato 700               github.com/google/fonts (ofl/lato)
-  Metal 400              github.com/google/fonts (ofl/metal)
-  Sora 100-800 variable  github.com/google/fonts (ofl/sora), site only
+  Geist 400/500/600/700      body: official release zip, github.com/vercel/geist-font
+  Unbounded 500/600/700      display: github.com/google/fonts (ofl/unbounded), static instances of the variable font
+  Sora 100-800 variable      github.com/google/fonts (ofl/sora), site only
 
 Writes:
   public/kit/fonts/one-agency_font_[family]-[weight].{ttf,woff2}   full-character downloads
   public/kit/fonts/one-agency_font_[family]_ofl.txt                licence text per family
   src/assets/fonts/[family]-[weight].woff2                         Latin subsets for the kit site
+
+Files in those folders that this run does not write (faces dropped from the brand) are removed.
 
 Needs fontTools with brotli (pip install fonttools brotli). Usage: python3 scripts/fetch-fonts.py
 """
@@ -26,6 +27,7 @@ from pathlib import Path
 
 from fontTools import subset
 from fontTools.ttLib import TTFont
+from fontTools.varLib import instancer
 
 ROOT = Path(__file__).resolve().parent.parent
 KIT_DIR = ROOT / "public" / "kit" / "fonts"
@@ -36,6 +38,10 @@ GEIST_ZIP = f"https://github.com/vercel/geist-font/releases/download/{GEIST_VERS
 GOOGLE_FONTS = "https://raw.githubusercontent.com/google/fonts/main/ofl"
 
 GEIST_WEIGHTS = {400: "Regular", 500: "Medium", 600: "SemiBold", 700: "Bold"}
+
+# Unbounded weights in the kit download; the hub serves only the display weight (600) as a Latin subset.
+UNBOUNDED_WEIGHTS = (500, 600, 700)
+UNBOUNDED_SITE_WEIGHT = 600
 
 # Google Fonts' "latin" unicode-range: what the live site's Google Fonts request serves to English pages.
 LATIN = (
@@ -50,39 +56,55 @@ def fetch(url: str) -> bytes:
         return response.read()
 
 
-def write_pair(ttf: bytes, family: str, weight: int, scratch: Path) -> None:
-    """Kit download (TTF + full WOFF2) and the Latin WOFF2 subset the site serves."""
+def write_pair(ttf: bytes, family: str, weight: int, scratch: Path, site: bool = True) -> list[Path]:
+    """Kit download (TTF + full WOFF2) and, unless site is False, the Latin WOFF2 subset the site serves."""
     stem = f"one-agency_font_{family}-{weight}"
-    (KIT_DIR / f"{stem}.ttf").write_bytes(ttf)
+    written = [KIT_DIR / f"{stem}.ttf", KIT_DIR / f"{stem}.woff2"]
+    written[0].write_bytes(ttf)
 
     font = TTFont(io.BytesIO(ttf))
     font.flavor = "woff2"
-    font.save(KIT_DIR / f"{stem}.woff2")
+    font.save(written[1])
 
-    source = scratch / f"{family}-{weight}.ttf"
-    source.write_bytes(ttf)
-    subset.main([
-        str(source),
-        f"--unicodes={LATIN}",
-        "--layout-features=*",
-        "--flavor=woff2",
-        f"--output-file={SITE_DIR / f'{family}-{weight}.woff2'}",
-    ])
+    if site:
+        source = scratch / f"{family}-{weight}.ttf"
+        source.write_bytes(ttf)
+        written.append(SITE_DIR / f"{family}-{weight}.woff2")
+        subset.main([
+            str(source),
+            f"--unicodes={LATIN}",
+            "--layout-features=*",
+            "--flavor=woff2",
+            f"--output-file={written[-1]}",
+        ])
+    return written
 
 
-def geist(scratch: Path) -> None:
+def geist(scratch: Path) -> list[Path]:
     archive = zipfile.ZipFile(io.BytesIO(fetch(GEIST_ZIP)))
+    written = []
     for weight, style in GEIST_WEIGHTS.items():
-        write_pair(archive.read(f"geist-font/Geist/ttf/Geist-{style}.ttf"), "geist", weight, scratch)
-    (KIT_DIR / "one-agency_font_geist_ofl.txt").write_bytes(archive.read("geist-font/OFL.txt"))
+        written += write_pair(archive.read(f"geist-font/Geist/ttf/Geist-{style}.ttf"), "geist", weight, scratch)
+    licence = KIT_DIR / "one-agency_font_geist_ofl.txt"
+    licence.write_bytes(archive.read("geist-font/OFL.txt"))
+    return [*written, licence]
 
 
-def google(family: str, filename: str, weight: int, scratch: Path) -> None:
-    write_pair(fetch(f"{GOOGLE_FONTS}/{family}/{filename}"), family, weight, scratch)
-    (KIT_DIR / f"one-agency_font_{family}_ofl.txt").write_bytes(fetch(f"{GOOGLE_FONTS}/{family}/OFL.txt"))
+def unbounded(scratch: Path) -> list[Path]:
+    """Unbounded ships as one variable font (wght 200 to 900): each kit weight is a static instance pinned from it."""
+    variable = TTFont(io.BytesIO(fetch(f"{GOOGLE_FONTS}/unbounded/Unbounded%5Bwght%5D.ttf")))
+    written = []
+    for weight in UNBOUNDED_WEIGHTS:
+        static = instancer.instantiateVariableFont(variable, {"wght": weight}, updateFontNames=True)
+        buffer = io.BytesIO()
+        static.save(buffer)
+        written += write_pair(buffer.getvalue(), "unbounded", weight, scratch, site=weight == UNBOUNDED_SITE_WEIGHT)
+    licence = KIT_DIR / "one-agency_font_unbounded_ofl.txt"
+    licence.write_bytes(fetch(f"{GOOGLE_FONTS}/unbounded/OFL.txt"))
+    return [*written, licence]
 
 
-def sora(scratch: Path) -> None:
+def sora(scratch: Path) -> Path:
     """Sora, the hub's face for token names, values and file names (in place of a monospace). Site only: it is not a
     brand face, so it gets no kit download. One variable WOFF2 (weights 100 to 800), Latin subset."""
     source = scratch / "sora.ttf"
@@ -94,6 +116,17 @@ def sora(scratch: Path) -> None:
         "--flavor=woff2",
         f"--output-file={SITE_DIR / 'sora-variable.woff2'}",
     ])
+    return SITE_DIR / "sora-variable.woff2"
+
+
+def remove_stale(written: list[Path]) -> None:
+    """Deletes font files no longer produced (faces dropped from the brand), so the kit never ships them."""
+    keep = {path.resolve() for path in written}
+    for folder in (KIT_DIR, SITE_DIR):
+        for path in folder.iterdir():
+            if path.is_file() and path.resolve() not in keep:
+                path.unlink()
+                print(f"removed  {path.relative_to(ROOT)}")
 
 
 def main() -> None:
@@ -101,10 +134,8 @@ def main() -> None:
         folder.mkdir(parents=True, exist_ok=True)
     scratch = Path(tempfile.mkdtemp(prefix="oa-fonts-"))
     try:
-        geist(scratch)
-        google("lato", "Lato-Bold.ttf", 700, scratch)
-        google("metal", "Metal-Regular.ttf", 400, scratch)
-        sora(scratch)
+        written = [*geist(scratch), *unbounded(scratch), sora(scratch)]
+        remove_stale(written)
     finally:
         shutil.rmtree(scratch, ignore_errors=True)
     for path in sorted([*KIT_DIR.iterdir(), *SITE_DIR.iterdir()]):

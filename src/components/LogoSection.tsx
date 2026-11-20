@@ -14,23 +14,24 @@ import { FilterTabs } from './ui/FilterTabs'
 import { ZipButton } from './ui/ZipButton'
 
 const LOCKUPS: { id: LogoLockup; label: string; use: string }[] = [
-  { id: 'stacked', label: 'Stacked', use: 'The primary lockup and master layout. Use it unless the space is too wide and short.' },
-  { id: 'horizontal', label: 'Horizontal', use: 'For wide, short spaces: headers, banners, footers.' },
-  { id: 'icon', label: 'Icon', use: 'The ONE mark alone, for avatars, small spaces and when the name is already on screen.' },
+  { id: 'horizontal', label: 'Horizontal', use: 'The primary lockup and master layout. Use it unless the space is too narrow.' },
+  { id: 'stacked', label: 'Stacked', use: 'For square and narrow spaces: avatars, posters, the end card of an ad.' },
+  { id: 'wordmark', label: 'Wordmark', use: 'ONE alone, for when AGENCY is already on screen or the space is very wide and short.' },
+  { id: 'mark', label: 'Mark', use: 'The O alone, for app icons, avatars and small spaces.' },
 ]
 
 /** Logo: lockups by variant with every file, then the rules (clear space, minimum size, misuse) and the small icons. */
 export function LogoSection() {
-  const [lockup, setLockup] = useState<LogoLockup>('stacked')
+  const [lockup, setLockup] = useState<LogoLockup>('horizontal')
   const current = LOCKUPS.find((l) => l.id === lockup)!
 
   return (
     <Section
       id="logo"
       eyebrow="Logo"
-      title="The chrome ONE mark"
+      title="The ONE logo"
       accent={[1]}
-      lede="The live site's logo is the master. Shapes are unchanged; the kit adds layouts and colour variants for every ground."
+      lede="The moodboard masters are the source. Shapes are unchanged; the kit adds colour variants for every ground."
       actions={<ZipButton group="logos" label="All logos" />}
     >
       <div className="flex flex-col gap-section">
@@ -41,7 +42,7 @@ export function LogoSection() {
           </div>
           <AnimatePresence mode="wait" initial={false}>
             <motion.div key={lockup} id="logo-variants" role="tabpanel" aria-label={`${current.label} lockup`} variants={swap} initial="hidden" animate="show" exit="exit">
-              <motion.ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4" variants={sequence(stagger.children)} initial="hidden" whileInView="show" viewport={viewport}>
+              <motion.ul className="grid gap-4 md:grid-cols-2" variants={sequence(stagger.children)} initial="hidden" whileInView="show" viewport={viewport}>
                 {LOGOS.filter((l) => l.lockup === lockup).map((logo) => (
                   <LogoVariantCard key={logo.svg.url} logo={logo} />
                 ))}
@@ -69,8 +70,8 @@ export function LogoSection() {
         </div>
 
         <div>
-          <SubHeading title="Favicon and social avatar">
-            The favicon crops to the O, as the live site does. Small sizes show at true size.
+          <SubHeading title="App tiles, favicon and social">
+            The three app tiles from the board, then the favicon (the navy tile) and the social images. Small sizes show at true size.
           </SubHeading>
           <FaviconSet />
         </div>

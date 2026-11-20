@@ -3,16 +3,16 @@ import { reveal } from '../../lib/motion'
 import { CopyButton } from '../ui/CopyButton'
 import { Reveal } from '../ui/Reveal'
 
-/** How the hub's light theme maps each role (src/styles/theme.css): the live dark token, and the paper-and-ink one used on light. */
+/** How the hub's light theme maps each role (src/styles/theme.css): the dark token, and the one used on light. */
 const ROLES = [
-  { role: 'Ground', dark: '--ground', light: '--paper-2' },
-  { role: 'Surface', dark: '--surface', light: '--paper' },
-  { role: 'Raised surface', dark: '--surface-2', light: '--lavender' },
+  { role: 'Ground', dark: '--void', light: '--paper' },
+  { role: 'Surface', dark: '--surface', light: '--mist-light' },
+  { role: 'Raised surface', dark: '--surface-2', light: '--mist' },
   { role: 'Text', dark: '--text', light: '--ink' },
   { role: 'Secondary text', dark: '--text-2', light: '--ink-2' },
   { role: 'Muted text', dark: '--text-3', light: '--ink-3' },
-  { role: 'Accent text and focus ring', dark: '--rose', light: '--kit-rose-700' },
-  { role: 'Info', dark: '--lilac', light: '--kit-lilac-700' },
+  { role: 'Accent text and focus ring', dark: '--mint', light: '--violet' },
+  { role: 'Info', dark: '--violet-light', light: '--violet' },
 ]
 
 function Chip({ token }: { token: string }) {

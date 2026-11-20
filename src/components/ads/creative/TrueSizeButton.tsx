@@ -20,7 +20,7 @@ export function TrueSizeButton({ concept, size, onOpen, rounded = 'rounded-site-
       onClick={onOpen}
       aria-haspopup="dialog"
       aria-label={`Open ${concept.name}, ${size.width}×${size.height}, at true size`}
-      className={`group absolute inset-0 cursor-zoom-in ${rounded} focus-visible:-outline-offset-4`}
+      className={`group absolute inset-0 cursor-zoom-in ${rounded} focus-visible:-outline-offset-4 focus-visible:outline-paper focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-inset`}
     >
       <span
         aria-hidden

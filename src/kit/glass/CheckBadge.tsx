@@ -9,7 +9,7 @@ interface CheckBadgeProps {
   icon?: Icon
 }
 
-/** Rose glass check badge: a lit rose sphere with a white check, rim light and glow. Decorative; pair it with text. */
+/** Mint glass check badge: a lit Mint sphere with a navy check and an edge ring (Navy on light). Decorative; pair it with text. */
 export function CheckBadge({ size = 'md', className, icon: Glyph = Check }: CheckBadgeProps) {
   return (
     <span aria-hidden className={`check-badge shrink-0 ${SIZES[size]} ${className ?? ''}`}>

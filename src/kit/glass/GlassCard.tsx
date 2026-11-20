@@ -33,8 +33,8 @@ function layerStyle(n: 1 | 2, recede: 'left' | 'right'): CSSProperties {
 }
 
 /**
- * Glass card: translucent fill over a backdrop blur, rose rim light, specular highlight top left, inner glow and a
- * soft drop shadow (src/styles/glass.css). Uses the `reveal` variants, so a staggered parent brings it in.
+ * Glass card: translucent fill over a backdrop blur, a solid edge under the Mint rim light, specular highlight top left
+ * and a soft drop shadow (src/styles/glass.css). Uses the `reveal` variants, so a staggered parent brings it in.
  */
 export function GlassCard({ children, className, as = 'div', shape = 'card', depth = 0, recede = 'left', interactive, style, ...aria }: GlassCardProps) {
   const Tag = TAGS[as]

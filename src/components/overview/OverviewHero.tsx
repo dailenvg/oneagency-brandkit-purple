@@ -30,7 +30,6 @@ export function OverviewHero() {
 
   return (
     <section aria-labelledby={TITLE_ID} className="relative isolate overflow-hidden border-b border-edge-soft">
-      <div aria-hidden className="ui-glow-field absolute inset-0 -z-30" />
       <MobiusLoop className="absolute inset-0 -z-20" onStatus={setLoop} paused={paused} />
       <div aria-hidden className="hero-scrim absolute inset-0 -z-10" />
       <div className="container-site flex min-h-[clamp(520px,74svh,760px)] flex-col items-start justify-center gap-6 py-16">
@@ -40,7 +39,7 @@ export function OverviewHero() {
         <GradientBar inView={false} delay={brandIntro.bar} className="h-1.5 w-[clamp(96px,10vw,160px)]" />
         <div>
           <p className="eyebrow mb-3">
-            <span className="font-num text-text-3">{viewIndex('overview')}</span> · Overview
+            <span className="tabular-nums text-text-3">{viewIndex('overview')}</span> · Overview
           </p>
           <WordRise
             as="h1"
@@ -50,11 +49,11 @@ export function OverviewHero() {
             delay={brandIntro.line}
             text={HEADLINE}
             accent={[3]}
-            className="max-w-3xl text-step-4 font-bold leading-display tracking-tight text-balance outline-none"
+            className="display max-w-3xl text-step-4 text-balance outline-none"
           />
         </div>
         <motion.div className="flex max-w-xl flex-col items-start gap-5" variants={reduced ? sequence(0) : sequence(stagger.children, AFTER_HEADLINE)} initial="hidden" animate="show">
-          <motion.p variants={reveal} className="font-num text-step--1 tracking-wide text-text-2">
+          <motion.p variants={reveal} className="tabular-nums text-step--1 tracking-wide text-text-2">
             Brand kit v{KIT.previousVersion} → v{KIT.version} · Updated {KIT.updated}
           </motion.p>
           <motion.p variants={reveal} className="text-step-1 leading-relaxed text-text-2 text-pretty">

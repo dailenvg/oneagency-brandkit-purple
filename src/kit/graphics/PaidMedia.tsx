@@ -67,7 +67,6 @@ export function PaidMedia({ tone, idPrefix, label, className }: GraphicProps) {
       </g>
       <path {...anim('draw')} d={smoothPath(LINE)} stroke={url('line')} strokeWidth={STROKE.focal * 1.25} strokeLinecap="round" />
       <g {...anim('focal')}>
-        <circle cx={cx} cy={cy} r="56" fill={url('glow')} />
         <circle cx={cx} cy={cy} r="7" fill={c.focal} />
       </g>
     </Artboard>

@@ -40,7 +40,7 @@ export function ConversionCurve({ tone, idPrefix, label, className }: GraphicPro
           <stop offset="1" stopColor={c.to} />
         </linearGradient>
         <linearGradient id={id('area')} x1="0" x2="0" y1={ey} y2={BASE} gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor={c.focal} stopOpacity={c.alpha.glow * 0.4} />
+          <stop offset="0" stopColor={c.focal} stopOpacity={c.alpha.area} />
           <stop offset="1" stopColor={c.focal} stopOpacity="0" />
         </linearGradient>
         <linearGradient id={id('area-fade')} x1={START[0]} x2={ex} y1="0" y2="0" gradientUnits="userSpaceOnUse">
@@ -57,10 +57,6 @@ export function ConversionCurve({ tone, idPrefix, label, className }: GraphicPro
         <mask id={id('grid-mask')}>
           <rect x="0" y={TOP} width={CONVERSION_CURVE_SIZE.width} height={BASE - TOP + 8} fill={url('grid-fade')} />
         </mask>
-        <radialGradient id={id('glow')}>
-          <stop offset="0" stopColor={c.focal} stopOpacity={c.alpha.glow} />
-          <stop offset="1" stopColor={c.focal} stopOpacity="0" />
-        </radialGradient>
       </defs>
 
       <g {...anim('structure')} stroke={c.line} strokeWidth={STROKE.hairline} mask={url('grid-mask')}>
@@ -79,7 +75,6 @@ export function ConversionCurve({ tone, idPrefix, label, className }: GraphicPro
       <path {...anim('node')} d={linePath([[ex, ey + 18], [ex, BASE]])} stroke={c.focal} strokeOpacity={c.alpha.secondary} strokeWidth={STROKE.hairline} strokeDasharray="2 5" strokeLinecap="round" />
 
       <g {...anim('focal')}>
-        <circle cx={ex} cy={ey} r="48" fill={url('glow')} />
         <circle cx={ex} cy={ey} r="20" stroke={c.focal} strokeOpacity={c.alpha.structure} strokeWidth={STROKE.hairline} />
         <circle cx={ex} cy={ey} r="11" stroke={c.focal} strokeOpacity={c.alpha.secondary} strokeWidth={STROKE.line} />
         <circle cx={ex} cy={ey} r="5" fill={c.focal} />

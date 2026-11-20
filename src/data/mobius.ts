@@ -22,7 +22,7 @@ export interface MobiusGround {
   /** The theme the loop is drawn in. */
   theme: 'dark' | 'light'
   /** Ground token it is flattened onto; none: transparent. */
-  ground?: '--ground' | '--paper'
+  ground?: '--navy' | '--paper'
   format: 'jpg' | 'png'
 }
 
@@ -62,7 +62,7 @@ export interface MobiusSize {
   height: number
 }
 
-const ON_NAVY: MobiusGround = { id: 'on-navy', label: 'On navy', theme: 'dark', ground: '--ground', format: 'jpg' }
+const ON_NAVY: MobiusGround = { id: 'on-navy', label: 'On navy', theme: 'dark', ground: '--navy', format: 'jpg' }
 const ON_PAPER: MobiusGround = { id: 'on-paper', label: 'On paper', theme: 'light', ground: '--paper', format: 'jpg' }
 
 export const MOBIUS_LOOKS: readonly MobiusLook[] = [

@@ -25,7 +25,7 @@ export function VoiceSection() {
             {PILLARS.map((p, i) => (
               <motion.li key={p.title} variants={reveal} className="flex flex-col gap-3 rounded-site border border-edge bg-surface p-6">
                 <span className="stat-num text-step-num">0{i + 1}</span>
-                <h3 className="text-step-2 font-bold tracking-tight">{p.title}</h3>
+                <h3 className="display text-step-2">{p.title}</h3>
                 <p className="text-step--1 text-text-2">{p.body}</p>
               </motion.li>
             ))}
@@ -45,7 +45,7 @@ export function VoiceSection() {
             <Reveal as="ul" stagger className="mt-8 flex flex-col gap-3">
               {RULES.map((r) => (
                 <motion.li key={r} variants={reveal} className="flex gap-3 text-step-0 text-text-2">
-                  <span aria-hidden className="mt-2.5 h-0.5 w-4 shrink-0 rounded-full" style={{ background: 'var(--bar)' }} />
+                  <span aria-hidden className="mt-2.5 h-0.5 w-4 shrink-0 rounded-full" style={{ background: 'var(--gradient)' }} />
                   {r}
                 </motion.li>
               ))}

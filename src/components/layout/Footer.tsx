@@ -34,15 +34,15 @@ function SourceNotes() {
       <div>
         <h2 className="mb-3 font-semibold text-text">Colour</h2>
         <p>
-          Live CSS pulled {KIT.liveCssPulled}: <ExternalLink href={KIT.liveCss}>home.bundle.css</ExternalLink>. Values and token names are the site&apos;s, unchanged.
-          Tints and shades are derived and labelled. The light theme of this hub is derived too: the live site is dark-only.
+          The five brand colours and the logo gradient are from the rebrand moodboard ({KIT.board}, exported {KIT.boardExported}). Surfaces, text greys, tints and shades
+          are derived from them and labelled.
         </p>
       </div>
       <div>
         <h2 className="mb-3 font-semibold text-text">Fonts</h2>
         <p>
-          The faces oneagency.com loads: <ExternalLink href={FONT_PAGES.geist}>Geist</ExternalLink>, <ExternalLink href={FONT_PAGES.lato}>Lato</ExternalLink> and{' '}
-          <ExternalLink href={FONT_PAGES.metal}>Metal</ExternalLink>, all SIL Open Font License 1.1.
+          <ExternalLink href={FONT_PAGES.unbounded}>Unbounded</ExternalLink> for display and <ExternalLink href={FONT_PAGES.geist}>Geist</ExternalLink> for body, both
+          SIL Open Font License 1.1.
         </p>
       </div>
       <div>
@@ -53,7 +53,7 @@ function SourceNotes() {
         </p>
       </div>
       <p className="sm:col-span-3">
-        Logo master: the live chrome ONE mark (oneagency.com/assets/img/one-agency-logo.svg). Motion follows the film &ldquo;ONE Agency: The Free Business Audit&rdquo;. The
+        Logo masters: the rebrand moodboard (design/source/rebrand/). Motion follows the film &ldquo;ONE Agency: The Free Business Audit&rdquo;. The
         glass and texture style comes from nine ONE Agency reference ads. Möbius loop: ConversionIQ key visual, used as supplied. © {KIT.updated.slice(0, 4)} ONE Agency, LLC.
       </p>
     </div>
@@ -76,7 +76,7 @@ export function Footer() {
           <div className="flex flex-col items-start gap-3">
             <BrandLogo lockup="horizontal" className="h-6 w-auto" />
             <GradientBar className="h-1 w-20" />
-            <p className="font-num text-step--1 text-text-2">{VERSION_NOTE}</p>
+            <p className="text-step--1 text-text-2 tabular-nums">{VERSION_NOTE}</p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <motion.button

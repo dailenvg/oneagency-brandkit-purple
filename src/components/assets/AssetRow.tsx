@@ -28,7 +28,7 @@ export function AssetRow({ asset, ref }: AssetRowProps) {
         <p className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-step-small text-text-3">
           <span className="rounded-full border border-edge px-2 font-semibold text-text-2">{asset.format}</span>
           {meta.map((m) => (
-            <span key={m} className="font-num">
+            <span key={m} className="tabular-nums">
               {m}
             </span>
           ))}
@@ -43,7 +43,7 @@ export function AssetRow({ asset, ref }: AssetRowProps) {
         href={asset.url}
         download
         aria-label={`Download ${asset.name}, ${formatBytes(asset.bytes)}`}
-        className="grid size-touch shrink-0 place-items-center rounded-full border border-edge text-text transition-colors hover:border-rose hover:bg-rose hover:text-on-accent active:bg-rose-deep"
+        className="grid size-touch shrink-0 place-items-center rounded-full border border-edge text-text transition-colors hover:border-fill hover:bg-fill hover:text-on-fill active:bg-fill-pressed"
         {...press}
       >
         <DownloadSimple className="size-5" aria-hidden />

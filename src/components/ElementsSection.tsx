@@ -1,6 +1,5 @@
 import { ArrowsHorizontal } from '@phosphor-icons/react'
 import { useRef, type ReactNode } from 'react'
-import { Halo } from '../kit/motion/Halo'
 import { edgeFade, useScrollEdges } from '../lib/hooks'
 import { AwardBadge } from './elements/AwardBadge'
 import { CtaStates } from './elements/CtaStates'
@@ -82,33 +81,23 @@ export function ElementsSection() {
               <ElementGraphic id="orbit" className="w-full max-w-72" />
             </ElementCard>
             {/* Phones: the 720 px artboard would shrink its labels to about 6 px, so it holds at 544 px and scrolls sideways. */}
-            <ElementCard ids={['conversion-stages']} themed replayable stage="grid-cols-1 bg-ground py-10 sm:px-10" className="md:col-span-2 xl:col-span-4">
+            <ElementCard ids={['conversion-stages']} themed replayable stage="grid-cols-1 bg-ground py-10 sm:px-10" className="md:col-span-2 xl:col-span-6">
               <ScrollStage label="Conversion stages, scrolls sideways" hint="Scroll sideways to see all four stages">
                 <div className="w-[37rem] px-6 sm:mx-auto sm:w-full sm:max-w-2xl sm:px-0">
                   <ElementGraphic id="conversion-stages" />
                 </div>
               </ScrollStage>
             </ElementCard>
-            <ElementCard ids={['editorial-frame']} themed replayable stage={GRAPHIC_STAGE} className="xl:col-span-2">
+            <ElementCard ids={['editorial-frame']} themed replayable stage={GRAPHIC_STAGE} className="xl:col-span-3">
               <div className="relative w-full max-w-72">
                 <ElementGraphic id="editorial-frame" />
                 {/* A sample headline, to show where copy sits. Not part of the file. */}
-                <p aria-hidden className="absolute inset-x-[14%] top-1/2 -translate-y-1/2 text-step-1 leading-tight font-bold text-balance text-text">
+                <p aria-hidden className="absolute inset-x-[14%] top-1/2 -translate-y-1/2 display text-step-1 leading-tight text-balance text-text">
                   Turn leads into <span className="accent-word">customers</span>
                 </p>
               </div>
             </ElementCard>
-            <ElementCard ids={['halo']} replayable className="xl:col-span-2">
-              <Halo className="absolute inset-y-0 left-1/2 aspect-square h-full -translate-x-1/2" />
-              {/* A sample number, to show the halo behind a stat. Not part of the file. */}
-              <span aria-hidden className="relative font-num text-step-3 font-bold">
-                450K+
-              </span>
-            </ElementCard>
-            <ElementCard ids={['glow-field']} stage="glow-field h-56" className="xl:col-span-2">
-              <span className="sr-only">Night-navy ground with a rose glow top left and a blue glow bottom right.</span>
-            </ElementCard>
-            <ElementCard ids={['laurel']} className="xl:col-span-2">
+            <ElementCard ids={['laurel']} className="xl:col-span-3">
               <img src="/kit/elements/one-agency_element_laurel.svg" alt="" width={240} height={240} className="h-full w-auto" loading="lazy" />
             </ElementCard>
           </Reveal>
@@ -131,6 +120,9 @@ export function ElementsSection() {
             shrink below half a pixel and the grid, contour and flow patterns all but vanish.
           */}
           <Reveal stagger className="grid gap-4 sm:grid-cols-2">
+            <ElementCard ids={['frames-orbit']} themed replayable stage="p-0" className="sm:col-span-2">
+              <ElementGraphic id="frames-orbit" className="w-full" />
+            </ElementCard>
             {PATTERNS.map((id) => (
               <ElementCard key={id} ids={[id]} themed stage="p-0">
                 <ElementGraphic id={id} className="w-full" />
@@ -186,7 +178,7 @@ export function ElementsSection() {
         </div>
 
         <div>
-          <SubHeading title="Icons">Phosphor, bold weight only, white or rose. Tap or click an icon to download its SVG; the full set is in the elements ZIP.</SubHeading>
+          <SubHeading title="Icons">Phosphor, bold weight only, white or Mint. Tap or click an icon to download its SVG; the full set is in the elements ZIP.</SubHeading>
           <IconSet />
         </div>
       </div>

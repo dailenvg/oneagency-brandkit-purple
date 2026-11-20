@@ -11,7 +11,7 @@ export function FaceSpecimen({ face }: { face: Face }) {
   return (
     <motion.article variants={reveal} className="flex flex-col gap-6 rounded-site border border-edge bg-surface p-6 sm:p-8">
       <header className="flex flex-wrap items-baseline justify-between gap-3">
-        <h2 className={`text-step-3 ${face.id === 'metal' ? 'accent-word' : 'font-bold'} ${face.className}`}>{face.family}</h2>
+        <h2 className={`text-step-3 ${face.id === 'unbounded' ? 'accent-word' : 'font-bold'} ${face.className}`}>{face.family}</h2>
         <code className="font-code text-step-small text-text-3">{face.cssVar}</code>
       </header>
       <p className="text-step--1 text-text-2">{face.role}</p>
@@ -21,7 +21,7 @@ export function FaceSpecimen({ face }: { face: Face }) {
             <span className="text-step-small text-text-3">
               {WEIGHT_NAMES[w]} {w}
             </span>
-            <span className={`text-step-2 leading-tight text-balance ${face.className} ${face.id === 'metal' ? 'accent-word' : ''}`} style={{ fontWeight: w }}>
+            <span className={`text-step-2 leading-tight text-balance ${face.className}`} style={{ fontWeight: w }}>
               {face.specimen}
             </span>
           </li>

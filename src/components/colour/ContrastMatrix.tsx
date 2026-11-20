@@ -31,7 +31,7 @@ export function ContrastMatrix() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <FilterTabs label="Contrast pairs to show" layoutId="contrast-view" options={VIEWS} value={view} onChange={setView} controls="contrast-table" />
         <p className="text-step-small text-text-3">
-          <span className="font-num text-text">{passing}</span> of {CONTRAST.length} pairs pass AA for body text (4.5:1). “Large” passes 3:1 only.
+          <span className="tabular-nums text-text">{passing}</span> of {CONTRAST.length} pairs pass AA for body text (4.5:1). “Large” passes 3:1 only.
         </p>
       </div>
       <div className="scroll-strip overflow-x-auto rounded-site border border-edge" tabIndex={0} role="region" aria-label="Contrast matrix, scrolls sideways">
@@ -63,7 +63,7 @@ export function ContrastMatrix() {
                       {show ? (
                         <div className="flex h-full min-h-16 flex-col justify-between gap-1 p-2.5" style={{ background: `var(${g})`, color: `var(${t})` }}>
                           <span className="text-step-0 leading-none font-semibold">Aa</span>
-                          <span className="font-num font-bold">
+                          <span className="tabular-nums font-bold">
                             {pair.ratio.toFixed(1)} · {verdict(pair)}
                           </span>
                         </div>

@@ -6,3 +6,5 @@ export const ORBIT_SIZE = { width: 480, height: 480 } as const
 export const EDITORIAL_FRAME_SIZE = { width: 540, height: 540 } as const
 export const PATTERN_SIZE = { width: 1080, height: 1080 } as const
 export const ILLUSTRATION_SIZE = { width: 640, height: 480 } as const
+/** Frames in orbit (concept 01 "Nova"): Nova's 800x500 board at 1.5x. */
+export const FRAMES_ORBIT_SIZE = { width: 1200, height: 750 } as const

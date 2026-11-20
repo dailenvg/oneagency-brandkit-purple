@@ -1,7 +1,9 @@
 // src/lib/motion.ts
 /**
-* ONE Agency motion tokens, taken from the film "ONE Agency: The Free Business Audit" (modules/shared.js and the scene
-* files). Quick and confident, left-to-right and upward, plays once and holds on the result.
+* ONE Agency motion tokens. The brand moves are taken from the film "ONE Agency: The Free Business Audit"
+* (modules/shared.js and the scene files): quick and confident, left-to-right and upward, plays once and holds on the
+* result. The hub's UI tokens (micro duration, the out and emphasized curves, springs, press, page and reveal
+* transitions, photo zoom) follow concept 01 "Nova" (one-agency-rebrand-v2, src/lib/motion.ts).
 *
 * Framework-free on purpose (type-only import above): src/kit/motion/vanilla.ts imports these for the HTML5 ad runtime.
 */
@@ -20,9 +22,9 @@ var backOut = (overshoot = 1.7) => (p) => {
 	const x = p - 1;
 	return 1 + (overshoot + 1) * x ** 3 + overshoot * x ** 2;
 };
-/** Seconds. Micro 150 to 250 ms, component 250 to 400 ms, page 300 to 600 ms; film moves noted. */
+/** Seconds. Micro 150 to 250 ms, component 250 to 400 ms, page 300 to 600 ms (Nova); film moves noted. */
 var duration = {
-	micro: .2,
+	micro: .18,
 	component: .32,
 	page: .5,
 	/** Word rise, letter hop and pop: each element's own move. */
@@ -42,11 +44,12 @@ var duration = {
 	/** End-dot pop and ring pulse. */
 	dot: .35,
 	ring: .65,
-	/** Halo swell: opacity settles first, scale keeps growing. */
-	haloFade: 1.7,
-	haloScale: 3.5,
 	/** Final still: the last beat of an ad holds dead still this long. */
-	hold: 4
+	hold: 4,
+	/** Particle stream drift: one cycle when it first comes into view, then it holds (brand rule: play once, then hold). */
+	drift: 4.8,
+	/** A staggered set: the last child has landed by this point, however many children there are. */
+	cascade: .8
 };
 /** Cubic-bezier fallbacks for CSS and for tweens where a function ease is not accepted. */
 var ease = {
@@ -74,11 +77,18 @@ var ease = {
 		.64,
 		1
 	],
-	/** The live site's --v2-ease. */
-	site: [
-		.2,
-		.7,
-		.2,
+	/** Nova's UI curve: page transitions, reveals and panel swaps. */
+	out: [
+		.22,
+		1,
+		.36,
+		1
+	],
+	/** Nova's emphasized curve, for large moves that should start and land firmly. */
+	emphasized: [
+		.83,
+		0,
+		.17,
 		1
 	]
 };
@@ -97,7 +107,7 @@ var stagger = {
 	wordLoose: .1,
 	letter: .035,
 	wordOut: .03,
-	/** The live site's --v2-stagger (cards, list items). */
+	/** Cards and list items. */
 	children: .1
 };
 /** Pixels, degrees and scales the moves travel. */
@@ -111,9 +121,25 @@ var distance = {
 	popFrom: .6,
 	logoFrom: .8,
 	logoBlur: 10,
-	ringScale: 3.2,
-	haloScale: [.85, 1.05],
-	haloOpacity: [.55, .9]
+	ringScale: 3.2
+};
+/** Spring presets for UI elements (buttons, toggles, layout). */
+var spring = {
+	snappy: {
+		type: "spring",
+		stiffness: 300,
+		damping: 28
+	},
+	soft: {
+		type: "spring",
+		stiffness: 200,
+		damping: 26
+	},
+	layout: {
+		type: "spring",
+		stiffness: 260,
+		damping: 30
+	}
 };
 duration.component, ease.outCubic;
 distance.riseY, `${distance.riseBlur}`, duration.move;
@@ -121,7 +147,18 @@ duration.move, overshoot.hop, duration.move / 4;
 distance.popFrom, duration.move, overshoot.pop, duration.move / 3;
 distance.outY, duration.out;
 duration.micro, ease.outCubic;
-duration.page, ease.outCubic, duration.out;
+duration.page, ease.out, duration.out, ease.inQuad;
+duration.component, ease.out;
+duration.component, ease.out, duration.micro;
+spring.snappy, duration.micro;
+duration.component, ease.outCubic, duration.micro;
+spring.soft, duration.micro;
+spring.snappy, duration.micro;
+spring.layout, duration.component, ease.inOutCubic;
+spring.snappy, duration.micro;
+spring.soft, duration.component, ease.outCubic, duration.micro;
+spring.soft, spring.soft;
+duration.wipe, ease.inOutCubic;
 // src/kit/motion/vanilla.ts
 /**
 * ONE Agency motion, framework-free. The same moves as the React components in this folder, written as pure functions
@@ -259,14 +296,7 @@ function lineDraw(parts, t, t0) {
 	parts.ring.style.opacity = fixed(r > 0 ? 1 - r : 0);
 	parts.ring.style.transform = `scale(${fixed(1 + (distance.ringScale - 1) * easeOutCubic(r))})`;
 }
-/** Halo: the soft glow behind the logo swells once (opacity 0.55 to 0.9, scale 0.85 to 1.05) and holds. */
-function halo(el, t, t0) {
-	const [o0, o1] = distance.haloOpacity;
-	const [s0, s1] = distance.haloScale;
-	el.style.opacity = fixed(lerp(o0, o1, easeOutCubic(seg(t, t0, t0 + duration.haloFade))) * clamp01((t - t0) * 4));
-	el.style.transform = `scale(${fixed(lerp(s0, s1, easeOutCubic(seg(t, t0, t0 + duration.haloScale))), 4)})`;
-}
-/** Gradient bar: the --bar rule grows from the left. Set transform-origin: left center. */
+/** Gradient bar: the --gradient rule grows from the left. Set transform-origin: left center. */
 function bar(el, t, t0) {
 	el.style.transform = `scaleX(${fixed(easeOutCubic(seg(t, t0, t0 + duration.bar)), 4)})`;
 }
@@ -320,4 +350,4 @@ function player(render, options) {
 		}
 	};
 }
-export { backOut, bar, clamp01, distance, draw, duration, easeInOutCubic, easeInQuad, easeOutCubic, halo, hop, lerp, lineDraw, logoIn, out, overshoot, player, pop, rise, seg, splitLetters, splitWords, stagger, wipe };
+export { backOut, bar, clamp01, distance, draw, duration, easeInOutCubic, easeInQuad, easeOutCubic, hop, lerp, lineDraw, logoIn, out, overshoot, player, pop, rise, seg, splitLetters, splitWords, stagger, wipe };

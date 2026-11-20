@@ -22,7 +22,7 @@ export function SubHeading({ title, badge, children }: SubHeadingProps) {
       <h2
         id={id}
         tabIndex={id ? -1 : undefined}
-        className="flex scroll-mt-4 flex-wrap items-center gap-3 text-step-2 font-semibold tracking-tight outline-none"
+        className="flex scroll-mt-4 flex-wrap items-center gap-3 display text-step-2 outline-none"
       >
         {title}
         {badge}

@@ -81,13 +81,8 @@ export function SignalRibbon({ tone, idPrefix, label, className }: GraphicProps)
         <mask id={id('mask')}>
           <rect width={W} height={H} fill={url('fade')} />
         </mask>
-        <radialGradient id={id('glow')}>
-          <stop offset="0" stopColor={c.focal} stopOpacity={c.alpha.glow * 0.7} />
-          <stop offset="1" stopColor={c.focal} stopOpacity="0" />
-        </radialGradient>
       </defs>
 
-      <ellipse {...anim('focal')} cx={KNOT[0]} cy={KNOT[1]} rx="110" ry="56" fill={url('glow')} />
       <g mask={url('mask')} stroke={url('stroke')} strokeLinecap="round">
         {PATHS.map(({ d, s, i }) => {
           const edge = i === 0 || i === FIBRES - 1
@@ -103,6 +98,8 @@ export function SignalRibbon({ tone, idPrefix, label, className }: GraphicProps)
           )
         })}
       </g>
+      {/* The lit point where the band turns: a solid focal dot, no glow. */}
+      <circle {...anim('focal')} cx={KNOT[0]} cy={KNOT[1]} r="6" fill={c.focal} />
     </Artboard>
   )
 }

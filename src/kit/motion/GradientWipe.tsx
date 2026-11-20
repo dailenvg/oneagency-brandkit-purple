@@ -8,12 +8,11 @@ interface GradientWipeProps extends MotionTriggerProps {
   className?: string
 }
 
-/** The site's --bar stops (#F59FAE to #6D92DE), turned vertical for the sweep, as in the film. */
-const SWEEP = 'linear-gradient(180deg, #F59FAE 0%, #6D92DE 100%)'
-const SWEEP_GLOW = '0 0 60px 14px color-mix(in srgb, var(--rose) 45%, transparent)'
+/** The signature --gradient (Mint to Ultra Violet), turned vertical for the sweep, as in the film. */
+const SWEEP = 'linear-gradient(180deg, var(--mint) 0%, var(--violet) 100%)'
 
 /**
- * Gradient wipe: a glowing gradient bar sweeps left to right and reveals the content behind it. Use it to bring in the
+ * Gradient wipe: a gradient bar sweeps left to right and reveals the content behind it. Use it to bring in the
  * next line. Reduced motion: the content fades in.
  */
 export function GradientWipe({ children, className, inView = true, delay = 0 }: GradientWipeProps) {
@@ -32,7 +31,7 @@ export function GradientWipe({ children, className, inView = true, delay = 0 }: 
     <motion.div className={`relative ${className ?? ''}`} {...trigger(inView)}>
       <motion.div variants={v.reveal}>{children}</motion.div>
       <motion.div aria-hidden className="pointer-events-none absolute inset-0" variants={v.track}>
-        <div className="absolute inset-y-0 right-0 w-3.5" style={{ background: SWEEP, boxShadow: SWEEP_GLOW }} />
+        <div className="absolute inset-y-0 right-0 w-3.5" style={{ background: SWEEP }} />
       </motion.div>
     </motion.div>
   )

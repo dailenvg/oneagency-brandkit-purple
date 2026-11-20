@@ -41,7 +41,7 @@ export function NavDrawer({ open, onClose, current }: NavDrawerProps) {
           >
             <div className="flex shrink-0 items-center gap-3 px-4 pt-[max(12px,env(safe-area-inset-top))] pb-2">
               <BrandLogo lockup="horizontal" alt="ONE Agency" className="h-5 w-auto" />
-              <span className="rounded-full border border-edge px-2 py-0.5 font-num text-step-small text-text-3">v{KIT.version}</span>
+              <span className="rounded-full border border-edge px-2 py-0.5 tabular-nums text-step-small text-text-3">v{KIT.version}</span>
               <motion.button
                 ref={closeRef}
                 type="button"

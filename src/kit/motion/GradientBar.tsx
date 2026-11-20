@@ -8,7 +8,7 @@ interface GradientBarProps extends MotionTriggerProps {
   className?: string
 }
 
-/** Gradient bar: the site's --bar rule grows in from the left, as under the logo in the film. Decorative; a block span so it can sit inside headings. */
+/** Gradient bar: the signature --gradient rule grows in from the left, as under the logo in the film. Decorative; a block span so it can sit inside headings. */
 export function GradientBar({ className, inView = true, delay = 0 }: GradientBarProps) {
   const reduced = useReducedMotion()
   const variants = useMemo<Variants>(
@@ -23,7 +23,7 @@ export function GradientBar({ className, inView = true, delay = 0 }: GradientBar
     <motion.span
       aria-hidden
       className={`block origin-left rounded-full ${className ?? ''}`}
-      style={{ background: 'var(--bar)' }}
+      style={{ background: 'var(--gradient)' }}
       variants={reduced ? fade : variants}
       {...trigger(inView)}
     />

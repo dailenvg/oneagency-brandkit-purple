@@ -17,7 +17,7 @@ const LEADS = [
 /** Technology: traffic flowing in as a particle stream, through the AI system tile, out as glass lead cards. */
 export function LeadStreamVisual({ className, placement, bleed }: VisualProps) {
   return (
-    <Stage width={470} height={250} bleed={bleed} arc={{ width: 560, top: -64, left: '46%' }} glow={{ width: 420, bottom: 0, left: '55%' }} placement={placement} className={className}>
+    <Stage width={470} height={250} bleed={bleed} arc={{ width: 560, top: -64, left: '46%' }} placement={placement} className={className}>
       <ParticleStream className="absolute top-[18%] -left-12 h-48 w-[62%]" />
       <GlassCard className="absolute top-1/2 left-[38%] grid size-28 -translate-x-1/2 -translate-y-1/2 place-items-center">
         <ChatCircleDots className="glass-icon size-14" weight="regular" />
@@ -29,7 +29,7 @@ export function LeadStreamVisual({ className, placement, bleed }: VisualProps) {
               <User weight="fill" className="glass-icon size-5" />
             </span>
             <span className="flex flex-1 flex-col gap-1.5">
-              <span className={`${BAR} w-4/5 ${i === 1 ? 'bg-rose!' : ''}`} />
+              <span className={`${BAR} w-4/5 ${i === 1 ? 'bg-mint!' : ''}`} />
               <span className={`${BAR} w-1/2`} />
             </span>
           </GlassCard>

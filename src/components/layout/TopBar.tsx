@@ -32,7 +32,7 @@ export function TopBar({ menuOpen, onMenu, current }: TopBarProps) {
         </motion.button>
         <a href={viewHref('overview')} aria-label="ONE Agency brand kit, overview" className="flex min-h-touch min-w-0 items-center gap-3 rounded-site-sm">
           <BrandLogo lockup="horizontal" alt="" eager className="h-5 w-auto shrink-0" />
-          <span className="hidden rounded-full border border-edge px-2 py-0.5 font-num text-step-small text-text-3 sm:inline">v{KIT.version}</span>
+          <span className="hidden rounded-full border border-edge px-2 py-0.5 tabular-nums text-step-small text-text-3 sm:inline">v{KIT.version}</span>
         </a>
         <span aria-hidden className="ml-1 hidden min-w-0 truncate border-l border-edge pl-3 text-step-small font-semibold text-text-2 min-[400px]:block">
           {current}

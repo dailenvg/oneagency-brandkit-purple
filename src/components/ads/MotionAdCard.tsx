@@ -56,8 +56,8 @@ export function MotionAdCard({ concept, size, name }: MotionAdCardProps) {
       </div>
       <figcaption className="flex flex-col gap-2">
         <p className="flex flex-wrap items-baseline gap-x-3">
-          <span className="font-num font-semibold text-text">{size.width}×{size.height}</span>
-          {video?.duration ? <span className="font-num text-step-small text-text-3">{formatSeconds(video.duration)}</span> : null}
+          <span className="tabular-nums font-semibold text-text">{size.width}×{size.height}</span>
+          {video?.duration ? <span className="tabular-nums text-step-small text-text-3">{formatSeconds(video.duration)}</span> : null}
         </p>
         <div className="flex flex-wrap items-center gap-2">
           <a

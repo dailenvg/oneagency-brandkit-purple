@@ -1,8 +1,10 @@
 import type { Transition, Variants } from 'motion/react'
 
 /**
- * ONE Agency motion tokens, taken from the film "ONE Agency: The Free Business Audit" (modules/shared.js and the scene
- * files). Quick and confident, left-to-right and upward, plays once and holds on the result.
+ * ONE Agency motion tokens. The brand moves are taken from the film "ONE Agency: The Free Business Audit"
+ * (modules/shared.js and the scene files): quick and confident, left-to-right and upward, plays once and holds on the
+ * result. The hub's UI tokens (micro duration, the out and emphasized curves, springs, press, page and reveal
+ * transitions, photo zoom) follow concept 01 "Nova" (one-agency-rebrand-v2, src/lib/motion.ts).
  *
  * Framework-free on purpose (type-only import above): src/kit/motion/vanilla.ts imports these for the HTML5 ad runtime.
  */
@@ -33,9 +35,9 @@ export const backOut =
 
 /* ---------------------------------------------------------------- tokens */
 
-/** Seconds. Micro 150 to 250 ms, component 250 to 400 ms, page 300 to 600 ms; film moves noted. */
+/** Seconds. Micro 150 to 250 ms, component 250 to 400 ms, page 300 to 600 ms (Nova); film moves noted. */
 export const duration = {
-  micro: 0.2,
+  micro: 0.18,
   component: 0.32,
   page: 0.5,
   /** Word rise, letter hop and pop: each element's own move. */
@@ -55,9 +57,6 @@ export const duration = {
   /** End-dot pop and ring pulse. */
   dot: 0.35,
   ring: 0.65,
-  /** Halo swell: opacity settles first, scale keeps growing. */
-  haloFade: 1.7,
-  haloScale: 3.5,
   /** Final still: the last beat of an ad holds dead still this long. */
   hold: 4,
   /** Particle stream drift: one cycle when it first comes into view, then it holds (brand rule: play once, then hold). */
@@ -72,8 +71,10 @@ export const ease = {
   inOutCubic: [0.65, 0, 0.35, 1],
   inQuad: [0.11, 0, 0.5, 0],
   backOut: [0.34, 1.56, 0.64, 1],
-  /** The live site's --v2-ease. */
-  site: [0.2, 0.7, 0.2, 1],
+  /** Nova's UI curve: page transitions, reveals and panel swaps. */
+  out: [0.22, 1, 0.36, 1],
+  /** Nova's emphasized curve, for large moves that should start and land firmly. */
+  emphasized: [0.83, 0, 0.17, 1],
 } as const
 
 /** Back-out overshoot amounts used across the film. */
@@ -86,13 +87,13 @@ export const stagger = {
   wordLoose: 0.1,
   letter: 0.035,
   wordOut: 0.03,
-  /** The live site's --v2-stagger (cards, list items). */
+  /** Cards and list items. */
   children: 0.1,
 } as const
 
 /**
  * Seconds between `count` staggered children (each moving for duration.component), so the last one lands within
- * duration.cascade: the site's --v2-stagger for short sets, tighter for long ones.
+ * duration.cascade: stagger.children for short sets, tighter for long ones.
  */
 export const cappedStagger = (count: number) => (count > 1 ? Math.min(stagger.children, (duration.cascade - duration.component) / (count - 1)) : stagger.children)
 
@@ -108,8 +109,6 @@ export const distance = {
   logoFrom: 0.8,
   logoBlur: 10,
   ringScale: 3.2,
-  haloScale: [0.85, 1.05],
-  haloOpacity: [0.55, 0.9],
 } as const
 
 /** Spring presets for UI elements (buttons, toggles, layout). */
@@ -145,8 +144,7 @@ export const wordRise: Variants = {
     y: 0,
     filter: 'blur(0px)',
     transition: { duration: duration.move, ease: easeOutCubic },
-    // Once the word has landed it drops the filter (blur(0px) looks the same but isolates the word), so an accent
-    // word's neon light and Add blend reach the ground behind the title.
+    // Once the word has landed it drops the filter (blur(0px) looks the same but creates a stacking context).
     transitionEnd: { filter: 'none' },
   },
 }
@@ -192,23 +190,23 @@ export const fade: Variants = {
   exit: { opacity: 0, transition: { duration: duration.micro, ease: ease.outCubic } },
 }
 
-/** View transition for the hub (AnimatePresence mode="wait" around the routed view): the site's own curve. */
+/** View transition for the hub (AnimatePresence mode="wait" around the routed view): Nova's out curve. */
 export const page: Variants = {
   hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: duration.page, ease: ease.site } },
+  show: { opacity: 1, y: 0, transition: { duration: duration.page, ease: ease.out } },
   exit: { opacity: 0, y: -8, transition: { duration: duration.out, ease: ease.inQuad } },
 }
 
 /** Scroll reveal for section content: a short rise and fade, upward like the brand moves. */
 export const reveal: Variants = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: duration.component, ease: ease.outCubic } },
+  show: { opacity: 1, y: 0, transition: { duration: duration.component, ease: ease.out } },
 }
 
 /** Tab and filter panels swapping under AnimatePresence (mode="wait" or "popLayout"). */
 export const swap: Variants = {
   hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: duration.component, ease: ease.outCubic } },
+  show: { opacity: 1, y: 0, transition: { duration: duration.component, ease: ease.out } },
   exit: { opacity: 0, y: -8, transition: { duration: duration.micro, ease: easeInQuad } },
 }
 
@@ -259,6 +257,12 @@ export const collapse: Variants = {
   hidden: { height: 0, opacity: 0 },
   show: { height: 'auto', opacity: 1, transition: { height: spring.soft, opacity: { duration: duration.component, ease: ease.outCubic } } },
   exit: { height: 0, opacity: 0, transition: { duration: duration.micro, ease: easeInQuad } },
+}
+
+/** A photo eases in slightly inside its frame on hover; the frame stays put (Nova). Use with whileHover="hover". */
+export const photoZoom: Variants = {
+  rest: { scale: 1, transition: spring.soft },
+  hover: { scale: 1.04, transition: spring.soft },
 }
 
 /** Highlight band wipe, left to right behind the words (the gradient wipe's curve and length). */

@@ -12,15 +12,13 @@ interface GlassPanelProps {
   /** Override the rim (the focal panel takes the gradient). */
   rim?: string
   rimWidth?: number
-  shadow?: boolean
   children?: ReactNode
 }
 
-/** A frosted panel: drop shadow, tinted translucent body, rim light, and a specular line round the top-left corner. */
-export function GlassPanel({ c, url, x, y, width, height, r, rim, rimWidth = 1, shadow = true, children }: GlassPanelProps) {
+/** A frosted panel: tinted translucent body, rim light, and a specular line round the top-left corner. */
+export function GlassPanel({ c, url, x, y, width, height, r, rim, rimWidth = 1, children }: GlassPanelProps) {
   return (
     <g>
-      {shadow && <rect x={x + 6} y={y + 18} width={width - 12} height={height - 6} rx={r} fill={c.shadow} fillOpacity={c.shadowAlpha} filter={url('soft')} />}
       <rect x={x} y={y} width={width} height={height} rx={r} fill={c.tint} fillOpacity={c.tintAlpha} />
       <rect x={x} y={y} width={width} height={height} rx={r} fill={url('glass')} />
       <rect x={x + 0.5} y={y + 0.5} width={width - 1} height={height - 1} rx={r - 0.5} stroke={rim ?? url('rim')} strokeWidth={rimWidth} />

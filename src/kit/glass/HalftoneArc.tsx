@@ -50,7 +50,7 @@ const appear = (delay: number): Variants => ({
   show: { opacity: 1, transition: { duration: duration.page, ease: ease.outCubic, delay } },
 })
 
-/** Halftone arc: rose dots sweeping behind glass objects, as in the reference ads. Decorative; fades in once. */
+/** Halftone arc: Mint dots sweeping behind glass objects, as in the reference ads. Decorative; fades in once. */
 export function HalftoneArc({ className, style, rows = 9, sweep = 150, density = 1, inView = true, delay = 0 }: HalftoneArcProps) {
   const points = useMemo(() => dots(rows, sweep, density), [rows, sweep, density])
   return (

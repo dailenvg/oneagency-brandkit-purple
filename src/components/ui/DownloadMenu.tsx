@@ -182,9 +182,9 @@ export function DownloadMenu({ title, files, className = '' }: DownloadMenuProps
               animate="show"
               exit="exit"
               style={style}
-              className={`scroll-strip fixed z-90 flex ${groups ? 'w-80' : 'w-72'} max-w-[calc(100vw-2rem)] flex-col overflow-y-auto rounded-site-sm border border-edge bg-surface p-1.5 shadow-card`}
+              className={`scroll-strip fixed z-90 flex ${groups ? 'w-80' : 'w-72'} max-w-[calc(100vw-2rem)] flex-col overflow-y-auto rounded-site-sm border border-edge bg-surface p-2 shadow-card`}
             >
-              <p className="truncate px-3 pt-1.5 pb-1 text-step-small font-semibold text-text-3" aria-hidden>
+              <p className="truncate px-3 pt-1 pb-1 text-step-small font-semibold text-text-3" aria-hidden>
                 {title}
               </p>
               {groups
@@ -195,7 +195,7 @@ export function DownloadMenu({ title, files, className = '' }: DownloadMenuProps
                       <div key={group} role="group" aria-label={group} className="flex items-center gap-2 rounded-site-sm py-1 pr-1 pl-3">
                         <span className="flex min-w-0 flex-1 flex-col leading-tight">
                           <span className="truncate font-semibold text-text">{group}</span>
-                          {dims && <span className="font-num text-step-small text-text-3">{dims}</span>}
+                          {dims && <span className="tabular-nums text-step-small text-text-3">{dims}</span>}
                         </span>
                         {row.map((file) => {
                           const { size } = metaFor(file)
@@ -208,7 +208,7 @@ export function DownloadMenu({ title, files, className = '' }: DownloadMenuProps
                               onClick={() => markDone(file.url)}
                               title={size ? `${file.label}, ${size}` : file.label}
                               aria-label={`${group}, ${file.label}${size ? `, ${size}` : ''}, download ${fileName(file.url)}`}
-                              className={`inline-flex h-touch shrink-0 items-center gap-1.5 rounded-full border border-edge px-3 text-step-small font-semibold text-text transition-colors hover:border-accent hover:text-accent active:bg-surface-2 [&_svg]:size-4 ${ITEM_FOCUS}`}
+                              className={`inline-flex h-touch shrink-0 items-center gap-2 rounded-full border border-edge px-3 text-step-small font-semibold text-text transition-colors hover:border-accent hover:text-accent active:bg-surface-2 [&_svg]:size-4 ${ITEM_FOCUS}`}
                             >
                               {doneIcon(file.url, 'text-text-3')}
                               {file.label}
@@ -232,7 +232,7 @@ export function DownloadMenu({ title, files, className = '' }: DownloadMenuProps
                         className={`group flex h-touch shrink-0 items-center gap-3 rounded-site-sm px-3 transition-colors hover:bg-surface-2 active:bg-surface-2 [&_svg]:size-5 ${ITEM_FOCUS}`}
                       >
                         <span className="font-semibold whitespace-nowrap text-text">{file.label}</span>
-                        <span className="ml-auto truncate font-num text-step-small text-text-3">{meta}</span>
+                        <span className="ml-auto truncate tabular-nums text-step-small text-text-3">{meta}</span>
                         {doneIcon(file.url, 'shrink-0 text-text-2 transition-colors group-hover:text-accent')}
                       </a>
                     )

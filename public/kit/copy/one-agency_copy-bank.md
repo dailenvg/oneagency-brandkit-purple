@@ -1,6 +1,6 @@
 # ONE Agency copy bank
 
-Brand kit v1.1 · Updated 2026-11-18. Every line is from the source pack; source and date follow each line.
+Brand kit v1.1 · Updated 2026-11-20. Every line is from the source pack; source and date follow each line.
 
 ## Headlines
 

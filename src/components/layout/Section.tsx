@@ -33,7 +33,7 @@ export function Section({ id, eyebrow, title, accent, highlight, lede, actions, 
         <header className="mb-10 flex flex-col gap-6 lg:mb-14 xl:flex-row xl:items-end xl:justify-between">
           <div className="max-w-3xl">
             <motion.p className="eyebrow mb-4" variants={reveal} initial="hidden" animate="show">
-              <span className="font-num text-text-3">{viewIndex(id)}</span> · {eyebrow}
+              <span className="tabular-nums text-text-3">{viewIndex(id)}</span> · {eyebrow}
             </motion.p>
             <WordRise
               as="h1"
@@ -43,7 +43,7 @@ export function Section({ id, eyebrow, title, accent, highlight, lede, actions, 
               text={title}
               accent={accent}
               highlight={highlight}
-              className="text-step-4 font-bold leading-display tracking-tight text-balance outline-none"
+              className="display text-step-4 text-balance outline-none"
             />
             {lede && (
               <motion.div className="mt-5 max-w-2xl text-step-1 leading-relaxed text-text-2" variants={reveal} initial="hidden" animate="show">

@@ -53,10 +53,9 @@ export function AiSearch({ tone, idPrefix, label, className }: GraphicProps) {
         const y = CARD.y - (yours ? 14 : 0)
         return (
           <g key={i} {...anim(yours ? 'focal' : 'node')}>
-            {yours && <ellipse cx={x + CARD.width / 2} cy={y + CARD.height / 2 + 12} rx="120" ry="100" fill={url('glow')} />}
-            <GlassPanel c={c} url={url} x={x} y={y} width={CARD.width} height={CARD.height} r={CARD.r} rim={yours ? url('accent') : undefined} rimWidth={yours ? STROKE.line : 1} shadow={yours}>
+            <GlassPanel c={c} url={url} x={x} y={y} width={CARD.width} height={CARD.height} r={CARD.r} rim={yours ? url('accent') : undefined} rimWidth={yours ? STROKE.line : 1}>
               <circle cx={x + 26} cy={y + 28} r="12" fill={yours ? url('accent') : c.line} fillOpacity={yours ? 1 : c.alpha.hairline * 1.5} stroke={yours ? 'none' : c.line} strokeOpacity={c.alpha.structure} />
-              <text x={x + 26} y={y + 28.5} textAnchor="middle" dominantBaseline="central" fontFamily="Lato" fontWeight="700" fontSize="12" fill={yours ? c.onFocal : c.line} fillOpacity={yours ? 1 : 0.7}>
+              <text x={x + 26} y={y + 28.5} textAnchor="middle" dominantBaseline="central" fontFamily="Unbounded" fontWeight="600" fontSize="10" fill={yours ? c.onFocal : c.line} fillOpacity={yours ? 1 : 0.7}>
                 {i + 1}
               </text>
               <TextBar c={c} x={x + 16} y={y + 62} width={84} strong={yours} />

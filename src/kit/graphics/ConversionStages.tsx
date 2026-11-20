@@ -32,10 +32,6 @@ export function ConversionStages({ tone, idPrefix, label, className }: GraphicPr
           <stop offset="0" stopColor={c.from} />
           <stop offset="1" stopColor={c.to} />
         </linearGradient>
-        <radialGradient id={id('glow')}>
-          <stop offset="0" stopColor={c.focal} stopOpacity={c.alpha.glow} />
-          <stop offset="1" stopColor={c.focal} stopOpacity="0" />
-        </radialGradient>
       </defs>
 
       <g {...anim('draw')} stroke={url('flow')} strokeWidth={STROKE.line} strokeLinecap="round" strokeLinejoin="round">
@@ -59,14 +55,13 @@ export function ConversionStages({ tone, idPrefix, label, className }: GraphicPr
           <g key={stage} {...anim(last ? 'focal' : 'node')}>
             {last ? (
               <>
-                <circle cx={x} cy={Y} r="64" fill={url('glow')} />
                 <circle cx={x} cy={Y} r={LAST_R + 10} stroke={c.focal} strokeOpacity={c.alpha.structure} strokeWidth={STROKE.hairline} />
                 <circle cx={x} cy={Y} r={LAST_R} fill={url('fill')} />
               </>
             ) : (
               <circle cx={x} cy={Y} r={R} fill={c.line} fillOpacity={c.alpha.hairline * 0.6} stroke={c.line} strokeOpacity={c.alpha.structure + 0.1 * i} strokeWidth={STROKE.line} />
             )}
-            <text x={x} y={Y} textAnchor="middle" dominantBaseline="central" fontFamily="Lato" fontWeight="700" fontSize="16" letterSpacing="0.5" fill={last ? c.onFocal : c.line} fillOpacity={last ? 1 : 0.8}>
+            <text x={x} y={Y} textAnchor="middle" dominantBaseline="central" fontFamily="Unbounded" fontWeight="600" fontSize="14" fill={last ? c.onFocal : c.line} fillOpacity={last ? 1 : 0.8}>
               {String(i + 1).padStart(2, '0')}
             </text>
             <text x={x} y={Y + 64} textAnchor="middle" fontFamily="Geist" fontWeight={last ? 600 : 500} fontSize="17" fill={last ? c.line : c.text}>

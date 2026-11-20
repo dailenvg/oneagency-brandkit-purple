@@ -6,7 +6,7 @@ import { textTags, trigger, type MotionTriggerProps, type TextTag } from './trig
 
 interface WordRiseProps extends MotionTriggerProps {
   text: string
-  /** Word indices set as accent words (Metal, signature gradient). */
+  /** Word indices set as accent words (Unbounded, signature gradient). */
   accent?: number[]
   /** First and last word index (inclusive) set on the highlight band. One phrase per title. */
   highlight?: readonly [number, number]

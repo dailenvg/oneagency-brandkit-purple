@@ -6,10 +6,10 @@ import type { VisualProps } from './visual-props'
 
 const BAR = 'block h-2 rounded-full bg-[color:var(--glass-divider)]'
 
-/** Local SEO: a glass map pack, the first listing lit rose and checked, a rose map pin badge on the corner. */
+/** Local SEO: a glass map pack, the first listing lit Mint and checked, a Mint map pin badge on the corner. */
 export function MapPackVisual({ className, placement, bleed }: VisualProps) {
   return (
-    <Stage width={320} height={270} bleed={bleed} arc={{ width: 540, top: -62 }} glow={{ width: 320, bottom: 4 }} placement={placement} className={className}>
+    <Stage width={320} height={270} bleed={bleed} arc={{ width: 540, top: -62 }} placement={placement} className={className}>
       <div className="absolute inset-x-4 top-3" style={{ transform: 'perspective(900px) rotateY(-12deg) rotateX(4deg)' }}>
         <GlassCard depth={1} recede="left" className="flex flex-col gap-3 p-4">
           <div className="flex items-center gap-3 px-1">
@@ -19,8 +19,8 @@ export function MapPackVisual({ className, placement, bleed }: VisualProps) {
           <GlassCard shape="tile" className="flex items-center gap-3 px-3 py-3">
             <CheckBadge size="sm" />
             <span className="flex flex-1 flex-col gap-1.5">
-              <span className="block h-2 w-4/5 rounded-full bg-rose" />
-              <span className="flex gap-0.5 text-rose">
+              <span className="block h-2 w-4/5 rounded-full bg-mint" />
+              <span className="flex gap-0.5 text-mint">
                 {[0, 1, 2, 3, 4].map((i) => (
                   <Star key={i} weight="fill" className="size-3" />
                 ))}

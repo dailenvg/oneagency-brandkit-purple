@@ -2,11 +2,11 @@ import { File, FileCode, FileText, FileZip, FilmSlate, TextAa } from '@phosphor-
 import type { AssetEntry } from '../../lib/assets'
 import { SmartImage } from '../ui/SmartImage'
 
-const FONT = /font_(geist|lato|metal)-(\d+)/
-const FONT_CLASS = { geist: 'font-sans', lato: 'font-num', metal: 'font-accent' } as const
+const FONT = /font_(geist|unbounded)-(\d+)/
+const FONT_CLASS = { geist: 'font-sans', unbounded: 'font-display' } as const
 
-/** Files drawn for light grounds (on-light and ink logos) preview on paper. */
-const LIGHT = /-(on-light|ink)[._]/
+/** Files drawn for light grounds (on-light and navy logos, Sky and Mint tiles) preview on paper. */
+const LIGHT = /-(on-light|navy|sky|mint)[._]/
 
 const ICONS: Record<string, typeof File> = { ZIP: FileZip, MD: FileText, TXT: FileText, JSON: FileCode, CSS: FileCode, JS: FileCode, MJS: FileCode, HTML: FileCode, MP4: FilmSlate, WEBM: FilmSlate }
 
@@ -36,7 +36,7 @@ export function AssetThumb({ asset }: { asset: AssetEntry }) {
     const [, family, weight] = font
     return (
       <div className={frame} aria-hidden>
-        <span className={`text-step-2 ${FONT_CLASS[family as keyof typeof FONT_CLASS]} ${family === 'metal' ? 'accent-word' : ''}`} style={{ fontWeight: Number(weight) }}>
+        <span className={`text-step-2 ${FONT_CLASS[family as keyof typeof FONT_CLASS]} ${family === 'unbounded' ? 'tracking-display' : ''}`} style={{ fontWeight: Number(weight) }}>
           Aa
         </span>
       </div>

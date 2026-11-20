@@ -9,7 +9,7 @@ interface CopyButtonProps {
   value: string
   /** Visible label; defaults to the value. */
   label?: string
-  /** What the toast and screen readers call it, e.g. "HEX for --rose". */
+  /** What the toast and screen readers call it, e.g. "HEX for --mint". */
   description?: string
   className?: string
 }

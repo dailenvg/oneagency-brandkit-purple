@@ -4,10 +4,10 @@
 @import "./styles/glass.css";
 
 /*
- * Kit site theme. Colours are the live site's custom properties (src/styles/tokens.css, generated from the
- * production CSS). The hub's own surfaces and text map to the --ui-* theme layer (src/styles/theme.css), which is the
- * live values in dark and a derived paper-and-ink set in light. Type scale, radii and the accent-word recipe are
- * copied from the live stylesheet so the kit renders exactly like oneagency.com.
+ * Kit site theme. Brand colours are the moodboard tokens (src/styles/tokens.css, generated from
+ * design/source/rebrand/brand-tokens.json). The hub's own surfaces and text map to the --ui-* theme layer
+ * (src/styles/theme.css): navy in dark, white with Mist and Sky in light. Type, radii and motion follow concept 01
+ * "Nova": Unbounded for display, Geist for everything else, pill buttons and 24 px cards.
  */
 @theme inline {
   --color-ground: var(--ui-ground);
@@ -17,9 +17,9 @@
   --color-band: var(--ui-band);
   --color-raised: var(--ui-raised);
   --color-nav-hover: var(--ui-nav-hover);
-  /* Status tags (Badge): light blue fill, navy text, the same in both themes. */
-  --color-tag: var(--kit-lilac-100);
-  --color-on-tag: var(--kit-lilac-900);
+  /* Status tags (Badge): a Sky chip with navy text, the same in both themes (14.3:1). */
+  --color-tag: var(--sky);
+  --color-on-tag: var(--navy);
   --color-edge: var(--ui-edge);
   --color-edge-soft: var(--ui-edge-soft);
   --color-edge-strong: var(--ui-edge-strong);
@@ -28,35 +28,38 @@
   --color-text-3: var(--ui-text-3);
   --color-text-4: var(--ui-text-4);
   --color-on-text: var(--ui-on-text);
-  /* Accent as text, icon or ring: rose on dark, the derived rose 700 on light. Fills use rose. */
+  /* Accent as text, icon or ring: Mint on navy, Ultra Violet on light. */
   --color-accent: var(--ui-accent);
   --color-info: var(--ui-info);
-  --color-proposed: var(--ui-proposed);
-  --color-rose: var(--rose);
-  --color-rose-deep: var(--rose-deep);
-  --color-lilac: var(--lilac);
-  --color-lilac-deep: var(--lilac-deep);
+  /* The primary fill and the text on it: Mint and navy on dark, Ultra Violet and white on light. */
+  --color-fill: var(--ui-fill);
+  --color-fill-pressed: var(--ui-fill-pressed);
+  --color-on-fill: var(--ui-on-fill);
+  --color-on-ghost: var(--ui-on-ghost);
+  /* Brand colours, for artwork that keeps its colour in both themes (ads, specimens). */
+  --color-navy: var(--navy);
+  --color-mint: var(--mint);
+  --color-mint-deep: var(--mint-deep);
+  --color-violet: var(--violet);
+  --color-violet-light: var(--violet-light);
+  --color-sky: var(--sky);
+  --color-mist: var(--mist);
   --color-on-accent: var(--on-accent);
-  --color-lavender: var(--lavender);
   --color-paper: var(--paper);
-  --color-paper-2: var(--paper-2);
   --color-ink: var(--ink);
   --color-ink-2: var(--ink-2);
   --color-ink-3: var(--ink-3);
-  --color-pos: var(--pos);
-  --color-lavender-text: var(--ui-on-ghost);
-  --color-form-copy: var(--form-copy);
   /* Kit UI only (guideline do/don't marks), not brand colours. */
   --color-do: var(--ui-do);
   --color-dont: var(--ui-dont);
   --shadow-card: var(--ui-shadow);
 }
 
-/* Faces and type steps: the live site's --font-* and --step-* values. */
+/* Faces, type steps and radii. */
 @theme {
   --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-accent: "Metal", Georgia, serif;
-  --font-num: "Lato", "Geist", ui-sans-serif, system-ui, sans-serif;
+  /* Unbounded: headlines, stat numerals and accent words, at 600 with -0.02em tracking (concept 01 "Nova"). */
+  --font-display: "Unbounded", "Geist", ui-sans-serif, system-ui, sans-serif;
   /*
    * No monospace anywhere in the hub: token names, hex values, file names and commands set in Sora (font-code). The
    * mono utility is removed and <code>, <kbd>, <pre> and <samp> default to Sora too.
@@ -68,20 +71,23 @@
   --text-step-0: clamp(1.0625rem, 1.03rem + 0.14vw, 1.125rem);
   --text-step-1: clamp(1.125rem, 1.07rem + 0.22vw, 1.25rem);
   --text-step-2: clamp(1.5rem, 1.3rem + 0.9vw, 1.875rem);
-  --text-step-3: clamp(2.125rem, 1.7rem + 1.75vw, 3rem);
-  --text-step-4: clamp(2.25rem, 1.6rem + 2.7vw, 3.8rem);
+  /* Display steps: Unbounded is wide, so these run at 0.8 of a narrow face's size (Nova's display scale). */
+  --text-step-3: clamp(1.7rem, 1.36rem + 1.4vw, 2.4rem);
+  --text-step-4: clamp(1.8rem, 1.28rem + 2.16vw, 3.04rem);
   --text-step-small: 0.8125rem;
   /* Kit step below small: the sidebar group separators (tracked caps, so 11px stays legible). */
   --text-step-micro: 0.6875rem;
-  --leading-display: 1.04;
-  /* Site tracking values: eyebrow, award org line, award 'Awarded to', award tag. */
+  --leading-display: 1.08;
+  --tracking-display: -0.02em;
   --tracking-eyebrow: 0.14em;
   --tracking-caps: 0.16em;
   --tracking-label: 0.28em;
   --tracking-tag: 0.32em;
-  --text-step-num: clamp(2.1875rem, 2.07rem + 0.5vw, 2.5rem);
-  --radius-site: 14px;
-  --radius-site-sm: 8px;
+  --text-step-num: clamp(1.75rem, 1.656rem + 0.4vw, 2rem);
+  /* Nova radii: 24 px cards, 40 px large panels; small tiles inside a card step down to 12 px (derived). Buttons are pills. */
+  --radius-site: 24px;
+  --radius-site-sm: 12px;
+  --radius-site-lg: 40px;
   /* Kit layout rhythm. */
   --spacing-section: clamp(4.5rem, 3rem + 6vw, 9rem);
   --spacing-gutter: clamp(24px, 4vw, 64px);
@@ -91,10 +97,6 @@
 }
 
 @layer base {
-  :root {
-    /* Site value: accent words run 1.27x the surrounding type. */
-    --accent-size: 1.27em;
-  }
   html {
     -webkit-text-size-adjust: 100%;
     /* Anchors land below the top bar on phones and tablets; the sidebar layout has no fixed header. */
@@ -126,10 +128,10 @@
     color: var(--ui-text);
   }
   ::selection {
-    background: var(--rose);
-    color: var(--on-accent);
+    background: var(--ui-fill);
+    color: var(--ui-on-fill);
   }
-  /* Site value: one rose ring, 3px out (the derived rose 700 on light, for 3:1 against paper). */
+  /* One accent ring, 3px out: Mint on navy, Ultra Violet on light (both 3:1 or better against their ground). */
   :focus-visible {
     outline: 2px solid var(--ui-accent);
     outline-offset: 3px;
@@ -138,23 +140,27 @@
 }
 
 @layer components {
-  /* The site's .serif accent word: Metal, the signature gradient clipped to the glyphs, lit by the neon filter. */
+  /* Display type: Unbounded 600, tracked in (Nova). Headlines and large figures. */
+  .display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: var(--tracking-display);
+    line-height: var(--leading-display);
+  }
+  /* The accent word: Unbounded, the signature gradient clipped to the glyphs. */
   .accent-word {
-    font-family: var(--font-accent);
+    font-family: var(--font-display);
     font-style: normal;
-    font-weight: 400;
-    font-size: var(--accent-size);
-    letter-spacing: normal;
+    font-weight: 600;
+    letter-spacing: var(--tracking-display);
     background: var(--ui-accent-fill);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    padding-bottom: 0.12em;
+    padding-bottom: 0.08em;
     padding-inline-end: 0.04em;
-    filter: var(--ui-accent-glow);
-    mix-blend-mode: var(--ui-accent-blend);
   }
   .container-site {
     width: 100%;
@@ -162,7 +168,7 @@
     margin-inline: auto;
     padding-inline: var(--spacing-gutter);
   }
-  /* The site's .eyebrow: tracked caps in rose. */
+  /* Eyebrow: tracked caps in the accent (Mint on navy, Ultra Violet on light). */
   .eyebrow {
     font-size: var(--text-step-small);
     font-weight: 600;
@@ -170,70 +176,32 @@
     text-transform: uppercase;
     color: var(--ui-accent);
   }
-  /* The site's .stat-num: Lato 700, gradient filled, lit like the accent words. */
+  /* Stat figures: Unbounded 600, gradient filled like the accent words. */
   .stat-num {
-    font-family: var(--font-num);
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: var(--tracking-display);
     line-height: 1.24;
+    font-variant-numeric: tabular-nums;
     background: var(--ui-accent-fill);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    filter: var(--ui-accent-glow);
-    mix-blend-mode: var(--ui-accent-blend);
-  }
-  /* Site rule: on phones, tablets and touch screens the SVG light is drawn in software, so stat figures take the soft glow. */
-  @media (max-width: 1023px), (pointer: coarse) {
-    .stat-num {
-      filter: var(--ui-accent-glow-soft);
-    }
-  }
-  /* While text is selected (lib/neon.ts), lit text drops its light so the highlight stays a normal highlight. */
-  .oa-selecting :is(.accent-word, .stat-num) {
-    filter: none;
-    mix-blend-mode: normal;
   }
   /*
-   * Forced colours (Windows contrast themes) drop gradient backgrounds but keep the transparent text, so lit words and
-   * figures would vanish: set them in the system text colour, unlit.
+   * Forced colours (Windows contrast themes) drop gradient backgrounds but keep the transparent text, so gradient words
+   * and figures would vanish: set them in the system text colour.
    */
   @media (forced-colors: active) {
     :is(.accent-word, .stat-num) {
       background: none;
       color: CanvasText;
-      filter: none;
-      mix-blend-mode: normal;
     }
-  }
-  /* More contrast asked for: the gradient stays, the neon light and its blend go, so the glyph edges stay crisp. */
-  @media (prefers-contrast: more) {
-    :is(.accent-word, .stat-num) {
-      filter: none;
-      mix-blend-mode: normal;
-    }
-  }
-  /*
-   * The site's hero glow field: rose top-left, lilac bottom-right, on the ground. Sized in % of the box, the same
-   * proportions as the downloadable one-agency_element_glow-field.svg (ellipses 62x42% and 68x48%, linear falloff), so a
-   * small stage shows the same composition as the file: two separate glows with night-navy between, not one wash.
-   */
-  .glow-field {
-    background:
-      radial-gradient(62% 42% at 14% -6%, color-mix(in srgb, var(--rose) 42%, transparent), transparent),
-      radial-gradient(68% 48% at 92% 96%, color-mix(in srgb, var(--lilac) 55%, transparent), transparent),
-      var(--ground);
   }
   /* Transparency checkerboard behind alpha swatches. */
   .checker {
     background:
       repeating-conic-gradient(var(--ui-surface-2) 0% 25%, var(--ui-surface) 0% 50%) 0 0 / 16px 16px;
-  }
-  /* The hub's own glow field (Overview hero): the site's rose and lilac glows, on the current theme's ground. */
-  .ui-glow-field {
-    background:
-      radial-gradient(72ch 44ch at 14% -6%, var(--ui-glow-a), transparent 66%),
-      radial-gradient(76ch 50ch at 92% 96%, var(--ui-glow-b), transparent 72%),
-      var(--ui-ground);
   }
   /*
    * Overview hero scrim: the theme's ground over the left of the Möbius loop, so the lockup keeps AA contrast. Phones
@@ -244,9 +212,7 @@
   }
   /*
    * From tablets up the scrim is anchored to the text column, not to a share of the hero: it holds at 92% to the end
-   * of the lede (container offset + gutter + 36rem, the lede's max-w-xl), then fades out over the next 20rem. With the
-   * old percentage stops the lede's right end sat over a 25 to 40% scrim at 768 to 1280 px, where the loop is brightest.
-   * On wide screens the loop on the right stays clear as before.
+   * of the lede (container offset + gutter + 36rem, the lede's max-w-xl), then fades out over the next 20rem.
    */
   @media (min-width: 768px) {
     .hero-scrim {
@@ -262,9 +228,9 @@
   }
   /*
    * Highlight band: a solid band behind the lower ~40% of the selected words, from just under the baseline to about
-   * mid x-height, starting 0.15em before the first word and running 0.15em past the last (measured on the reference,
-   * "Convert AI searches into recommendations"). Padding and matching negative margin widen the band without moving the text; clone repeats
-   * it on every line. --hl-reveal (0 to 100%) is the wipe-in, animated by HighlightText.
+   * mid x-height, starting 0.15em before the first word and running 0.15em past the last. Padding and matching negative
+   * margin widen the band without moving the text; clone repeats it on every line. --hl-reveal (0 to 100%) is the
+   * wipe-in, animated by HighlightText.
    */
   .highlight-band {
     --hl-height: 0.36em;
@@ -279,11 +245,8 @@
     box-decoration-break: clone;
   }
   /*
-   * The title (or line) that holds a band clips it at its own left and right edges. Mid-line, the 0.15em lead runs into
-   * the word space as in the reference; when a highlighted fragment starts a line, the lead would otherwise hang past
-   * the text column (the band read as starting before the line), so that fragment's band starts flush with its first
-   * word instead. Each wrapped line keeps its own band (clone above). overflow-x: clip leaves the vertical axis
-   * visible, so word rise, accent glyphs and focus are untouched.
+   * The title (or line) that holds a band clips it at its own left and right edges, so a band that starts a line never
+   * hangs past the text column. overflow-x: clip leaves the vertical axis visible, so word rise and focus are untouched.
    */
   :where(*):has(> .highlight-band) {
     overflow-x: clip;
@@ -292,18 +255,18 @@
   .busy-field {
     background:
       radial-gradient(circle at 20% 30%, var(--paper) 0 8%, transparent 9%),
-      radial-gradient(circle at 70% 60%, var(--pos) 0 12%, transparent 13%),
-      radial-gradient(circle at 45% 80%, var(--lilac) 0 10%, transparent 11%),
-      repeating-linear-gradient(35deg, var(--text-2) 0 6px, var(--ink-3) 6px 14px, var(--rose) 14px 18px);
+      radial-gradient(circle at 70% 60%, var(--sky) 0 12%, transparent 13%),
+      radial-gradient(circle at 45% 80%, var(--violet) 0 10%, transparent 11%),
+      repeating-linear-gradient(35deg, var(--text-2) 0 6px, var(--ink-3) 6px 14px, var(--mint) 14px 18px);
   }
   /* Thin scrollbars for horizontal strips. */
   .scroll-strip {
     scrollbar-width: thin;
-    scrollbar-color: var(--edge-strong) transparent;
+    scrollbar-color: var(--ui-edge-strong) transparent;
   }
 }
 
-/* The site's stat divider: a vertical gradient rule before a stat in a row. */
+/* Stat divider: a vertical gradient rule before a stat in a row. */
 @utility stat-divided {
   &::before {
     content: "";

@@ -28,7 +28,7 @@ export default function App() {
           <a
             href="#main"
             onClick={skipToMain}
-            className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-90 focus:rounded-full focus:bg-rose focus:px-4 focus:py-2 focus:font-semibold focus:text-on-accent"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-90 focus:rounded-full focus:bg-fill focus:px-4 focus:py-2 focus:font-semibold focus:text-on-fill"
           >
             Skip to content
           </a>

@@ -64,14 +64,14 @@ export function FilterTabs<T extends string>({ options, value, onChange, label, 
             tabIndex={active ? 0 : -1}
             onClick={() => select(i)}
             onKeyDown={(e) => onKeyDown(e, i)}
-            // The focused tab is the rose one (roving tab index), so the ring is white and sits 1px out to fit the strip's 4px padding.
-            className={`relative inline-flex min-h-touch shrink-0 items-center gap-1.5 rounded-full px-4 text-step-small font-semibold transition-colors focus-visible:outline-offset-1 focus-visible:outline-text ${
-              active ? 'text-on-accent' : 'text-text-2 hover:bg-surface-2 hover:text-text'
+            // The focused tab is the filled one (roving tab index), so the ring is white and sits 1px out to fit the strip's 4px padding.
+            className={`relative inline-flex min-h-touch shrink-0 items-center gap-2 rounded-full px-4 text-step-small font-semibold transition-colors focus-visible:outline-offset-1 focus-visible:outline-text ${
+              active ? 'text-on-fill' : 'text-text-2 hover:bg-surface-2 hover:text-text'
             }`}
           >
-            {active && <motion.span layoutId={layoutId} className="absolute inset-0 rounded-full bg-rose" transition={spring.layout} aria-hidden />}
+            {active && <motion.span layoutId={layoutId} className="absolute inset-0 rounded-full bg-fill" transition={spring.layout} aria-hidden />}
             <span className="relative">{option.label}</span>
-            {option.count !== undefined && <span className={`relative font-num ${active ? 'text-on-accent' : 'text-text-3'}`}>{option.count}</span>}
+            {option.count !== undefined && <span className={`relative tabular-nums ${active ? 'text-on-fill' : 'text-text-3'}`}>{option.count}</span>}
           </button>
         )
       })}

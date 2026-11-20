@@ -39,7 +39,7 @@ export function GlassSection() {
     <Section
       id="glass"
       eyebrow="Glass & texture"
-      title="Frosted glass with a rose rim light"
+      title="Frosted glass with a Mint rim light"
       highlight={[4, 6]}
       lede="The style of the nine reference ads: frosted glass objects floating at a slight angle on a near-black ground, lit with a rose rim, stacked in depth, with halftone arcs and particle streams behind them."
       actions={<ZipButton group="glass" label="All glass & texture" />}
@@ -57,7 +57,7 @@ export function GlassSection() {
         </div>
 
         <div>
-          <SubHeading title="Anatomy of a glass card">Six parts, numbered on the card. Values are for a 1080 px ad; the hub uses the same tokens.</SubHeading>
+          <SubHeading title="Anatomy of a glass card">Five parts, numbered on the card. Values are for a 1080 px ad; the hub uses the same tokens.</SubHeading>
           <GlassAnatomy />
         </div>
 
@@ -95,8 +95,8 @@ export function GlassSection() {
         </div>
 
         <SourceNote>
-          Codified from nine ONE Agency reference ads (November 2026). Rim, glow and dots use the live site&apos;s rose (--rose, #ffa0aa). The violet ground (#2a004c into
-          #0e0f12) is sampled from the references and labelled derived; it is not on the live site.
+          Codified from nine ONE Agency reference ads (November 2026), repainted in the new palette. Rim, glow and dots use Mint (--mint, #00FAB3) on navy and Ultra
+          Violet on light. The violet ground runs from the derived --violet-800 into --void; both are labelled derived.
         </SourceNote>
       </div>
     </Section>

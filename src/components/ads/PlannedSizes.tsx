@@ -21,7 +21,7 @@ export function PlannedSizes() {
                   <div className="grid place-items-center rounded-site-sm border border-dashed border-edge-strong/60 bg-surface/50" style={{ width: Math.max(w * k, MIN_W), height: Math.max(h * k, MIN_H) }}>
                     <span className="sr-only">Placeholder</span>
                   </div>
-                  <span className="font-num text-step-small text-text-3">
+                  <span className="tabular-nums text-step-small text-text-3">
                     {w}×{h}
                   </span>
                 </li>

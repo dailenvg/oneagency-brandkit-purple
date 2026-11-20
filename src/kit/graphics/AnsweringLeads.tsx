@@ -40,7 +40,7 @@ export function AnsweringLeads({ tone, idPrefix, label, className }: GraphicProp
       </g>
 
       <g {...anim('node')}>
-        <GlassPanel c={c} url={url} x={inner} y={y + 52} width={132} height={52} r={16} shadow={false}>
+        <GlassPanel c={c} url={url} x={inner} y={y + 52} width={132} height={52} r={16}>
           <TextBar c={c} x={inner + 16} y={y + 70} width={92} />
           <TextBar c={c} x={inner + 16} y={y + 86} width={60} />
         </GlassPanel>
@@ -51,7 +51,7 @@ export function AnsweringLeads({ tone, idPrefix, label, className }: GraphicProp
         <TextBar c={c} x={x + width - 124} y={y + 154} width={52} strong />
       </g>
       <g {...anim('node')}>
-        <GlassPanel c={c} url={url} x={inner} y={y + 190} width={76} height={36} r={18} shadow={false}>
+        <GlassPanel c={c} url={url} x={inner} y={y + 190} width={76} height={36} r={18}>
           {[0, 1, 2].map((i) => (
             <circle key={i} cx={inner + 22 + i * 16} cy={y + 208} r="3.5" fill={c.line} fillOpacity={0.55 - i * 0.15} />
           ))}
@@ -59,11 +59,10 @@ export function AnsweringLeads({ tone, idPrefix, label, className }: GraphicProp
       </g>
 
       <g {...anim('focal')}>
-        <ellipse cx={TIMER.cx} cy={TIMER.cy + 8} rx="120" ry="92" fill={url('glow')} />
         <GlassPanel c={c} url={url} x={TIMER.cx - TIMER.r} y={TIMER.cy - TIMER.r} width={TIMER.r * 2} height={TIMER.r * 2} r={TIMER.r} />
         <circle cx={TIMER.cx} cy={TIMER.cy} r="46" stroke={c.line} strokeOpacity={c.alpha.grid} strokeWidth={STROKE.focal} />
         <path d={arcPath(TIMER.cx, TIMER.cy, 46, RING_FROM, RING_TO)} stroke={url('ring')} strokeWidth={STROKE.focal * 1.5} strokeLinecap="round" />
-        <text x={TIMER.cx} y={TIMER.cy + 1} textAnchor="middle" dominantBaseline="central" fontFamily="Lato" fontWeight="700" fontSize="26" letterSpacing="0.5" fill={c.line}>
+        <text x={TIMER.cx} y={TIMER.cy + 1} textAnchor="middle" dominantBaseline="central" fontFamily="Unbounded" fontWeight="600" fontSize="22" fill={c.line}>
           5:00
         </text>
       </g>

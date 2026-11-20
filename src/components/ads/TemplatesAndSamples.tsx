@@ -54,7 +54,7 @@ export function TemplatesAndSamples() {
       <Button variant="secondary" onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} aria-controls={expanded ? panelId : undefined} className="self-start">
         {expanded ? 'Hide templates and samples' : 'Show templates and samples'}
         {ads.length > 0 && (
-          <span className="font-num">
+          <span className="tabular-nums">
             {ads.length}
             <span className="sr-only"> ads</span>
           </span>

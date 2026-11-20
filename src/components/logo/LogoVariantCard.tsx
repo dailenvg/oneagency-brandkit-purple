@@ -18,7 +18,7 @@ export function LogoVariantCard({ logo }: { logo: LogoAsset }) {
           width={Math.round(svg.width)}
           height={Math.round(svg.height)}
           style={{ aspectRatio: `${svg.width} / ${svg.height}` }}
-          className="w-4/5"
+          className={logo.lockup === 'mark' ? 'w-1/4' : logo.lockup === 'horizontal' ? 'w-4/5' : 'w-1/2'}
           imgClassName="size-full"
         />
       </div>
@@ -29,7 +29,7 @@ export function LogoVariantCard({ logo }: { logo: LogoAsset }) {
           <p className="mt-1 text-step-small text-text-3">{logo.note}</p>
         </div>
         <DownloadMenu
-          // "Stacked, On dark": the lockup's short name, without its "(primary, master layout)" aside.
+          // "Horizontal, Gradient on light": the lockup's short name, without its "(primary, master layout)" aside.
           title={`${logo.lockupLabel.replace(/\s*\(.*\)$/, '')}, ${logo.label}`}
           files={[
             { url: svg.url, label: 'SVG', bytes: svg.bytes },

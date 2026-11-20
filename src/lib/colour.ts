@@ -13,8 +13,8 @@ export function contrastRatio(a: string, b: string) {
   return (hi + 0.05) / (lo + 0.05)
 }
 
-/** --ink and --paper, the two label colours. */
-const INK = '#01030f'
+/** --ink (Navy) and --paper, the two label colours. */
+const INK = '#020257'
 const PAPER = '#ffffff'
 
 /**

@@ -55,13 +55,13 @@ export interface CreativeAdConcept {
   sourceUrl: string
   eyebrow: string | null
   headline: string
-  /** Word index in `headline` set as the accent word (Metal, signature gradient). */
+  /** Word index in `headline` set as the accent word (Unbounded, signature gradient). */
   accent: number
   /** The headline is a client quote: set in quote marks, with `attribution` under it. */
   quote: boolean
   attribution: string | null
   sub: string | null
-  /** Checklist items (rose glass check badges, or the labels of the icon tiles). */
+  /** Checklist items (Mint glass check badges, or the labels of the icon tiles). */
   list: string[]
   stats: CreativeStat[]
   /** Client and date for the stats, as one source line. */
@@ -72,7 +72,7 @@ export interface CreativeAdConcept {
   /** Small line under the CTA (secondary, or a legal line). */
   small: string | null
   visual: CreativeVisual
-  /** What lights the visual from behind: the rose halftone arc (default) or the Möbius loop. */
+  /** What lights the visual from behind: the Mint halftone arc (default) or the Möbius loop. */
   backdrop?: 'halftone' | 'mobius'
   mobius?: CreativeMobius
   /** Verbatim lines this ad trims (words removed, none added), by field. */
@@ -320,7 +320,7 @@ export const CREATIVE_AD_SIZES: CreativeAdSize[] = [
   { format: 'landscape', label: 'Landscape', width: 1200, height: 627 },
 ]
 
-/** Story safe zone, px at 1080x1920: nothing but ground, glow and texture in the top 220 and bottom 340. */
+/** Story safe zone, px at 1080x1920: nothing but ground and texture in the top 220 and bottom 340. */
 export const STORY_SAFE = { top: 220, bottom: 340 } as const
 
 /**
