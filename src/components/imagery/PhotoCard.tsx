@@ -1,13 +1,14 @@
 import { ArrowUpRight, MagnifyingGlassPlus } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
-import { unsplashUrl, type BrandPhoto } from '../../data/imagery-photos'
+import { photoCredit, type BrandPhoto } from '../../data/imagery-photos'
 import { photoZoom, pressCard, reveal } from '../../lib/motion'
 import { buttonClass } from '../ui/button-styles'
 import { DownloadLink } from '../ui/DownloadLink'
 import { SmartImage } from '../ui/SmartImage'
 
-/** One photo of the Nova set: the image (zooms gently on hover, opens larger on click), its credit and its download. */
+/** One photo of the photo set: the image (zooms gently on hover, opens larger on click), its credit and its download. */
 export function PhotoCard({ photo, onOpen }: { photo: BrandPhoto; onOpen: () => void }) {
+  const credit = photoCredit(photo.source)
   return (
     <motion.li variants={reveal} whileHover="hover" className="flex flex-col overflow-hidden rounded-site border border-edge bg-surface">
       <div className="overflow-hidden" style={{ aspectRatio: `${photo.width} / ${photo.height}` }}>
@@ -49,16 +50,16 @@ export function PhotoCard({ photo, onOpen }: { photo: BrandPhoto; onOpen: () => 
         </p>
         <div className="mt-auto flex flex-wrap items-center gap-2">
           <a
-            href={unsplashUrl(photo.unsplashId)}
+            href={credit.url}
             target="_blank"
             rel="noopener noreferrer"
             // Starts with the visible text (WCAG 2.5.3 label in name).
-            aria-label={`Unsplash ${photo.unsplashId}, the photo's source page (opens in a new tab)`}
+            aria-label={`${credit.label}, ${credit.destination} (opens in a new tab)`}
             className={buttonClass('link', 'sm', '-ms-4')}
           >
-            Unsplash {photo.unsplashId} <ArrowUpRight aria-hidden />
+            {credit.label} <ArrowUpRight aria-hidden />
           </a>
-          <DownloadLink url={photo.url} label="WebP" bytes={photo.bytes} className="ml-auto" />
+          <DownloadLink url={photo.url} label="WebP" className="ml-auto" />
         </div>
       </div>
     </motion.li>

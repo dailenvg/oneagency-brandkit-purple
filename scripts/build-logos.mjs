@@ -125,7 +125,7 @@ function save(rel, data) {
   const path = `${OUT}/${rel}`
   mkdirSync(dirname(path), { recursive: true })
   writeFileSync(path, data)
-  return { url: `${URL_BASE}/${rel}`, bytes: Buffer.byteLength(data) }
+  return { url: `${URL_BASE}/${rel}` }
 }
 
 const dataUri = (svg) => `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`
@@ -276,10 +276,10 @@ function writeManifest(logos, tiles, favicons, social) {
 export type LogoLockup = ${Object.keys(LOCKUPS).map((k) => `'${k}'`).join(' | ')}
 export type LogoVariant = ${Object.keys(VARIANTS).map((k) => `'${k}'`).join(' | ')}
 
+/** File sizes are not recorded here: the hub reads them from the asset manifest (kit:zips), which sees the final files. */
 export interface AssetFile {
   /** Public URL path. */
   url: string
-  bytes: number
 }
 
 export interface LogoPng extends AssetFile {

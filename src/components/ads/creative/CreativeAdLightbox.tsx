@@ -23,8 +23,8 @@ export function CreativeAdLightbox({ open, onClose }: { open: OpenCreativeAd | n
         <div className="flex flex-col gap-4">
           {(files.png || files.webp) && (
             <div className="flex flex-wrap gap-2">
-              {files.png && <DownloadLink url={files.png.url} label={`PNG ${dims}`} bytes={files.png.bytes} />}
-              {files.webp && <DownloadLink url={files.webp.url} label={`WebP ${dims}`} bytes={files.webp.bytes} />}
+              {files.png && <DownloadLink url={files.png.url} label={`PNG ${dims}`} />}
+              {files.webp && <DownloadLink url={files.webp.url} label={`WebP ${dims}`} />}
             </div>
           )}
           <MobiusCredit concept={open.concept} />

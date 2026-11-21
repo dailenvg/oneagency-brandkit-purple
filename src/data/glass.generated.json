@@ -1,7 +1,7 @@
 {
-  "version": "1.1",
-  "generated": "2026-11-17",
-  "source": "design/magnific/glass/log.md",
+  "version": "2.0",
+  "generated": "2026-11-20",
+  "source": "design/magnific/log-v2.md",
   "items": [
     {
       "id": "illustration-magnifier-on-dark",
@@ -15,8 +15,8 @@
         "png": "/kit/illustrations/one-agency_illustration-magnifier_on-dark_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-magnifier_on-dark_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/UPhI5Jewny",
-      "notes": "AI search visibility: glass icon tile with a silver magnifier. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/dt4YZDuXSL",
+      "notes": "AI search visibility: navy glass icon tile with a white-silver magnifier and a crisp Mint edge. Generated with Magnific One + ONE Agency v2 brand kit (2048 master, downsized). No text, no glow."
     },
     {
       "id": "illustration-magnifier-transparent",
@@ -30,8 +30,8 @@
         "png": "/kit/illustrations/one-agency_illustration-magnifier_transparent_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-magnifier_transparent_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/Ifi9DvotvE",
-      "notes": "AI search visibility: glass icon tile with a silver magnifier. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/If3VWs3tvE",
+      "notes": "AI search visibility: navy glass icon tile with a white-silver magnifier and a crisp Mint edge. Magnific background removal of the on-dark render; the ground and its contact shadow go with it. No text, no glow."
     },
     {
       "id": "illustration-magnifier-on-light",
@@ -45,8 +45,8 @@
         "png": "/kit/illustrations/one-agency_illustration-magnifier_on-light_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-magnifier_on-light_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/Ifi9DvotvE",
-      "notes": "AI search visibility: glass icon tile with a silver magnifier. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/If3VWs3tvE",
+      "notes": "AI search visibility: navy glass icon tile with a white-silver magnifier and a crisp Mint edge. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
     },
     {
       "id": "illustration-seo-document-on-dark",
@@ -60,8 +60,8 @@
         "png": "/kit/illustrations/one-agency_illustration-seo-document_on-dark_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-seo-document_on-dark_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/DoJU2BYpcl",
-      "notes": "SEO audit: glass page with placeholder lines and a silver magnifier. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/5jDa8q7Kxe",
+      "notes": "SEO audit: navy glass document of blank bars under a silver magnifier, crisp Mint edge. Generated with Magnific One + ONE Agency v2 brand kit (2048 master, downsized). No text, no glow."
     },
     {
       "id": "illustration-seo-document-transparent",
@@ -75,8 +75,8 @@
         "png": "/kit/illustrations/one-agency_illustration-seo-document_transparent_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-seo-document_transparent_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/iGbFJGD3uK",
-      "notes": "SEO audit: glass page with placeholder lines and a silver magnifier. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/gOm5Fc9SXO",
+      "notes": "SEO audit: navy glass document of blank bars under a silver magnifier, crisp Mint edge. Magnific background removal of the on-dark render; the ground and its contact shadow go with it. No text, no glow."
     },
     {
       "id": "illustration-seo-document-on-light",
@@ -90,8 +90,8 @@
         "png": "/kit/illustrations/one-agency_illustration-seo-document_on-light_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-seo-document_on-light_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/iGbFJGD3uK",
-      "notes": "SEO audit: glass page with placeholder lines and a silver magnifier. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/gOm5Fc9SXO",
+      "notes": "SEO audit: navy glass document of blank bars under a silver magnifier, crisp Mint edge. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
     },
     {
       "id": "illustration-review-star-on-dark",
@@ -105,8 +105,8 @@
         "png": "/kit/illustrations/one-agency_illustration-review-star_on-dark_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-review-star_on-dark_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/lJIBHyagv9",
-      "notes": "Online reviews audit: smoked glass star with rose rim light. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/lJtbEs7gv9",
+      "notes": "Reviews: frosted navy glass star with a crisp Mint edge. Generated with Magnific One + ONE Agency v2 brand kit (2048 master, downsized). No text, no glow."
     },
     {
       "id": "illustration-review-star-transparent",
@@ -120,8 +120,8 @@
         "png": "/kit/illustrations/one-agency_illustration-review-star_transparent_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-review-star_transparent_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/gOtok4RSXO",
-      "notes": "Online reviews audit: smoked glass star with rose rim light. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/kseChZB16B",
+      "notes": "Reviews: frosted navy glass star with a crisp Mint edge. Magnific background removal of the on-dark render; the ground and its contact shadow go with it. No text, no glow."
     },
     {
       "id": "illustration-review-star-on-light",
@@ -135,8 +135,8 @@
         "png": "/kit/illustrations/one-agency_illustration-review-star_on-light_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-review-star_on-light_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/gOtok4RSXO",
-      "notes": "Online reviews audit: smoked glass star with rose rim light. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/kseChZB16B",
+      "notes": "Reviews: frosted navy glass star with a crisp Mint edge. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
     },
     {
       "id": "illustration-cro-window-on-dark",
@@ -150,8 +150,8 @@
         "png": "/kit/illustrations/one-agency_illustration-cro-window_on-dark_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-cro-window_on-dark_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/VXwgRI3MMU",
-      "notes": "Website CRO audit: glass browser window, rose button, cursor. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/BhNcAXMoQR",
+      "notes": "Website CRO: navy glass browser window with blank blocks, a Mint button and a white glass cursor. Generated with Magnific One + ONE Agency v2 brand kit (2048 master, downsized). No text, no glow."
     },
     {
       "id": "illustration-cro-window-transparent",
@@ -165,8 +165,8 @@
         "png": "/kit/illustrations/one-agency_illustration-cro-window_transparent_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-cro-window_transparent_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/UPhIriowny",
-      "notes": "Website CRO audit: glass browser window, rose button, cursor. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/WDgi4F8cXe",
+      "notes": "Website CRO: navy glass browser window with blank blocks, a Mint button and a white glass cursor. Magnific background removal of the on-dark render; the ground and its contact shadow go with it. No text, no glow."
     },
     {
       "id": "illustration-cro-window-on-light",
@@ -180,8 +180,8 @@
         "png": "/kit/illustrations/one-agency_illustration-cro-window_on-light_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-cro-window_on-light_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/UPhIriowny",
-      "notes": "Website CRO audit: glass browser window, rose button, cursor. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/WDgi4F8cXe",
+      "notes": "Website CRO: navy glass browser window with blank blocks, a Mint button and a white glass cursor. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
     },
     {
       "id": "illustration-growth-stairs-on-dark",
@@ -195,8 +195,8 @@
         "png": "/kit/illustrations/one-agency_illustration-growth-stairs_on-dark_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-growth-stairs_on-dark_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/fHGZBpSCDY",
-      "notes": "Tactical steps to scale up: glass staircase with a rose arrow (second take; first take read as a bar chart). Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/EbYoDEBuuO",
+      "notes": "Tactical steps to scale up: frosted glass staircase with a Mint arrow climbing it. Generated with Magnific One + ONE Agency v2 brand kit (2048 master, downsized). No text, no glow."
     },
     {
       "id": "illustration-growth-stairs-transparent",
@@ -210,8 +210,8 @@
         "png": "/kit/illustrations/one-agency_illustration-growth-stairs_transparent_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-growth-stairs_transparent_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/cpgLAf20eP",
-      "notes": "Tactical steps to scale up: glass staircase with a rose arrow (second take; first take read as a bar chart). Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/MBJA3KNDCm",
+      "notes": "Tactical steps to scale up: frosted glass staircase with a Mint arrow climbing it. Magnific background removal of the on-dark render; the ground and its contact shadow go with it. No text, no glow."
     },
     {
       "id": "illustration-growth-stairs-on-light",
@@ -225,8 +225,8 @@
         "png": "/kit/illustrations/one-agency_illustration-growth-stairs_on-light_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-growth-stairs_on-light_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/cpgLAf20eP",
-      "notes": "Tactical steps to scale up: glass staircase with a rose arrow (second take; first take read as a bar chart). Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/MBJA3KNDCm",
+      "notes": "Tactical steps to scale up: frosted glass staircase with a Mint arrow climbing it. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
     },
     {
       "id": "illustration-profile-stack-on-dark",
@@ -240,8 +240,8 @@
         "png": "/kit/illustrations/one-agency_illustration-profile-stack_on-dark_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-profile-stack_on-dark_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/Bh9yYq0oQR",
-      "notes": "Customers / lead activation: depth stack of 3 glass profile cards with a rose check badge. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/EbYopQouuO",
+      "notes": "Leads and customers: depth stack of three glass profile cards, Mint check badge with a Navy check. Generated with Magnific One + ONE Agency v2 brand kit (2048 master, downsized). No text, no glow."
     },
     {
       "id": "illustration-profile-stack-transparent",
@@ -255,8 +255,8 @@
         "png": "/kit/illustrations/one-agency_illustration-profile-stack_transparent_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-profile-stack_transparent_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/Lwodb9RswO",
-      "notes": "Customers / lead activation: depth stack of 3 glass profile cards with a rose check badge. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/CqnBpPQEEy",
+      "notes": "Leads and customers: depth stack of three glass profile cards, Mint check badge with a Navy check. Magnific background removal of the on-dark render; the ground and its contact shadow go with it. No text, no glow."
     },
     {
       "id": "illustration-profile-stack-on-light",
@@ -270,8 +270,8 @@
         "png": "/kit/illustrations/one-agency_illustration-profile-stack_on-light_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-profile-stack_on-light_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/Lwodb9RswO",
-      "notes": "Customers / lead activation: depth stack of 3 glass profile cards with a rose check badge. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/CqnBpPQEEy",
+      "notes": "Leads and customers: depth stack of three glass profile cards, Mint check badge with a Navy check. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
     },
     {
       "id": "illustration-toggle-check-on-dark",
@@ -285,8 +285,8 @@
         "png": "/kit/illustrations/one-agency_illustration-toggle-check_on-dark_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-toggle-check_on-dark_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/WDljNa6cXe",
-      "notes": "Violet-to-blue variant: glass toggle switched on, rose knob with check, light streaks. Use alone, not next to the rose-only look. Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/xSBQasCjfW",
+      "notes": "Violet variant: glass toggle switched on, Mint knob with a Navy check, on a flat Ultra Violet to Navy ground. Use alone. Generated with Magnific One + ONE Agency v2 brand kit (2048 master, downsized). No text, no glow."
     },
     {
       "id": "illustration-toggle-check-transparent",
@@ -300,8 +300,8 @@
         "png": "/kit/illustrations/one-agency_illustration-toggle-check_transparent_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-toggle-check_transparent_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/WDljRIwcXe",
-      "notes": "Violet-to-blue variant: glass toggle switched on, rose knob with check, light streaks. Use alone, not next to the rose-only look. Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/lJtbQ0Dgv9",
+      "notes": "Violet variant: glass toggle switched on, Mint knob with a Navy check, on a flat Ultra Violet to Navy ground. Use alone. Magnific background removal of the on-dark render; the ground and its contact shadow go with it. No text, no glow."
     },
     {
       "id": "illustration-toggle-check-on-light",
@@ -315,8 +315,8 @@
         "png": "/kit/illustrations/one-agency_illustration-toggle-check_on-light_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-toggle-check_on-light_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/WDljRIwcXe",
-      "notes": "Violet-to-blue variant: glass toggle switched on, rose knob with check, light streaks. Use alone, not next to the rose-only look. Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/lJtbQ0Dgv9",
+      "notes": "Violet variant: glass toggle switched on, Mint knob with a Navy check, on a flat Ultra Violet to Navy ground. Use alone. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
     },
     {
       "id": "illustration-lead-flow-on-dark",
@@ -330,8 +330,8 @@
         "png": "/kit/illustrations/one-agency_illustration-lead-flow_on-dark_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-lead-flow_on-dark_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/TdUl2RiVNR",
-      "notes": "Convert visitors into leads: particle stream into a glass browser, lead cards flying out (second take). Generated with Magnific One + ONE Agency brand kit (2048 master, downsized). No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/1ldEhLEr4r",
+      "notes": "Convert visitors into leads: a white dot stream into a glass browser window, lead cards flying out. Generated with Magnific One + ONE Agency v2 brand kit (2048 master, downsized). No text, no glow."
     },
     {
       "id": "illustration-lead-flow-transparent",
@@ -345,8 +345,8 @@
         "png": "/kit/illustrations/one-agency_illustration-lead-flow_transparent_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-lead-flow_transparent_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/gOtornESXO",
-      "notes": "Convert visitors into leads: particle stream into a glass browser, lead cards flying out (second take). Magnific background removal of the on-dark render. Glow, reflection and light streaks are removed with the ground; add the rose under-glow texture behind it when compositing on dark. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/mEZD0wIhJQ",
+      "notes": "Convert visitors into leads: a white dot stream into a glass browser window, lead cards flying out. Magnific background removal of the on-dark render; the ground and its contact shadow go with it; most of the dot stream goes too. No text, no glow."
     },
     {
       "id": "illustration-lead-flow-on-light",
@@ -360,15 +360,15 @@
         "png": "/kit/illustrations/one-agency_illustration-lead-flow_on-light_1200x1200.png",
         "webp": "/kit/illustrations/one-agency_illustration-lead-flow_on-light_1200x1200.webp"
       },
-      "magnificUrl": "https://www.magnific.com/app/creation/gOtornESXO",
-      "notes": "Convert visitors into leads: particle stream into a glass browser, lead cards flying out (second take). Built locally: transparent cut-out on #FFFFFF with a soft #01030F contact + ambient shadow. Derived: the glass stays smoked/dark on light grounds. No text in image."
+      "magnificUrl": "https://www.magnific.com/app/creation/mEZD0wIhJQ",
+      "notes": "Convert visitors into leads: a white dot stream into a glass browser window, lead cards flying out. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
     },
     {
       "id": "texture-halftone-arc",
       "kind": "texture",
-      "name": "Rose halftone dot arc",
+      "name": "Mint halftone dot arc",
       "subject": "halftone-arc",
-      "theme": "any",
+      "theme": "dark",
       "width": 2048,
       "height": 1024,
       "files": {
@@ -376,7 +376,7 @@
         "webp": "/kit/textures/one-agency_texture-halftone-arc_2048x1024.webp",
         "svg": "/kit/textures/one-agency_texture-halftone-arc_2048x1024.svg"
       },
-      "notes": "Hex-grid rose #FFA0AA dots on an arc band; dots shrink toward the band edges and ends. Transparent. SVG is the vector source (2,381 circles). Built locally (Pillow)."
+      "notes": "Hex-grid Mint #00FAB3 dots on an arc band; dots shrink toward the band edges and ends. Transparent; made for Navy grounds (Mint dots are too faint on white). SVG is the vector source (2,381 circles). Built locally (Pillow), v2 repaint of the v1 geometry."
     },
     {
       "id": "texture-particle-stream",
@@ -391,7 +391,7 @@
         "webp": "/kit/textures/one-agency_texture-particle-stream_2048x768.webp",
         "svg": "/kit/textures/one-agency_texture-particle-stream_2048x768.svg"
       },
-      "notes": "Fine dotted strands flowing in a wave, white on the left to rose on the right, converging. Transparent; made for dark grounds (white dots vanish on white). SVG is vector (5,545 circles + 12 paths). Built locally."
+      "notes": "Fine dotted strands flowing in a wave, white on the left to Mint on the right, converging. Crisp dots and lines, no blur or glow layer (removed in v2). Transparent; made for dark grounds. SVG is vector (5,545 circles + 12 paths). Built locally."
     },
     {
       "id": "texture-grain",
@@ -404,49 +404,21 @@
       "files": {
         "png": "/kit/textures/one-agency_texture-grain_512x512.png"
       },
-      "notes": "Tileable luminance noise (wrap-safe), black/white pixels at up to ~12.5% alpha. Use as background-repeat at 1x; lower opacity further on light grounds. Built locally."
+      "notes": "Tileable luminance noise (wrap-safe), black/white pixels at up to ~12.5% alpha. Use as background-repeat at 1x; lower opacity further on light grounds. Built locally; colourless, so unchanged from v1 (the v2 build is pixel-identical)."
     },
     {
-      "id": "texture-rose-underglow",
+      "id": "texture-ground-violet-navy",
       "kind": "texture",
-      "name": "Rose under-glow",
-      "subject": "rose-underglow",
-      "theme": "dark",
-      "width": 2048,
-      "height": 768,
-      "files": {
-        "png": "/kit/textures/one-agency_texture-rose-underglow_2048x768.png",
-        "webp": "/kit/textures/one-agency_texture-rose-underglow_2048x768.webp"
-      },
-      "notes": "Soft elliptical rose pool with a lighter core, transparent, dithered against banding. Place under glass objects. Built locally."
-    },
-    {
-      "id": "texture-violet-streaks",
-      "kind": "texture",
-      "name": "Violet-blue light-streak ground",
-      "subject": "violet-streaks",
+      "name": "Violet to Navy ground",
+      "subject": "ground-violet-navy",
       "theme": "dark",
       "width": 1920,
       "height": 1080,
       "files": {
-        "jpg": "/kit/textures/one-agency_texture-violet-streaks_1920x1080.jpg",
-        "webp": "/kit/textures/one-agency_texture-violet-streaks_1920x1080.webp"
+        "jpg": "/kit/textures/one-agency_texture-ground-violet-navy_1920x1080.jpg",
+        "webp": "/kit/textures/one-agency_texture-ground-violet-navy_1920x1080.webp"
       },
-      "notes": "Violet #2A004C top-left to deep blue to near-black #0E0F12 right, rose and blue light streaks with screen-blend glow and bokeh, light grain. Matches the highlight-bar reference ground. Built locally."
-    },
-    {
-      "id": "texture-ground-rose-glow",
-      "kind": "texture",
-      "name": "Near-black ground with rose glow",
-      "subject": "ground-rose-glow",
-      "theme": "dark",
-      "width": 1920,
-      "height": 1080,
-      "files": {
-        "jpg": "/kit/textures/one-agency_texture-ground-rose-glow_1920x1080.jpg",
-        "webp": "/kit/textures/one-agency_texture-ground-rose-glow_1920x1080.webp"
-      },
-      "notes": "#01030F ground with a rose glow pool low-centre and a faint lilac lift top-right, grain-dithered. Built locally."
+      "notes": "Flat diagonal gradient, Ultra Violet #6203D0 top-left through Navy #020257 to Void #010138, light grain. The ground of the violet variant (replaces the v1 violet-streaks texture: no streaks, bokeh or glow). Built locally."
     }
   ]
 }

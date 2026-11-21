@@ -24,8 +24,8 @@ export interface ElementFile {
   /** File base name without variant, size or extension. */
   base: string
   title: string
-  /** live: the live site; film: the brand film; nova: concept 01 "Nova"; proposed: drawn for the kit. */
-  source: 'live' | 'film' | 'nova' | 'proposed'
+  /** Shown as a badge. nova: concept 01 "Nova"; proposed: drawn for the kit, not yet signed off; null: no badge. */
+  source: 'nova' | 'proposed' | null
   use: string
   /** Describes the artwork for screen readers (the card heading already gives the title). Falls back to the title. */
   alt?: string
@@ -100,12 +100,12 @@ export const ELEMENTS: ElementFile[] = [
   el('illustration-paid-media', 'illustration', 'Paid media', 'proposed', 'Two ad cards and a line that climbs from the click into a target. For search and social advertising.',
     toned('Two ad cards and a results line climbing into a target'),
   ),
-  el('cta-primary', 'classic', 'CTA, primary', 'live', 'Mint pill, Navy text. One per ad.'),
-  el('cta-secondary', 'classic', 'CTA, secondary', 'live', 'White outline pill for a second, quieter action on dark.'),
+  el('cta-primary', 'classic', 'CTA, primary', null, 'Mint pill, Navy text. One per ad.'),
+  el('cta-secondary', 'classic', 'CTA, secondary', null, 'White outline pill for a second, quieter action on dark.'),
   el('cta-on-light', 'classic', 'CTA, on light', 'proposed', 'Navy pill for white and other light grounds, where Mint fails contrast.'),
-  el('stat-bar', 'classic', 'Proof bar', 'live', 'Unbounded numbers in the gradient, white labels and gradient dividers, with the source line underneath.'),
-  el('award-badge', 'classic', 'Award badge', 'live', 'Always says it was awarded to ConversionIQ.ai.'),
-  el('laurel', 'classic', 'Laurel', 'live', 'The award laurel from the live banner, white.'),
+  el('stat-bar', 'classic', 'Proof bar', null, 'Unbounded numbers in the gradient, white labels and gradient dividers, with the source line underneath.'),
+  el('award-badge', 'classic', 'Award badge', null, 'Always says it was awarded to ConversionIQ.ai.'),
+  el('laurel', 'classic', 'Laurel', null, 'The award laurel from the live banner, white.'),
 ]
 
 export const elementById = (id: string) => {

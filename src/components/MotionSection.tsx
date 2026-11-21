@@ -1,6 +1,5 @@
 import { motion } from 'motion/react'
 import { MOVES, PRINCIPLES } from '../data/motion-moves'
-import { assetFor } from '../lib/assets'
 import { reveal } from '../lib/motion'
 import { Section } from './layout/Section'
 import { SubHeading } from './layout/SubHeading'
@@ -23,8 +22,8 @@ export function MotionSection() {
       lede="Every move comes from the film “ONE Agency: The Free Business Audit”. The same values drive this site, the React components and the HTML5 ad runtime."
       actions={
         <>
-          <DownloadLink url={RUNTIME} label="one-motion.js" bytes={assetFor(RUNTIME)?.bytes} />
-          <DownloadLink url={RUNTIME_ESM} label="one-motion.mjs" bytes={assetFor(RUNTIME_ESM)?.bytes} />
+          <DownloadLink url={RUNTIME} label="one-motion.js" />
+          <DownloadLink url={RUNTIME_ESM} label="one-motion.mjs" />
         </>
       }
     >

@@ -27,7 +27,7 @@ import { fileURLToPath } from 'node:url'
 import { mediaInfo } from './lib/media-info.mjs'
 import { zipFiles } from './lib/zip.mjs'
 import { ASSET_GROUPS, FULL_KIT_URL, groupPaths, KIT, VERSION_NOTE, zipUrl } from '../src/lib/kit.ts'
-import { BRAND_PHOTOS, unsplashUrl } from '../src/data/imagery-photos.ts'
+import { BRAND_PHOTOS, photoCredit } from '../src/data/imagery-photos.ts'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const PUBLIC = resolve(ROOT, 'public')
@@ -57,7 +57,7 @@ Folders
   templates/  ad templates and sample ads (editable versions live in Magnific)
   ads/        the creative ads: ten concepts in four sizes, PNG and WebP (not in the full kit). Three of them
               (technology, results, vacation-ownership) are built on the Möbius loop stills.
-  imagery/    photos/: the concept 01 Nova photo set (Unsplash, credits below); the starter image
+  imagery/    photos/: the photo set, one per palette mood (credits below); the starter image
               library, AI-generated in Magnific (no real people or clients); stand-ins until real client work exists
   motion/     one-motion.js (the motion runtime), HTML5 ad sources, and exports (MP4, GIF, end frames, HTML5 ZIPs)
   copy/       the copy bank (Markdown and JSON)
@@ -75,8 +75,11 @@ Sources
   Colour and logo: the rebrand moodboard (${KIT.board}, exported ${KIT.boardExported})
   Proof figures 10M+, $100M+, 7B+, 450K+: as published on oneagency.com, November 2026.
 
-Photo credits (imagery/photos/, from concept 01 Nova; Unsplash photo ids)
-${BRAND_PHOTOS.map((p) => `  ${p.url.split('/').pop()}: ${unsplashUrl(p.unsplashId)}`).join('\n')}
+Photo credits (imagery/photos/)
+${BRAND_PHOTOS.map((p) => {
+  const credit = photoCredit(p.source)
+  return `  ${p.url.split('/').pop()}: ${credit.label}, ${credit.url}`
+}).join('\n')}
 `
 
 /** Every file under a folder (or the file itself), as paths relative to public/ with forward slashes. Dotfiles are skipped. */

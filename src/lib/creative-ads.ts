@@ -8,7 +8,7 @@ interface CreativeAdManifest {
     format: CreativeFormat
     width: number
     height: number
-    files: Partial<Record<CreativeAdExt, { url: string; bytes: number }>>
+    files: Partial<Record<CreativeAdExt, { url: string }>>
   }[]
 }
 

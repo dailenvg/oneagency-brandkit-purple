@@ -11,7 +11,7 @@
  * Usage: node scripts/export-creative-ads.mjs [concept ...] [--format=square,story]   (npm run kit:ads)
  */
 import { execFileSync } from 'node:child_process'
-import { existsSync, mkdirSync, statSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
@@ -55,7 +55,7 @@ function writeManifest() {
       const files = Object.fromEntries(
         ['png', 'webp'].flatMap((ext) => {
           const url = creativeAdFile(c.id, s, ext)
-          return existsSync(disk(url)) ? [[ext, { url, bytes: statSync(disk(url)).size }]] : []
+          return existsSync(disk(url)) ? [[ext, { url }]] : []
         }),
       )
       return Object.keys(files).length ? [{ concept: c.id, format: s.format, width: s.width, height: s.height, files }] : []

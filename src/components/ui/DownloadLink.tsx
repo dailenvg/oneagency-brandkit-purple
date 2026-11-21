@@ -1,6 +1,7 @@
 import { DownloadSimple } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
 import { press } from '../../lib/motion'
+import { assetFor } from '../../lib/assets'
 import { fileName, formatBytes } from '../../lib/format'
 import { buttonClass } from './button-styles'
 
@@ -8,12 +9,15 @@ interface DownloadLinkProps {
   url: string
   /** Short visible label, e.g. "SVG" or "PNG 2x". */
   label: string
-  bytes?: number | null
   className?: string
 }
 
-/** Per-file download chip. The accessible name carries the visible label, the size and the full file name. */
-export function DownloadLink({ url, label, bytes, className }: DownloadLinkProps) {
+/**
+ * Per-file download chip. The accessible name carries the visible label, the size and the full file name. The size
+ * comes from the asset manifest (written from disk by kit:zips, the last kit step), so it always matches the file.
+ */
+export function DownloadLink({ url, label, className }: DownloadLinkProps) {
+  const bytes = assetFor(url)?.bytes
   return (
     <motion.a
       href={url}

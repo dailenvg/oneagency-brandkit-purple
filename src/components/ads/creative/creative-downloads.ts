@@ -7,5 +7,5 @@ export const creativeDownloads = (concept: CreativeAdConcept): DownloadFile[] =>
   CREATIVE_AD_SIZES.flatMap((size) => {
     const files = creativeAdFiles(concept.id, size.format)
     const group = `${size.width}×${size.height}`
-    return (['png', 'webp'] as const).flatMap((ext) => (files[ext] ? [{ url: files[ext].url, label: ext === 'png' ? 'PNG' : 'WebP', bytes: files[ext].bytes, group }] : []))
+    return (['png', 'webp'] as const).flatMap((ext) => (files[ext] ? [{ url: files[ext].url, label: ext === 'png' ? 'PNG' : 'WebP', group }] : []))
   })
