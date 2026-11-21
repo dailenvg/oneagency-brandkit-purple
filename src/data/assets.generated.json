@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T00:16:31.995Z",
+  "generatedAt": "2026-11-21T01:15:44.057Z",
   "version": "Brand kit v2.0 · Updated 2026-11-20",
   "groups": [
     {
@@ -9,7 +9,7 @@
       "bytes": 1461002,
       "zip": {
         "url": "/kit/zips/one-agency_kit_logos.zip",
-        "bytes": 1457212,
+        "bytes": 1457194,
         "files": 86
       }
     },
@@ -20,7 +20,7 @@
       "bytes": 51607,
       "zip": {
         "url": "/kit/zips/one-agency_kit_colour.zip",
-        "bytes": 8352,
+        "bytes": 8334,
         "files": 2
       }
     },
@@ -31,7 +31,7 @@
       "bytes": 2309112,
       "zip": {
         "url": "/kit/zips/one-agency_kit_fonts.zip",
-        "bytes": 1428495,
+        "bytes": 1428477,
         "files": 16
       }
     },
@@ -42,19 +42,19 @@
       "bytes": 49649610,
       "zip": {
         "url": "/kit/zips/one-agency_kit_elements.zip",
-        "bytes": 49275738,
+        "bytes": 49275720,
         "files": 225
       }
     },
     {
       "id": "glass",
       "label": "Glass & texture",
-      "count": 68,
-      "bytes": 35555209,
+      "count": 65,
+      "bytes": 34366094,
       "zip": {
         "url": "/kit/zips/one-agency_kit_glass.zip",
-        "bytes": 35083558,
-        "files": 68
+        "bytes": 34251655,
+        "files": 65
       }
     },
     {
@@ -64,7 +64,7 @@
       "bytes": 7571338,
       "zip": {
         "url": "/kit/zips/one-agency_kit_templates.zip",
-        "bytes": 7602971,
+        "bytes": 7602953,
         "files": 141
       }
     },
@@ -72,10 +72,10 @@
       "id": "ads",
       "label": "Creative ads",
       "count": 80,
-      "bytes": 32368581,
+      "bytes": 32227995,
       "zip": {
         "url": "/kit/zips/one-agency_kit_ads.zip",
-        "bytes": 32386622,
+        "bytes": 32246018,
         "files": 80
       }
     },
@@ -83,10 +83,10 @@
       "id": "imagery",
       "label": "Imagery",
       "count": 85,
-      "bytes": 15694243,
+      "bytes": 15690659,
       "zip": {
         "url": "/kit/zips/one-agency_kit_imagery.zip",
-        "bytes": 15711464,
+        "bytes": 15707860,
         "files": 85
       }
     },
@@ -94,10 +94,10 @@
       "id": "motion",
       "label": "Motion",
       "count": 38,
-      "bytes": 7498609,
+      "bytes": 7497743,
       "zip": {
         "url": "/kit/zips/one-agency_kit_motion.zip",
-        "bytes": 8444543,
+        "bytes": 8443205,
         "files": 128
       }
     },
@@ -108,15 +108,15 @@
       "bytes": 17814,
       "zip": {
         "url": "/kit/zips/one-agency_kit_copy.zip",
-        "bytes": 6222,
+        "bytes": 6204,
         "files": 2
       }
     }
   ],
   "full": {
     "url": "/kit/zips/one-agency_kit_full.zip",
-    "bytes": 70587768,
-    "files": 583
+    "bytes": 69750868,
+    "files": 580
   },
   "files": [
     {
@@ -4432,39 +4432,6 @@
       "preview": "/kit/textures/one-agency_texture-halftone-arc_2048x1024.webp"
     },
     {
-      "url": "/kit/textures/one-agency_texture-particle-stream_2048x768.png",
-      "name": "one-agency_texture-particle-stream_2048x768.png",
-      "group": "glass",
-      "format": "PNG",
-      "bytes": 479976,
-      "width": 2048,
-      "height": 768,
-      "duration": null,
-      "preview": "/kit/textures/one-agency_texture-particle-stream_2048x768.png"
-    },
-    {
-      "url": "/kit/textures/one-agency_texture-particle-stream_2048x768.svg",
-      "name": "one-agency_texture-particle-stream_2048x768.svg",
-      "group": "glass",
-      "format": "SVG",
-      "bytes": 431969,
-      "width": 2048,
-      "height": 768,
-      "duration": null,
-      "preview": "/kit/textures/one-agency_texture-particle-stream_2048x768.svg"
-    },
-    {
-      "url": "/kit/textures/one-agency_texture-particle-stream_2048x768.webp",
-      "name": "one-agency_texture-particle-stream_2048x768.webp",
-      "group": "glass",
-      "format": "WEBP",
-      "bytes": 277170,
-      "width": 2048,
-      "height": 768,
-      "duration": null,
-      "preview": "/kit/textures/one-agency_texture-particle-stream_2048x768.webp"
-    },
-    {
       "url": "/vendor/ciq/README.md",
       "name": "README.md",
       "group": "glass",
@@ -6570,7 +6537,7 @@
       "name": "one-agency_ad-technology_1080x1080.png",
       "group": "ads",
       "format": "PNG",
-      "bytes": 1015960,
+      "bytes": 1007017,
       "width": 1080,
       "height": 1080,
       "duration": null,
@@ -6581,7 +6548,7 @@
       "name": "one-agency_ad-technology_1080x1080.webp",
       "group": "ads",
       "format": "WEBP",
-      "bytes": 101002,
+      "bytes": 97228,
       "width": 1080,
       "height": 1080,
       "duration": null,
@@ -6592,7 +6559,7 @@
       "name": "one-agency_ad-technology_1080x1350.png",
       "group": "ads",
       "format": "PNG",
-      "bytes": 1234876,
+      "bytes": 1225502,
       "width": 1080,
       "height": 1350,
       "duration": null,
@@ -6603,7 +6570,7 @@
       "name": "one-agency_ad-technology_1080x1350.webp",
       "group": "ads",
       "format": "WEBP",
-      "bytes": 112760,
+      "bytes": 108114,
       "width": 1080,
       "height": 1350,
       "duration": null,
@@ -6614,7 +6581,7 @@
       "name": "one-agency_ad-technology_1080x1920.png",
       "group": "ads",
       "format": "PNG",
-      "bytes": 1760329,
+      "bytes": 1747629,
       "width": 1080,
       "height": 1920,
       "duration": null,
@@ -6625,7 +6592,7 @@
       "name": "one-agency_ad-technology_1080x1920.webp",
       "group": "ads",
       "format": "WEBP",
-      "bytes": 133266,
+      "bytes": 127430,
       "width": 1080,
       "height": 1920,
       "duration": null,
@@ -6636,7 +6603,7 @@
       "name": "one-agency_ad-technology_1200x627.png",
       "group": "ads",
       "format": "PNG",
-      "bytes": 715640,
+      "bytes": 706709,
       "width": 1200,
       "height": 627,
       "duration": null,
@@ -6647,7 +6614,7 @@
       "name": "one-agency_ad-technology_1200x627.webp",
       "group": "ads",
       "format": "WEBP",
-      "bytes": 65328,
+      "bytes": 61304,
       "width": 1200,
       "height": 627,
       "duration": null,
@@ -6834,7 +6801,7 @@
       "name": "one-agency_ad-web-design_1080x1080.png",
       "group": "ads",
       "format": "PNG",
-      "bytes": 395961,
+      "bytes": 386748,
       "width": 1080,
       "height": 1080,
       "duration": null,
@@ -6845,7 +6812,7 @@
       "name": "one-agency_ad-web-design_1080x1080.webp",
       "group": "ads",
       "format": "WEBP",
-      "bytes": 69968,
+      "bytes": 67716,
       "width": 1080,
       "height": 1080,
       "duration": null,
@@ -6856,7 +6823,7 @@
       "name": "one-agency_ad-web-design_1080x1350.png",
       "group": "ads",
       "format": "PNG",
-      "bytes": 616796,
+      "bytes": 597988,
       "width": 1080,
       "height": 1350,
       "duration": null,
@@ -6867,7 +6834,7 @@
       "name": "one-agency_ad-web-design_1080x1350.webp",
       "group": "ads",
       "format": "WEBP",
-      "bytes": 94346,
+      "bytes": 86966,
       "width": 1080,
       "height": 1350,
       "duration": null,
@@ -6878,7 +6845,7 @@
       "name": "one-agency_ad-web-design_1080x1920.png",
       "group": "ads",
       "format": "PNG",
-      "bytes": 765644,
+      "bytes": 746327,
       "width": 1080,
       "height": 1920,
       "duration": null,
@@ -6889,7 +6856,7 @@
       "name": "one-agency_ad-web-design_1080x1920.webp",
       "group": "ads",
       "format": "WEBP",
-      "bytes": 107892,
+      "bytes": 101792,
       "width": 1080,
       "height": 1920,
       "duration": null,
@@ -6900,7 +6867,7 @@
       "name": "one-agency_ad-web-design_1200x627.png",
       "group": "ads",
       "format": "PNG",
-      "bytes": 369118,
+      "bytes": 354740,
       "width": 1200,
       "height": 627,
       "duration": null,
@@ -6911,7 +6878,7 @@
       "name": "one-agency_ad-web-design_1200x627.webp",
       "group": "ads",
       "format": "WEBP",
-      "bytes": 56848,
+      "bytes": 51938,
       "width": 1200,
       "height": 627,
       "duration": null,
@@ -7820,15 +7787,15 @@
       "preview": "/kit/imagery/photos/one-agency_photo-mint-paper-waves_900x600.webp"
     },
     {
-      "url": "/kit/imagery/photos/one-agency_photo-violet-ribbon-swirl_900x600.webp",
-      "name": "one-agency_photo-violet-ribbon-swirl_900x600.webp",
+      "url": "/kit/imagery/photos/one-agency_photo-violet-paper-waves_900x600.webp",
+      "name": "one-agency_photo-violet-paper-waves_900x600.webp",
       "group": "imagery",
       "format": "WEBP",
-      "bytes": 25664,
+      "bytes": 22080,
       "width": 900,
       "height": 600,
       "duration": null,
-      "preview": "/kit/imagery/photos/one-agency_photo-violet-ribbon-swirl_900x600.webp"
+      "preview": "/kit/imagery/photos/one-agency_photo-violet-paper-waves_900x600.webp"
     },
     {
       "url": "/kit/imagery/photos/one-agency_photo-violet-silk-wave_900x507.webp",
@@ -7890,7 +7857,7 @@
       "name": "one-agency_motion-audit_1080x1080.zip",
       "group": "motion",
       "format": "ZIP",
-      "bytes": 105354,
+      "bytes": 105288,
       "width": null,
       "height": null,
       "duration": null,
@@ -7934,7 +7901,7 @@
       "name": "one-agency_motion-audit_1080x1920.zip",
       "group": "motion",
       "format": "ZIP",
-      "bytes": 105364,
+      "bytes": 105298,
       "width": null,
       "height": null,
       "duration": null,
@@ -7978,7 +7945,7 @@
       "name": "one-agency_motion-audit_300x250.zip",
       "group": "motion",
       "format": "ZIP",
-      "bytes": 105366,
+      "bytes": 105300,
       "width": null,
       "height": null,
       "duration": null,
@@ -8022,7 +7989,7 @@
       "name": "one-agency_motion-award_1080x1080.zip",
       "group": "motion",
       "format": "ZIP",
-      "bytes": 105464,
+      "bytes": 105398,
       "width": null,
       "height": null,
       "duration": null,
@@ -8066,7 +8033,7 @@
       "name": "one-agency_motion-award_1080x1920.zip",
       "group": "motion",
       "format": "ZIP",
-      "bytes": 105472,
+      "bytes": 105406,
       "width": null,
       "height": null,
       "duration": null,
@@ -8110,7 +8077,7 @@
       "name": "one-agency_motion-award_300x250.zip",
       "group": "motion",
       "format": "ZIP",
-      "bytes": 105474,
+      "bytes": 105408,
       "width": null,
       "height": null,
       "duration": null,
@@ -8154,7 +8121,7 @@
       "name": "one-agency_motion-proof_1080x1080.zip",
       "group": "motion",
       "format": "ZIP",
-      "bytes": 105796,
+      "bytes": 105730,
       "width": null,
       "height": null,
       "duration": null,
@@ -8198,7 +8165,7 @@
       "name": "one-agency_motion-proof_1080x1920.zip",
       "group": "motion",
       "format": "ZIP",
-      "bytes": 105805,
+      "bytes": 105739,
       "width": null,
       "height": null,
       "duration": null,
@@ -8242,7 +8209,7 @@
       "name": "one-agency_motion-proof_300x250.zip",
       "group": "motion",
       "format": "ZIP",
-      "bytes": 105516,
+      "bytes": 105450,
       "width": null,
       "height": null,
       "duration": null,
@@ -8253,7 +8220,7 @@
       "name": "one-motion.js",
       "group": "motion",
       "format": "JS",
-      "bytes": 13403,
+      "bytes": 13266,
       "width": null,
       "height": null,
       "duration": null,
@@ -8264,7 +8231,7 @@
       "name": "one-motion.mjs",
       "group": "motion",
       "format": "MJS",
-      "bytes": 12495,
+      "bytes": 12360,
       "width": null,
       "height": null,
       "duration": null,

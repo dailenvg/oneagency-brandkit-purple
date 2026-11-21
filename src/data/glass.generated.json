@@ -379,21 +379,6 @@
       "notes": "Hex-grid Mint #00FAB3 dots on an arc band; dots shrink toward the band edges and ends. Transparent; made for Navy grounds (Mint dots are too faint on white). SVG is the vector source (2,381 circles). Built locally (Pillow), v2 repaint of the v1 geometry."
     },
     {
-      "id": "texture-particle-stream",
-      "kind": "texture",
-      "name": "Particle stream wave",
-      "subject": "particle-stream",
-      "theme": "dark",
-      "width": 2048,
-      "height": 768,
-      "files": {
-        "png": "/kit/textures/one-agency_texture-particle-stream_2048x768.png",
-        "webp": "/kit/textures/one-agency_texture-particle-stream_2048x768.webp",
-        "svg": "/kit/textures/one-agency_texture-particle-stream_2048x768.svg"
-      },
-      "notes": "Fine dotted strands flowing in a wave, white on the left to Mint on the right, converging. Crisp dots and lines, no blur or glow layer (removed in v2). Transparent; made for dark grounds. SVG is vector (5,545 circles + 12 paths). Built locally."
-    },
-    {
       "id": "texture-grain",
       "kind": "texture",
       "name": "Fine grain tile",

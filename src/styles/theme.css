@@ -67,8 +67,6 @@
   --glass-icon-to: var(--text-2);
   --glass-divider: color-mix(in srgb, var(--paper) 28%, transparent);
   --glass-dots: var(--mint);
-  --glass-stream-from: var(--paper);
-  --glass-stream-to: var(--mint);
   --grain-opacity: 0.14;
   --grain-blend: overlay;
   /* Violet ground: deep violet top left into the deepest navy. */
@@ -133,8 +131,6 @@
   --glass-icon-to: var(--ink);
   --glass-divider: color-mix(in srgb, var(--navy) 18%, transparent);
   --glass-dots: var(--violet);
-  --glass-stream-from: var(--sky);
-  --glass-stream-to: var(--violet);
   --grain-opacity: 0.1;
   --grain-blend: multiply;
   --glass-ground-from: var(--sky);

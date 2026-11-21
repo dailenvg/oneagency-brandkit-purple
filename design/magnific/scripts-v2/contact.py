@@ -29,7 +29,7 @@ for r,v in enumerate(rows):
 sheet.save(OUTDIR/"glass-contact.png")
 
 # textures
-items = [("halftone-arc_2048x1024.png","#020257"),("particle-stream_2048x768.png","#020257"),
+items = [("halftone-arc_2048x1024.png","#020257"),  # particle-stream removed (client decision, 2026-11-20)
          ("grain_512x512.png","#020257"),("ground-violet-navy_1920x1080.jpg",None),
          ("halftone-arc_2048x1024.png","#FFFFFF"),("grain_512x512.png","#FFFFFF")]
 TW, TH = 760, 428

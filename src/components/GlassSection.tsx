@@ -41,7 +41,7 @@ export function GlassSection() {
       eyebrow="Glass & texture"
       title="Frosted glass with a Mint rim light"
       highlight={[4, 6]}
-      lede="The style of the nine reference ads, repainted in the new palette: frosted glass objects at a slight angle on a navy ground, edged with a Mint rim light, stacked in depth, with halftone arcs and particle streams behind them."
+      lede="The style of the nine reference ads, repainted in the new palette: frosted glass objects at a slight angle on a navy ground, edged with a Mint rim light, stacked in depth, with halftone arcs behind them."
       actions={<ZipButton group="glass" label="All glass & texture" />}
     >
       <div className="flex flex-col gap-section">

@@ -1,7 +1,6 @@
 import { ChatCircleDots, User } from '@phosphor-icons/react'
 import { CheckBadge } from '../../../../kit/glass/CheckBadge'
 import { GlassCard } from '../../../../kit/glass/GlassCard'
-import { ParticleStream } from '../../../../kit/glass/ParticleStream'
 import { Stage } from './Stage'
 import type { VisualProps } from './visual-props'
 
@@ -14,11 +13,10 @@ const LEADS = [
   { top: 170, right: 4, opacity: 0.7 },
 ]
 
-/** Technology: traffic flowing in as a particle stream, through the AI system tile, out as glass lead cards. */
+/** Technology: the AI system tile, with glass lead cards coming out of it, the first one checked. */
 export function LeadStreamVisual({ className, placement, bleed }: VisualProps) {
   return (
     <Stage width={470} height={250} bleed={bleed} arc={{ width: 560, top: -64, left: '46%' }} placement={placement} className={className}>
-      <ParticleStream className="absolute top-[18%] -left-12 h-48 w-[62%]" />
       <GlassCard className="absolute top-1/2 left-[38%] grid size-28 -translate-x-1/2 -translate-y-1/2 place-items-center">
         <ChatCircleDots className="glass-icon size-14" weight="regular" />
       </GlassCard>

@@ -99,7 +99,7 @@ src/
   components/         views (*Section.tsx), with their parts in a folder per view (overview/, glass/, ...)
     layout/ ui/       app shell, sidebar, drawer, view outlet, footer, view header; buttons, filters, toasts, lightbox
   kit/motion/         motion components + vanilla.ts runtime
-  kit/glass/          GlassCard, GlassIcon, CheckBadge, HalftoneArc, ParticleStream, Grain, LightStreaks (no glow anywhere)
+  kit/glass/          GlassCard, GlassIcon, CheckBadge, HalftoneArc, Grain, LightStreaks (no glow anywhere)
   kit/type/           HighlightText (the highlight band)
   kit/graphics/       the element artwork as pure-SVG components (devices, patterns, illustrations), shared by the
                       hub and scripts/build-elements.mjs

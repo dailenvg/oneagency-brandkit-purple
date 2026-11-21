@@ -1,13 +1,12 @@
 """Build ONE Agency glass-style textures locally (Pillow + numpy), v2 identity (2026-11-20).
 
 Outputs to public/kit/textures/ in the repo:
-  halftone-arc (PNG + WebP 2048x1024 + SVG, Mint dots), particle-stream (PNG + WebP 2048x768 + SVG, white to Mint,
-  crisp dots and lines, no blur), grain tile (PNG 512x512, tileable, unchanged recipe),
+  halftone-arc (PNG + WebP 2048x1024 + SVG, Mint dots), grain tile (PNG 512x512, tileable, unchanged recipe),
   ground-violet-navy (JPG + WebP 1920x1080: flat Ultra Violet to Navy gradient with grain; the ground of the violet
   variant, replacing v1 violet-streaks without streaks, bokeh or glow).
 Dropped from v1 (glow textures, banned in v2): rose-underglow, violet-streaks, ground-rose-glow.
-Changes from v1 (design/magnific/glass/scripts/textures.py): ROSE -> MINT, LILAC/violet -> Ultra Violet / Navy,
-the particle stream's blurred "soft glow" under-layer removed, seed kept (20261117) so the geometry matches v1.
+Removed in v2 (client decision, 2026-11-20): the particle stream texture.
+Changes from v1 (design/magnific/glass/scripts/textures.py): ROSE -> MINT, LILAC/violet -> Ultra Violet / Navy.
 """
 import math
 import sys
@@ -87,69 +86,6 @@ def halftone_arc():
     return len(dots)
 
 
-# ------------------------------------------------------------- particle stream
-def particle_stream():
-    W, H = 2048, 768
-    S = 3
-    cy = H / 2
-    strands = 34
-    pts = []
-    lines = []
-    for i in range(strands):
-        u = (i / (strands - 1)) * 2 - 1  # -1..1 position in the ribbon
-        phase = RNG.uniform(-0.25, 0.25)
-        n = 170
-        xs = np.linspace(-20, W + 20, n) + RNG.uniform(0, 12)
-        strand_pts = []
-        for j, x in enumerate(xs):
-            p = x / W
-            # ribbon: wide and loose on the left, gathers and lifts toward the right
-            spread = 250 * (1 - 0.86 * max(0.0, p) ** 0.9) + 14
-            wave = 120 * math.sin(2 * math.pi * (p * 1.15 + 0.1) + phase * 0.6) * (0.55 + 0.45 * p)
-            y = cy + wave + u * spread * (0.85 + 0.15 * math.sin(6 * p + i))
-            y += RNG.normal(0, 0.6)
-            xj = x + RNG.normal(0, 0.8)
-            edge = 1 - abs(u) ** 2  # strands near the ribbon edge are fainter
-            fade_in = min(1.0, p / 0.12) if p > 0 else 0.0
-            fade_out = min(1.0, (1 - p) / 0.08) if p < 1 else 0.0
-            op = (0.25 + 0.75 * edge) * fade_in * fade_out * RNG.uniform(0.55, 1.0)
-            r = (0.7 + 1.6 * edge * RNG.uniform(0.4, 1.0)) * (0.8 + 0.5 * p)
-            col = tuple(int(WHITE[k] + (MINT[k] - WHITE[k]) * min(1, max(0.0, p) ** 1.3 * 1.15)) for k in range(3))
-            strand_pts.append((xj, y))
-            if op > 0.04:
-                pts.append((xj, y, r, op, col))
-        if i % 3 == 1:
-            lines.append((strand_pts, 0.14 * (1 - abs(u) ** 2)))
-
-    big = Image.new("RGBA", (W * S, H * S), (0, 0, 0, 0))
-    d = ImageDraw.Draw(big)
-    for spts, op in lines:
-        for k in range(len(spts) - 1):
-            p = spts[k][0] / W
-            col = tuple(int(WHITE[c] + (MINT[c] - WHITE[c]) * min(1, max(0, p))) for c in range(3))
-            d.line([(spts[k][0] * S, spts[k][1] * S), (spts[k + 1][0] * S, spts[k + 1][1] * S)],
-                   fill=col + (int(255 * op),), width=S)
-    for x, y, r, op, col in pts:
-        d.ellipse([(x - r) * S, (y - r) * S, (x + r) * S, (y + r) * S], fill=col + (int(255 * op),))
-    out = big.resize((W, H), Image.LANCZOS)  # v2: no blurred glow layer, crisp dots and lines only
-    out.save(name("particle-stream", W, H, "png"), optimize=True)
-    save_webp(out, name("particle-stream", W, H, "webp"))
-
-    svg = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">',
-           '<defs><linearGradient id="s" x1="0" x2="1" y1="0" y2="0" gradientUnits="objectBoundingBox">'
-           '<stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#00FAB3"/></linearGradient></defs>',
-           '<g fill="none" stroke-width="1">']
-    for spts, op in lines:
-        dpath = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in spts[::2])
-        svg.append(f'<path d="{dpath}" stroke="url(#s)" stroke-opacity="{op:.2f}"/>')
-    svg.append("</g><g>")
-    for x, y, r, op, col in pts:
-        svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.2f}" fill="#{col[0]:02X}{col[1]:02X}{col[2]:02X}" fill-opacity="{op:.2f}"/>')
-    svg.append("</g></svg>")
-    name("particle-stream", W, H, "svg").write_text("".join(svg))
-    return len(pts)
-
-
 # ----------------------------------------------------------------- grain tile
 def grain():
     N = 512
@@ -190,7 +126,6 @@ def ground_violet_navy():
 
 if __name__ == "__main__":
     print("halftone dots", halftone_arc())
-    print("stream dots", particle_stream())
     grain()
     ground_violet_navy()
     for p in sorted(OUT.glob("one-agency_texture-*")):

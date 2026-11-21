@@ -3,7 +3,8 @@
 - src/data/ads.generated.json: v2 brand kit link, v2 design and creation links, imagery notes; ids, names, paths
   and sizes are unchanged (the v2 files replaced the v1 files of the same names).
 - src/data/glass.generated.json: v2 creation links and notes for the 24 illustration variants; textures: the three
-  glow textures removed, halftone arc and particle stream repainted in Mint, ground-violet-navy added.
+  glow textures removed, halftone arc repainted in Mint, ground-violet-navy added. The particle stream texture was
+  removed by client decision (2026-11-20): it is no longer listed here.
 - src/data/assets.generated.json: per-file entries (bytes, width, height) re-read from disk for every file under
   templates/, imagery/ (not imagery/photos/), illustrations/ and textures/; deleted files dropped, new files added;
   group counts and bytes recomputed. The ZIP entries are left as they are: run `npm run kit:zips` to rebuild them.
@@ -45,10 +46,6 @@ TEXTURES = [
          files=dict(png="/kit/textures/one-agency_texture-halftone-arc_2048x1024.png", webp="/kit/textures/one-agency_texture-halftone-arc_2048x1024.webp",
                     svg="/kit/textures/one-agency_texture-halftone-arc_2048x1024.svg"),
          notes="Hex-grid Mint #00FAB3 dots on an arc band; dots shrink toward the band edges and ends. Transparent; made for Navy grounds (Mint dots are too faint on white). SVG is the vector source (2,381 circles). Built locally (Pillow), v2 repaint of the v1 geometry."),
-    dict(id="texture-particle-stream", kind="texture", name="Particle stream wave", subject="particle-stream", theme="dark", width=2048, height=768,
-         files=dict(png="/kit/textures/one-agency_texture-particle-stream_2048x768.png", webp="/kit/textures/one-agency_texture-particle-stream_2048x768.webp",
-                    svg="/kit/textures/one-agency_texture-particle-stream_2048x768.svg"),
-         notes="Fine dotted strands flowing in a wave, white on the left to Mint on the right, converging. Crisp dots and lines, no blur or glow layer (removed in v2). Transparent; made for dark grounds. SVG is vector (5,545 circles + 12 paths). Built locally."),
     dict(id="texture-grain", kind="texture", name="Fine grain tile", subject="grain", theme="any", width=512, height=512,
          files=dict(png="/kit/textures/one-agency_texture-grain_512x512.png"),
          notes="Tileable luminance noise (wrap-safe), black/white pixels at up to ~12.5% alpha. Use as background-repeat at 1x; lower opacity further on light grounds. Built locally; colourless, so unchanged from v1 (the v2 build is pixel-identical)."),

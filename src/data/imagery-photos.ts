@@ -1,8 +1,8 @@
 /**
- * The photo set in public/kit/imagery/photos/: one photo per palette mood. Four come from concept 01 "Nova"
- * (one-agency-rebrand-v2, public/palette/), where the file names are Unsplash photo ids; the photographers are not
- * recorded there, so the credit is the id and its Unsplash page. The Mint photo is AI-generated in Magnific; its credit
- * is the Magnific creation.
+ * The photo set in public/kit/imagery/photos/, each photo paired with a palette colour. Three come from concept 01
+ * "Nova" (one-agency-rebrand-v2, public/palette/), where the file names are Unsplash photo ids; the photographers are not
+ * recorded there, so the credit is the id and its Unsplash page. The Mint and Violet paper photos are AI-generated in
+ * Magnific; their credit is the Magnific creation.
  */
 
 /** Where a photo comes from, which decides its credit line and link. */
@@ -58,7 +58,7 @@ const photo = (id: string, title: string, alt: string, mood: BrandPhoto['mood'],
 export const BRAND_PHOTOS: BrandPhoto[] = [
   photo('mint-paper-waves', 'Mint paper waves', 'Layers of pale Mint paper curving across the frame in soft, overlapping waves, matte and evenly lit.', 'Mint', magnific('ONE Agency v2 · Photo · Mint paper waves', 'https://www.magnific.com/app/creation/Xm9WAQjBfo'), 900, 600),
   photo('violet-silk-wave', 'Violet silk wave', 'A soft violet fold of light curving across a deep purple ground.', 'Ultra Violet', unsplash('5Q9Gf0WSyLk'), 900, 507),
-  photo('violet-ribbon-swirl', 'Violet ribbon swirl', 'Glossy purple and pink ribbons of fine lines sweeping around an open violet centre.', 'Navy', unsplash('1uyWq9xVwcE'), 900, 600),
+  photo('violet-paper-waves', 'Violet paper waves', 'Layers of violet paper curving across the frame in soft, overlapping waves, matte and evenly lit.', 'Ultra Violet', magnific('ONE Agency v2 · Photo · Violet paper waves', 'https://www.magnific.com/app/creation/Xm9cKPQBfo'), 900, 600),
   photo('dark-curves', 'Dark curves', 'Smooth black surfaces curving in soft layers, lit faintly from above.', 'Navy', unsplash('NYtHU9TLkPE'), 900, 507),
   photo('white-layered-waves', 'White layered waves', 'Thin white layers rippling in gentle waves, like stacked paper.', 'Mist', unsplash('pHUF3pNk1XA'), 900, 600),
 ]

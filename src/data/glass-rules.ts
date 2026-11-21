@@ -37,7 +37,7 @@ export const GLASS_DO = [
   'Navy ground (or the violet variant), so the rim light carries.',
   'One glass object or stack per layout, at a slight perspective.',
   'Mint for the rim light, dots and checks; white or silver icons.',
-  'Halftone arc or particle stream behind the object, not over it.',
+  'Halftone arc behind the object, not over it.',
 ]
 
 export const GLASS_DONT = [
@@ -54,7 +54,6 @@ export const GLASS_COMPONENTS = [
   { name: 'GlassIcon', use: 'Icon tile with a vertical divider and a label, as in the offer grids.', code: '<GlassIcon icon={MagnifyingGlass} label="SEO audit" />' },
   { name: 'CheckBadge', use: 'Mint glass circle with a navy check: the result marker.', code: '<CheckBadge size="lg" />' },
   { name: 'HalftoneArc', use: 'Mint dot arc behind objects; dots shrink toward the ends and edges.', code: '<HalftoneArc className="w-full" />' },
-  { name: 'ParticleStream', use: 'Fine dots and lines in a wave, white to Mint, drifting left to right.', code: '<ParticleStream className="h-40 w-full" />' },
   { name: 'Grain', use: 'Film grain over a composition: overlay on dark, multiply on light.', code: '<Grain />' },
 ] as const
 

@@ -215,3 +215,42 @@ lead-flow cut-out also loses most of the dot stream (as in v1).
 gen.py, layouts.py, run.py (v2 layouts), ingest.py (v1 copy), imagery.py (new: imagery crops), illus.py and
 contact.py (v2 copies of glass/scripts), textures.py (v2), manifests.py (new). The v1 scripts in scripts/ and
 glass/scripts/ are unchanged.
+
+## Follow-ups (2026-11-20, after the first hand-back)
+
+### Violet photo for the Nova set (replaces "Violet ribbon swirl", Unsplash 1uyWq9xVwcE, which had pink-lit light trails)
+- images_generate, model Nano Banana 2 Flash (no kit), 3:2, 75 credits (simulate_cost 75, exact), same recipe as the
+  Mint paper waves with Ultra Violet #6203D0: "ONE Agency v2 · Photo · Violet paper waves",
+  https://www.magnific.com/app/creation/Xm9cKPQBfo . First take; read with creations_read: matte layered paper waves in
+  one deep violet, soft diffused light, no lit edges, glow, trails, bokeh, text or people.
+- design/magnific/v2-photo-violet/one-agency_photo-violet-paper-waves_900x600.webp (centre crop of the 1264x848 render
+  to 3:2, LANCZOS to 900x600, WebP q82, 22,080 bytes). Develop wires it in; nothing written to public/kit or src.
+- Measured: saturation-weighted mean hue 260.1 deg (#6203D0 is about 268; well below the 290 deg pink/magenta limit),
+  mean colour #56319E, mean saturation 0.71.
+
+### "ONE Agency v2" brand kit: stray uploaded_fonts.lato
+- Routes tried (all on 42FH9AaisN, each checked with brand_kit_get full + jq): `uploaded_fonts: {lato: null}`,
+  `uploaded_fonts: {}`, the full typography with `uploaded_fonts` minus lato and `user_requested_overwrite: true`,
+  `section_item_remove` on a Lato item, a writability probe (`lato: {family: "Geist", …}`; the server recorded a write
+  but left uploaded_fonts as it was), brand_kit_organize of the Typography section with only the Unbounded and Geist
+  faces, re-registering Geist 400 as body (matched font 24054; typography byte-identical), and a temporary "Lato"
+  family filed and then deleted with `section_item_remove` (the face went, uploaded_fonts.lato stayed). Result: the
+  server treats `uploaded_fonts` as server-owned and drops client writes to it; the entry is still there
+  (body Geist 24054, label Geist 24056, display/heading Unbounded 25671, lato Lato 24057).
+- The one remaining route, `atoms: {typography: null}` with `user_requested_overwrite: true` followed by restoring the
+  families and tiers and re-registering the four role fonts, was blocked by the session's permission check as
+  destructive and was not attempted another way.
+- Status: the kit was already "ready" when this follow-up started (updated 23:50:11, not set by this job's calls);
+  left as it is. Families (Unbounded, Geist), tiers, the 12-colour palette, rules, logos and design_md unchanged.
+  Lasting side effect: the Unbounded and Geist faces are now filed as two items in the Typography section (correct
+  filing; removing them would delete the faces).
+
+### Particle stream texture removed (client decision)
+- Develop deleted the particle-stream files, its generation in scripts-v2/textures.py and its manifest entry.
+  scripts-v2/manifests.py no longer lists texture-particle-stream (it would have re-added an entry pointing at
+  deleted files) and scripts-v2/contact.py no longer draws it. Both still run: contact.py rebuilt the review sheet,
+  and a dry run of manifests.py on a copy of src/data reproduced the current ads, glass (27 items) and assets
+  manifests byte for byte. The texture and manifest notes above describe the state before this removal.
+
+### Credits
+- Balance 15,059 -> 14,984 (75, the Violet photo). Credits used by this job in total: 3,054 of the 3,200 cap.
