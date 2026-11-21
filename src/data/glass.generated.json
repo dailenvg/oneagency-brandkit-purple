@@ -319,51 +319,6 @@
       "notes": "Violet variant: glass toggle switched on, Mint knob with a Navy check, on a flat Ultra Violet to Navy ground. Use alone. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
     },
     {
-      "id": "illustration-lead-flow-on-dark",
-      "kind": "illustration",
-      "name": "Leads flowing out of a browser (on-dark)",
-      "subject": "lead-flow",
-      "theme": "dark",
-      "width": 1200,
-      "height": 1200,
-      "files": {
-        "png": "/kit/illustrations/one-agency_illustration-lead-flow_on-dark_1200x1200.png",
-        "webp": "/kit/illustrations/one-agency_illustration-lead-flow_on-dark_1200x1200.webp"
-      },
-      "magnificUrl": "https://www.magnific.com/app/creation/1ldEhLEr4r",
-      "notes": "Convert visitors into leads: a white dot stream into a glass browser window, lead cards flying out. Generated with Magnific One + ONE Agency v2 brand kit (2048 master, downsized). No text, no glow."
-    },
-    {
-      "id": "illustration-lead-flow-transparent",
-      "kind": "illustration",
-      "name": "Leads flowing out of a browser (transparent)",
-      "subject": "lead-flow",
-      "theme": "any",
-      "width": 1200,
-      "height": 1200,
-      "files": {
-        "png": "/kit/illustrations/one-agency_illustration-lead-flow_transparent_1200x1200.png",
-        "webp": "/kit/illustrations/one-agency_illustration-lead-flow_transparent_1200x1200.webp"
-      },
-      "magnificUrl": "https://www.magnific.com/app/creation/mEZD0wIhJQ",
-      "notes": "Convert visitors into leads: a white dot stream into a glass browser window, lead cards flying out. Magnific background removal of the on-dark render; the ground and its contact shadow go with it; most of the dot stream goes too. No text, no glow."
-    },
-    {
-      "id": "illustration-lead-flow-on-light",
-      "kind": "illustration",
-      "name": "Leads flowing out of a browser (on-light)",
-      "subject": "lead-flow",
-      "theme": "light",
-      "width": 1200,
-      "height": 1200,
-      "files": {
-        "png": "/kit/illustrations/one-agency_illustration-lead-flow_on-light_1200x1200.png",
-        "webp": "/kit/illustrations/one-agency_illustration-lead-flow_on-light_1200x1200.webp"
-      },
-      "magnificUrl": "https://www.magnific.com/app/creation/mEZD0wIhJQ",
-      "notes": "Convert visitors into leads: a white dot stream into a glass browser window, lead cards flying out. Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. Derived: the glass stays navy-tinted on light grounds. No text, no glow."
-    },
-    {
       "id": "texture-halftone-arc",
       "kind": "texture",
       "name": "Mint halftone dot arc",

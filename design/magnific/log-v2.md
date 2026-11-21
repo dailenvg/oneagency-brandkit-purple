@@ -171,6 +171,9 @@ Navy-tinted): on-dark, transparent (images_remove_background, 3 credits each) an
 WebP q82, 48 files replaced in public/kit/illustrations/ (same names). The cut-outs lose the ground and its shadow; the
 lead-flow cut-out also loses most of the dot stream (as in v1).
 
+**2026-11-20 note:** lead-flow was dropped from the kit at the user's request: its dot stream reads as the retired particle
+stream. Its files, manifest entries and script entries are removed; this row stays as history (21 variants, 7 subjects remain).
+
 ## Textures (built locally, scripts-v2/textures.py, seed 20261117 as v1)
 - halftone-arc 2048x1024 (PNG, WebP, SVG): Mint dots, v1 geometry (2,381 circles). Theme now "dark".
 - particle-stream 2048x768 (PNG, WebP, SVG): white to Mint, v1 geometry (5,545 dots + 12 paths); the v1 blurred "soft

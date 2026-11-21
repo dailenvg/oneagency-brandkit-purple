@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 ILL, TEX, OUTDIR = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
 FONT = "/Users/dailenvazquez/Projects/One Agency/oneagency-brandkit-purple/public/kit/fonts/one-agency_font_geist-600.ttf"
 f = ImageFont.truetype(FONT, 20); fs = ImageFont.truetype(FONT, 15)
-SUB = ["magnifier","seo-document","review-star","cro-window","growth-stairs","profile-stack","toggle-check","lead-flow"]
+SUB = ["magnifier","seo-document","review-star","cro-window","growth-stairs","profile-stack","toggle-check"]
 C, PAD, LBL = 300, 16, 34
 rows = ["on-dark","transparent","on-light"]
 W = PAD + len(SUB)*(C+PAD); H = 60 + len(rows)*(C+LBL+PAD) + PAD

@@ -15,7 +15,6 @@ const GLASS: Record<string, string> = {
   'growth-stairs': 'A glass staircase with a Mint arrow climbing it. Use it for plans and next steps.',
   'profile-stack': 'Three glass profile cards stacked in depth, with a Mint check badge carrying a Navy check. Use it for leads and customers.',
   'toggle-check': 'A glass toggle switched on, its Mint knob carrying a Navy check, on a flat Ultra Violet to Navy ground. Use it on its own to show a result.',
-  'lead-flow': 'A particle stream flowing into a glass browser window, with lead cards flying out. Use it for turning visitors into leads.',
   'halftone-arc': 'An arc of Mint halftone dots that shrink toward its edges, made for Navy grounds. Place it behind a glass object, clear of text.',
   grain: 'A fine grain tile. Repeat it over a whole layout at low opacity, and lower still on light grounds.',
   'ground-violet-navy': 'A flat ground running from Ultra Violet at the top left into Navy. Use it for the violet variant.',

@@ -10,7 +10,7 @@ SRC_DARK, SRC_CUT, OUT = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
 OUT.mkdir(parents=True, exist_ok=True)
 N = 1200
 SUBJECTS = ["magnifier", "seo-document", "review-star", "cro-window", "growth-stairs",
-            "profile-stack", "toggle-check", "lead-flow"]
+            "profile-stack", "toggle-check"]
 
 
 def save(img, stem):

@@ -2,7 +2,7 @@
   python3 design/magnific/scripts-v2/manifests.py
 - src/data/ads.generated.json: v2 brand kit link, v2 design and creation links, imagery notes; ids, names, paths
   and sizes are unchanged (the v2 files replaced the v1 files of the same names).
-- src/data/glass.generated.json: v2 creation links and notes for the 24 illustration variants; textures: the three
+- src/data/glass.generated.json: v2 creation links and notes for the 21 illustration variants; textures: the three
   glow textures removed, halftone arc repainted in Mint, ground-violet-navy added. The particle stream texture was
   removed by client decision (2026-11-20): it is no longer listed here.
 - src/data/assets.generated.json: per-file entries (bytes, width, height) re-read from disk for every file under
@@ -39,7 +39,6 @@ ILLUS = {  # subject -> (on-dark creation, cut-out creation, description)
     "growth-stairs": ("EbYoDEBuuO", "MBJA3KNDCm", "Tactical steps to scale up: frosted glass staircase with a Mint arrow climbing it."),
     "profile-stack": ("EbYopQouuO", "CqnBpPQEEy", "Leads and customers: depth stack of three glass profile cards, Mint check badge with a Navy check."),
     "toggle-check": ("xSBQasCjfW", "lJtbQ0Dgv9", "Violet variant: glass toggle switched on, Mint knob with a Navy check, on a flat Ultra Violet to Navy ground. Use alone."),
-    "lead-flow": ("1ldEhLEr4r", "mEZD0wIhJQ", "Convert visitors into leads: a white dot stream into a glass browser window, lead cards flying out."),
 }
 TEXTURES = [
     dict(id="texture-halftone-arc", kind="texture", name="Mint halftone dot arc", subject="halftone-arc", theme="dark", width=2048, height=1024,
@@ -112,7 +111,7 @@ for it in g["items"]:
     elif variant == "transparent":
         it["magnificUrl"] = f"https://www.magnific.com/app/creation/{cut}"
         it["notes"] = (f"{desc} Magnific background removal of the on-dark render; the ground and its contact shadow go with it"
-                       + ("; most of the dot stream goes too" if subj == "lead-flow" else "") + ". No text, no glow.")
+                       + ". No text, no glow.")
     else:
         it["magnificUrl"] = f"https://www.magnific.com/app/creation/{cut}"
         it["notes"] = (f"{desc} Built locally: transparent cut-out on #FFFFFF with a soft Navy #020257 contact + ambient shadow. "
