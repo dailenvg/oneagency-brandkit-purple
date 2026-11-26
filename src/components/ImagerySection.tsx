@@ -47,9 +47,9 @@ export function ImagerySection() {
           <DirectionList kind="dont" items={DONT} />
         </Reveal>
         <div>
-          <SubHeading title="Photo set" badge={<Badge>Concept 01 Nova</Badge>}>
-            Five abstract photos from concept 01 &ldquo;Nova&rdquo;, one for each mood of the palette. Use them as grounds and texture behind type. Each links to its
-            source on Unsplash.
+          <SubHeading title="Photo set" badge={<Badge>Nova and Magnific</Badge>}>
+            Ten photos, each paired with a palette colour: eight from concept 01 &ldquo;Nova&rdquo; (Unsplash) and two AI-generated in Magnific, the Mint and
+            Violet paper waves. The Colour view shows one on each brand colour. Use them as grounds and texture behind type. Each one links to its source.
           </SubHeading>
           <Reveal as="ul" stagger className="columns-1 gap-4 sm:columns-2 xl:columns-3 [&>li]:mb-4 [&>li]:break-inside-avoid">
             {BRAND_PHOTOS.map((photo) => (

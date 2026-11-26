@@ -11,8 +11,6 @@ export interface DownloadFile {
   url: string
   /** Short format label, e.g. "SVG", "PNG 2x" or "JPG". */
   label: string
-  /** Falls back to the asset manifest. */
-  bytes?: number | null
   /**
    * Rows: files that share a group (e.g. the "9:16" crop) sit on one row with a button per format. Leave unset for
    * one row per file.
@@ -35,10 +33,10 @@ type Placement = { left: number; top?: number; bottom?: number; maxHeight: numbe
 
 const ITEM_FOCUS = 'focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-accent'
 
+/** Size and dimensions come from the asset manifest only (written from disk by kit:zips, the last kit step), never from a generator's own record. */
 const metaFor = (file: DownloadFile) => {
   const asset = assetFor(file.url)
-  const bytes = file.bytes ?? asset?.bytes
-  return { dims: formatSize(asset?.width ?? null, asset?.height ?? null), size: bytes ? formatBytes(bytes) : null }
+  return { dims: formatSize(asset?.width ?? null, asset?.height ?? null), size: asset ? formatBytes(asset.bytes) : null }
 }
 
 /**

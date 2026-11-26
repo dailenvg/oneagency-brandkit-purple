@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { useMemo, useState } from 'react'
 import { COPY, COPY_GROUPS, type CopyGroup } from '../data/copy'
-import { assetFor } from '../lib/assets'
 import { CopyLineItem } from './copy/CopyLineItem'
 import { Section } from './layout/Section'
 import { DownloadLink } from './ui/DownloadLink'
@@ -31,8 +30,8 @@ export function CopySection() {
       lede="Headlines, taglines, CTAs, proof points and legal lines, each with where it comes from and when. Tap or click a line to copy it."
       actions={
         <>
-          <DownloadLink url={MD} label="Markdown" bytes={assetFor(MD)?.bytes} />
-          <DownloadLink url={JSON_URL} label="JSON" bytes={assetFor(JSON_URL)?.bytes} />
+          <DownloadLink url={MD} label="Markdown" />
+          <DownloadLink url={JSON_URL} label="JSON" />
         </>
       }
     >

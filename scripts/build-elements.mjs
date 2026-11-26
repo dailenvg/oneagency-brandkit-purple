@@ -125,14 +125,12 @@ function statBar() {
   const col = 400
   const w = col * AD_COPY_PROOF.length
   const h = 280
-  const defs = linear('num', [
-    [0, C.mint],
-    [1, C.violetLight],
-  ]) + linear('div', fadeStops(0.3, 0.7, 0.7), { x2: 0, y2: 1 })
+  // Numbers are solid Mint: text never takes a gradient. Only the dividers keep the fade.
+  const defs = linear('div', fadeStops(0.3, 0.7, 0.7), { x2: 0, y2: 1 })
   const cols = AD_COPY_PROOF.map((s, i) => {
     const cx = col * i + col / 2
     const divider = i ? `<rect x="${col * i}" y="10" width="2" height="170" fill="url(#div)"/>` : ''
-    return `${divider}<text x="${cx}" y="96" text-anchor="middle" font-family="Unbounded" font-weight="600" font-size="62" letter-spacing="-1.2" fill="url(#num)">${esc(s.value)}</text>
+    return `${divider}<text x="${cx}" y="96" text-anchor="middle" font-family="Unbounded" font-weight="600" font-size="62" letter-spacing="-1.2" fill="${C.mint}">${esc(s.value)}</text>
 <text x="${cx}" y="150" text-anchor="middle" font-family="Geist" font-weight="500" font-size="26" fill="${C.text}">${esc(s.label)}</text>`
   }).join('')
   const legal = `<text x="${w / 2}" y="252" text-anchor="middle" font-family="Geist" font-weight="500" font-size="22" fill="${C.text2}">${esc(LEGAL)}</text>`

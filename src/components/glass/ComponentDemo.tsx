@@ -5,7 +5,6 @@ import { GlassCard } from '../../kit/glass/GlassCard'
 import { GlassIcon } from '../../kit/glass/GlassIcon'
 import { Grain } from '../../kit/glass/Grain'
 import { HalftoneArc } from '../../kit/glass/HalftoneArc'
-import { ParticleStream } from '../../kit/glass/ParticleStream'
 
 /** Live render of one glass component for the gallery stage. Decorative: the card text describes it. */
 export function ComponentDemo({ name }: { name: GlassComponentName }) {
@@ -30,8 +29,6 @@ export function ComponentDemo({ name }: { name: GlassComponentName }) {
       )
     case 'HalftoneArc':
       return <HalftoneArc className="w-full max-w-72" />
-    case 'ParticleStream':
-      return <ParticleStream className="absolute inset-0 size-full" />
     case 'Grain':
       return (
         <>

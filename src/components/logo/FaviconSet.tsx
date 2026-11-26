@@ -34,7 +34,7 @@ function AppTileCard({ tile }: { tile: AppTile }) {
         </p>
         <DownloadMenu
           title={tile.label}
-          files={[{ url: tile.svg.url, label: 'SVG', bytes: tile.svg.bytes }, ...tile.pngs.map((png) => ({ url: png.url, label: `PNG ${png.width} px`, bytes: png.bytes }))]}
+          files={[{ url: tile.svg.url, label: 'SVG' }, ...tile.pngs.map((png) => ({ url: png.url, label: `PNG ${png.width} px` }))]}
         />
       </div>
     </motion.li>
@@ -54,7 +54,7 @@ function IconTile({ file }: { file: IconFile }) {
         <span className="font-semibold text-text">{KIND_LABEL[file.kind]}</span>
         <span className="block text-text-3 tabular-nums">{dims ?? 'Any size'}</span>
       </p>
-      <DownloadLink url={file.url} label={fileFormat(file.url)} bytes={file.bytes} className="mt-auto self-start" />
+      <DownloadLink url={file.url} label={fileFormat(file.url)} className="mt-auto self-start" />
     </motion.li>
   )
 }
@@ -77,7 +77,7 @@ function SocialTile({ file }: { file: IconFile }) {
         <span className="font-semibold text-text">{KIND_LABEL[file.kind]}</span>
         <span className="block text-text-3 tabular-nums">{formatSize(file.width, file.height)}</span>
       </p>
-      <DownloadLink url={file.url} label="PNG" bytes={file.bytes} className="mt-auto self-start" />
+      <DownloadLink url={file.url} label="PNG" className="mt-auto self-start" />
     </motion.li>
   )
 }

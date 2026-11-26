@@ -46,8 +46,6 @@ var duration = {
 	ring: .65,
 	/** Final still: the last beat of an ad holds dead still this long. */
 	hold: 4,
-	/** Particle stream drift: one cycle when it first comes into view, then it holds (brand rule: play once, then hold). */
-	drift: 4.8,
 	/** A staggered set: the last child has landed by this point, however many children there are. */
 	cascade: .8
 };

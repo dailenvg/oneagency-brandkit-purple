@@ -15,7 +15,7 @@ export interface AdConcept {
   source: string
   eyebrow: string | null
   headline: string
-  /** Word index in `headline` set as the accent word (Unbounded, signature gradient). */
+  /** Word index in `headline` set as the accent word (Unbounded, solid accent colour). */
   accent: number
   sub: string | null
   attribution: string | null

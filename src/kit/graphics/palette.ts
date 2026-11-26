@@ -31,12 +31,17 @@ export interface GraphicPalette {
   focal: string
   /** Text and marks that sit on a gradient or focal fill. */
   onFocal: string
-  /** Glass body: gradient stops [offset, colour, opacity], lit from the top left (the --glass-fill recipe). */
+  /** Glass body, top to bottom: gradient stops [offset, colour, opacity]. Colour at the top edge running down to a milky clear (--glass-fill over --glass-milk). */
   glass: readonly (readonly [number, string, number])[]
-  /** Glass rim: bright at the top left, fading round to the bottom right (--glass-rim, --glass-rim-fade). */
+  /** Glass rim, top to bottom: bright along the top edge, fading down the sides (--glass-rim, --glass-rim-fade). */
   rimStops: readonly (readonly [number, string, number])[]
   /** Top-edge highlight (--glass-specular): paper at this opacity. */
   specular: number
+  /** Diagonal strip-light sheen across the face (--glass-sheen): paper at this opacity. */
+  sheen: number
+  /** Thin slab edge along the bottom (--glass-wall). */
+  wall: string
+  wallAlpha: number
   paper: string
   /** Glass tint under the body (--glass-tint): what makes it read as frosted, not clear. */
   tint: string
@@ -59,19 +64,24 @@ const DARK: GraphicPalette = {
   focal: hex('--mint'),
   onFocal: hex('--on-accent'),
   glass: [
-    [0, hex('--paper'), 0.13],
-    [0.55, hex('--paper'), 0.04],
-    [1, hex('--mint'), 0.08],
+    [0, hex('--mint'), 0.22],
+    [0.38, hex('--mint'), 0.1],
+    [0.78, hex('--paper'), 0.07],
+    [1, hex('--paper'), 0.07],
   ],
   rimStops: [
     [0, hex('--mint'), 0.9],
-    [0.45, hex('--mint'), 0.18],
-    [1, hex('--paper'), 0.1],
+    [0.3, hex('--mint'), 0.22],
+    [0.62, hex('--mint'), 0],
+    [1, hex('--mint'), 0.22],
   ],
-  specular: 0.3,
+  specular: 0.38,
+  sheen: 0.09,
+  wall: hex('--void'),
+  wallAlpha: 0.55,
   paper: hex('--paper'),
   tint: hex('--navy'),
-  tintAlpha: 0.55,
+  tintAlpha: 0.42,
   alpha: { hairline: 0.07, grid: 0.12, structure: 0.22, secondary: 0.5, area: 0.2 },
   patternGain: 2.5,
 }
@@ -91,19 +101,24 @@ const LIGHT: GraphicPalette = {
   focal: hex('--violet'),
   onFocal: hex('--paper'),
   glass: [
-    [0, hex('--paper'), 0.85],
-    [0.55, hex('--paper'), 0.5],
-    [1, hex('--violet'), 0.08],
+    [0, hex('--violet'), 0.12],
+    [0.38, hex('--paper'), 0.55],
+    [0.78, hex('--paper'), 0.52],
+    [1, hex('--paper'), 0.52],
   ],
   rimStops: [
     [0, hex('--violet'), 0.8],
-    [0.45, hex('--violet'), 0.25],
-    [1, hex('--ink'), 0.08],
+    [0.3, hex('--violet'), 0.24],
+    [0.62, hex('--violet'), 0],
+    [1, hex('--violet'), 0.24],
   ],
   specular: 0.9,
+  sheen: 0.6,
+  wall: hex('--violet'),
+  wallAlpha: 0.16,
   paper: hex('--paper'),
   tint: hex('--paper'),
-  tintAlpha: 0.55,
+  tintAlpha: 0.4,
   alpha: { hairline: 0.07, grid: 0.11, structure: 0.2, secondary: 0.5, area: 0.1 },
   patternGain: 1.8,
 }

@@ -4,8 +4,8 @@ import { creativeConcept, creativeSize, type CreativeConceptId, type CreativeFor
 import { edgeFade, useScrollEdges } from '../../../lib/hooks'
 import { pressCard, reveal, sequence, stagger } from '../../../lib/motion'
 import { CreativeAdLightbox, type OpenCreativeAd } from './CreativeAdLightbox'
+import { AdImage } from './AdImage'
 import { TrueSizeButton } from './TrueSizeButton'
-import { ScaledAd } from './ScaledAd'
 
 /** Three featured ads in three ratios, set as a collage: the story tall on the left, the others stepped beside it. */
 const FEATURED: { concept: CreativeConceptId; format: CreativeFormat; place: string }[] = [
@@ -15,7 +15,7 @@ const FEATURED: { concept: CreativeConceptId; format: CreativeFormat; place: str
 ]
 
 /**
- * The lead of the Ads view: live creative ads, each opening at true size. Phones get a swipe strip
+ * The lead of the Ads view: three creative ads, each opening at true size. Phones get a swipe strip
  * at one readable height (20rem, the next ad peeking in); from 640 px up the ads sit as a stepped collage.
  */
 export function CreativeHero() {
@@ -47,7 +47,7 @@ export function CreativeHero() {
               >
                 <motion.figure {...pressCard} className="flex flex-col gap-2">
                   <div className="relative overflow-hidden rounded-site border border-edge shadow-card">
-                    <ScaledAd concept={concept} size={size} />
+                    <AdImage concept={concept} size={size} priority />
                     <TrueSizeButton concept={concept} size={size} rounded="rounded-site" onOpen={() => setOpen({ concept, size })} />
                   </div>
                   <figcaption className="text-step-small text-text-2">

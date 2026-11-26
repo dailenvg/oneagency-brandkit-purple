@@ -45,8 +45,8 @@
   --ui-do: var(--color-emerald-400);
   --ui-dont: var(--color-red-500);
   /*
-   * Gradient text on navy: Mint into the derived --violet-light, because full Ultra Violet on navy is 2.1:1. Rules and
-   * fills keep the full Mint-to-Violet --gradient.
+   * The signature underline in the footer: Mint into the derived --violet-light (full Ultra Violet on navy is 2.1:1).
+   * Not for text: text is always a solid colour.
    */
   --ui-accent-fill: linear-gradient(90deg, var(--mint) 0%, var(--violet-light) 100%);
   --ui-shadow: var(--shadow);
@@ -55,20 +55,25 @@
   /* Phones: the hero text sits over the whole loop, so the scrim covers it all at this strength. */
   --ui-scrim-cover: 80%;
 
-  /* Glass (codified from the reference ads, repainted in Mint and Violet). No glow: rim, edge and a neutral drop shadow only. */
-  --glass-tint: color-mix(in srgb, var(--navy) 55%, transparent);
-  --glass-fill: linear-gradient(155deg, color-mix(in srgb, var(--paper) 13%, transparent), color-mix(in srgb, var(--paper) 4%, transparent) 55%, color-mix(in srgb, var(--mint) 8%, transparent));
+  /*
+   * Glass, matched to the glass studio's frosted material: a frosted navy base under a milky wash, colour that runs
+   * from the top edge down to clear, a Mint rim on the upper edges, a diagonal strip-light sheen, a thin slab edge
+   * along the bottom and a neutral contact shadow down and to the right. No glow.
+   */
+  --glass-tint: color-mix(in srgb, var(--navy) 42%, transparent);
+  --glass-milk: color-mix(in srgb, var(--paper) 7%, transparent);
+  --glass-fill: linear-gradient(180deg, color-mix(in srgb, var(--mint) 20%, transparent) 0%, color-mix(in srgb, var(--mint) 7%, transparent) 38%, transparent 78%);
   --glass-rim: var(--mint);
-  --glass-rim-fade: color-mix(in srgb, var(--mint) 18%, transparent);
-  --glass-top-line: color-mix(in srgb, var(--paper) 30%, transparent);
-  --glass-shadow: 0 32px 64px -30px color-mix(in srgb, var(--void) 95%, transparent);
-  --glass-specular: color-mix(in srgb, var(--paper) 30%, transparent);
+  --glass-rim-fade: color-mix(in srgb, var(--mint) 22%, transparent);
+  --glass-top-line: color-mix(in srgb, var(--paper) 38%, transparent);
+  --glass-wall: color-mix(in srgb, var(--void) 55%, transparent);
+  --glass-shadow: 14px 26px 48px -22px color-mix(in srgb, var(--void) 92%, transparent);
+  --glass-specular: color-mix(in srgb, var(--paper) 16%, transparent);
+  --glass-sheen: color-mix(in srgb, var(--paper) 9%, transparent);
   --glass-icon-from: var(--paper);
   --glass-icon-to: var(--text-2);
   --glass-divider: color-mix(in srgb, var(--paper) 28%, transparent);
   --glass-dots: var(--mint);
-  --glass-stream-from: var(--paper);
-  --glass-stream-to: var(--mint);
   --grain-opacity: 0.14;
   --grain-blend: overlay;
   /* Violet ground: deep violet top left into the deepest navy. */
@@ -115,26 +120,27 @@
   --ui-on-fill: var(--paper);
   --ui-do: var(--color-emerald-700);
   --ui-dont: var(--color-red-700);
-  /* Gradient text on white: Ultra Violet into Navy, both well over 4.5:1 (Mint would vanish on white). */
+  /* The footer's signature underline on white: Ultra Violet into Navy (Mint would vanish on white). Not for text. */
   --ui-accent-fill: linear-gradient(90deg, var(--violet) 0%, var(--navy) 100%);
   --ui-shadow: 0 24px 48px -30px color-mix(in srgb, var(--navy) 35%, transparent);
   --ui-highlight: var(--kit-highlight-light);
   --ui-scrim: var(--paper);
   --ui-scrim-cover: 88%;
 
-  --glass-tint: color-mix(in srgb, var(--paper) 55%, transparent);
-  --glass-fill: linear-gradient(155deg, color-mix(in srgb, var(--paper) 85%, transparent), color-mix(in srgb, var(--paper) 50%, transparent) 55%, color-mix(in srgb, var(--violet) 8%, transparent));
+  --glass-tint: color-mix(in srgb, var(--paper) 40%, transparent);
+  --glass-milk: color-mix(in srgb, var(--paper) 52%, transparent);
+  --glass-fill: linear-gradient(180deg, color-mix(in srgb, var(--violet) 12%, transparent) 0%, color-mix(in srgb, var(--violet) 4%, transparent) 38%, transparent 78%);
   --glass-rim: var(--violet);
-  --glass-rim-fade: color-mix(in srgb, var(--violet) 22%, transparent);
+  --glass-rim-fade: color-mix(in srgb, var(--violet) 24%, transparent);
   --glass-top-line: var(--paper);
-  --glass-shadow: 0 24px 48px -24px color-mix(in srgb, var(--navy) 22%, transparent);
-  --glass-specular: color-mix(in srgb, var(--paper) 90%, transparent);
+  --glass-wall: color-mix(in srgb, var(--violet) 16%, transparent);
+  --glass-shadow: 14px 24px 44px -22px color-mix(in srgb, var(--navy) 28%, transparent);
+  --glass-specular: color-mix(in srgb, var(--paper) 85%, transparent);
+  --glass-sheen: color-mix(in srgb, var(--paper) 60%, transparent);
   --glass-icon-from: var(--ink-2);
   --glass-icon-to: var(--ink);
   --glass-divider: color-mix(in srgb, var(--navy) 18%, transparent);
   --glass-dots: var(--violet);
-  --glass-stream-from: var(--sky);
-  --glass-stream-to: var(--violet);
   --grain-opacity: 0.1;
   --grain-blend: multiply;
   --glass-ground-from: var(--sky);
@@ -147,7 +153,7 @@
 
 /* Shape and depth do not change with the theme. Radii follow Nova: pills, 24 px cards, 40 px large panels. */
 :root {
-  --glass-blur: 18px;
+  --glass-blur: 26px;
   --glass-radius: 24px;
   --glass-radius-tile: 12px;
   --glass-radius-sm: 12px;

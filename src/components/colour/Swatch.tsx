@@ -1,40 +1,29 @@
 import { motion } from 'motion/react'
 import type { ColourToken } from '../../data/tokens'
 import { reveal } from '../../lib/motion'
-import { Badge } from '../ui/Badge'
 import { CopyButton } from '../ui/CopyButton'
 
-/** One brand token: chip, role and click-to-copy HEX, RGB and CSS var (or the CSS value for gradients and alphas). */
+/** A system token, compact: chip, name and click-to-copy HEX and RGB (or the CSS value for gradients and alphas). */
 export function Swatch({ token }: { token: ColourToken }) {
   const solid = token.hex !== null && token.alpha === 1
+  const name = token.label ?? token.name
   return (
-    <motion.li variants={reveal} className="flex flex-col overflow-hidden rounded-site border border-edge bg-surface">
-      <div className={`relative h-16 sm:h-28 ${token.alpha < 1 ? 'checker' : ''}`}>
+    <motion.li variants={reveal} className="flex flex-col overflow-hidden rounded-site border border-edge-soft bg-surface shadow-card">
+      <div className={`relative h-20 border-b border-edge-soft sm:h-24 ${token.alpha < 1 ? 'checker' : ''}`}>
         <div className="absolute inset-0" style={{ background: token.cssVar }} />
-        <span className="absolute top-2 left-2">
-          <Badge>{token.source === 'board' ? 'From the board' : 'Derived'}</Badge>
-        </span>
       </div>
-      <div className="flex flex-1 flex-col gap-3 p-4">
-        <div>
-          <h3 className="font-code text-step--1 font-semibold text-text">
-            {token.name}
-            {token.label && <span className="ms-2 font-sans font-normal text-text-3">{token.label}</span>}
-          </h3>
-          <p className="mt-1 text-step-small text-text-3">{token.role}</p>
-        </div>
+      <div className="flex flex-1 flex-col gap-3 p-3 sm:p-4">
+        <h3 className="truncate font-code text-step--1 font-semibold text-text">{name}</h3>
         <div className="mt-auto flex flex-col gap-1.5">
           {solid ? (
             <>
-              <CopyButton value={token.hex!.toUpperCase()} description={`HEX for ${token.name}`} />
-              <CopyButton value={token.rgb!} description={`RGB for ${token.name}`} />
+              <CopyButton value={token.hex!.toUpperCase()} description={`HEX for ${name}`} />
+              <CopyButton value={token.rgb!} description={`RGB for ${name}`} />
             </>
           ) : (
-            <CopyButton value={token.value} label={token.value} description={`CSS value of ${token.name}`} />
+            <CopyButton value={token.value} label={token.value} description={`CSS value of ${name}`} />
           )}
-          <CopyButton value={token.cssVar} description={`CSS variable ${token.name}`} />
         </div>
-        {token.derivation && token.derivation !== 'literal' && <p className="text-step-small text-text-3">{token.derivation}</p>}
       </div>
     </motion.li>
   )

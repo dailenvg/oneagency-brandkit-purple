@@ -2,7 +2,6 @@ import { ArrowsOut } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
 import { useState } from 'react'
 import { GLASS_REFERENCES, REFERENCE_PREVIEW_SIZE, REFERENCE_SIZE, referenceFile, referencePreview, type GlassReference } from '../../data/glass-references'
-import { assetFor } from '../../lib/assets'
 import { reveal } from '../../lib/motion'
 import { DownloadLink } from '../ui/DownloadLink'
 import { Lightbox } from '../ui/Lightbox'
@@ -41,7 +40,7 @@ export function ReferenceGallery() {
                 <h3 className="font-semibold text-text">{ref.title}</h3>
                 <p className="text-step-small text-text-2">{ref.shows}</p>
                 <div className="mt-auto">
-                  <DownloadLink url={file} label={`PNG ${REFERENCE_SIZE}×${REFERENCE_SIZE}`} bytes={assetFor(file)?.bytes} />
+                  <DownloadLink url={file} label={`PNG ${REFERENCE_SIZE}×${REFERENCE_SIZE}`} />
                 </div>
               </div>
             </motion.li>

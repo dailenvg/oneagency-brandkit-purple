@@ -61,8 +61,8 @@ export const AD_TEXT_STYLES: AdTextStyle[] = [
     lineHeight: 1.08,
     tracking: -0.02,
     uppercase: false,
-    colour: '--gradient',
-    note: 'The headline size and face, filled with the signature gradient.',
+    colour: '--mint',
+    note: 'The headline size and face, in solid Mint on navy (Ultra Violet on light grounds). Never a gradient.',
   },
   {
     id: 'subhead',
@@ -100,8 +100,8 @@ export const AD_TEXT_STYLES: AdTextStyle[] = [
     lineHeight: 1.1,
     tracking: -0.02,
     uppercase: false,
-    colour: '--gradient',
-    note: 'Unbounded 600, gradient filled. Always with a label and a source line.',
+    colour: '--mint',
+    note: 'Unbounded 600 in solid Mint on navy (Ultra Violet on light grounds). Always with a label and a source line.',
   },
   {
     id: 'statLabel',

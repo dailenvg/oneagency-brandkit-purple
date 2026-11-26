@@ -13,7 +13,7 @@
  * The full kit keeps one raster format per illustration: the WebP twin of an illustration PNG is left out of
  * one-agency_kit_full.zip (its README says so) to stay under GitHub's 100 MiB file limit. The glass ZIP has both.
  * For the same reason, the Möbius stills (elements/mobius/, rendered by scripts/build-mobius.mjs) and the creative ads
- * (ads/creative/, rendered by scripts/export-creative-ads.mjs) are on the site and in their group ZIPs (elements and
+ * (ads/creative/, designed in Magnific and imported by scripts/import-magnific-ads.py) are on the site and in their group ZIPs (elements and
  * ads) but not in the full kit.
  *
  * The HTML5 ad source folders (motion/ads/) go into the ZIPs but are not listed one by one: each ad is listed as its
@@ -27,7 +27,7 @@ import { fileURLToPath } from 'node:url'
 import { mediaInfo } from './lib/media-info.mjs'
 import { zipFiles } from './lib/zip.mjs'
 import { ASSET_GROUPS, FULL_KIT_URL, groupPaths, KIT, VERSION_NOTE, zipUrl } from '../src/lib/kit.ts'
-import { BRAND_PHOTOS, unsplashUrl } from '../src/data/imagery-photos.ts'
+import { BRAND_PHOTOS, photoCredit } from '../src/data/imagery-photos.ts'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const PUBLIC = resolve(ROOT, 'public')
@@ -53,11 +53,10 @@ Folders
               (elements/mobius/, not in the full kit), laurel, CTA buttons, proof bar, award badge, icons
   illustrations/, textures/  glass illustrations (AI-generated in Magnific) and textures (made in code)
   references/ the nine reference ads the glass and texture style comes from
-  vendor/ciq/ ConversionIQ's README for the Möbius loop, the source of its credit
+  vendor/ciq/ ConversionIQ's README for the Möbius loop, the source of its credit, and RECOLOUR.md (the Mint recolour)
   templates/  ad templates and sample ads (editable versions live in Magnific)
-  ads/        the creative ads: ten concepts in four sizes, PNG and WebP (not in the full kit). Three of them
-              (technology, results, vacation-ownership) are built on the Möbius loop stills.
-  imagery/    photos/: the concept 01 Nova photo set (Unsplash, credits below); the starter image
+  ads/        the creative ads: ten concepts in four sizes, PNG and WebP, designed in Magnific (not in the full kit)
+  imagery/    photos/: the photo set, one per palette mood (credits below); the starter image
               library, AI-generated in Magnific (no real people or clients); stand-ins until real client work exists
   motion/     one-motion.js (the motion runtime), HTML5 ad sources, and exports (MP4, GIF, end frames, HTML5 ZIPs)
   copy/       the copy bank (Markdown and JSON)
@@ -66,16 +65,20 @@ Licences
   Unbounded and Geist are under the SIL Open Font License 1.1 (see fonts/*_ofl.txt).
   Logos and all other brand assets belong to ONE Agency, LLC. Use them only for ONE Agency work.
   The 2026 ARDY Award belongs to ConversionIQ.ai; say so wherever it appears.
-  The Möbius loop is ConversionIQ's key visual, used as supplied: the stills in elements/mobius/ and the three ads
-  in ads/ built on them. Never edit, redraw or recolour it, and credit it wherever it appears:
-  "Möbius loop: ConversionIQ key visual, used as supplied."
+  The Möbius loop is ConversionIQ's key visual, recoloured to Mint for ONE Agency (vendor/ciq/RECOLOUR.md): the
+  stills in elements/mobius/ and the three ads in ads/ built on them. The recolour changes colour only. Never edit or
+  redraw it, and credit it wherever it appears:
+  "Möbius loop: ConversionIQ key visual, recoloured to Mint."
 
 Sources
   Colour and logo: the rebrand moodboard (${KIT.board}, exported ${KIT.boardExported})
   Proof figures 10M+, $100M+, 7B+, 450K+: as published on oneagency.com, November 2026.
 
-Photo credits (imagery/photos/, from concept 01 Nova; Unsplash photo ids)
-${BRAND_PHOTOS.map((p) => `  ${p.url.split('/').pop()}: ${unsplashUrl(p.unsplashId)}`).join('\n')}
+Photo credits (imagery/photos/)
+${BRAND_PHOTOS.map((p) => {
+  const credit = photoCredit(p.source)
+  return `  ${p.url.split('/').pop()}: ${credit.label}, ${credit.url}`
+}).join('\n')}
 `
 
 /** Every file under a folder (or the file itself), as paths relative to public/ with forward slashes. Dotfiles are skipped. */

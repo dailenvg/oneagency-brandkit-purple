@@ -16,7 +16,7 @@ import { ZipButton } from './ui/ZipButton'
 const LOCKUPS: { id: LogoLockup; label: string; use: string }[] = [
   { id: 'horizontal', label: 'Horizontal', use: 'The primary lockup and master layout. Use it unless the space is too narrow.' },
   { id: 'stacked', label: 'Stacked', use: 'For square and narrow spaces: avatars, posters, the end card of an ad.' },
-  { id: 'wordmark', label: 'Wordmark', use: 'ONE alone, for when AGENCY is already on screen or the space is very wide and short.' },
+  { id: 'wordmark', label: 'Wordmark', use: 'ONE on its own, for when AGENCY is already on screen.' },
   { id: 'mark', label: 'Mark', use: 'The O alone, for app icons, avatars and small spaces.' },
 ]
 
@@ -31,7 +31,7 @@ export function LogoSection() {
       eyebrow="Logo"
       title="The ONE logo"
       accent={[1]}
-      lede="The moodboard masters are the source. Shapes are unchanged; the kit adds colour variants for every ground."
+      lede="Every file comes from the moodboard masters with the shapes unchanged, in four colour variants: three from the board, plus one-colour white for dark grounds and photos."
       actions={<ZipButton group="logos" label="All logos" />}
     >
       <div className="flex flex-col gap-section">

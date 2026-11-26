@@ -1,6 +1,6 @@
-import type { CreativeAdExt, CreativeConceptId, CreativeFormat } from '../data/ad-creative'
+import type { CreativeAdConcept, CreativeAdExt, CreativeAdSize, CreativeConceptId, CreativeFormat } from '../data/ad-creative'
 
-/** Shape of src/data/ads-creative.generated.json, written by scripts/export-creative-ads.mjs from the files on disk. */
+/** Shape of src/data/ads-creative.generated.json, written by scripts/import-magnific-ads.py from the files on disk. */
 interface CreativeAdManifest {
   generatedAt: string
   items: {
@@ -8,7 +8,7 @@ interface CreativeAdManifest {
     format: CreativeFormat
     width: number
     height: number
-    files: Partial<Record<CreativeAdExt, { url: string; bytes: number }>>
+    files: Partial<Record<CreativeAdExt, { url: string }>>
   }[]
 }
 
@@ -20,3 +20,7 @@ const byKey = new Map((manifest?.items ?? []).map((item) => [`${item.concept}/${
 
 /** The exported PNG and WebP of one ad (either may be missing until the export has run). */
 export const creativeAdFiles = (concept: CreativeConceptId, format: CreativeFormat) => byKey.get(`${concept}/${format}`) ?? {}
+
+/** Alt text for an ad image: what it is and what it says. */
+export const adAlt = (concept: CreativeAdConcept, size: Pick<CreativeAdSize, 'label' | 'width' | 'height'>) =>
+  `${concept.name} ad, ${size.label.toLowerCase()} ${size.width}×${size.height}: ${concept.headline}`

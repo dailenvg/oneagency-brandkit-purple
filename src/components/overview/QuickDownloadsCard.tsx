@@ -1,4 +1,3 @@
-import { assetFor } from '../../lib/assets'
 import { DownloadLink } from '../ui/DownloadLink'
 import { FullKitButton } from '../ui/FullKitButton'
 import { ZipButton } from '../ui/ZipButton'
@@ -24,8 +23,8 @@ export function QuickDownloadsCard({ className }: { className?: string }) {
       <div className="flex flex-col gap-2 border-t border-edge pt-4">
         <p className="text-step-small font-semibold text-text-2">Colour tokens</p>
         <div className="grid grid-cols-2 gap-2">
-          <DownloadLink url={TOKENS_CSS} label="CSS" bytes={assetFor(TOKENS_CSS)?.bytes} className={ROW} />
-          <DownloadLink url={TOKENS_JSON} label="JSON" bytes={assetFor(TOKENS_JSON)?.bytes} className={ROW} />
+          <DownloadLink url={TOKENS_CSS} label="CSS" className={ROW} />
+          <DownloadLink url={TOKENS_JSON} label="JSON" className={ROW} />
         </div>
       </div>
     </DashboardCard>

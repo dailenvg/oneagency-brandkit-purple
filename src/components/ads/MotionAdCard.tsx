@@ -72,7 +72,7 @@ export function MotionAdCard({ concept, size, name }: MotionAdCardProps) {
           <DownloadMenu
             title={`${name}, ${size.width}×${size.height}`}
             className="ml-auto"
-            files={files.map(({ ext, file }) => ({ url: file!.url, label: ext === 'zip' ? 'HTML5 package' : ext.toUpperCase(), bytes: file!.bytes }))}
+            files={files.map(({ ext, file }) => ({ url: file!.url, label: ext === 'zip' ? 'HTML5 package' : ext.toUpperCase() }))}
           />
         </div>
       </figcaption>

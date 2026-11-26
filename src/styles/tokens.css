@@ -11,6 +11,8 @@
   --violet: #6203d0; /* board: Ultra Violet */
   --sky: #d0e6fd; /* board: Sky */
   --mist: #ebebed; /* board: Mist */
+  --plum: #170032; /* concept 01 Nova: Plum Night */
+  --lavender: #f6f3fb; /* concept 01 Nova: Lavender */
 
   /* accent */
   --on-accent: var(--navy); /* derived: same value as --navy */
@@ -92,7 +94,7 @@
 }
 
 /*
- * DERIVED, NOT ON THE BOARD (v1.1 style).
+ * DERIVED, NOT ON THE BOARD (highlight band).
  * CSS color-mix in sRGB of the brand tokens (hex shown for reference).
  */
 :root {

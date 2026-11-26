@@ -9,7 +9,8 @@ type State = (typeof STATES)[number]
 interface Row {
   variant: ButtonVariant
   label: string
-  source: 'live' | 'proposed'
+  /** Not yet signed off: shows the Proposed badge. */
+  proposed?: boolean
   light: boolean
   /** Classes that pin each state for the static preview (mirrors button-styles.ts). */
   pinned: Record<Exclude<State, 'Rest' | 'Disabled'>, string>
@@ -19,21 +20,19 @@ const ROWS: Row[] = [
   {
     variant: 'primary',
     label: 'Primary: Mint pill',
-    source: 'live',
     light: false,
     pinned: { Hover: 'bg-transparent! text-on-ghost!', Focus: 'outline-2 outline-offset-3 outline-text', Pressed: 'bg-fill-pressed! border-fill-pressed!' },
   },
   {
     variant: 'secondary',
     label: 'Secondary: outline',
-    source: 'live',
     light: false,
     pinned: { Hover: 'bg-text! text-on-text!', Focus: 'outline-2 outline-offset-3 outline-text', Pressed: 'bg-text-2! border-text-2! text-on-text!' },
   },
   {
     variant: 'on-light',
     label: 'On light: Navy pill',
-    source: 'proposed',
+    proposed: true,
     light: true,
     pinned: { Hover: 'bg-transparent! text-ink!', Focus: 'outline-2 outline-offset-3 outline-ink', Pressed: 'bg-ink-2! border-ink-2!' },
   },
@@ -71,9 +70,11 @@ export function CtaStates() {
             <tr key={row.variant} data-theme={row.light ? 'light' : 'dark'} className={`border-t border-edge ${row.light ? 'bg-paper' : 'bg-ground'}`}>
               <th scope="row" className={`min-w-40 p-4 text-left font-semibold ${row.light ? 'text-ink' : 'text-text'}`}>
                 <span className="block">{row.label}</span>
-                <span className="mt-1.5 inline-block">
-                  <Badge>{row.source === 'live' ? 'Live site' : 'Proposed'}</Badge>
-                </span>
+                {row.proposed && (
+                  <span className="mt-1.5 inline-block">
+                    <Badge>Proposed</Badge>
+                  </span>
+                )}
               </th>
               {STATES.map((s) => (
                 <td key={s} className="p-4">

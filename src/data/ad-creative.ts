@@ -1,10 +1,10 @@
 /**
- * Creative ads: ten concepts composed from the kit's glass components, each in four sizes. Every claim, figure and CTA
+ * Creative ads: ten concepts, each in four sizes, designed in Magnific (frosted glass art, live brand type) and imported
+ * by scripts/import-magnific-ads.py; this file is the copy they set. Every claim, figure and CTA
  * is verbatim from oneagency.com (content pull of 2026-11-17) or a trim of a verbatim line: words removed, none added,
  * recorded in `trimmedFrom`. The only lines not from the site are labelled additions: eyebrows naming the service, and
  * source or legal notes (e.g. the results ad's "Figures as published on oneagency.com, November 2026."). Client stats
- * keep their client, and their date where the site gives one. The hub (src/components/ads/creative/) renders them live
- * and scripts/export-creative-ads.mjs renders them to PNG and WebP. Import-free on purpose (the script imports it).
+ * keep their client, and their date where the site gives one. The hub shows the imported images.
  */
 
 export type CreativeConceptId =
@@ -18,24 +18,6 @@ export type CreativeConceptId =
   | 'results'
   | 'vacation-ownership'
   | 'testimonial'
-
-/** The glass composition each concept is built around (src/components/ads/creative/visuals/). */
-export type CreativeVisual = 'browser' | 'tiles' | 'search-card' | 'profile-stack' | 'map-pack' | 'site-stream' | 'lead-stream' | 'stat-board' | 'award' | 'quote'
-
-/** Crops of the Möbius loop stills (src/data/mobius.ts): where the loop sits in the frame. */
-export type MobiusCropId = 'sweep' | 'band-top' | 'band-bottom' | 'side' | 'frame'
-
-/**
- * The Möbius loop (ConversionIQ's key visual) behind a concept, in place of the halftone arc: a transparent still from
- * public/kit/elements/mobius/, used as supplied. Placed full width; `shift` only moves it away from an edge the loop
- * never touches, so every cut stays at the frame edge.
- */
-export interface CreativeMobius {
-  look: 'energy' | 'strings'
-  crop: Record<CreativeFormat, MobiusCropId>
-  /** Nudge per format, as a share of the ad's height (+ down) or width (+ right). */
-  shift?: Partial<Record<CreativeFormat, { x?: number; y?: number }>>
-}
 
 export type CreativeField = 'eyebrow' | 'headline' | 'sub' | 'small' | 'award'
 
@@ -55,7 +37,7 @@ export interface CreativeAdConcept {
   sourceUrl: string
   eyebrow: string | null
   headline: string
-  /** Word index in `headline` set as the accent word (Unbounded, signature gradient). */
+  /** Word index in `headline` set as the accent word (Unbounded, solid accent colour). */
   accent: number
   /** The headline is a client quote: set in quote marks, with `attribution` under it. */
   quote: boolean
@@ -71,10 +53,6 @@ export interface CreativeAdConcept {
   cta: string
   /** Small line under the CTA (secondary, or a legal line). */
   small: string | null
-  visual: CreativeVisual
-  /** What lights the visual from behind: the Mint halftone arc (default) or the Möbius loop. */
-  backdrop?: 'halftone' | 'mobius'
-  mobius?: CreativeMobius
   /** Verbatim lines this ad trims (words removed, none added), by field. */
   trimmedFrom: Partial<Record<CreativeField, string>>
 }
@@ -96,7 +74,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: [],
     cta: 'Check your AI visibility',
     small: null,
-    visual: 'browser',
     trimmedFrom: {},
   },
   {
@@ -115,7 +92,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: [],
     cta: 'Start My 5-Minute Audit',
     small: 'Free. No obligation. Yours to keep, whatever you do next.',
-    visual: 'tiles',
     trimmedFrom: {},
   },
   {
@@ -134,7 +110,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: [],
     cta: 'Get your complimentary PPC audit',
     small: null,
-    visual: 'search-card',
     trimmedFrom: { headline: 'The Orlando PPC agency that optimizes for leads, not clicks' },
   },
   {
@@ -156,7 +131,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: [],
     cta: 'Get your complimentary paid social audit',
     small: null,
-    visual: 'profile-stack',
     trimmedFrom: {},
   },
   {
@@ -178,7 +152,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: [],
     cta: 'Get your complimentary SEO audit',
     small: null,
-    visual: 'map-pack',
     trimmedFrom: { headline: 'The Orlando SEO company for brands that need revenue, not rankings' },
   },
   {
@@ -197,7 +170,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: [],
     cta: 'Get your complimentary site audit',
     small: null,
-    visual: 'site-stream',
     trimmedFrom: { headline: 'An Orlando web design company that builds for conversion, not applause' },
   },
   {
@@ -222,9 +194,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: [],
     cta: 'Talk to us about a build',
     small: null,
-    visual: 'lead-stream',
-    backdrop: 'mobius',
-    mobius: { look: 'energy', crop: { square: 'band-top', portrait: 'band-top', story: 'frame', landscape: 'side' }, shift: { square: { y: 0.38 }, portrait: { y: 0.33 }, story: { y: 0.15 } } },
     trimmedFrom: {
       eyebrow: 'Our technology: Most agencies buy you traffic. We built the system that converts it.',
       headline: 'Our technology: Most agencies buy you traffic. We built the system that converts it.',
@@ -251,9 +220,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: [],
     cta: 'Run My Free Audit',
     small: 'Figures as published on oneagency.com, November 2026.',
-    visual: 'stat-board',
-    backdrop: 'mobius',
-    mobius: { look: 'energy', crop: { square: 'band-top', portrait: 'band-top', story: 'frame', landscape: 'side' }, shift: { square: { y: 0.35 }, portrait: { y: 0.33 }, story: { y: 0.12 } } },
     trimmedFrom: {},
   },
   {
@@ -275,9 +241,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: ['Best AI Product', '2026 ARDY Awards', 'Awarded to ConversionIQ.ai'],
     cta: 'Book a strategy call',
     small: null,
-    visual: 'award',
-    backdrop: 'mobius',
-    mobius: { look: 'energy', crop: { square: 'side', portrait: 'band-top', story: 'frame', landscape: 'side' }, shift: { square: { x: 0.12 }, portrait: { y: 0.33 }, story: { y: 0.23 }, landscape: { x: 0.06 } } },
     trimmedFrom: {
       headline: 'Tours, owners, reviews and revenue. One team, one AI, one number.',
       award: '2026 ARDY Awards, American Resort Development Association',
@@ -299,7 +262,6 @@ export const CREATIVE_CONCEPTS: CreativeAdConcept[] = [
     award: [],
     cta: 'Call (689) 205-9923',
     small: null,
-    visual: 'quote',
     trimmedFrom: {},
   },
 ]
@@ -323,12 +285,6 @@ export const CREATIVE_AD_SIZES: CreativeAdSize[] = [
 /** Story safe zone, px at 1080x1920: nothing but ground and texture in the top 220 and bottom 340. */
 export const STORY_SAFE = { top: 220, bottom: 340 } as const
 
-/**
- * Ads are laid out in CSS px at half their pixel size (1080 wide is 540) and drawn at 2x, so the kit's glass
- * components keep their own proportions. Type sizes in src/data/ad-styles.ts are px at 1080 wide.
- */
-export const CREATIVE_AD_UNIT = 2
-
 export type CreativeAdExt = 'png' | 'webp'
 
 export const creativeAdFile = (concept: CreativeConceptId, size: Pick<CreativeAdSize, 'width' | 'height'>, ext: CreativeAdExt) =>
@@ -337,14 +293,3 @@ export const creativeAdFile = (concept: CreativeConceptId, size: Pick<CreativeAd
 export const creativeConcept = (id: string) => CREATIVE_CONCEPTS.find((c) => c.id === id) ?? null
 
 export const creativeSize = (format: string) => CREATIVE_AD_SIZES.find((s) => s.format === format) ?? null
-
-/**
- * The transparent Möbius still for a format (energy: clear-dark, strings: clear). Landscape uses the 1200x628 still as a
- * full-bleed cover; the extra pixel row is cropped by the frame.
- */
-export const mobiusStill = (mobius: CreativeMobius, format: CreativeFormat) => {
-  const { width, height } = CREATIVE_AD_SIZES.find((s) => s.format === format)!
-  const size = format === 'landscape' ? '1200x628' : `${width}x${height}`
-  const ground = mobius.look === 'energy' ? 'clear-dark' : 'clear'
-  return `/kit/elements/mobius/one-agency_element_mobius-${mobius.look}-${mobius.crop[format]}-${ground}_${size}.png`
-}

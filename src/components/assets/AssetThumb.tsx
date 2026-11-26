@@ -5,8 +5,11 @@ import { SmartImage } from '../ui/SmartImage'
 const FONT = /font_(geist|unbounded)-(\d+)/
 const FONT_CLASS = { geist: 'font-sans', unbounded: 'font-display' } as const
 
-/** Files drawn for light grounds (on-light and navy logos, Sky and Mint tiles) preview on paper. */
-const LIGHT = /-(on-light|navy|sky|mint)[._]/
+/**
+ * Files drawn for light grounds preview on paper: the logo's on-light and Navy versions and the app tiles (never its
+ * on-navy ones), on-light graphics and illustrations, and the Möbius stills on paper and their transparent light set.
+ */
+const LIGHT = /_logo_[a-z-]*?(?<!-on)-(?:on-light|navy|sky|mint)[._]|-(?:on-light|clear-light|on-paper)[._]|_on-light_/
 
 const ICONS: Record<string, typeof File> = { ZIP: FileZip, MD: FileText, TXT: FileText, JSON: FileCode, CSS: FileCode, JS: FileCode, MJS: FileCode, HTML: FileCode, MP4: FilmSlate, WEBM: FilmSlate }
 

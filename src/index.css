@@ -44,6 +44,8 @@
   --color-violet-light: var(--violet-light);
   --color-sky: var(--sky);
   --color-mist: var(--mist);
+  --color-plum: var(--plum);
+  --color-lavender: var(--lavender);
   --color-on-accent: var(--on-accent);
   --color-paper: var(--paper);
   --color-ink: var(--ink);
@@ -147,20 +149,13 @@
     letter-spacing: var(--tracking-display);
     line-height: var(--leading-display);
   }
-  /* The accent word: Unbounded, the signature gradient clipped to the glyphs. */
+  /* The accent word: Unbounded in the solid accent (Mint on navy, Ultra Violet on light). Text never takes a gradient. */
   .accent-word {
     font-family: var(--font-display);
     font-style: normal;
     font-weight: 600;
     letter-spacing: var(--tracking-display);
-    background: var(--ui-accent-fill);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    padding-bottom: 0.08em;
-    padding-inline-end: 0.04em;
+    color: var(--ui-accent);
   }
   .container-site {
     width: 100%;
@@ -176,27 +171,14 @@
     text-transform: uppercase;
     color: var(--ui-accent);
   }
-  /* Stat figures: Unbounded 600, gradient filled like the accent words. */
+  /* Stat figures: Unbounded 600 in the solid accent, like the accent words. */
   .stat-num {
     font-family: var(--font-display);
     font-weight: 600;
     letter-spacing: var(--tracking-display);
     line-height: 1.24;
     font-variant-numeric: tabular-nums;
-    background: var(--ui-accent-fill);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  /*
-   * Forced colours (Windows contrast themes) drop gradient backgrounds but keep the transparent text, so gradient words
-   * and figures would vanish: set them in the system text colour.
-   */
-  @media (forced-colors: active) {
-    :is(.accent-word, .stat-num) {
-      background: none;
-      color: CanvasText;
-    }
+    color: var(--ui-accent);
   }
   /* Transparency checkerboard behind alpha swatches. */
   .checker {

@@ -57,14 +57,14 @@ export function ElementsSection() {
       eyebrow="Graphic elements"
       title="A line that always ends on a result"
       accent={[7]}
-      lede="Devices, patterns and illustrations drawn for ads, plus the site's buttons, proof bar and award badge. The vector pieces download as SVG and PNG; the Möbius stills as JPG and PNG."
+      lede="Devices, patterns and illustrations for ads, plus the buttons, proof bar and award badge from the site, in the new palette. The vector pieces download as SVG and PNG; the Möbius stills as JPG and PNG."
       actions={<ZipButton group="elements" label="All elements" />}
     >
       <div className="flex flex-col gap-section">
         <div>
           <SubHeading title="Signature devices">
             Five devices that carry the story: growth, the twist of the loop, the four stages, signals and a frame for copy. Each one lights a single point and keeps
-            the rest quiet. All five come on dark and on light. The halo, glow field and laurel from the live site sit alongside them.
+            the rest quiet. All five come on dark and on light. The award laurel from the site&apos;s banner sits alongside them.
           </SubHeading>
           {/*
             No grid-flow-dense: DOM order is the visual order at every width, so Tab moves through the cards as they read.
@@ -114,7 +114,10 @@ export function ElementsSection() {
         </div>
 
         <div>
-          <SubHeading title="Patterns">Grounds to sit behind ad copy, 1080×1080 and full bleed. Each one fades across the frame, so set the copy where it is quiet.</SubHeading>
+          <SubHeading title="Patterns">
+            Full-bleed grounds to sit behind ad copy: Frames in orbit at 1200×750, the four line patterns at 1080×1080. The line patterns fade across the frame, so
+            set the copy where it is quiet.
+          </SubHeading>
           {/*
             Two columns at most: at four across (about 210 px a card at 1280) the 1.5 px strokes of a 1080 px pattern
             shrink below half a pixel and the grid, contour and flow patterns all but vanish.
@@ -133,7 +136,7 @@ export function ElementsSection() {
 
         <div>
           <SubHeading title="Illustrations">
-            Spot illustrations in the glass style, lit from the top left. Each has one lit element and no words, only a few numerals.
+            Spot illustrations in the frosted glass style, lit from above. Each has one lit element and no words, only a few numerals.
           </SubHeading>
           <Reveal stagger className="grid gap-4 md:grid-cols-2">
             {ILLUSTRATIONS.map((id) => (
@@ -145,7 +148,7 @@ export function ElementsSection() {
         </div>
 
         <div>
-          <SubHeading title="CTA buttons">Every state, from the live site&apos;s button styles. One primary CTA per ad.</SubHeading>
+          <SubHeading title="CTA buttons">Every state of the site&apos;s button styles, in the new palette. One primary CTA per ad.</SubHeading>
           <Reveal className="flex flex-col gap-4">
             <CtaStates />
             <ElementCard ids={['cta-primary', 'cta-secondary', 'cta-on-light']} title="CTA files" />

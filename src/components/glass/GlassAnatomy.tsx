@@ -6,10 +6,10 @@ import { Reveal } from '../ui/Reveal'
 
 /** Where each numbered marker sits on the diagram card (percent of the card box). */
 const MARKERS = [
-  { left: '96%', top: '6%' },
-  { left: '55%', top: '55%' },
-  { left: '14%', top: '10%' },
-  { left: '0%', top: '72%' },
+  { left: '50%', top: '0%' },
+  { left: '22%', top: '22%' },
+  { left: '46%', top: '50%' },
+  { left: '28%', top: '100%' },
   { left: '100%', top: '100%' },
 ] as const
 

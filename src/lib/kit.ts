@@ -4,9 +4,9 @@
  */
 
 export const KIT = {
-  version: '1.1',
+  version: '2.0',
   /** The release before this one, for the "what's new" note. */
-  previousVersion: '1.0',
+  previousVersion: '1.1',
   updated: '2026-11-20',
   site: 'https://oneagency.com',
   /** The rebrand moodboard: palette and logo masters (design/source/rebrand/). */
@@ -25,7 +25,7 @@ export const ASSET_GROUPS = [
   { id: 'colour', label: 'Colour' },
   { id: 'fonts', label: 'Fonts' },
   { id: 'elements', label: 'Elements' },
-  { id: 'glass', label: 'Glass & texture', paths: ['kit/illustrations', 'kit/textures', 'kit/references', 'vendor/ciq/README.md'] },
+  { id: 'glass', label: 'Glass & texture', paths: ['kit/illustrations', 'kit/textures', 'kit/references', 'vendor/ciq/README.md', 'vendor/ciq/RECOLOUR.md'] },
   { id: 'templates', label: 'Templates' },
   { id: 'ads', label: 'Creative ads' },
   { id: 'imagery', label: 'Imagery' },

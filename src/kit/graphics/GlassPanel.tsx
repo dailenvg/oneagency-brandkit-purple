@@ -15,12 +15,23 @@ interface GlassPanelProps {
   children?: ReactNode
 }
 
-/** A frosted panel: tinted translucent body, rim light, and a specular line round the top-left corner. */
+/**
+ * A frosted panel in the glass studio's material: tinted body with colour running top to bottom, the diagonal sheen, a
+ * thin slab edge along the bottom, rim light along the top, and a specular line round the top-left corner.
+ */
 export function GlassPanel({ c, url, x, y, width, height, r, rim, rimWidth = 1, children }: GlassPanelProps) {
   return (
     <g>
       <rect x={x} y={y} width={width} height={height} rx={r} fill={c.tint} fillOpacity={c.tintAlpha} />
       <rect x={x} y={y} width={width} height={height} rx={r} fill={url('glass')} />
+      <rect x={x} y={y} width={width} height={height} rx={r} fill={url('sheen')} />
+      <path
+        d={`M${x + 1} ${y + height - r}A${r - 1} ${r - 1} 0 0 0 ${x + r} ${y + height - 1}H${x + width - r}A${r - 1} ${r - 1} 0 0 0 ${x + width - 1} ${y + height - r}`}
+        stroke={c.wall}
+        strokeOpacity={c.wallAlpha}
+        strokeWidth={2}
+        fill="none"
+      />
       <rect x={x + 0.5} y={y + 0.5} width={width - 1} height={height - 1} rx={r - 0.5} stroke={rim ?? url('rim')} strokeWidth={rimWidth} />
       <path d={`M${x + 1.5} ${y + r}A${r - 1.5} ${r - 1.5} 0 0 1 ${x + r} ${y + 1.5}H${x + Math.max(r, width * 0.55)}`} stroke={url('spec')} strokeLinecap="round" />
       {children}

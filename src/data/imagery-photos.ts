@@ -1,8 +1,13 @@
 /**
- * The concept 01 "Nova" photo set (one-agency-rebrand-v2, public/palette/), copied into public/kit/imagery/photos/.
- * Nova drew each palette colour from one of these abstract photos. File names are Unsplash photo ids in the source, kept
- * here as `unsplashId` for the credit; the photographers are not recorded in the source repo.
+ * The photo set in public/kit/imagery/photos/, each photo paired with a palette colour. Eight come from concept 01
+ * "Nova" (one-agency-rebrand-v2, public/palette/), where the file names are Unsplash photo ids; the photographers are not
+ * recorded there, so the credit is the id and its Unsplash page. The Mint and Violet paper photos are AI-generated in
+ * Magnific; their credit is the Magnific creation. The Colour view shows one photo on each brand colour card
+ * (PALETTE_PHOTOS below).
  */
+
+/** Where a photo comes from, which decides its credit line and link. */
+export type PhotoSource = { kind: 'unsplash'; id: string } | { kind: 'magnific'; creation: string; url: string }
 
 export interface BrandPhoto {
   /** Kebab-case subject, the file name part. */
@@ -10,35 +15,73 @@ export interface BrandPhoto {
   title: string
   /** One sentence on what the photo shows, for screen readers. */
   alt: string
-  /** The palette colour Nova paired the photo with (Nova's Deep Plum and Ink map to Navy in this palette). */
-  mood: 'Mint' | 'Ultra Violet' | 'Navy' | 'Mist'
-  unsplashId: string
+  /** The palette colour the photo is paired with (Nova's Ink maps to Navy in this palette). */
+  mood: 'Mint' | 'Ultra Violet' | 'Navy' | 'Sky' | 'Mist' | 'Plum Night' | 'Lavender' | 'White'
+  source: PhotoSource
   url: string
   width: number
   height: number
-  bytes: number
 }
+
+export interface PhotoCredit {
+  /** The visible credit, e.g. "Unsplash 5Q9Gf0WSyLk" or "AI-generated in Magnific". */
+  label: string
+  /** The source page. */
+  url: string
+  /** What the link opens, for its accessible name. */
+  destination: string
+}
+
+/** The credit line and link for a photo, by where it comes from. */
+export function photoCredit(source: PhotoSource): PhotoCredit {
+  if (source.kind === 'unsplash') {
+    return { label: `Unsplash ${source.id}`, url: `https://unsplash.com/photos/${source.id}`, destination: "the photo's source page" }
+  }
+  return { label: 'AI-generated in Magnific', url: source.url, destination: `the Magnific creation "${source.creation}"` }
+}
+
+const unsplash = (id: string): PhotoSource => ({ kind: 'unsplash', id })
+const magnific = (creation: string, url: string): PhotoSource => ({ kind: 'magnific', creation, url })
 
 const DIR = '/kit/imagery/photos'
 
-const photo = (id: string, title: string, alt: string, mood: BrandPhoto['mood'], unsplashId: string, width: number, height: number, bytes: number): BrandPhoto => ({
+const photo = (id: string, title: string, alt: string, mood: BrandPhoto['mood'], source: PhotoSource, width: number, height: number): BrandPhoto => ({
   id,
   title,
   alt,
   mood,
-  unsplashId,
+  source,
   url: `${DIR}/one-agency_photo-${id}_${width}x${height}.webp`,
   width,
   height,
-  bytes,
 })
 
 export const BRAND_PHOTOS: BrandPhoto[] = [
-  photo('mint-light-streaks', 'Mint light streaks', 'Fine mint and green light streaks falling diagonally across a dark ground.', 'Mint', 'bHd7tm-2oWU', 506, 900, 134084),
-  photo('violet-silk-wave', 'Violet silk wave', 'A soft violet fold of light curving across a deep purple ground.', 'Ultra Violet', '5Q9Gf0WSyLk', 900, 507, 5214),
-  photo('violet-ribbon-swirl', 'Violet ribbon swirl', 'Glossy purple and pink ribbons of fine lines looping around a dark centre.', 'Navy', '1uyWq9xVwcE', 900, 600, 25664),
-  photo('dark-curves', 'Dark curves', 'Smooth black surfaces curving in soft layers, lit from above.', 'Navy', 'NYtHU9TLkPE', 900, 507, 3078),
-  photo('white-layered-waves', 'White layered waves', 'Thin white layers rippling in gentle waves, like stacked paper.', 'Mist', 'pHUF3pNk1XA', 900, 600, 10506),
+  photo('mint-paper-waves', 'Mint paper waves', 'Layers of pale Mint paper curving across the frame in soft, overlapping waves, matte and evenly lit.', 'Mint', magnific('ONE Agency v2 · Photo · Mint paper waves', 'https://www.magnific.com/app/creation/Xm9WAQjBfo'), 900, 600),
+  photo('violet-silk-wave', 'Violet silk wave', 'A soft violet fold of light curving across a deep purple ground.', 'Ultra Violet', unsplash('5Q9Gf0WSyLk'), 900, 507),
+  photo('violet-paper-waves', 'Violet paper waves', 'Layers of violet paper curving across the frame in soft, overlapping waves, matte and evenly lit.', 'Ultra Violet', magnific('ONE Agency v2 · Photo · Violet paper waves', 'https://www.magnific.com/app/creation/Xm9cKPQBfo'), 900, 600),
+  photo('navy-blue-waves', 'Navy blue waves', 'Deep blue folds of light rolling across a dark navy ground.', 'Navy', unsplash('tnkb5EcWN9I'), 900, 636),
+  photo('dark-curves', 'Dark curves', 'Smooth black surfaces curving in soft layers, lit faintly from above.', 'Navy', unsplash('NYtHU9TLkPE'), 900, 507),
+  photo('sky-clouds', 'Sky clouds', 'Soft white clouds drifting across a pale blue sky.', 'Sky', unsplash('dmQhktXQ0ew'), 600, 900),
+  photo('mist-fog', 'Mist fog', 'Grey fog rolling low over a hillside, the ridge fading into the haze.', 'Mist', unsplash('asohee2GUCc'), 900, 600),
+  photo('plum-night-swirl', 'Plum Night swirl', 'Fine violet and magenta lines sweeping in a curve across a near-black plum ground.', 'Plum Night', unsplash('1uyWq9xVwcE'), 900, 600),
+  photo('lavender-marble', 'Lavender marble', 'Marbled paint in pale lavender, white and violet, with fine blue veins running through it.', 'Lavender', unsplash('VXUhQqO8u5Q'), 900, 600),
+  photo('white-layered-waves', 'White layered waves', 'Thin white layers rippling in gentle waves, like stacked paper.', 'White', unsplash('pHUF3pNk1XA'), 900, 600),
 ]
 
-export const unsplashUrl = (id: string) => `https://unsplash.com/photos/${id}`
+/** The photo on each brand colour card in the Colour view, by token name. */
+export const PALETTE_PHOTOS: Record<string, BrandPhoto> = Object.fromEntries(
+  (
+    [
+      ['--navy', 'navy-blue-waves'],
+      ['--mint', 'mint-paper-waves'],
+      ['--violet', 'violet-silk-wave'],
+      ['--sky', 'sky-clouds'],
+      ['--mist', 'mist-fog'],
+      ['--plum', 'plum-night-swirl'],
+      ['--lavender', 'lavender-marble'],
+      ['--paper', 'white-layered-waves'],
+    ] as const
+  ).map(([token, id]) => [token, BRAND_PHOTOS.find((p) => p.id === id)!]),
+)
+

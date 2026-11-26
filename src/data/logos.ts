@@ -3,10 +3,10 @@
 export type LogoLockup = 'horizontal' | 'stacked' | 'wordmark' | 'mark'
 export type LogoVariant = 'on-light' | 'on-navy' | 'navy' | 'white'
 
+/** File sizes are not recorded here: the hub reads them from the asset manifest (kit:zips), which sees the final files. */
 export interface AssetFile {
   /** Public URL path. */
   url: string
-  bytes: number
 }
 
 export interface LogoPng extends AssetFile {
@@ -51,10 +51,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Horizontal (primary, master layout)",
     "label": "Gradient on light",
     "ground": "--paper",
-    "note": "As drawn on the board: the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.",
+    "note": "As drawn on the board: ONE in the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.",
     "svg": {
       "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-light.svg",
-      "bytes": 4063,
       "width": 2956.67,
       "height": 330.42
     },
@@ -63,22 +62,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 960,
         "height": 107,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-light_1x.png",
-        "bytes": 16747
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-light_1x.png"
       },
       {
         "scale": 2,
         "width": 1920,
         "height": 215,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-light_2x.png",
-        "bytes": 37846
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-light_2x.png"
       },
       {
         "scale": 4,
         "width": 3840,
         "height": 429,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-light_4x.png",
-        "bytes": 95003
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-light_4x.png"
       }
     ]
   },
@@ -89,10 +85,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Horizontal (primary, master layout)",
     "label": "Mint and white on navy",
     "ground": "--navy",
-    "note": "The reversed version from the board: ONE in Mint, AGENCY in white. For Navy and dark photos.",
+    "note": "The reversed version from the board: ONE in Mint, AGENCY in white. For Navy grounds and dark photos.",
     "svg": {
       "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-navy.svg",
-      "bytes": 3801,
       "width": 2956.67,
       "height": 330.42
     },
@@ -101,22 +96,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 960,
         "height": 107,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-navy_1x.png",
-        "bytes": 11460
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-navy_1x.png"
       },
       {
         "scale": 2,
         "width": 1920,
         "height": 215,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-navy_2x.png",
-        "bytes": 23265
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-navy_2x.png"
       },
       {
         "scale": 4,
         "width": 3840,
         "height": 429,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-navy_4x.png",
-        "bytes": 47632
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-on-navy_4x.png"
       }
     ]
   },
@@ -127,10 +119,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Horizontal (primary, master layout)",
     "label": "Navy (one colour)",
     "ground": "--paper",
-    "note": "Single colour Navy, as on the board. When the gradient cannot print or render.",
+    "note": "One-colour Navy, as on the board. For light grounds where the gradient cannot print or render.",
     "svg": {
       "url": "/kit/logos/horizontal/one-agency_logo_horizontal-navy.svg",
-      "bytes": 3801,
       "width": 2956.67,
       "height": 330.42
     },
@@ -139,22 +130,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 960,
         "height": 107,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-navy_1x.png",
-        "bytes": 12697
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-navy_1x.png"
       },
       {
         "scale": 2,
         "width": 1920,
         "height": 215,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-navy_2x.png",
-        "bytes": 26014
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-navy_2x.png"
       },
       {
         "scale": 4,
         "width": 3840,
         "height": 429,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-navy_4x.png",
-        "bytes": 52951
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-navy_4x.png"
       }
     ]
   },
@@ -165,10 +153,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Horizontal (primary, master layout)",
     "label": "White (one colour)",
     "ground": "--navy",
-    "note": "Single colour white for dark grounds and photos where Mint would clash.",
+    "note": "One-colour white, for dark grounds and photos where Mint would clash.",
     "svg": {
       "url": "/kit/logos/horizontal/one-agency_logo_horizontal-white.svg",
-      "bytes": 3801,
       "width": 2956.67,
       "height": 330.42
     },
@@ -177,22 +164,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 960,
         "height": 107,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-white_1x.png",
-        "bytes": 10524
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-white_1x.png"
       },
       {
         "scale": 2,
         "width": 1920,
         "height": 215,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-white_2x.png",
-        "bytes": 21240
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-white_2x.png"
       },
       {
         "scale": 4,
         "width": 3840,
         "height": 429,
-        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-white_4x.png",
-        "bytes": 43731
+        "url": "/kit/logos/horizontal/one-agency_logo_horizontal-white_4x.png"
       }
     ]
   },
@@ -203,10 +187,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Stacked",
     "label": "Gradient on light",
     "ground": "--paper",
-    "note": "As drawn on the board: the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.",
+    "note": "As drawn on the board: ONE in the Violet-to-Mint gradient, AGENCY in Navy. For white, Mist and Sky grounds.",
     "svg": {
       "url": "/kit/logos/stacked/one-agency_logo_stacked-on-light.svg",
-      "bytes": 4065,
       "width": 1223.2,
       "height": 567.08
     },
@@ -215,22 +198,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 480,
         "height": 223,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-light_1x.png",
-        "bytes": 17324
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-light_1x.png"
       },
       {
         "scale": 2,
         "width": 960,
         "height": 445,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-light_2x.png",
-        "bytes": 42932
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-light_2x.png"
       },
       {
         "scale": 4,
         "width": 1920,
         "height": 890,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-light_4x.png",
-        "bytes": 108452
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-light_4x.png"
       }
     ]
   },
@@ -241,10 +221,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Stacked",
     "label": "Mint and white on navy",
     "ground": "--navy",
-    "note": "The reversed version from the board: ONE in Mint, AGENCY in white. For Navy and dark photos.",
+    "note": "The reversed version from the board: ONE in Mint, AGENCY in white. For Navy grounds and dark photos.",
     "svg": {
       "url": "/kit/logos/stacked/one-agency_logo_stacked-on-navy.svg",
-      "bytes": 3809,
       "width": 1223.2,
       "height": 567.08
     },
@@ -253,22 +232,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 480,
         "height": 223,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-navy_1x.png",
-        "bytes": 11295
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-navy_1x.png"
       },
       {
         "scale": 2,
         "width": 960,
         "height": 445,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-navy_2x.png",
-        "bytes": 23407
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-navy_2x.png"
       },
       {
         "scale": 4,
         "width": 1920,
         "height": 890,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-navy_4x.png",
-        "bytes": 48949
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-on-navy_4x.png"
       }
     ]
   },
@@ -279,10 +255,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Stacked",
     "label": "Navy (one colour)",
     "ground": "--paper",
-    "note": "Single colour Navy, as on the board. When the gradient cannot print or render.",
+    "note": "One-colour Navy, as on the board. For light grounds where the gradient cannot print or render.",
     "svg": {
       "url": "/kit/logos/stacked/one-agency_logo_stacked-navy.svg",
-      "bytes": 3809,
       "width": 1223.2,
       "height": 567.08
     },
@@ -291,22 +266,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 480,
         "height": 223,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-navy_1x.png",
-        "bytes": 12526
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-navy_1x.png"
       },
       {
         "scale": 2,
         "width": 960,
         "height": 445,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-navy_2x.png",
-        "bytes": 26052
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-navy_2x.png"
       },
       {
         "scale": 4,
         "width": 1920,
         "height": 890,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-navy_4x.png",
-        "bytes": 54324
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-navy_4x.png"
       }
     ]
   },
@@ -317,10 +289,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Stacked",
     "label": "White (one colour)",
     "ground": "--navy",
-    "note": "Single colour white for dark grounds and photos where Mint would clash.",
+    "note": "One-colour white, for dark grounds and photos where Mint would clash.",
     "svg": {
       "url": "/kit/logos/stacked/one-agency_logo_stacked-white.svg",
-      "bytes": 3809,
       "width": 1223.2,
       "height": 567.08
     },
@@ -329,22 +300,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 480,
         "height": 223,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-white_1x.png",
-        "bytes": 10384
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-white_1x.png"
       },
       {
         "scale": 2,
         "width": 960,
         "height": 445,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-white_2x.png",
-        "bytes": 21620
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-white_2x.png"
       },
       {
         "scale": 4,
         "width": 1920,
         "height": 890,
-        "url": "/kit/logos/stacked/one-agency_logo_stacked-white_4x.png",
-        "bytes": 45140
+        "url": "/kit/logos/stacked/one-agency_logo_stacked-white_4x.png"
       }
     ]
   },
@@ -358,7 +326,6 @@ export const LOGOS: LogoAsset[] = [
     "note": "As drawn on the board: the Violet-to-Mint gradient. For white, Mist and Sky grounds.",
     "svg": {
       "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-light.svg",
-      "bytes": 1215,
       "width": 1223.2,
       "height": 330.42
     },
@@ -367,22 +334,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 480,
         "height": 130,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-light_1x.png",
-        "bytes": 10724
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-light_1x.png"
       },
       {
         "scale": 2,
         "width": 960,
         "height": 259,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-light_2x.png",
-        "bytes": 28643
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-light_2x.png"
       },
       {
         "scale": 4,
         "width": 1920,
         "height": 519,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-light_4x.png",
-        "bytes": 81481
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-light_4x.png"
       }
     ]
   },
@@ -393,10 +357,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Wordmark (ONE)",
     "label": "Mint on navy",
     "ground": "--navy",
-    "note": "The reversed colour from the board: Mint on Navy and dark photos.",
+    "note": "The reversed version from the board, in Mint. For Navy grounds and dark photos.",
     "svg": {
       "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-navy.svg",
-      "bytes": 957,
       "width": 1223.2,
       "height": 330.42
     },
@@ -405,22 +368,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 480,
         "height": 130,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-navy_1x.png",
-        "bytes": 5882
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-navy_1x.png"
       },
       {
         "scale": 2,
         "width": 960,
         "height": 259,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-navy_2x.png",
-        "bytes": 11950
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-navy_2x.png"
       },
       {
         "scale": 4,
         "width": 1920,
         "height": 519,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-navy_4x.png",
-        "bytes": 26177
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-on-navy_4x.png"
       }
     ]
   },
@@ -431,10 +391,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Wordmark (ONE)",
     "label": "Navy (one colour)",
     "ground": "--paper",
-    "note": "Single colour Navy, as on the board. When the gradient cannot print or render.",
+    "note": "One-colour Navy, as on the board. For light grounds where the gradient cannot print or render.",
     "svg": {
       "url": "/kit/logos/wordmark/one-agency_logo_wordmark-navy.svg",
-      "bytes": 957,
       "width": 1223.2,
       "height": 330.42
     },
@@ -443,22 +402,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 480,
         "height": 130,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-navy_1x.png",
-        "bytes": 6078
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-navy_1x.png"
       },
       {
         "scale": 2,
         "width": 960,
         "height": 259,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-navy_2x.png",
-        "bytes": 12338
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-navy_2x.png"
       },
       {
         "scale": 4,
         "width": 1920,
         "height": 519,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-navy_4x.png",
-        "bytes": 26675
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-navy_4x.png"
       }
     ]
   },
@@ -469,10 +425,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Wordmark (ONE)",
     "label": "White (one colour)",
     "ground": "--navy",
-    "note": "Single colour white for dark grounds and photos where Mint would clash.",
+    "note": "One-colour white, for dark grounds and photos where Mint would clash.",
     "svg": {
       "url": "/kit/logos/wordmark/one-agency_logo_wordmark-white.svg",
-      "bytes": 957,
       "width": 1223.2,
       "height": 330.42
     },
@@ -481,22 +436,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 480,
         "height": 130,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-white_1x.png",
-        "bytes": 5105
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-white_1x.png"
       },
       {
         "scale": 2,
         "width": 960,
         "height": 259,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-white_2x.png",
-        "bytes": 10320
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-white_2x.png"
       },
       {
         "scale": 4,
         "width": 1920,
         "height": 519,
-        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-white_4x.png",
-        "bytes": 22642
+        "url": "/kit/logos/wordmark/one-agency_logo_wordmark-white_4x.png"
       }
     ]
   },
@@ -510,7 +462,6 @@ export const LOGOS: LogoAsset[] = [
     "note": "As drawn on the board: the Violet-to-Mint gradient. For white, Mist and Sky grounds.",
     "svg": {
       "url": "/kit/logos/mark/one-agency_logo_mark-on-light.svg",
-      "bytes": 815,
       "width": 492,
       "height": 330
     },
@@ -519,22 +470,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 240,
         "height": 161,
-        "url": "/kit/logos/mark/one-agency_logo_mark-on-light_1x.png",
-        "bytes": 8745
+        "url": "/kit/logos/mark/one-agency_logo_mark-on-light_1x.png"
       },
       {
         "scale": 2,
         "width": 480,
         "height": 322,
-        "url": "/kit/logos/mark/one-agency_logo_mark-on-light_2x.png",
-        "bytes": 31779
+        "url": "/kit/logos/mark/one-agency_logo_mark-on-light_2x.png"
       },
       {
         "scale": 4,
         "width": 960,
         "height": 644,
-        "url": "/kit/logos/mark/one-agency_logo_mark-on-light_4x.png",
-        "bytes": 101033
+        "url": "/kit/logos/mark/one-agency_logo_mark-on-light_4x.png"
       }
     ]
   },
@@ -545,10 +493,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Mark (the O)",
     "label": "Mint on navy",
     "ground": "--navy",
-    "note": "The reversed colour from the board: Mint on Navy and dark photos.",
+    "note": "The reversed version from the board, in Mint. For Navy grounds and dark photos.",
     "svg": {
       "url": "/kit/logos/mark/one-agency_logo_mark-on-navy.svg",
-      "bytes": 567,
       "width": 492,
       "height": 330
     },
@@ -557,22 +504,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 240,
         "height": 161,
-        "url": "/kit/logos/mark/one-agency_logo_mark-on-navy_1x.png",
-        "bytes": 3523
+        "url": "/kit/logos/mark/one-agency_logo_mark-on-navy_1x.png"
       },
       {
         "scale": 2,
         "width": 480,
         "height": 322,
-        "url": "/kit/logos/mark/one-agency_logo_mark-on-navy_2x.png",
-        "bytes": 7354
+        "url": "/kit/logos/mark/one-agency_logo_mark-on-navy_2x.png"
       },
       {
         "scale": 4,
         "width": 960,
         "height": 644,
-        "url": "/kit/logos/mark/one-agency_logo_mark-on-navy_4x.png",
-        "bytes": 16004
+        "url": "/kit/logos/mark/one-agency_logo_mark-on-navy_4x.png"
       }
     ]
   },
@@ -583,10 +527,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Mark (the O)",
     "label": "Navy (one colour)",
     "ground": "--paper",
-    "note": "Single colour Navy, as on the board. When the gradient cannot print or render.",
+    "note": "One-colour Navy, as on the board. For light grounds where the gradient cannot print or render.",
     "svg": {
       "url": "/kit/logos/mark/one-agency_logo_mark-navy.svg",
-      "bytes": 567,
       "width": 492,
       "height": 330
     },
@@ -595,22 +538,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 240,
         "height": 161,
-        "url": "/kit/logos/mark/one-agency_logo_mark-navy_1x.png",
-        "bytes": 3629
+        "url": "/kit/logos/mark/one-agency_logo_mark-navy_1x.png"
       },
       {
         "scale": 2,
         "width": 480,
         "height": 322,
-        "url": "/kit/logos/mark/one-agency_logo_mark-navy_2x.png",
-        "bytes": 7633
+        "url": "/kit/logos/mark/one-agency_logo_mark-navy_2x.png"
       },
       {
         "scale": 4,
         "width": 960,
         "height": 644,
-        "url": "/kit/logos/mark/one-agency_logo_mark-navy_4x.png",
-        "bytes": 16388
+        "url": "/kit/logos/mark/one-agency_logo_mark-navy_4x.png"
       }
     ]
   },
@@ -621,10 +561,9 @@ export const LOGOS: LogoAsset[] = [
     "lockupLabel": "Mark (the O)",
     "label": "White (one colour)",
     "ground": "--navy",
-    "note": "Single colour white for dark grounds and photos where Mint would clash.",
+    "note": "One-colour white, for dark grounds and photos where Mint would clash.",
     "svg": {
       "url": "/kit/logos/mark/one-agency_logo_mark-white.svg",
-      "bytes": 567,
       "width": 492,
       "height": 330
     },
@@ -633,22 +572,19 @@ export const LOGOS: LogoAsset[] = [
         "scale": 1,
         "width": 240,
         "height": 161,
-        "url": "/kit/logos/mark/one-agency_logo_mark-white_1x.png",
-        "bytes": 3083
+        "url": "/kit/logos/mark/one-agency_logo_mark-white_1x.png"
       },
       {
         "scale": 2,
         "width": 480,
         "height": 322,
-        "url": "/kit/logos/mark/one-agency_logo_mark-white_2x.png",
-        "bytes": 6455
+        "url": "/kit/logos/mark/one-agency_logo_mark-white_2x.png"
       },
       {
         "scale": 4,
         "width": 960,
         "height": 644,
-        "url": "/kit/logos/mark/one-agency_logo_mark-white_4x.png",
-        "bytes": 14013
+        "url": "/kit/logos/mark/one-agency_logo_mark-white_4x.png"
       }
     ]
   }
@@ -661,7 +597,6 @@ export const APP_TILES: AppTile[] = [
     "note": "Sky ground, gradient mark. The light app icon.",
     "svg": {
       "url": "/kit/logos/tile/one-agency_logo_app-tile-sky.svg",
-      "bytes": 869,
       "width": 855,
       "height": 855
     },
@@ -670,22 +605,19 @@ export const APP_TILES: AppTile[] = [
         "scale": 1,
         "width": 256,
         "height": 256,
-        "url": "/kit/logos/tile/one-agency_logo_app-tile-sky_1x.png",
-        "bytes": 7849
+        "url": "/kit/logos/tile/one-agency_logo_app-tile-sky_1x.png"
       },
       {
         "scale": 2,
         "width": 512,
         "height": 512,
-        "url": "/kit/logos/tile/one-agency_logo_app-tile-sky_2x.png",
-        "bytes": 20676
+        "url": "/kit/logos/tile/one-agency_logo_app-tile-sky_2x.png"
       },
       {
         "scale": 4,
         "width": 1024,
         "height": 1024,
-        "url": "/kit/logos/tile/one-agency_logo_app-tile-sky_4x.png",
-        "bytes": 57796
+        "url": "/kit/logos/tile/one-agency_logo_app-tile-sky_4x.png"
       }
     ]
   },
@@ -695,7 +627,6 @@ export const APP_TILES: AppTile[] = [
     "note": "Navy ground, Mint mark. The default app icon and favicon.",
     "svg": {
       "url": "/kit/logos/tile/one-agency_logo_app-tile-navy.svg",
-      "bytes": 631,
       "width": 855,
       "height": 855
     },
@@ -704,22 +635,19 @@ export const APP_TILES: AppTile[] = [
         "scale": 1,
         "width": 256,
         "height": 256,
-        "url": "/kit/logos/tile/one-agency_logo_app-tile-navy_1x.png",
-        "bytes": 5278
+        "url": "/kit/logos/tile/one-agency_logo_app-tile-navy_1x.png"
       },
       {
         "scale": 2,
         "width": 512,
         "height": 512,
-        "url": "/kit/logos/tile/one-agency_logo_app-tile-navy_2x.png",
-        "bytes": 10808
+        "url": "/kit/logos/tile/one-agency_logo_app-tile-navy_2x.png"
       },
       {
         "scale": 4,
         "width": 1024,
         "height": 1024,
-        "url": "/kit/logos/tile/one-agency_logo_app-tile-navy_4x.png",
-        "bytes": 23679
+        "url": "/kit/logos/tile/one-agency_logo_app-tile-navy_4x.png"
       }
     ]
   },
@@ -729,7 +657,6 @@ export const APP_TILES: AppTile[] = [
     "note": "Mint ground, Navy mark. For launches and highlights.",
     "svg": {
       "url": "/kit/logos/tile/one-agency_logo_app-tile-mint.svg",
-      "bytes": 631,
       "width": 855,
       "height": 855
     },
@@ -738,22 +665,19 @@ export const APP_TILES: AppTile[] = [
         "scale": 1,
         "width": 256,
         "height": 256,
-        "url": "/kit/logos/tile/one-agency_logo_app-tile-mint_1x.png",
-        "bytes": 5139
+        "url": "/kit/logos/tile/one-agency_logo_app-tile-mint_1x.png"
       },
       {
         "scale": 2,
         "width": 512,
         "height": 512,
-        "url": "/kit/logos/tile/one-agency_logo_app-tile-mint_2x.png",
-        "bytes": 10563
+        "url": "/kit/logos/tile/one-agency_logo_app-tile-mint_2x.png"
       },
       {
         "scale": 4,
         "width": 1024,
         "height": 1024,
-        "url": "/kit/logos/tile/one-agency_logo_app-tile-mint_4x.png",
-        "bytes": 23265
+        "url": "/kit/logos/tile/one-agency_logo_app-tile-mint_4x.png"
       }
     ]
   }
@@ -764,57 +688,49 @@ export const FAVICONS: IconFile[] = [
     "kind": "svg",
     "width": null,
     "height": null,
-    "url": "/kit/logos/favicon/one-agency_logo_favicon.svg",
-    "bytes": 717
+    "url": "/kit/logos/favicon/one-agency_logo_favicon.svg"
   },
   {
     "kind": "png",
     "width": 16,
     "height": 16,
-    "url": "/kit/logos/favicon/one-agency_logo_favicon_16x16.png",
-    "bytes": 428
+    "url": "/kit/logos/favicon/one-agency_logo_favicon_16x16.png"
   },
   {
     "kind": "png",
     "width": 32,
     "height": 32,
-    "url": "/kit/logos/favicon/one-agency_logo_favicon_32x32.png",
-    "bytes": 758
+    "url": "/kit/logos/favicon/one-agency_logo_favicon_32x32.png"
   },
   {
     "kind": "png",
     "width": 48,
     "height": 48,
-    "url": "/kit/logos/favicon/one-agency_logo_favicon_48x48.png",
-    "bytes": 1049
+    "url": "/kit/logos/favicon/one-agency_logo_favicon_48x48.png"
   },
   {
     "kind": "ico",
     "width": 48,
     "height": 48,
-    "url": "/kit/logos/favicon/one-agency_logo_favicon.ico",
-    "bytes": 2289
+    "url": "/kit/logos/favicon/one-agency_logo_favicon.ico"
   },
   {
     "kind": "apple-touch-icon",
     "width": 180,
     "height": 180,
-    "url": "/kit/logos/favicon/one-agency_logo_apple-touch-icon_180x180.png",
-    "bytes": 1894
+    "url": "/kit/logos/favicon/one-agency_logo_apple-touch-icon_180x180.png"
   },
   {
     "kind": "app-icon",
     "width": 192,
     "height": 192,
-    "url": "/kit/logos/favicon/one-agency_logo_app-icon_192x192.png",
-    "bytes": 2058
+    "url": "/kit/logos/favicon/one-agency_logo_app-icon_192x192.png"
   },
   {
     "kind": "app-icon",
     "width": 512,
     "height": 512,
-    "url": "/kit/logos/favicon/one-agency_logo_app-icon_512x512.png",
-    "bytes": 5740
+    "url": "/kit/logos/favicon/one-agency_logo_app-icon_512x512.png"
   }
 ]
 
@@ -823,14 +739,12 @@ export const SOCIAL_IMAGES: IconFile[] = [
     "kind": "avatar",
     "width": 1080,
     "height": 1080,
-    "url": "/kit/logos/social/one-agency_logo_social-avatar_1080x1080.png",
-    "bytes": 22337
+    "url": "/kit/logos/social/one-agency_logo_social-avatar_1080x1080.png"
   },
   {
     "kind": "og",
     "width": 1200,
     "height": 630,
-    "url": "/kit/logos/social/one-agency_logo_og-image_1200x630.png",
-    "bytes": 21001
+    "url": "/kit/logos/social/one-agency_logo_og-image_1200x630.png"
   }
 ]

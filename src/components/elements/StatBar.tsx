@@ -5,7 +5,7 @@ import { pop, sequence, stagger, viewport } from '../../lib/motion'
 const PROOF = AD_CONCEPTS.find((c) => c.id === 'proof')!
 
 /**
- * The live stat band: Unbounded numbers in the gradient, white labels, gradient dividers (--stat-divider, or -h when
+ * The live stat band: Unbounded numbers in solid Mint, white labels, gradient dividers (--stat-divider, or -h when
  * stacked), and the source line directly underneath. Stats pop in left to right.
  */
 export function StatBar() {

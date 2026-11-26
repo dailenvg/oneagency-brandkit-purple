@@ -1,7 +1,6 @@
 import { CheckBadge } from '../../kit/glass/CheckBadge'
 import { Grain } from '../../kit/glass/Grain'
 import { HalftoneArc } from '../../kit/glass/HalftoneArc'
-import { ParticleStream } from '../../kit/glass/ParticleStream'
 import { BrowserMock } from './BrowserMock'
 
 /** The audit checklist from the reference ads (source: the ads' own copy). */
@@ -9,13 +8,12 @@ const CHECKS = ['AI search visibility scan', 'SEO audit', 'Online reviews audit'
 
 /**
  * The style at a glance, rebuilt from the kit components (not an image): halftone arc, glass browser in a depth stack,
- * the check list, a particle stream and grain. Follows the hub theme.
+ * the check list and grain. Follows the hub theme.
  */
 export function GlassScene() {
   return (
     <figure className="relative isolate overflow-hidden rounded-site border border-edge bg-ground">
       <Grain className="z-10" />
-      <ParticleStream className="absolute bottom-0 left-0 -z-10 h-1/2 w-full opacity-70 md:w-1/2" />
       <div className="grid items-center gap-10 p-6 sm:p-10 md:grid-cols-2 lg:p-14">
         <div className="relative mx-auto w-full max-w-sm">
           <HalftoneArc inView className="absolute -top-16 left-1/2 -z-10 w-[150%] max-w-none -translate-x-1/2" />
@@ -32,7 +30,7 @@ export function GlassScene() {
       </div>
       <figcaption className="sr-only">
         The glass style rebuilt from the kit components: a frosted browser window stacked in depth, a Mint halftone arc behind it, a checklist with Mint
-        glass badges, a particle stream and grain.
+        glass badges and grain.
       </figcaption>
     </figure>
   )

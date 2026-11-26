@@ -32,8 +32,8 @@ export function LogoVariantCard({ logo }: { logo: LogoAsset }) {
           // "Horizontal, Gradient on light": the lockup's short name, without its "(primary, master layout)" aside.
           title={`${logo.lockupLabel.replace(/\s*\(.*\)$/, '')}, ${logo.label}`}
           files={[
-            { url: svg.url, label: 'SVG', bytes: svg.bytes },
-            ...logo.pngs.map((png) => ({ url: png.url, label: `PNG ${png.scale}x`, bytes: png.bytes })),
+            { url: svg.url, label: 'SVG' },
+            ...logo.pngs.map((png) => ({ url: png.url, label: `PNG ${png.scale}x` })),
           ]}
         />
       </div>

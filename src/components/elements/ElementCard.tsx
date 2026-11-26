@@ -27,8 +27,6 @@ interface ElementCardProps {
 }
 
 const SOURCE_BADGE = {
-  live: <Badge>Live site</Badge>,
-  film: <Badge>Film</Badge>,
   nova: <Badge>Concept 01 Nova</Badge>,
   proposed: <Badge>Proposed</Badge>,
 }
@@ -58,7 +56,7 @@ export function ElementCard({ ids, title, children, replayable, stage = 'h-56 bg
       <div className="flex flex-1 flex-col gap-3 p-5">
         <header className="flex flex-wrap items-center justify-between gap-2">
           <Heading className="font-semibold text-text">{title ?? first.title}</Heading>
-          {SOURCE_BADGE[first.source]}
+          {first.source && SOURCE_BADGE[first.source]}
         </header>
         <p className="text-step-small text-text-2">{first.use}</p>
         <div className="mt-auto flex flex-wrap items-center gap-2">

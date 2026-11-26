@@ -84,7 +84,7 @@ export function splitLetters(el: HTMLElement): HTMLElement[] {
 export interface RiseOptions {
   /** Start of the word-by-word exit, if the line leaves. */
   out?: number
-  /** Word indices set as accent words (Unbounded, gradient fill). */
+  /** Word indices set as accent words (Unbounded, solid Mint). */
   accent?: number[]
   /** Seconds between words. */
   stagger?: number

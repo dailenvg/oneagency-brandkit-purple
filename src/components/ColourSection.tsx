@@ -1,8 +1,9 @@
 import { CheckCircle } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
-import { ACCENT_RULES, GROUP_LABELS, GROUP_ORDER } from '../data/colour-rules'
+import { ACCENT_RULES, BRAND_ORDER, GROUP_LABELS, GROUP_ORDER } from '../data/colour-rules'
 import { DERIVED_RAMPS, RAMPS, TOKEN_SOURCE, TOKENS } from '../data/tokens'
 import { reveal } from '../lib/motion'
+import { BrandColourCard } from './colour/BrandColourCard'
 import { ContrastMatrix } from './colour/ContrastMatrix'
 import { LightThemeTokens } from './colour/LightThemeTokens'
 import { RampRow } from './colour/RampRow'
@@ -18,7 +19,11 @@ import { ZipButton } from './ui/ZipButton'
 const CSS_URL = '/kit/colour/one-agency_tokens_web.css'
 const JSON_URL = '/kit/colour/one-agency_tokens_web.json'
 
-/** Colour: the board palette and derived tokens by group, ramps, the contrast matrix and the ad accent rules. */
+/** The brand palette as photo cards: the seven brand colours plus White, lightest to darkest. */
+const BRAND_CARDS = BRAND_ORDER.flatMap((name) => TOKENS.filter((t) => t.name === name))
+const ON_CARDS = new Set<string>(BRAND_ORDER)
+
+/** Colour: the brand palette as photo cards, the derived tokens by group, ramps, the contrast matrix and the ad accent rules. */
 export function ColourSection() {
   return (
     <Section
@@ -26,7 +31,7 @@ export function ColourSection() {
       eyebrow="Colour"
       title="Navy, Mint and Ultra Violet"
       accent={[1]}
-      lede="Five colours from the moodboard, and everything the kit derives from them, labelled. Tap or click any value to copy it."
+      lede="Seven brand colours and White, each with the photo it pairs with, plus every token the kit derives from them. Tap or click any value to copy it."
       actions={
         <>
           <DownloadLink url={CSS_URL} label="CSS tokens" />
@@ -36,13 +41,22 @@ export function ColourSection() {
       }
     >
       <div className="flex flex-col gap-section">
-        {GROUP_ORDER.map((group) => {
-          const tokens = TOKENS.filter((t) => t.group === group)
+        <div>
+          <SubHeading title={GROUP_LABELS.brand.label}>{GROUP_LABELS.brand.note}</SubHeading>
+          <Reveal as="ul" stagger className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {BRAND_CARDS.map((t) => (
+              <BrandColourCard key={t.name} token={t} />
+            ))}
+          </Reveal>
+        </div>
+
+        {GROUP_ORDER.filter((group) => group !== 'brand').map((group) => {
+          const tokens = TOKENS.filter((t) => t.group === group && !ON_CARDS.has(t.name))
           if (!tokens.length) return null
           return (
             <div key={group}>
               <SubHeading title={GROUP_LABELS[group].label}>{GROUP_LABELS[group].note}</SubHeading>
-              <Reveal as="ul" stagger className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <Reveal as="ul" stagger className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-4">
                 {tokens.map((t) => (
                   <Swatch key={t.name} token={t} />
                 ))}
@@ -84,8 +98,8 @@ export function ColourSection() {
 
         <div>
           <SubHeading title="Light theme for this hub" badge={<Badge>Derived</Badge>}>
-            The sun and moon switch swaps each role from its navy token to a white, Mist and Sky one. Mint never sets text on light grounds, so accent text
-            and the focus ring use Ultra Violet.
+            The sun and moon switch moves each role from its navy token to a white, Mist or Sky one. Mint never sets text on light grounds, so accent text and
+            the focus ring use Ultra Violet.
           </SubHeading>
           <LightThemeTokens />
         </div>

@@ -7,7 +7,7 @@ import { DepthStack } from './glass/DepthStack'
 import { GlassAnatomy } from './glass/GlassAnatomy'
 import { GlassLibrary } from './glass/GlassLibrary'
 import { GlassScene } from './glass/GlassScene'
-import { ReferenceGallery } from './glass/ReferenceGallery'
+import { GlassStudio } from './glass/studio/GlassStudio'
 import { DirectionList } from './imagery/DirectionList'
 import { Section } from './layout/Section'
 import { SubHeading } from './layout/SubHeading'
@@ -33,7 +33,7 @@ function UsageList({ title, items, glass }: { title: string; items: string[]; gl
   )
 }
 
-/** Glass and texture: the reference ads' style as components, anatomy, depth and usage rules, sources and Magnific files. */
+/** Glass and texture: the reference ads' style as components, anatomy, depth and usage rules and Magnific files. */
 export function GlassSection() {
   return (
     <Section
@@ -41,13 +41,22 @@ export function GlassSection() {
       eyebrow="Glass & texture"
       title="Frosted glass with a Mint rim light"
       highlight={[4, 6]}
-      lede="The style of the nine reference ads: frosted glass objects floating at a slight angle on a near-black ground, lit with a rose rim, stacked in depth, with halftone arcs and particle streams behind them."
+      lede="Frosted glass in the brand materials: the ONE mark, the ad icons or any shape, set over a brand ground and edged with a Mint rim light. Turn it, tune it and export a PNG. Below it, the same frosted material on the kit's cards, tiles and badges."
       actions={<ZipButton group="glass" label="All glass & texture" />}
     >
       <div className="flex flex-col gap-section">
         <Reveal>
-          <GlassScene />
+          <GlassStudio />
         </Reveal>
+
+        <div>
+          <SubHeading title="Glass in layouts">
+            The studio&apos;s frosted material on the kit components: a browser in a depth stack, a Mint halftone arc and the checklist.
+          </SubHeading>
+          <Reveal>
+            <GlassScene />
+          </Reveal>
+        </div>
 
         <div>
           <SubHeading title="Components" badge={<Badge>Proposed</Badge>}>
@@ -83,11 +92,6 @@ export function GlassSection() {
         </div>
 
         <div>
-          <SubHeading title="Source of the style">The nine ONE Agency reference ads this view is built from. Tap or click one to see it at full size.</SubHeading>
-          <ReferenceGallery />
-        </div>
-
-        <div>
           <SubHeading title="Illustrations and textures">
             The illustrations are AI-generated in Magnific to this style, each on dark, on light and transparent. The textures are made in code, not generated.
           </SubHeading>
@@ -95,8 +99,8 @@ export function GlassSection() {
         </div>
 
         <SourceNote>
-          Codified from nine ONE Agency reference ads (November 2026), repainted in the new palette. Rim, glow and dots use Mint (--mint, #00FAB3) on navy and Ultra
-          Violet on light. The violet ground runs from the derived --violet-800 into --void; both are labelled derived.
+          Codified from nine ONE Agency reference ads (November 2026); the kit repaints that style in the new palette. The rim light and dots use Mint (--mint, #00FAB3) on navy and
+          Ultra Violet on light. No glow, halo or backlight. The violet ground runs from the derived --violet-800 into --void; both are labelled derived.
         </SourceNote>
       </div>
     </Section>
