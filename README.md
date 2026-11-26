@@ -32,8 +32,8 @@ Overview. The v1.0 anchors (`#logo`, `#assets`, `#top`) still work and are rewri
   colour ramps in Mint (the blue end unchanged) and the glow ground turned off (see `public/vendor/ciq/RECOLOUR.md`).
   The hub and the stills load the recolour. Live, it runs behind the Overview hero
   (`src/components/overview/MobiusLoop.tsx`): it follows the hub theme, pauses while the tab is hidden and is removed
-  when you leave the view. In the kit it ships as stills (`public/kit/elements/mobius/`, `npm run kit:mobius`), and
-  three creative ads (technology, results, vacation-ownership) are built on them. Credit wherever it appears:
+  when you leave the view. In the kit it ships as stills (`public/kit/elements/mobius/`, `npm run kit:mobius`).
+  Credit wherever it appears:
   "Möbius loop: ConversionIQ key visual, recoloured to Mint." Never edit or redraw it; colour changes go through the
   recolour script only.
 
@@ -44,11 +44,11 @@ in `design/source/rebrand/`:
 
 | File | What it is |
 | --- | --- |
-| `brand-tokens.json` | Hand-authored colour source: the five board colours (Navy, Mint, Ultra Violet, Sky, Mist), white, the logo gradient, and every derived token with its recipe. `npm run kit:tokens` builds everything from it. |
+| `brand-tokens.json` | Hand-authored colour source: the five board colours (Navy, Mint, Ultra Violet, Sky, Mist), Plum Night and Lavender from concept 01 "Nova", white, the logo gradient, and every derived token with its recipe. `npm run kit:tokens` builds everything from it. |
 | `logo_*.svg`, `wordmark-one_gradient.svg`, `mark_*.svg`, `icon_*.svg` | The logo masters, verified against the board (written by `build-source.mjs`). The only logo source. |
 | `paths.json`, `moodboard_figma-133-305.png` | The three logo paths and the board itself, for reference. |
 
-Five colours, white and the logo gradient are the board's. Everything else is computed and labelled derived wherever
+Five colours, white and the logo gradient are the board's; Plum Night and Lavender come from concept 01 "Nova". Everything else is computed and labelled derived wherever
 it appears: the system colours (surfaces, text greys, edges, `--violet-light`, pressed steps), the tint/shade ramps,
 the hub's light theme and the highlight band tokens. Type is Unbounded (display and numerals) and Geist (body); Lato
 and Metal are retired. Radii, the "Frames in orbit" pattern, the photo set (Unsplash, ids in
@@ -84,7 +84,7 @@ Playwright (asset rendering). Python 3 with `fonttools` and `brotli` for the fon
 | `npm run kit:copy` | `scripts/build-copy.mjs`: exports `src/data/copy.ts` to `public/kit/copy/one-agency_copy-bank.{md,json}`. |
 | `npm run kit:motion-ads` | `scripts/build-motion-ads.mjs` writes the nine HTML5 ads (3 concepts x 1080x1920, 1080x1080, 300x250) to `public/kit/motion/ads/` plus an HTML5 ZIP each; `scripts/export-motion-ads.mjs` renders them frame by frame (Playwright, `oneAd.seek(t)`) to MP4 (ffmpeg), GIF (300x250 under 3 MB) and an end-frame PNG in `public/kit/motion/exports/`. Without ffmpeg it records WebM instead and skips the GIF. `node scripts/export-motion-ads.mjs --stills` renders end frames only. |
 | `npm run kit:references` | `scripts/copy-references.mjs [folder]`: copies the nine reference ads (default `../Ads`) to `public/kit/references/one-agency_reference-ad_[slug]_1254x1254.png` and writes WebP previews to `public/previews/references/` (display only). Names and alt text live in `src/data/glass-references.ts`. Skips when the folder is not there. |
-| `npm run kit:ads` | `scripts/export-creative-ads.mjs [concept ...] [--format=square,story]`: renders the ten creative ad concepts (copy and visuals in `src/data/ad-creative.ts`, components in `src/components/ads/creative/`) through the `render-ad.html` Vite entry in Playwright, at 1080x1080, 1080x1350, 1080x1920 and 1200x627, to `public/kit/ads/creative/[concept]/one-agency_ad-[concept]_[WxH].{png,webp}`, and lists them in `src/data/ads-creative.generated.json` for the Ads view. |
+| `npm run kit:ads` | `scripts/import-magnific-ads.py --manifest`: lists the creative ads on disk in `src/data/ads-creative.generated.json` for the Ads view. The ads are designed in Magnific, not in code: one Designer document per concept ("ONE Agency ad – [name]", ONE Agency Brand Kit project, folder "Frosted glass ads") with four pages, square 1080x1080, portrait 1080x1350, story 1080x1920 and landscape 1200x627. The glass art in each is generated in Magnific (Nano Banana 2.1, frosted glass on a flat brand ground, no text); the copy is live Unbounded and Geist type from `src/data/ad-creative.ts`, so it stays verbatim and editable. After editing a design, export it as PNG and run `python3 scripts/import-magnific-ads.py [concept] [export.zip]`: it writes `public/kit/ads/creative/[concept]/one-agency_ad-[concept]_[WxH].{png,webp}` and refreshes the manifest. |
 | `npm run kit:optimise` | `scripts/optimise-pngs.py public/kit`: lossless re-encode of every kit PNG (oxipng level 6 with `pyoxipng`, else Pillow), written only when the decoded pixels match the original exactly and the file is smaller. Content credentials are always preserved: any PNG carrying C2PA (a caBX chunk or a C2PA JUMBF box) is left untouched, so the reference ads stay byte copies of the source ads. |
 | `npm run kit:og` | `scripts/build-og-image.mjs`: the hub's own link preview, `public/og/one-agency_brand-kit_og-image_1200x630.jpg`, composed from the energy Möbius still, the horizontal logo on navy, Unbounded and Geist. Not a kit download and never zipped. Needs `kit:logos` and `kit:mobius` first. |
 | `npm run kit:zips` | `scripts/build-zips.mjs`: ZIPs every group to `public/kit/zips/one-agency_kit_[group].zip` and `one-agency_kit_full.zip`, and writes the asset list `src/data/assets.generated.json`, the hub's only source for file sizes (it runs last, after `kit:optimise`, so sizes always match the files). Rerun it whenever files change (for example after the Magnific export lands). |
@@ -154,10 +154,23 @@ between their variants. Missing file: "on the way" state; malformed: error state
 ## Glass, texture and the highlight band
 
 The Glass & texture view codifies the nine reference ads, which are in the old palette, and repaints the style in Mint
-and Violet with no glow: components in `src/kit/glass/` (classes in
-`src/styles/glass.css`, colours from the `--glass-*` theme variables), the anatomy of a glass card, depth stack rules,
+and Violet with no glow, in the glass studio's frosted material (frost under a milky wash, colour running from the top
+edge down to clear, a rim light along the top, a diagonal sheen, a thin slab edge and a contact shadow down and to the
+right): components in `src/kit/glass/` (classes in `src/styles/glass.css`, colours from the `--glass-*` theme
+variables; the SVG illustrations follow the same recipe through `src/kit/graphics/palette.ts` and `GlassDefs`), the anatomy of a glass card, depth stack rules,
 glass versus flat, do and don't, the references themselves and the Magnific files. Rules and copy live in
 `src/data/glass-rules.ts`.
+
+The view opens on the **glass studio** (`src/components/glass/studio/`), which turns a shape into a thin slab of frosted
+glass in WebGL2 and exports it as a PNG (1080 or 2160 px, on the ground or transparent). Shapes: the ONE mark, the
+Phosphor ad icons in the fill weight, up to four Unbounded letters, or an uploaded or pasted SVG or transparent PNG.
+Materials (Clear, Mint, Violet, Signature) and grounds (Navy, Violet, Mist) are brand tokens only, in
+`src/kit/glass3d/presets.ts`. The renderer (`src/kit/glass3d/`) builds a signed distance field from the shape
+(`field.ts`), raymarches it as an extruded slab with frost (`shader.ts`; thickness, edge, refraction and spectrum are fixed at
+their minimums in `DEFAULT_SETTINGS`, with no sliders), and renders only
+while something moves (`GlassRenderer.ts`). Per the glass rules it has no halo and no inner glow: the edge light is the
+rim light (Mint on navy and violet, Ultra Violet on Mist) and the only shading under the icon is a neutral contact
+shadow. Ported from the "Glass icons" WebGL study.
 
 The highlight band (`HighlightText`, `.highlight-band`, `--kit-highlight` derived / `--kit-highlight-light` = Sky) is
 documented on the Type view with a live rebuild of the reference line. `WordRise` takes `highlight={[from, to]}`

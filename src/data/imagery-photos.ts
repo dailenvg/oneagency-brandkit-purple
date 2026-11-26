@@ -1,8 +1,9 @@
 /**
- * The photo set in public/kit/imagery/photos/, each photo paired with a palette colour. Three come from concept 01
+ * The photo set in public/kit/imagery/photos/, each photo paired with a palette colour. Eight come from concept 01
  * "Nova" (one-agency-rebrand-v2, public/palette/), where the file names are Unsplash photo ids; the photographers are not
  * recorded there, so the credit is the id and its Unsplash page. The Mint and Violet paper photos are AI-generated in
- * Magnific; their credit is the Magnific creation.
+ * Magnific; their credit is the Magnific creation. The Colour view shows one photo on each brand colour card
+ * (PALETTE_PHOTOS below).
  */
 
 /** Where a photo comes from, which decides its credit line and link. */
@@ -14,8 +15,8 @@ export interface BrandPhoto {
   title: string
   /** One sentence on what the photo shows, for screen readers. */
   alt: string
-  /** The palette colour the photo is paired with (Nova's Deep Plum and Ink map to Navy in this palette). */
-  mood: 'Mint' | 'Ultra Violet' | 'Navy' | 'Mist'
+  /** The palette colour the photo is paired with (Nova's Ink maps to Navy in this palette). */
+  mood: 'Mint' | 'Ultra Violet' | 'Navy' | 'Sky' | 'Mist' | 'Plum Night' | 'Lavender' | 'White'
   source: PhotoSource
   url: string
   width: number
@@ -59,7 +60,28 @@ export const BRAND_PHOTOS: BrandPhoto[] = [
   photo('mint-paper-waves', 'Mint paper waves', 'Layers of pale Mint paper curving across the frame in soft, overlapping waves, matte and evenly lit.', 'Mint', magnific('ONE Agency v2 · Photo · Mint paper waves', 'https://www.magnific.com/app/creation/Xm9WAQjBfo'), 900, 600),
   photo('violet-silk-wave', 'Violet silk wave', 'A soft violet fold of light curving across a deep purple ground.', 'Ultra Violet', unsplash('5Q9Gf0WSyLk'), 900, 507),
   photo('violet-paper-waves', 'Violet paper waves', 'Layers of violet paper curving across the frame in soft, overlapping waves, matte and evenly lit.', 'Ultra Violet', magnific('ONE Agency v2 · Photo · Violet paper waves', 'https://www.magnific.com/app/creation/Xm9cKPQBfo'), 900, 600),
+  photo('navy-blue-waves', 'Navy blue waves', 'Deep blue folds of light rolling across a dark navy ground.', 'Navy', unsplash('tnkb5EcWN9I'), 900, 636),
   photo('dark-curves', 'Dark curves', 'Smooth black surfaces curving in soft layers, lit faintly from above.', 'Navy', unsplash('NYtHU9TLkPE'), 900, 507),
-  photo('white-layered-waves', 'White layered waves', 'Thin white layers rippling in gentle waves, like stacked paper.', 'Mist', unsplash('pHUF3pNk1XA'), 900, 600),
+  photo('sky-clouds', 'Sky clouds', 'Soft white clouds drifting across a pale blue sky.', 'Sky', unsplash('dmQhktXQ0ew'), 600, 900),
+  photo('mist-fog', 'Mist fog', 'Grey fog rolling low over a hillside, the ridge fading into the haze.', 'Mist', unsplash('asohee2GUCc'), 900, 600),
+  photo('plum-night-swirl', 'Plum Night swirl', 'Fine violet and magenta lines sweeping in a curve across a near-black plum ground.', 'Plum Night', unsplash('1uyWq9xVwcE'), 900, 600),
+  photo('lavender-marble', 'Lavender marble', 'Marbled paint in pale lavender, white and violet, with fine blue veins running through it.', 'Lavender', unsplash('VXUhQqO8u5Q'), 900, 600),
+  photo('white-layered-waves', 'White layered waves', 'Thin white layers rippling in gentle waves, like stacked paper.', 'White', unsplash('pHUF3pNk1XA'), 900, 600),
 ]
+
+/** The photo on each brand colour card in the Colour view, by token name. */
+export const PALETTE_PHOTOS: Record<string, BrandPhoto> = Object.fromEntries(
+  (
+    [
+      ['--navy', 'navy-blue-waves'],
+      ['--mint', 'mint-paper-waves'],
+      ['--violet', 'violet-silk-wave'],
+      ['--sky', 'sky-clouds'],
+      ['--mist', 'mist-fog'],
+      ['--plum', 'plum-night-swirl'],
+      ['--lavender', 'lavender-marble'],
+      ['--paper', 'white-layered-waves'],
+    ] as const
+  ).map(([token, id]) => [token, BRAND_PHOTOS.find((p) => p.id === id)!]),
+)
 

@@ -103,7 +103,7 @@ export const ELEMENTS: ElementFile[] = [
   el('cta-primary', 'classic', 'CTA, primary', null, 'Mint pill, Navy text. One per ad.'),
   el('cta-secondary', 'classic', 'CTA, secondary', null, 'White outline pill for a second, quieter action on dark.'),
   el('cta-on-light', 'classic', 'CTA, on light', 'proposed', 'Navy pill for white and other light grounds, where Mint fails contrast.'),
-  el('stat-bar', 'classic', 'Proof bar', null, 'Unbounded numbers in the gradient, white labels and gradient dividers, with the source line underneath.'),
+  el('stat-bar', 'classic', 'Proof bar', null, 'Unbounded numbers in solid Mint, white labels and gradient dividers, with the source line underneath.'),
   el('award-badge', 'classic', 'Award badge', null, 'Always says it was awarded to ConversionIQ.ai.'),
   el('laurel', 'classic', 'Laurel', null, 'The award laurel from the live banner, white.'),
 ]

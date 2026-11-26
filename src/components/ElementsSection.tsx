@@ -136,7 +136,7 @@ export function ElementsSection() {
 
         <div>
           <SubHeading title="Illustrations">
-            Spot illustrations in the glass style, lit from the top left. Each has one lit element and no words, only a few numerals.
+            Spot illustrations in the frosted glass style, lit from above. Each has one lit element and no words, only a few numerals.
           </SubHeading>
           <Reveal stagger className="grid gap-4 md:grid-cols-2">
             {ILLUSTRATIONS.map((id) => (

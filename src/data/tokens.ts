@@ -15,8 +15,10 @@ export interface ColourToken {
   alpha: number
   group: TokenGroup
   role: string
-  /** 'board': copied from the Figma moodboard. 'derived': computed by the kit. */
-  source: 'board' | 'derived'
+  /** 'board': copied from the Figma moodboard. 'concept': a brand colour taken from a rebrand concept. 'derived': computed by the kit. */
+  source: 'board' | 'concept' | 'derived'
+  /** Where a 'concept' colour comes from (e.g. "concept 01 Nova"); null otherwise. */
+  origin?: string | null
   /** How a derived value was made (e.g. "OKLab mix of --navy toward #000000, 25%"); null for board values and gradients. */
   derivation: string | null
   /** Gradient stops, resolved to hex where they reference a token. */
@@ -67,7 +69,7 @@ export const TOKEN_SOURCE = {
   "figma": "Figma file Ex4UgCrCeAKPnv8H6BdHMm, node 133:305",
   "board": "design/source/rebrand/moodboard_figma-133-305.png",
   "exported": "2026-11-20",
-  "note": "Brand colours and the logo gradient are from the Figma moodboard. Everything marked \"derived\" is computed from them."
+  "note": "Navy, Mint, Ultra Violet, Sky, Mist, white and the logo gradient are from the Figma moodboard; Plum Night and Lavender are from concept 01 Nova. Everything marked \"derived\" is computed from them."
 } as const
 
 export const TOKENS: ColourToken[] = [
@@ -82,6 +84,7 @@ export const TOKENS: ColourToken[] = [
     "group": "brand",
     "role": "Brand ground: specimens, the reversed lockup and app tile, AGENCY in the lockup, ink on light grounds.",
     "source": "board",
+    "origin": null,
     "derivation": null,
     "stops": null
   },
@@ -96,6 +99,7 @@ export const TOKENS: ColourToken[] = [
     "group": "brand",
     "role": "Accent on navy: ONE in the reversed lockup, the CTA fill, focus and highlights on dark. Never text on light grounds.",
     "source": "board",
+    "origin": null,
     "derivation": null,
     "stops": null
   },
@@ -110,6 +114,7 @@ export const TOKENS: ColourToken[] = [
     "group": "brand",
     "role": "Primary accent on light: links, accent text and buttons on light grounds. Holds most of the logo gradient.",
     "source": "board",
+    "origin": null,
     "derivation": null,
     "stops": null
   },
@@ -124,6 +129,7 @@ export const TOKENS: ColourToken[] = [
     "group": "brand",
     "role": "Light panels, tags, the highlight band on light and the light app tile.",
     "source": "board",
+    "origin": null,
     "derivation": null,
     "stops": null
   },
@@ -138,6 +144,37 @@ export const TOKENS: ColourToken[] = [
     "group": "brand",
     "role": "Supporting neutral: light surfaces and panels.",
     "source": "board",
+    "origin": null,
+    "derivation": null,
+    "stops": null
+  },
+  {
+    "name": "--plum",
+    "label": "Plum Night",
+    "cssVar": "var(--plum)",
+    "value": "#170032",
+    "hex": "#170032",
+    "rgb": "rgb(23, 0, 50)",
+    "alpha": 1,
+    "group": "brand",
+    "role": "Deep ground: premium dark panels, photo-led ads and hero surfaces. White type on top.",
+    "source": "concept",
+    "origin": "concept 01 Nova",
+    "derivation": null,
+    "stops": null
+  },
+  {
+    "name": "--lavender",
+    "label": "Lavender",
+    "cssVar": "var(--lavender)",
+    "value": "#f6f3fb",
+    "hex": "#f6f3fb",
+    "rgb": "rgb(246, 243, 251)",
+    "alpha": 1,
+    "group": "brand",
+    "role": "Soft light ground: panels and light surfaces with a violet cast. Navy or Plum Night type on top.",
+    "source": "concept",
+    "origin": "concept 01 Nova",
     "derivation": null,
     "stops": null
   },
@@ -152,6 +189,7 @@ export const TOKENS: ColourToken[] = [
     "group": "surface",
     "role": "White: the light ground, and type on navy.",
     "source": "board",
+    "origin": null,
     "derivation": null,
     "stops": null
   },
@@ -863,6 +901,36 @@ export const CONTRAST: ContrastPair[] = [
   },
   {
     "text": "--text",
+    "background": "--plum",
+    "textHex": "#ffffff",
+    "backgroundHex": "#170032",
+    "ratio": 19.4,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--paper",
+    "background": "--plum",
+    "textHex": "#ffffff",
+    "backgroundHex": "#170032",
+    "ratio": 19.4,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--plum",
+    "background": "--paper",
+    "textHex": "#170032",
+    "backgroundHex": "#ffffff",
+    "ratio": 19.4,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--text",
     "background": "--navy",
     "textHex": "#ffffff",
     "backgroundHex": "#020257",
@@ -892,11 +960,81 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": true
   },
   {
+    "text": "--lavender",
+    "background": "--void",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#010138",
+    "ratio": 18,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--plum",
+    "background": "--mist-light",
+    "textHex": "#170032",
+    "backgroundHex": "#f5f5f6",
+    "ratio": 17.81,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--lavender",
+    "background": "--plum",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#170032",
+    "ratio": 17.67,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--plum",
+    "background": "--lavender",
+    "textHex": "#170032",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 17.67,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
     "text": "--ink",
     "background": "--mist-light",
     "textHex": "#020257",
     "backgroundHex": "#f5f5f6",
     "ratio": 16.78,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--lavender",
+    "background": "--navy",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#020257",
+    "ratio": 16.65,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--ink",
+    "background": "--lavender",
+    "textHex": "#020257",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 16.65,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--plum",
+    "background": "--mist",
+    "textHex": "#170032",
+    "backgroundHex": "#ebebed",
+    "ratio": 16.29,
     "aaNormal": true,
     "aaLarge": true,
     "aaaNormal": true
@@ -942,11 +1080,41 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": true
   },
   {
+    "text": "--sky",
+    "background": "--plum",
+    "textHex": "#d0e6fd",
+    "backgroundHex": "#170032",
+    "ratio": 15.17,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--plum",
+    "background": "--sky",
+    "textHex": "#170032",
+    "backgroundHex": "#d0e6fd",
+    "ratio": 15.17,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
     "text": "--mint",
     "background": "--void",
     "textHex": "#00fab3",
     "backgroundHex": "#010138",
     "ratio": 14.42,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--lavender",
+    "background": "--surface-2",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#071a63",
+    "ratio": 14.31,
     "aaNormal": true,
     "aaLarge": true,
     "aaaNormal": true
@@ -967,6 +1135,26 @@ export const CONTRAST: ContrastPair[] = [
     "textHex": "#020257",
     "backgroundHex": "#d0e6fd",
     "ratio": 14.29,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--mint",
+    "background": "--plum",
+    "textHex": "#00fab3",
+    "backgroundHex": "#170032",
+    "ratio": 14.16,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--plum",
+    "background": "--mint",
+    "textHex": "#170032",
+    "backgroundHex": "#00fab3",
+    "ratio": 14.16,
     "aaNormal": true,
     "aaLarge": true,
     "aaaNormal": true
@@ -1027,6 +1215,26 @@ export const CONTRAST: ContrastPair[] = [
     "textHex": "#c2cbde",
     "backgroundHex": "#010138",
     "ratio": 12.13,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--lavender",
+    "background": "--raised",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#132a6e",
+    "ratio": 12.08,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--text-2",
+    "background": "--plum",
+    "textHex": "#c2cbde",
+    "backgroundHex": "#170032",
+    "ratio": 11.91,
     "aaNormal": true,
     "aaLarge": true,
     "aaaNormal": true
@@ -1102,11 +1310,31 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": true
   },
   {
+    "text": "--ink-2",
+    "background": "--lavender",
+    "textHex": "#273f7d",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 9.14,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
     "text": "--text-3",
     "background": "--void",
     "textHex": "#a0adca",
     "backgroundHex": "#010138",
     "ratio": 8.77,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--text-3",
+    "background": "--plum",
+    "textHex": "#a0adca",
+    "backgroundHex": "#170032",
+    "ratio": 8.61,
     "aaNormal": true,
     "aaLarge": true,
     "aaaNormal": true
@@ -1192,6 +1420,26 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": true
   },
   {
+    "text": "--lavender",
+    "background": "--violet",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#6203d0",
+    "ratio": 7.83,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
+    "text": "--violet",
+    "background": "--lavender",
+    "textHex": "#6203d0",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 7.83,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": true
+  },
+  {
     "text": "--ink-2",
     "background": "--mint",
     "textHex": "#273f7d",
@@ -1227,6 +1475,16 @@ export const CONTRAST: ContrastPair[] = [
     "textHex": "#a0adca",
     "backgroundHex": "#071a63",
     "ratio": 6.97,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": false
+  },
+  {
+    "text": "--violet-light",
+    "background": "--plum",
+    "textHex": "#a08cec",
+    "backgroundHex": "#170032",
+    "ratio": 6.89,
     "aaNormal": true,
     "aaLarge": true,
     "aaaNormal": false
@@ -1312,6 +1570,16 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": false
   },
   {
+    "text": "--ink-3",
+    "background": "--lavender",
+    "textHex": "#496095",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 5.64,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": false
+  },
+  {
     "text": "--violet-light",
     "background": "--surface-2",
     "textHex": "#a08cec",
@@ -1372,6 +1640,16 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": false
   },
   {
+    "text": "--text-4",
+    "background": "--plum",
+    "textHex": "#687ca9",
+    "backgroundHex": "#170032",
+    "ratio": 4.66,
+    "aaNormal": true,
+    "aaLarge": true,
+    "aaaNormal": false
+  },
+  {
     "text": "--ink-3",
     "background": "--mint",
     "textHex": "#496095",
@@ -1417,6 +1695,16 @@ export const CONTRAST: ContrastPair[] = [
     "textHex": "#687ca9",
     "backgroundHex": "#f5f5f6",
     "ratio": 3.82,
+    "aaNormal": false,
+    "aaLarge": true,
+    "aaaNormal": false
+  },
+  {
+    "text": "--text-4",
+    "background": "--lavender",
+    "textHex": "#687ca9",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 3.79,
     "aaNormal": false,
     "aaLarge": true,
     "aaaNormal": false
@@ -1472,6 +1760,16 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": false
   },
   {
+    "text": "--ink-3",
+    "background": "--plum",
+    "textHex": "#496095",
+    "backgroundHex": "#170032",
+    "ratio": 3.13,
+    "aaNormal": false,
+    "aaLarge": true,
+    "aaaNormal": false
+  },
+  {
     "text": "--violet-light",
     "background": "--violet",
     "textHex": "#a08cec",
@@ -1522,6 +1820,16 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": false
   },
   {
+    "text": "--violet-light",
+    "background": "--lavender",
+    "textHex": "#a08cec",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 2.57,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
     "text": "--ink-3",
     "background": "--surface-2",
     "textHex": "#496095",
@@ -1547,6 +1855,26 @@ export const CONTRAST: ContrastPair[] = [
     "textHex": "#6203d0",
     "backgroundHex": "#010138",
     "ratio": 2.3,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--violet",
+    "background": "--plum",
+    "textHex": "#6203d0",
+    "backgroundHex": "#170032",
+    "ratio": 2.26,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--plum",
+    "background": "--violet",
+    "textHex": "#170032",
+    "backgroundHex": "#6203d0",
+    "ratio": 2.26,
     "aaNormal": false,
     "aaLarge": false,
     "aaaNormal": false
@@ -1632,11 +1960,31 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": false
   },
   {
+    "text": "--text-3",
+    "background": "--lavender",
+    "textHex": "#a0adca",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 2.05,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
     "text": "--ink-2",
     "background": "--void",
     "textHex": "#273f7d",
     "backgroundHex": "#010138",
     "ratio": 1.97,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--ink-2",
+    "background": "--plum",
+    "textHex": "#273f7d",
+    "backgroundHex": "#170032",
+    "ratio": 1.93,
     "aaNormal": false,
     "aaLarge": false,
     "aaaNormal": false
@@ -1727,6 +2075,26 @@ export const CONTRAST: ContrastPair[] = [
     "textHex": "#c2cbde",
     "backgroundHex": "#f5f5f6",
     "ratio": 1.5,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--text-2",
+    "background": "--lavender",
+    "textHex": "#c2cbde",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 1.48,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--plum",
+    "background": "--raised",
+    "textHex": "#170032",
+    "backgroundHex": "#132a6e",
+    "ratio": 1.46,
     "aaNormal": false,
     "aaLarge": false,
     "aaaNormal": false
@@ -1852,6 +2220,36 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": false
   },
   {
+    "text": "--mint",
+    "background": "--lavender",
+    "textHex": "#00fab3",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 1.25,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--lavender",
+    "background": "--mint",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#00fab3",
+    "ratio": 1.25,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--plum",
+    "background": "--surface-2",
+    "textHex": "#170032",
+    "backgroundHex": "#071a63",
+    "ratio": 1.24,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
     "text": "--text",
     "background": "--mist",
     "textHex": "#ffffff",
@@ -1893,9 +2291,29 @@ export const CONTRAST: ContrastPair[] = [
   },
   {
     "text": "--sky",
+    "background": "--lavender",
+    "textHex": "#d0e6fd",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 1.17,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--sky",
     "background": "--mist-light",
     "textHex": "#d0e6fd",
     "backgroundHex": "#f5f5f6",
+    "ratio": 1.17,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--lavender",
+    "background": "--sky",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#d0e6fd",
     "ratio": 1.17,
     "aaNormal": false,
     "aaLarge": false,
@@ -1917,6 +2335,36 @@ export const CONTRAST: ContrastPair[] = [
     "textHex": "#00fab3",
     "backgroundHex": "#ebebed",
     "ratio": 1.15,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--lavender",
+    "background": "--paper",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#ffffff",
+    "ratio": 1.1,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--text",
+    "background": "--lavender",
+    "textHex": "#ffffff",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 1.1,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--paper",
+    "background": "--lavender",
+    "textHex": "#ffffff",
+    "backgroundHex": "#f6f3fb",
+    "ratio": 1.1,
     "aaNormal": false,
     "aaLarge": false,
     "aaaNormal": false
@@ -1952,6 +2400,16 @@ export const CONTRAST: ContrastPair[] = [
     "aaaNormal": false
   },
   {
+    "text": "--lavender",
+    "background": "--mist",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#ebebed",
+    "ratio": 1.08,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
     "text": "--sky",
     "background": "--mist",
     "textHex": "#d0e6fd",
@@ -1977,6 +2435,46 @@ export const CONTRAST: ContrastPair[] = [
     "textHex": "#d0e6fd",
     "backgroundHex": "#00fab3",
     "ratio": 1.07,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--plum",
+    "background": "--navy",
+    "textHex": "#170032",
+    "backgroundHex": "#020257",
+    "ratio": 1.06,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--ink",
+    "background": "--plum",
+    "textHex": "#020257",
+    "backgroundHex": "#170032",
+    "ratio": 1.06,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--plum",
+    "background": "--void",
+    "textHex": "#170032",
+    "backgroundHex": "#010138",
+    "ratio": 1.02,
+    "aaNormal": false,
+    "aaLarge": false,
+    "aaaNormal": false
+  },
+  {
+    "text": "--lavender",
+    "background": "--mist-light",
+    "textHex": "#f6f3fb",
+    "backgroundHex": "#f5f5f6",
+    "ratio": 1.01,
     "aaNormal": false,
     "aaLarge": false,
     "aaaNormal": false

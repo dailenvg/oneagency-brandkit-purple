@@ -9,7 +9,8 @@
  *   public/kit/colour/one-agency_tokens_web.json    the same data as JSON
  *   src/styles/tokens.css                           the same CSS, imported by the kit site
  *
- * The five brand colours, white and the logo gradient are copied from the board. Everything else is computed and
+ * The five board colours, white and the logo gradient are copied from the board; Plum Night and Lavender (marked with an
+ * origin) come from concept 01 "Nova". Everything else is computed and
  * labelled "derived" wherever it appears: the system colours (surfaces, text, edges), the tint/shade ramps and the
  * style tokens (the highlight band).
  *
@@ -35,7 +36,7 @@ const contrast = buildContrast()
 
 const data = {
   source: brand.source,
-  note: 'Brand colours and the logo gradient are from the Figma moodboard. Everything marked "derived" is computed from them.',
+  note: 'Navy, Mint, Ultra Violet, Sky, Mist, white and the logo gradient are from the Figma moodboard; Plum Night and Lavender are from concept 01 Nova. Everything marked "derived" is computed from them.',
   tokens,
   logoGradient: brand.logoGradient,
   effects,
@@ -52,7 +53,7 @@ write('public/kit/colour/one-agency_tokens_web.json', JSON.stringify(data, null,
 write('public/kit/colour/one-agency_tokens_web.css', renderCss())
 write('src/styles/tokens.css', renderCss())
 write('src/data/tokens.ts', renderTs())
-console.log(`tokens: ${tokens.length} (${tokens.filter((t) => t.source === 'board').length} from the board) · effects: ${effects.length} · derived ramps: ${ramps.length} · contrast pairs: ${contrast.length} (${contrast.filter((c) => c.aaNormal).length} pass AA)`)
+console.log(`tokens: ${tokens.length} (${tokens.filter((t) => t.source === 'board').length} from the board, ${tokens.filter((t) => t.source === 'concept').length} from a concept) · effects: ${effects.length} · derived ramps: ${ramps.length} · contrast pairs: ${contrast.length} (${contrast.filter((c) => c.aaNormal).length} pass AA)`)
 
 /* ---------------------------------------------------------------- resolve */
 
@@ -103,7 +104,8 @@ function buildBoardTokens() {
     ...solid(b.name, parseColour(b.hex)),
     group: b.group,
     role: b.role,
-    source: 'board',
+    source: b.origin ? 'concept' : 'board',
+    origin: b.origin ?? null,
     derivation: null,
     stops: null,
   }))
@@ -182,7 +184,7 @@ function write(rel, content) {
 function renderCss() {
   const groups = ['brand', 'accent', 'surface', 'neutral', 'gradient']
   const line = (t) => {
-    const note = t.source === 'board' ? (t.label ? `board: ${t.label}` : 'board') : t.derivation && t.derivation !== 'literal' ? `derived: ${t.derivation}` : 'derived'
+    const note = t.source === 'concept' ? `${t.origin}: ${t.label}` : t.source === 'board' ? (t.label ? `board: ${t.label}` : 'board') : t.derivation && t.derivation !== 'literal' ? `derived: ${t.derivation}` : 'derived'
     return `  ${t.name}: ${t.value}; /* ${note} */`
   }
   const blocks = groups.map((g) => `  /* ${g} */\n${tokens.filter((t) => t.group === g).map(line).join('\n')}`)
@@ -239,8 +241,10 @@ export interface ColourToken {
   alpha: number
   group: TokenGroup
   role: string
-  /** 'board': copied from the Figma moodboard. 'derived': computed by the kit. */
-  source: 'board' | 'derived'
+  /** 'board': copied from the Figma moodboard. 'concept': a brand colour taken from a rebrand concept. 'derived': computed by the kit. */
+  source: 'board' | 'concept' | 'derived'
+  /** Where a 'concept' colour comes from (e.g. "concept 01 Nova"); null otherwise. */
+  origin?: string | null
   /** How a derived value was made (e.g. "OKLab mix of --navy toward #000000, 25%"); null for board values and gradients. */
   derivation: string | null
   /** Gradient stops, resolved to hex where they reference a token. */

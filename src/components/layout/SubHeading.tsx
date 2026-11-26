@@ -18,7 +18,8 @@ export function SubHeading({ title, badge, children }: SubHeadingProps) {
   const view = useContext(SectionViewContext)
   const id = view ? subAnchorId(view, slug(title)) : undefined
   return (
-    <div className="mb-6 flex flex-col gap-2">
+    // A fading Mint-to-Violet hairline (--hairline) opens each subsection, so long views read as chapters.
+    <div className="relative mb-6 flex flex-col gap-2 pt-6 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-(image:--hairline) before:content-['']">
       <h2
         id={id}
         tabIndex={id ? -1 : undefined}

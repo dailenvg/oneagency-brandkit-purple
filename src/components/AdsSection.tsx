@@ -14,7 +14,7 @@ import { ButtonLink } from './ui/ButtonLink'
 import { ZipButton } from './ui/ZipButton'
 
 /**
- * Ads: the creative ads composed from the kit (a featured collage, then all ten concepts in four sizes), the reference
+ * Ads: the creative ads designed in Magnific (a featured collage, then all ten concepts in four sizes), the reference
  * ads the style comes from, the Magnific templates and samples (collapsed), and the animated HTML5 ads.
  */
 export function AdsSection() {
@@ -26,7 +26,7 @@ export function AdsSection() {
       eyebrow="Ads"
       title="Creative ads, templates and motion"
       accent={[0]}
-      lede="Ten ready-to-run ad concepts built from the kit's glass components, with every claim and figure taken from oneagency.com. Download any size as PNG or WebP, or open it at true size."
+      lede="Ten ready-to-run ad concepts designed in Magnific: frosted glass art built around each offer, with every claim and figure taken from oneagency.com. Download any size as PNG or WebP, or open it at true size."
       actions={
         // Three actions, one lead: the creative ads ZIP is the secondary pill every view uses for its ZIP; templates and the
         // outbound Magnific link step down to quiet. Phones stack them full width; tablets wrap them in a row; from xl,
@@ -57,7 +57,7 @@ export function AdsSection() {
         <div>
           <SubHeading title="Reference ads" badge={<Badge>{GLASS_REFERENCES.length}</Badge>}>
             The originals the glass style is codified from, in the old palette. The kit repaints the style in Mint and Violet without the glow, and sets their serif
-            italic accent word in Unbounded with the signature gradient.
+            italic accent word in solid Mint Unbounded.
           </SubHeading>
           <ReferenceGallery />
         </div>

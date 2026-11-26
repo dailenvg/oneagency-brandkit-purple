@@ -25,7 +25,7 @@ export function CreativeAdActions({ concept, inline = false }: { concept: Creati
       {files.length ? (
         <DownloadMenu title={concept.name} className={push} files={files} />
       ) : (
-        // No export manifest yet: say so where the download button would be (the lightbox still shows the live ad).
+        // Not imported yet (scripts/import-magnific-ads.py): say so where the download button would be.
         <span className={`${push} text-step-small text-text-3`}>Downloads for this ad are coming soon.</span>
       )}
     </div>

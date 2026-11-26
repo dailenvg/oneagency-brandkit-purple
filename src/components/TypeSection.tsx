@@ -43,7 +43,7 @@ export function TypeSection() {
 
         <div>
           <SubHeading title="Highlight band" badge={<Badge>Derived</Badge>}>
-            A solid band behind part of a title, from the reference ads. It replaces the gradient accent word on that title: use one or the other.
+            A solid band behind part of a title, from the reference ads. It replaces the accent word on that title: use one or the other.
           </SubHeading>
           <HighlightBand />
         </div>

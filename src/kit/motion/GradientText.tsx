@@ -6,7 +6,8 @@ interface GradientTextProps {
 }
 
 /**
- * Accent word: Unbounded 600, filled with the theme's accent gradient (Mint to Violet on navy, Violet to Navy on light). No glow.
+ * Accent word: Unbounded 600 in the solid theme accent (Mint on navy, Ultra Violet on light). The name is historical: text
+ * never takes a gradient.
  * Static on purpose; animate it by placing it inside WordRise (`accent` prop) or Pop.
  */
 export function GradientText({ children, className }: GradientTextProps) {

@@ -4,7 +4,8 @@ const FACE_CLASS = { Geist: 'font-sans', Unbounded: 'font-display' } as const
 
 /** Sample in the style, at banner size so the row stays compact. */
 function Sample({ s }: { s: AdTextStyle }) {
-  const filled = s.colour === '--gradient'
+  // Accent words and stats take the theme accent (Mint on navy, Ultra Violet on light), so the sample reads in both themes.
+  const filled = s.id === 'accent' || s.id === 'stat'
   const cta = s.id === 'cta'
   const text = { eyebrow: 'Free AI Growth Audit', headline: 'Best AI Product', accent: 'holes', subhead: 'Yours to keep.', body: 'Results in 5 minutes.', stat: '10M+', statLabel: 'Qualified leads generated', cta: 'Run My Free Audit', legal: 'Figures as published on oneagency.com, November 2026.' }[s.id]
   return (

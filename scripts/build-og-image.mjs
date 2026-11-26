@@ -3,7 +3,7 @@
  * Not a kit download (the logo's plain og-image in public/kit/logos/social is), so it lives in public/og and is never zipped.
  *
  * Composed from kit assets: the energy Möbius on navy, the horizontal logo on navy, an Unbounded headline with its
- * accent word in the signature gradient, Geist for the lede and version line. Run: npm run kit:og
+ * accent word in solid Mint, Geist for the lede and version line. Run: npm run kit:og
  */
 import { mkdirSync, readFileSync, statSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
@@ -43,8 +43,7 @@ body { position: relative; font-family: "Geist", sans-serif; color: #fff; -webki
 .content { position: absolute; inset: 0; padding: 72px 80px; display: flex; flex-direction: column; justify-content: space-between; }
 .logo { height: 40px; width: auto; display: block; align-self: flex-start; }
 h1 { font-family: "Unbounded", sans-serif; font-weight: 600; font-size: 104px; line-height: 1; letter-spacing: -.02em; }
-.accent { background: linear-gradient(90deg, ${C.mint} 0%, ${C.violetLight} 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
-  padding: 0 .04em .08em 0; }
+.accent { color: ${C.mint}; }
 .bar { width: 128px; height: 6px; border-radius: 3px; margin: 30px 0 26px; background: linear-gradient(90deg, ${C.mint} 0%, ${C.violet} 100%); }
 .lede { font-weight: 500; font-size: 30px; line-height: 1.35; color: ${C.text2}; max-width: 560px; }
 .meta { font-weight: 500; font-size: 20px; letter-spacing: .04em; color: ${C.text3}; display: flex; gap: 14px; align-items: center; font-variant-numeric: tabular-nums; }

@@ -13,7 +13,7 @@
  * The full kit keeps one raster format per illustration: the WebP twin of an illustration PNG is left out of
  * one-agency_kit_full.zip (its README says so) to stay under GitHub's 100 MiB file limit. The glass ZIP has both.
  * For the same reason, the Möbius stills (elements/mobius/, rendered by scripts/build-mobius.mjs) and the creative ads
- * (ads/creative/, rendered by scripts/export-creative-ads.mjs) are on the site and in their group ZIPs (elements and
+ * (ads/creative/, designed in Magnific and imported by scripts/import-magnific-ads.py) are on the site and in their group ZIPs (elements and
  * ads) but not in the full kit.
  *
  * The HTML5 ad source folders (motion/ads/) go into the ZIPs but are not listed one by one: each ad is listed as its
@@ -55,8 +55,7 @@ Folders
   references/ the nine reference ads the glass and texture style comes from
   vendor/ciq/ ConversionIQ's README for the Möbius loop, the source of its credit, and RECOLOUR.md (the Mint recolour)
   templates/  ad templates and sample ads (editable versions live in Magnific)
-  ads/        the creative ads: ten concepts in four sizes, PNG and WebP (not in the full kit). Three of them
-              (technology, results, vacation-ownership) are built on the Möbius loop stills.
+  ads/        the creative ads: ten concepts in four sizes, PNG and WebP, designed in Magnific (not in the full kit)
   imagery/    photos/: the photo set, one per palette mood (credits below); the starter image
               library, AI-generated in Magnific (no real people or clients); stand-ins until real client work exists
   motion/     one-motion.js (the motion runtime), HTML5 ad sources, and exports (MP4, GIF, end frames, HTML5 ZIPs)

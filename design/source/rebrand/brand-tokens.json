@@ -1,5 +1,5 @@
 {
-  "$comment": "Hand-authored brand colour source for the kit. scripts/extract-tokens.mjs reads this file and writes src/styles/tokens.css, src/data/tokens.ts and public/kit/colour/one-agency_tokens_web.{css,json}. The five brand colours, white and the logo gradient are from the Figma moodboard; every other value is derived from them and labelled so. Derivations: mix = OKLab mix of the first colour toward the second by the amount; alpha = the colour at that opacity; value = written as is (aliases, gradients, effects).",
+  "$comment": "Hand-authored brand colour source for the kit. scripts/extract-tokens.mjs reads this file and writes src/styles/tokens.css, src/data/tokens.ts and public/kit/colour/one-agency_tokens_web.{css,json}. The five board colours, white and the logo gradient are from the Figma moodboard; Plum Night and Lavender (origin: concept 01 Nova, one-agency-rebrand-v2 src/data/concepts.ts) were added to the brand palette on 2026-11-23; every other value is derived from them and labelled so. Derivations: mix = OKLab mix of the first colour toward the second by the amount; alpha = the colour at that opacity; value = written as is (aliases, gradients, effects).",
   "source": {
     "name": "ONE Agency rebrand moodboard",
     "figma": "Figma file Ex4UgCrCeAKPnv8H6BdHMm, node 133:305",
@@ -11,7 +11,9 @@
     { "name": "--mint", "label": "Mint", "hex": "#00FAB3", "role": "Accent on navy: ONE in the reversed lockup, the CTA fill, focus and highlights on dark. Never text on light grounds." },
     { "name": "--violet", "label": "Ultra Violet", "hex": "#6203D0", "role": "Primary accent on light: links, accent text and buttons on light grounds. Holds most of the logo gradient." },
     { "name": "--sky", "label": "Sky", "hex": "#D0E6FD", "role": "Light panels, tags, the highlight band on light and the light app tile." },
-    { "name": "--mist", "label": "Mist", "hex": "#EBEBED", "role": "Supporting neutral: light surfaces and panels." }
+    { "name": "--mist", "label": "Mist", "hex": "#EBEBED", "role": "Supporting neutral: light surfaces and panels." },
+    { "name": "--plum", "label": "Plum Night", "hex": "#170032", "origin": "concept 01 Nova", "role": "Deep ground: premium dark panels, photo-led ads and hero surfaces. White type on top." },
+    { "name": "--lavender", "label": "Lavender", "hex": "#F6F3FB", "origin": "concept 01 Nova", "role": "Soft light ground: panels and light surfaces with a violet cast. Navy or Plum Night type on top." }
   ],
   "white": { "name": "--paper", "label": "White", "hex": "#FFFFFF", "role": "White: the light ground, and type on navy." },
   "logoGradient": {
@@ -66,7 +68,7 @@
     { "name": "--kit-highlight-light", "value": "var(--sky)", "role": "Highlight band on light grounds, navy text on top: Sky." }
   ],
   "contrast": {
-    "text": ["--text", "--text-2", "--text-3", "--text-4", "--mint", "--violet-light", "--sky", "--ink", "--ink-2", "--ink-3", "--violet", "--paper"],
-    "background": ["--navy", "--void", "--surface-2", "--raised", "--violet", "--paper", "--mist", "--mist-light", "--sky", "--mint"]
+    "text": ["--text", "--text-2", "--text-3", "--text-4", "--mint", "--violet-light", "--sky", "--lavender", "--ink", "--ink-2", "--ink-3", "--violet", "--plum", "--paper"],
+    "background": ["--navy", "--void", "--plum", "--surface-2", "--raised", "--violet", "--paper", "--lavender", "--mist", "--mist-light", "--sky", "--mint"]
   }
 }

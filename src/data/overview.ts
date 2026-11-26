@@ -1,9 +1,10 @@
 import type { ViewId } from '../lib/views'
+import { BRAND_PHOTOS, type BrandPhoto } from './imagery-photos'
 
 /** One line per view for the Overview shortcuts. */
 export const VIEW_SUMMARIES: Record<Exclude<ViewId, 'overview'>, string> = {
   logo: 'The ONE mark in every lockup and colour, with clear space, sizes and misuse.',
-  colour: 'The five moodboard colours, the derived tokens and ramps, the contrast matrix and accent rules.',
+  colour: 'Seven brand colours with their photos, the derived tokens and ramps, the contrast matrix and accent rules.',
   type: 'Unbounded and Geist, the type scale, ad text styles and the highlight band.',
   elements: 'Signature devices, patterns, illustrations, CTAs, proof bar, award badge and icons.',
   glass: 'Frosted glass with a Mint rim light: components, rules and the reference ads.',
@@ -15,12 +16,31 @@ export const VIEW_SUMMARIES: Record<Exclude<ViewId, 'overview'>, string> = {
   assets: 'Every file with its format and size, a ZIP per group and the full kit.',
 }
 
+/** The photo band on each Overview shortcut tile, from the photo set (ten photos, eleven views: Assets reuses Logo's). */
+const VIEW_PHOTO_IDS: Record<Exclude<ViewId, 'overview'>, string> = {
+  logo: 'navy-blue-waves',
+  colour: 'lavender-marble',
+  type: 'white-layered-waves',
+  elements: 'violet-silk-wave',
+  glass: 'violet-paper-waves',
+  motion: 'plum-night-swirl',
+  imagery: 'sky-clouds',
+  voice: 'mint-paper-waves',
+  copy: 'mist-fog',
+  ads: 'dark-curves',
+  assets: 'navy-blue-waves',
+}
+
+export const VIEW_PHOTOS = Object.fromEntries(
+  Object.entries(VIEW_PHOTO_IDS).map(([view, id]) => [view, BRAND_PHOTOS.find((p) => p.id === id)]),
+) as Record<Exclude<ViewId, 'overview'>, BrandPhoto | undefined>
+
 /** The v2.0 changes (the rebrand), each pointing at the view it lives in. */
 export const WHATS_NEW: { text: string; view: ViewId }[] = [
   { text: 'A new logo from the moodboard: the lockups, the ONE wordmark, the O mark and three app tiles.', view: 'logo' },
-  { text: 'A new palette: Mist, Sky, Mint, Ultra Violet and Navy, with every derived token labelled.', view: 'colour' },
+  { text: 'A new palette: Navy, Ultra Violet, Mint, Sky and Mist, plus Plum Night and Lavender from Nova, each paired with a photo.', view: 'colour' },
   { text: 'Unbounded for display and numerals, Geist for body. Lato and Metal are retired.', view: 'type' },
-  { text: 'From concept 01 Nova: the Frames in orbit pattern and a set of five photos.', view: 'elements' },
+  { text: 'From concept 01 Nova: the Frames in orbit pattern and the photo set.', view: 'elements' },
   { text: 'The Möbius loop, recoloured to Mint, live on Overview and as stills.', view: 'elements' },
   { text: 'No glow, halo or backlight anywhere. The Halo and Glow field elements are retired.', view: 'glass' },
 ]

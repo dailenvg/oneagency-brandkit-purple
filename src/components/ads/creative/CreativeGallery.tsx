@@ -6,7 +6,6 @@ import { FilterTabs } from '../../ui/FilterTabs'
 import { CreativeAdActions } from './CreativeAdActions'
 import { CreativeAdCard } from './CreativeAdCard'
 import { CreativeAdLightbox, type OpenCreativeAd } from './CreativeAdLightbox'
-import { MobiusCredit } from './MobiusCredit'
 
 type ConceptFilter = CreativeConceptId | 'all'
 type SizeFilter = CreativeFormat | 'all'
@@ -61,12 +60,9 @@ export function CreativeGallery() {
               {concepts.map((c) => (
                 <section key={c.id} aria-labelledby={`creative-${c.id}`}>
                   <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-                    <div className="flex min-w-0 flex-col gap-1">
-                      <h3 id={`creative-${c.id}`} className="text-step-1 font-semibold text-text-2">
-                        {c.name}
-                      </h3>
-                      <MobiusCredit concept={c} />
-                    </div>
+                    <h3 id={`creative-${c.id}`} className="min-w-0 text-step-1 font-semibold text-text-2">
+                      {c.name}
+                    </h3>
                     <CreativeAdActions concept={c} inline />
                   </div>
                   <motion.ul role="list" className="flex flex-wrap items-start gap-6" variants={sequence(cappedStagger(sizes.length))}>

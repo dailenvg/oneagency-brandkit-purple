@@ -3,8 +3,7 @@ import type { CSSProperties } from 'react'
 import type { CreativeAdConcept, CreativeAdSize } from '../../../data/ad-creative'
 import { pressCard, reveal } from '../../../lib/motion'
 import { CreativeAdActions } from './CreativeAdActions'
-import { MobiusCredit } from './MobiusCredit'
-import { ScaledAd } from './ScaledAd'
+import { AdImage } from './AdImage'
 import { TrueSizeButton } from './TrueSizeButton'
 
 interface CreativeAdCardProps {
@@ -19,13 +18,13 @@ interface CreativeAdCardProps {
   sizeOnly?: boolean
 }
 
-/** A creative ad, live and fitted, with its name, source page and the downloads for every size. Opens at true size. */
+/** A creative ad image with its name, source page and the downloads for every size. Opens at true size. */
 export function CreativeAdCard({ concept, size, onOpen, style, sizeOnly = false }: CreativeAdCardProps) {
   const dims = `${size.width}×${size.height}`
   return (
     <motion.li variants={reveal} className="flex max-w-full flex-col gap-3" style={style}>
       <motion.div {...pressCard} className="relative overflow-hidden rounded-site-sm border border-edge bg-surface-2 shadow-card">
-        <ScaledAd concept={concept} size={size} />
+        <AdImage concept={concept} size={size} />
         <TrueSizeButton concept={concept} size={size} onOpen={onOpen} />
       </motion.div>
       {sizeOnly ? (
@@ -40,7 +39,6 @@ export function CreativeAdCard({ concept, size, onOpen, style, sizeOnly = false 
               {size.label} {dims}
             </span>
           </p>
-          <MobiusCredit concept={concept} />
           <CreativeAdActions concept={concept} />
         </div>
       )}

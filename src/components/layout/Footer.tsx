@@ -34,8 +34,8 @@ function SourceNotes() {
       <div>
         <h2 className="mb-3 font-semibold text-text">Colour</h2>
         <p>
-          The five brand colours and the logo gradient are from the rebrand moodboard ({KIT.board}, exported {KIT.boardExported}). Surfaces, text greys, tints and shades
-          are derived from them and labelled.
+          Navy, Mint, Ultra Violet, Sky, Mist and the logo gradient are from the rebrand moodboard ({KIT.board}, exported {KIT.boardExported}); Plum Night and
+          Lavender are from concept 01 &ldquo;Nova&rdquo;. Surfaces, text greys, tints and shades are derived from them and labelled.
         </p>
       </div>
       <div>

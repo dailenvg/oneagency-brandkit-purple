@@ -19,7 +19,7 @@
     "kit:copy": "node scripts/build-copy.mjs",
     "kit:motion-ads": "node scripts/build-motion-ads.mjs && node scripts/export-motion-ads.mjs",
     "kit:references": "node scripts/copy-references.mjs",
-    "kit:ads": "node scripts/export-creative-ads.mjs",
+    "kit:ads": "python3 scripts/import-magnific-ads.py --manifest",
     "kit:optimise": "python3 scripts/optimise-pngs.py public/kit",
     "kit:zips": "node scripts/build-zips.mjs",
     "kit:og": "node scripts/build-og-image.mjs"
